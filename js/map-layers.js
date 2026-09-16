@@ -13,13 +13,96 @@
   let wasTemporarilyAdded = false;
 
   const MAP_CENTER = [-7.15, 110.14];
-  const DEFAULT_ZOOM = 8;
+  const STYLE_HIGHLIGHTED = {
+    fillColor: '#FFE600', // Satu warna: Kuning Neobrutalis
+    weight: 2.5,
+    opacity: 1,
+    color: '#000000',
+    dashArray: '',
+    fillOpacity: 0.45
+  };
 
-  function getChoroplethColor(count) {
-    if (count >= 6) return '#7C3AED';
-    if (count >= 4) return '#8B5CF6';
-    if (count >= 2) return '#A78BFA';
-    return '#DDD6FE';
+  const STYLE_INVISIBLE = {
+    fillColor: 'transparent',
+    weight: 0,
+    opacity: 0,
+    fillOpacity: 0
+  };
+
+  const STYLE_SUBTLE_OUTLINE = {
+    fillColor: 'transparent',
+    weight: 1,
+    opacity: 0.35,
+    color: '#000000',
+    dashArray: '3',
+    fillOpacity: 0
+  };
+
+  /**
+   * Menemukan tepat SATU poligon kabupaten yang sesuai dengan nama kabupaten sastra lisan
+   */
+  function matchSingleKabupaten(kabStr, kabFeatureLayers) {
+    if (!kabStr || !kabFeatureLayers || !kabFeatureLayers.length) return null;
+    const s = String(kabStr).toLowerCase().trim();
+
+    // 1. Cek kecocokan nama persis (Exact match)
+    for (let i = 0; i < kabFeatureLayers.length; i++) {
+      const layer = kabFeatureLayers[i];
+      const name = (layer.feature && layer.feature.properties ? layer.feature.properties.nama : '').toLowerCase().trim();
+      if (name === s) return layer;
+    }
+
+    // 2. Kota ambigu yang memiliki versi Kabupaten dan Kota (Semarang, Magelang, Pekalongan, Tegal)
+    const ambiguous = ['semarang', 'magelang', 'pekalongan', 'tegal'];
+    for (let i = 0; i < ambiguous.length; i++) {
+      const city = ambiguous[i];
+      if (s.includes(city)) {
+        const wantsKota = s.includes('kota ' + city);
+        for (let j = 0; j < kabFeatureLayers.length; j++) {
+          const layer = kabFeatureLayers[j];
+          const name = (layer.feature && layer.feature.properties ? layer.feature.properties.nama : '').toLowerCase();
+          if (wantsKota && name === 'kota ' + city) return layer;
+          if (!wantsKota && name === 'kabupaten ' + city) return layer;
+        }
+      }
+    }
+
+    // 3. Surakarta dan Salatiga
+    if (s.includes('surakarta') || s.includes('solo')) {
+      for (let i = 0; i < kabFeatureLayers.length; i++) {
+        const layer = kabFeatureLayers[i];
+        const name = (layer.feature && layer.feature.properties ? layer.feature.properties.nama : '').toLowerCase();
+        if (name === 'kota surakarta') return layer;
+      }
+    }
+    if (s.includes('salatiga')) {
+      for (let i = 0; i < kabFeatureLayers.length; i++) {
+        const layer = kabFeatureLayers[i];
+        const name = (layer.feature && layer.feature.properties ? layer.feature.properties.nama : '').toLowerCase();
+        if (name === 'kota salatiga') return layer;
+      }
+    }
+
+    // 4. Cek kata kunci inti setiap kabupaten dengan batas kata (\b)
+    for (let i = 0; i < kabFeatureLayers.length; i++) {
+      const layer = kabFeatureLayers[i];
+      const origName = layer.feature && layer.feature.properties ? layer.feature.properties.nama : '';
+      const core = origName.toLowerCase().replace(/^kabupaten\s+|^kota\s+/, '').trim();
+      if (core) {
+        const re = new RegExp('\\b' + core + '\\b', 'i');
+        if (re.test(s)) return layer;
+      }
+    }
+
+    // 5. Fallback substring
+    for (let i = 0; i < kabFeatureLayers.length; i++) {
+      const layer = kabFeatureLayers[i];
+      const origName = layer.feature && layer.feature.properties ? layer.feature.properties.nama : '';
+      const core = origName.toLowerCase().replace(/^kabupaten\s+|^kota\s+/, '').trim();
+      if (core && s.includes(core)) return layer;
+    }
+
+    return null;
   }
 
   const MapLayers = {
@@ -95,16 +178,8 @@
 
       const self = this;
       boundaryLayer = L.geoJSON(window.JATENG_KABUPATEN, {
-        style: function (feature) {
-          const count = feature.properties ? feature.properties.total_sastra : 0;
-          return {
-            fillColor: getChoroplethColor(count),
-            weight: 2,
-            opacity: 0.9,
-            color: '#000000',
-            dashArray: '3',
-            fillOpacity: 0.25
-          };
+        style: function () {
+          return STYLE_INVISIBLE;
         },
         onEachFeature: function (feature, layer) {
           const props = feature.properties;
@@ -129,22 +204,29 @@
 
           layer.on({
             mouseover: function (e) {
-              const l = e.target;
-              l.setStyle({
-                weight: 3.5,
-                color: '#000',
-                dashArray: '',
-                fillOpacity: 0.5
-              });
-              if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
-                l.bringToFront();
+              if (activeHighlightedKabupaten === layer) {
+                layer.setStyle({
+                  ...STYLE_HIGHLIGHTED,
+                  fillOpacity: 0.60
+                });
               }
             },
             mouseout: function (e) {
-              boundaryLayer.resetStyle(e.target);
+              if (activeHighlightedKabupaten === layer) {
+                layer.setStyle(STYLE_HIGHLIGHTED);
+              } else {
+                const toggleEl = typeof document !== 'undefined' ? document.getElementById('toggle-boundaries') : null;
+                if (toggleEl && toggleEl.checked) {
+                  layer.setStyle(STYLE_SUBTLE_OUTLINE);
+                } else {
+                  layer.setStyle(STYLE_INVISIBLE);
+                }
+              }
             },
             click: function (e) {
-              mapInstance.fitBounds(e.target.getBounds(), { padding: [40, 40] });
+              if (activeHighlightedKabupaten === layer) {
+                mapInstance.fitBounds(layer.getBounds(), { padding: [40, 40] });
+              }
             }
           });
         }
@@ -157,24 +239,38 @@
     toggleBoundaries: function (show) {
       if (!boundaryLayer || !mapInstance) return;
       if (show) {
-        wasTemporarilyAdded = false;
         if (!mapInstance.hasLayer(boundaryLayer)) {
           boundaryLayer.addTo(mapInstance);
           boundaryLayer.bringToBack();
         }
         boundaryLayer.eachLayer(function (layer) {
-          boundaryLayer.resetStyle(layer);
+          if (activeHighlightedKabupaten === layer) {
+            layer.setStyle(STYLE_HIGHLIGHTED);
+          } else {
+            layer.setStyle(STYLE_SUBTLE_OUTLINE);
+          }
         });
       } else {
-        wasTemporarilyAdded = false;
-        if (mapInstance.hasLayer(boundaryLayer)) {
-          mapInstance.removeLayer(boundaryLayer);
+        if (!activeHighlightedKabupaten) {
+          if (mapInstance.hasLayer(boundaryLayer)) {
+            mapInstance.removeLayer(boundaryLayer);
+          }
+        } else {
+          // Hanya sembunyikan kabupaten lain, pertahankan yang sedang tersorot
+          boundaryLayer.eachLayer(function (layer) {
+            if (activeHighlightedKabupaten === layer) {
+              layer.setStyle(STYLE_HIGHLIGHTED);
+            } else {
+              layer.setStyle(STYLE_INVISIBLE);
+            }
+          });
         }
       }
     },
 
     /**
-     * Menyeleksi dan menyorot (highlight) poligon kabupaten tertentu berdasarkan nama kabupaten
+     * Menyeleksi dan menyorot (highlight) HANYA SATU poligon kabupaten tertentu
+     * Kabupaten lain dibuat transparan total (tidak perlu warna / garis pengganggu)
      */
     highlightKabupaten: function (kabName) {
       if (!boundaryLayer || !mapInstance) return;
@@ -184,63 +280,42 @@
         return;
       }
 
-      // 1. Pastikan boundaryLayer terpasang di peta
+      // Pastikan boundaryLayer terpasang di peta
       if (!mapInstance.hasLayer(boundaryLayer)) {
         boundaryLayer.addTo(mapInstance);
         boundaryLayer.bringToBack();
         wasTemporarilyAdded = true;
       }
 
-      // Normalisasi teks pembersih nama wilayah
-      const cleanName = function (n) {
-        if (!n) return '';
-        return String(n)
-          .toLowerCase()
-          .replace(/\b(kabupaten|kota)\b/g, '')
-          .replace(/[^a-z0-9]/g, '')
-          .trim();
-      };
+      // Kumpulkan layer-layer kabupaten
+      const layers = [];
+      boundaryLayer.eachLayer(function (l) {
+        layers.push(l);
+      });
 
-      const targetClean = cleanName(kabName);
-      let matchedLayer = null;
+      // Cari tepat satu poligon yang sesuai
+      const matchedLayer = matchSingleKabupaten(kabName, layers);
 
-      boundaryLayer.eachLayer(function (layer) {
-        const featName = layer.feature && layer.feature.properties ? layer.feature.properties.nama : '';
-        const featClean = cleanName(featName);
+      const toggleEl = typeof document !== 'undefined' ? document.getElementById('toggle-boundaries') : null;
+      const isToggleChecked = toggleEl ? toggleEl.checked : false;
 
-        const isMatch = targetClean && featClean && (
-          featClean === targetClean ||
-          targetClean.includes(featClean) ||
-          featClean.includes(targetClean)
-        );
-
-        if (isMatch) {
-          matchedLayer = layer;
-          layer.setStyle({
-            fillColor: '#FFE600', // Kuning Neobrutalis menyala
-            weight: 3.5,
-            opacity: 1,
-            color: '#000000',
-            dashArray: '',
-            fillOpacity: 0.60
-          });
+      // Warnai HANYA kabupaten yang tersorot, kabupaten lain tidak perlu
+      layers.forEach(function (layer) {
+        if (matchedLayer && layer === matchedLayer) {
+          layer.setStyle(STYLE_HIGHLIGHTED);
           if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
             layer.bringToFront();
           }
         } else {
-          // Redupkan poligon kabupaten lain agar terfokus ke wilayah yang dipilih
-          layer.setStyle({
-            fillColor: '#94a3b8',
-            weight: 1,
-            opacity: 0.35,
-            color: '#000000',
-            dashArray: '2',
-            fillOpacity: 0.08
-          });
+          if (isToggleChecked) {
+            layer.setStyle(STYLE_SUBTLE_OUTLINE);
+          } else {
+            layer.setStyle(STYLE_INVISIBLE);
+          }
         }
       });
 
-      // Pastikan titik marker tetap di atas bidang poligon
+      // Pastikan titik marker tetap terlihat jelas di atas
       if (markerLayerGroup && markerLayerGroup.bringToFront) {
         markerLayerGroup.bringToFront();
       }
@@ -250,7 +325,7 @@
     },
 
     /**
-     * Mengembalikan gaya semua poligon kabupaten ke kondisi default
+     * Mengembalikan gaya poligon kabupaten (menghilangkan sorotan)
      */
     resetKabupatenHighlight: function () {
       if (!boundaryLayer || !mapInstance) return;
@@ -260,17 +335,19 @@
       const toggleEl = typeof document !== 'undefined' ? document.getElementById('toggle-boundaries') : null;
       const isToggleChecked = toggleEl ? toggleEl.checked : false;
 
-      // Jika layer dipasang sementara saat klik tradisi dan toggle tidak dicentang
-      if (wasTemporarilyAdded && !isToggleChecked) {
+      if (!isToggleChecked) {
+        boundaryLayer.eachLayer(function (layer) {
+          layer.setStyle(STYLE_INVISIBLE);
+        });
         if (mapInstance.hasLayer(boundaryLayer)) {
           mapInstance.removeLayer(boundaryLayer);
         }
         wasTemporarilyAdded = false;
+      } else {
+        boundaryLayer.eachLayer(function (layer) {
+          layer.setStyle(STYLE_SUBTLE_OUTLINE);
+        });
       }
-
-      boundaryLayer.eachLayer(function (layer) {
-        boundaryLayer.resetStyle(layer);
-      });
     },
 
     /**
