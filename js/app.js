@@ -314,7 +314,7 @@
       photos = [item.cover_image];
     }
 
-    const galleryCard = galleryGrid.closest('.info-card');
+    const galleryCard = (galleryGrid && typeof galleryGrid.closest === 'function') ? galleryGrid.closest('.info-card') : null;
     if (galleryCard) {
       const h4 = galleryCard.querySelector('h4');
       if (h4) {

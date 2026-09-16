@@ -1,11 +1,11 @@
-﻿import os
+import os
 import zipfile
 
 def create_package():
     zip_filename = "Atlas_Sastra_Lisan_Jateng_Siap_Pakai.zip"
     print(f"Creating package: {zip_filename}...")
     
-    include_dirs = ["css", "js", "data", "media", "gis_exports"]
+    include_dirs = ["css", "js", "data", "media", "gis_exports", "lib"]
     include_files = [
         "index.html",
         "kentrung-Cover.jpg",

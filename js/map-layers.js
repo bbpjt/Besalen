@@ -13,6 +13,7 @@
   let wasTemporarilyAdded = false;
 
   const MAP_CENTER = [-7.15, 110.14];
+  const DEFAULT_ZOOM = 8;
   const STYLE_HIGHLIGHTED = {
     fillColor: '#FFE600', // Satu warna: Kuning Neobrutalis
     weight: 2.5,
