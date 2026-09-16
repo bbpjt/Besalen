@@ -1,0 +1,733 @@
+﻿/**
+ * Aplikasi Utama Atlas Sastra Lisan Jawa Tengah
+ * Logika filter reaktif, drawer detail multimedia, transkrip, dan dialog modal
+ */
+(function (window, document) {
+  'use strict';
+
+  // Global State
+  const state = {
+    searchQuery: '',
+    filterR1: true,
+    filterR2: true,
+    filterR3: true,
+    selectedKaresidenan: 'ALL',
+    selectedEkologi: 'ALL',
+    showBoundaries: false,
+    selectedItem: null,
+    currentVideoSource: 'youtube' // 'youtube' or 'local'
+  };
+
+  /**
+   * Mengambil semua entri spasial (Ring 1, Ring 2, Ring 3)
+   */
+  function getAllItems() {
+    if (!window.SASTRA_DATA) return [];
+    const r1 = window.SASTRA_DATA.ring1 || [];
+    const r2 = window.SASTRA_DATA.ring2 || [];
+    const r3 = window.SASTRA_DATA.ring3 || [];
+    return [...r1, ...r2, ...r3];
+  }
+
+  /**
+   * Filter reaktif titik sastra lisan
+   */
+  function applyFilters() {
+    const all = getAllItems();
+    const query = state.searchQuery.toLowerCase().trim();
+
+    const filtered = all.filter(function (item) {
+      // 1. Filter Ring
+      if (item.ring_level === 1 && !state.filterR1) return false;
+      if (item.ring_level === 2 && !state.filterR2) return false;
+      if (item.ring_level === 3 && !state.filterR3) return false;
+
+      // 2. Filter Karesidenan
+      if (state.selectedKaresidenan !== 'ALL') {
+        const itemKar = (item.karesidenan || '').toLowerCase();
+        if (!itemKar.includes(state.selectedKaresidenan.toLowerCase())) {
+          return false;
+        }
+      }
+
+      // 3. Filter Zona Ekologi
+      if (state.selectedEkologi !== 'ALL') {
+        const itemEko = (item.zona_ekologi || '').toLowerCase();
+        if (!itemEko.includes(state.selectedEkologi.toLowerCase())) {
+          return false;
+        }
+      }
+
+      // 4. Filter Kata Kunci Pencarian
+      if (query.length > 0) {
+        const matchNama = (item.nama || '').toLowerCase().includes(query);
+        const matchKab = (item.kabupaten || '').toLowerCase().includes(query);
+        const matchMaestro = (item.maestro || '').toLowerCase().includes(query);
+        const matchTeks = (item.unsur_teks || item.bentuk_tuturan || '').toLowerCase().includes(query);
+        const matchRingkasan = (item.ringkasan_ilmiah || '').toLowerCase().includes(query);
+        if (!matchNama && !matchKab && !matchMaestro && !matchTeks && !matchRingkasan) {
+          return false;
+        }
+      }
+
+      return true;
+    });
+
+    // Perbarui layer marker di peta
+    if (window.MapLayers) {
+      window.MapLayers.renderMarkers(filtered, openDrawer);
+    }
+  }
+
+  /**
+   * Membuka sliding drawer detail
+   */
+  function openDrawer(item) {
+    state.selectedItem = item;
+    const drawer = document.getElementById('detail-drawer');
+    const drawerTitle = document.getElementById('drawer-title');
+    const drawerBadge = document.getElementById('drawer-badge');
+
+    drawerTitle.textContent = item.nama;
+
+    // Set badge style & label
+    drawerBadge.className = 'neo-badge';
+    if (item.ring_level === 1) {
+      drawerBadge.classList.add('badge-r1');
+      drawerBadge.textContent = '⭐ Ring 1: Terverifikasi';
+    } else if (item.ring_level === 2) {
+      drawerBadge.classList.add('badge-r2');
+      drawerBadge.textContent = '📖 Ring 2: Terverifikasi Teks';
+    } else {
+      drawerBadge.classList.add('badge-r3');
+      drawerBadge.textContent = '🔍 Ring 3: Perlu Verifikasi';
+    }
+
+    // Render Tab Content
+    renderTabProfil(item);
+    renderTabTuturan(item);
+    renderTabMultimedia(item);
+    renderTabTranskrip(item);
+    renderTabPustaka(item);
+
+    // Reset ke tab pertama (Profil)
+    switchDrawerTab('tab-pane-profil');
+
+    // Tampilkan Drawer
+    drawer.classList.add('drawer-open');
+  }
+
+  function closeDrawer() {
+    const drawer = document.getElementById('detail-drawer');
+    drawer.classList.remove('drawer-open');
+    // Hentikan video yang sedang berputar bila ada
+    const videoWrapper = document.getElementById('video-wrapper');
+    if (videoWrapper) {
+      videoWrapper.innerHTML = '';
+    }
+  }
+
+  /**
+   * Mengubah tab aktif di drawer
+   */
+  function switchDrawerTab(targetPaneId) {
+    document.querySelectorAll('.tab-btn').forEach(function (btn) {
+      if (btn.getAttribute('data-target') === targetPaneId) {
+        btn.classList.add('active');
+      } else {
+        btn.classList.remove('active');
+      }
+    });
+
+    document.querySelectorAll('.tab-pane').forEach(function (pane) {
+      if (pane.id === targetPaneId) {
+        pane.classList.add('active');
+      } else {
+        pane.classList.remove('active');
+      }
+    });
+  }
+
+  /**
+   * Render Tab 1: Profil & Ekologi
+   */
+  function renderTabProfil(item) {
+    const locGrid = document.getElementById('meta-location-grid');
+    locGrid.innerHTML = `
+      <span class="meta-label">Kabupaten / Kota:</span>
+      <span class="meta-value">${item.kabupaten || '-'}</span>
+      <span class="meta-label">Kecamatan:</span>
+      <span class="meta-value">${item.kecamatan || '-'}</span>
+      <span class="meta-label">Desa / Dusun:</span>
+      <span class="meta-value">${item.desa || '-'}</span>
+      <span class="meta-label">Karesidenan:</span>
+      <span class="meta-value">${item.karesidenan || '-'}</span>
+      <span class="meta-label">Zona Ekologi:</span>
+      <span class="meta-value">${item.zona_ekologi || '-'}</span>
+      <span class="meta-label">Koordinat GPS:</span>
+      <span class="meta-value">${item.latitude.toFixed(4)}, ${item.longitude.toFixed(4)}</span>
+    `;
+
+    const maestroGrid = document.getElementById('meta-maestro-grid');
+    maestroGrid.innerHTML = `
+      <span class="meta-label">Nama Maestro:</span>
+      <span class="meta-value" style="font-weight: 800; color: #000;">${item.maestro || 'Belum terdaftar profil maestro perorangan'}</span>
+      <span class="meta-label">Usia / Garis:</span>
+      <span class="meta-value">${item.usia_garis || '-'}</span>
+      <span class="meta-label">Komunitas Pewaris:</span>
+      <span class="meta-value">${item.komunitas || 'Masyarakat adat dan sanggar seni setempat'}</span>
+    `;
+
+    const narrative = document.getElementById('narrative-summary');
+    narrative.textContent = item.ringkasan_ilmiah || item.catatan_kritis || 'Belum ada catatan deskriptif naratif.';
+  }
+
+  /**
+   * Render Tab 2: Formula Tuturan
+   */
+  function renderTabTuturan(item) {
+    const bentukEl = document.getElementById('formula-bentuk');
+    bentukEl.textContent = item.bentuk_tuturan || item.unsur_teks || 'Tradisi tutur lisan komunal';
+
+    const musikEl = document.getElementById('formula-musik');
+    musikEl.textContent = item.iringan_musik || 'Tuturan ritmis dengan instrumen penopang khas daerah';
+
+    const sampleEl = document.getElementById('formula-sample');
+    if (item.repertoar) {
+      sampleEl.textContent = item.repertoar;
+    } else if (item.unsur_teks) {
+      sampleEl.textContent = `Unsur tuturan teridentifikasi: ${item.unsur_teks}`;
+    } else {
+      sampleEl.textContent = 'Formula tuturan baku sedang dalam penelusuran lebih lanjut.';
+    }
+  }
+
+  /**
+   * Render Tab 3: Multimedia (YouTube Embeds, Local Video, Photo Gallery)
+   */
+  function renderTabMultimedia(item) {
+    const videoWrapper = document.getElementById('video-wrapper');
+    const btnYtExternal = document.getElementById('btn-yt-external');
+    const btnSwitchSource = document.getElementById('btn-switch-video-source');
+    const galleryGrid = document.getElementById('photo-gallery-grid');
+
+    videoWrapper.innerHTML = '';
+    galleryGrid.innerHTML = '';
+
+    // Pemetaan YouTube resmi untuk Ring 1
+    let ytId = null;
+    if (item.nama && item.nama.includes('Blora')) {
+      ytId = '5XteEv2MU_g'; // Kentrung Blora
+    } else if (item.nama && item.nama.includes('Pasir Luhur')) {
+      ytId = 'Ixm0NVVzniM'; // Maca Babad Pasir Luhur
+    } else if (item.nama && item.nama.includes('Othok Obrol')) {
+      ytId = 'Q_JAmcKSFB0'; // Wayang Othok Obrol
+    } else if (item.youtube_id) {
+      ytId = item.youtube_id;
+    }
+
+    if (ytId) {
+      // Pasang embed YouTube
+      videoWrapper.innerHTML = `
+        <iframe 
+          src="https://www.youtube.com/embed/${ytId}?rel=0&modestbranding=1" 
+          title="Dokumentasi Video ${item.nama}" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen>
+        </iframe>
+      `;
+      btnYtExternal.style.display = 'inline-flex';
+      btnYtExternal.href = `https://youtu.be/${ytId}`;
+
+      // Opsi tombol video lokal untuk Kentrung
+      if (item.video_local) {
+        btnSwitchSource.style.display = 'inline-flex';
+        btnSwitchSource.onclick = function () {
+          if (state.currentVideoSource === 'youtube') {
+            videoWrapper.innerHTML = `
+              <video controls style="width:100%; height:100%; object-fit:cover;" poster="${item.cover_image || ''}">
+                <source src="${item.video_local}" type="video/mp4">
+                Peramban Anda tidak mendukung pemutaran video HTML5.
+              </video>
+            `;
+            btnSwitchSource.innerHTML = '<i class="fa-brands fa-youtube"></i> Putar YouTube';
+            state.currentVideoSource = 'local';
+          } else {
+            videoWrapper.innerHTML = `
+              <iframe 
+                src="https://www.youtube.com/embed/${ytId}?rel=0" 
+                title="Dokumentasi Video ${item.nama}" 
+                allow="accelerometer; autoplay; encrypted-media;" 
+                allowfullscreen>
+              </iframe>
+            `;
+            btnSwitchSource.innerHTML = '<i class="fa-solid fa-video"></i> Putar Video Lokal';
+            state.currentVideoSource = 'youtube';
+          }
+        };
+      } else {
+        btnSwitchSource.style.display = 'none';
+      }
+    } else {
+      // Bukan Ring 1 atau belum ada video
+      videoWrapper.innerHTML = `
+        <div style="width:100%; height:100%; display:flex; flex-direction:column; align-items:center; justify-content:center; background:#f4efe6; color:#444; padding:20px; text-align:center;">
+          <i class="fa-solid fa-film" style="font-size: 2.5rem; margin-bottom: 10px; color:#999;"></i>
+          <p style="font-weight: 700; font-size: 0.9rem;">Dokumentasi Video Lapangan Belum Diunggah</p>
+          <p style="font-size: 0.75rem; color: #666; margin-top: 4px;">Entri ini saat ini terdokumentasikan dalam laporan inventarisasi ilmiah dan naskah.</p>
+        </div>
+      `;
+      btnYtExternal.style.display = 'none';
+      btnSwitchSource.style.display = 'none';
+    }
+
+    // Galeri Foto
+    let photos = [];
+    if (item.gallery_images && item.gallery_images.length > 0) {
+      photos = item.gallery_images;
+    } else if (item.cover_image) {
+      photos = [item.cover_image];
+    }
+
+    if (photos.length > 0) {
+      photos.forEach(function (src) {
+        const img = document.createElement('img');
+        img.src = src;
+        img.alt = `Dokumentasi ${item.nama}`;
+        img.className = 'gallery-thumb';
+        img.onclick = function () {
+          window.open(src, '_blank');
+        };
+        galleryGrid.appendChild(img);
+      });
+    } else {
+      galleryGrid.innerHTML = '<p style="font-size:0.8rem; color:#777;">Tidak ada foto tambahan untuk tradisi ini.</p>';
+    }
+  }
+
+  /**
+   * Render Tab 4: Transkrip Naskah
+   */
+  function renderTabTranskrip(item) {
+    const listEl = document.getElementById('transcript-segments-list');
+    listEl.innerHTML = '';
+
+    const transkripData = window.TRANSKRIP_DATA || {};
+
+    if (item.nama && item.nama.includes('Blora')) {
+      const korpus = transkripData.kentrung_blora;
+      if (korpus && korpus.segmen) {
+        renderTranscriptSegments(korpus.segmen, listEl);
+      }
+    } else if (item.nama && item.nama.includes('Pasir Luhur')) {
+      const korpus = transkripData.maca_babad_pasir_luhur;
+      if (korpus && korpus.pupuh) {
+        korpus.pupuh.forEach(function (p) {
+          const div = document.createElement('div');
+          div.className = 'segment-item';
+          div.innerHTML = `
+            <span class="segment-time">Pupuh ${p.metrum} (Bait ${p.bait})</span>
+            <p style="font-family:'Times New Roman', serif; font-size:1rem; line-height:1.6; margin:6px 0; font-style:italic;">
+              "${p.cakepan_jawa}"
+            </p>
+            <p style="font-size:0.8rem; color:#444; border-top:1px dashed #bbb; padding-top:4px;">
+              <strong>Terjemahan:</strong> ${p.terjemahan}
+            </p>
+          `;
+          listEl.appendChild(div);
+        });
+      }
+    } else if (item.nama && item.nama.includes('Othok Obrol')) {
+      const korpus = transkripData.wayang_othok_obrol;
+      if (korpus && korpus.fragmen) {
+        korpus.fragmen.forEach(function (f) {
+          const div = document.createElement('div');
+          div.className = 'segment-item';
+          div.innerHTML = `
+            <span class="segment-time">${f.nama}</span>
+            <p style="line-height:1.5; margin:6px 0; font-style:italic; font-family:'Times New Roman', serif; font-size:0.95rem;">
+              ${f.teks_jawa.replace(/\n/g, '<br>')}
+            </p>
+            <p style="font-size:0.8rem; color:#444; border-top:1px dashed #bbb; padding-top:4px;">
+              <strong>Fungsi Tutur:</strong> ${f.fungsi}
+            </p>
+          `;
+          listEl.appendChild(div);
+        });
+      }
+    } else {
+      // Tampilkan ringkasan tekstual untuk Ring 2 dan 3
+      listEl.innerHTML = `
+        <div class="segment-item">
+          <span class="segment-time">Catatan Formula Teks</span>
+          <p style="margin-top:6px; font-weight:600;">${item.unsur_teks || 'Belum ada transkripsi fonemik penuh untuk entri ini.'}</p>
+          <p style="font-size:0.8rem; color:#555; margin-top:4px;">${item.ringkasan_ilmiah || item.catatan_kritis || ''}</p>
+        </div>
+      `;
+    }
+  }
+
+  function renderTranscriptSegments(segments, containerEl) {
+    segments.forEach(function (seg) {
+      const div = document.createElement('div');
+      div.className = 'segment-item';
+      div.setAttribute('data-text', seg.text.toLowerCase());
+      div.innerHTML = `
+        <span class="segment-time">${seg.timestamp} &bull; ${seg.section}</span>
+        <p style="line-height:1.5; margin-top:4px;">${seg.text}</p>
+      `;
+      containerEl.appendChild(div);
+    });
+
+    // In-transcript live search
+    const transInput = document.getElementById('transcript-search-input');
+    transInput.oninput = function () {
+      const q = transInput.value.toLowerCase().trim();
+      const items = containerEl.querySelectorAll('.segment-item');
+      items.forEach(function (itemEl) {
+        const text = itemEl.getAttribute('data-text') || '';
+        if (!q || text.includes(q)) {
+          itemEl.style.display = 'block';
+          if (q) itemEl.classList.add('highlight');
+          else itemEl.classList.remove('highlight');
+        } else {
+          itemEl.style.display = 'none';
+          itemEl.classList.remove('highlight');
+        }
+      });
+    };
+  }
+
+  /**
+   * Render Tab 5: Sumber Pustaka Ilmiah
+   */
+  function renderTabPustaka(item) {
+    const citationEl = document.getElementById('citation-content');
+    citationEl.innerHTML = `
+      <p style="font-weight: 700; margin-bottom: 6px;">Sumber Ilmiah / Inventarisasi Lapangan:</p>
+      <div style="padding: 10px; background: #fffbe6; border-left: 4px solid #000; margin-bottom: 12px; font-size: 0.85rem;">
+        ${item.sumber_ilmiah || item.sumber_ilmiah_1 || item.sumber_referensi || 'Balai Bahasa Provinsi Jawa Tengah (2026)'}
+      </div>
+      ${item.dasar_bukti_1 ? `
+        <p style="font-weight: 700; margin-bottom: 4px;">Dasar Pembuktian Tekstual:</p>
+        <p style="font-size: 0.85rem; color: #333; margin-bottom: 10px;">${item.dasar_bukti_1}</p>
+      ` : ''}
+      ${item.sumber_ilmiah_2 ? `
+        <p style="font-weight: 700; margin-bottom: 4px;">Sumber Pembanding Tambahan:</p>
+        <p style="font-size: 0.85rem; color: #555;">${item.sumber_ilmiah_2}</p>
+      ` : ''}
+    `;
+  }
+
+  /**
+   * Modal Dialogs Controller
+   */
+  function openModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal) modal.classList.add('open');
+  }
+
+  function closeModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal) modal.classList.remove('open');
+  }
+
+  function renderAnalyticsModal() {
+    const body = document.getElementById('analytics-modal-body');
+    if (!body || !window.SASTRA_DATA) return;
+
+    const data = window.SASTRA_DATA;
+    const kabs = data.kabupaten || [];
+
+    // Hitung per Karesidenan
+    const karesidenanCounts = {};
+    kabs.forEach(function (k) {
+      const kar = k.karesidenan || 'Lainnya';
+      if (!karesidenanCounts[kar]) {
+        karesidenanCounts[kar] = { total: 0, r1: 0, r2: 0, r3: 0, r4: 0, kabCount: 0 };
+      }
+      karesidenanCounts[kar].total += k.total_potensi;
+      karesidenanCounts[kar].r1 += k.r1_count;
+      karesidenanCounts[kar].r2 += k.r2_count;
+      karesidenanCounts[kar].r3 += k.r3_count;
+      karesidenanCounts[kar].r4 += k.r4_count;
+      karesidenanCounts[kar].kabCount += 1;
+    });
+
+    let html = `
+      <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap:10px; margin-bottom:20px;">
+        <div class="stat-chip badge-r1" style="justify-content:center; padding:10px;">
+          <div><div style="font-size:1.4rem; font-weight:800;">${data.metadata.total_ring1}</div><div style="font-size:0.75rem;">Ring 1 (Terverifikasi)</div></div>
+        </div>
+        <div class="stat-chip badge-r2" style="justify-content:center; padding:10px;">
+          <div><div style="font-size:1.4rem; font-weight:800;">${data.metadata.total_ring2}</div><div style="font-size:0.75rem;">Ring 2 (Terverifikasi Teks)</div></div>
+        </div>
+        <div class="stat-chip badge-r3" style="justify-content:center; padding:10px;">
+          <div><div style="font-size:1.4rem; font-weight:800;">${data.metadata.total_ring3}</div><div style="font-size:0.75rem;">Ring 3 (Perlu Verifikasi)</div></div>
+        </div>
+        <div class="stat-chip badge-r4" style="justify-content:center; padding:10px;">
+          <div><div style="font-size:1.4rem; font-weight:800;">${data.metadata.total_ring4}</div><div style="font-size:0.75rem;">Ring 4 (Eksklusi)</div></div>
+        </div>
+      </div>
+
+      <h4 style="font-family:'Space Grotesk', sans-serif; font-size:1rem; font-weight:800; margin-bottom:10px;">
+        Distribusi Potensi Sastra Lisan Berdasarkan 6 Wilayah Karesidenan:
+      </h4>
+      <table style="width:100%; border-collapse:collapse; font-size:0.82rem; border:2px solid #000;">
+        <thead>
+          <tr style="background:#FFE600; border-bottom:2px solid #000;">
+            <th style="padding:8px; text-align:left; border-right:1px solid #000;">Wilayah Karesidenan</th>
+            <th style="padding:8px; text-align:center; border-right:1px solid #000;">Kab/Kota</th>
+            <th style="padding:8px; text-align:center; border-right:1px solid #000;">⭐ R1</th>
+            <th style="padding:8px; text-align:center; border-right:1px solid #000;">📖 R2</th>
+            <th style="padding:8px; text-align:center; border-right:1px solid #000;">🔍 R3</th>
+            <th style="padding:8px; text-align:center;">Total Sastra</th>
+          </tr>
+        </thead>
+        <tbody>
+    `;
+
+    Object.keys(karesidenanCounts).sort().forEach(function (kar) {
+      const row = karesidenanCounts[kar];
+      html += `
+        <tr style="border-bottom:1px solid #ddd;">
+          <td style="padding:7px 8px; font-weight:700; border-right:1px solid #ddd;">${kar}</td>
+          <td style="padding:7px 8px; text-align:center; border-right:1px solid #ddd;">${row.kabCount}</td>
+          <td style="padding:7px 8px; text-align:center; font-weight:700; color:#d97706; border-right:1px solid #ddd;">${row.r1}</td>
+          <td style="padding:7px 8px; text-align:center; font-weight:700; color:#0284c7; border-right:1px solid #ddd;">${row.r2}</td>
+          <td style="padding:7px 8px; text-align:center; font-weight:700; color:#ea580c; border-right:1px solid #ddd;">${row.r3}</td>
+          <td style="padding:7px 8px; text-align:center; font-weight:800;">${row.total}</td>
+        </tr>
+      `;
+    });
+
+    html += `
+        </tbody>
+      </table>
+    `;
+
+    body.innerHTML = html;
+  }
+
+  function renderMethodologyModal() {
+    const body = document.getElementById('methodology-modal-body');
+    if (!body || !window.SASTRA_DATA) return;
+
+    const ring4 = window.SASTRA_DATA.ring4 || [];
+
+    let html = `
+      <div style="background:#FFFDF9; border:2px solid #000; padding:12px; margin-bottom:16px; box-shadow:3px 3px 0px #000;">
+        <h4 style="font-family:'Space Grotesk',sans-serif; font-weight:800; font-size:0.95rem; margin-bottom:4px;">
+          Kriteria Metodologi Kurasi Ilmiah Balai Bahasa Provinsi Jawa Tengah (2026)
+        </h4>
+        <p style="font-size:0.82rem; line-height:1.5;">
+          Pemetaan Sastra Lisan menggunakan pendekatan <strong>Ring Validasi Empiris</strong> untuk menjaga integritas data kebahasaan dan kesusastraan nasional:
+        </p>
+        <ul style="font-size:0.8rem; margin:8px 0 0 18px; line-height:1.5;">
+          <li><strong>Ring 1 (Terverifikasi):</strong> Telah divalidasi penuh di lapangan dengan profil maestro aktif, GPS presisi, transkrip rekaman, dan media resmi.</li>
+          <li><strong>Ring 2 (Terverifikasi Teks):</strong> Terbukti secara tekstual ilmiah memiliki formula tuturan (mantra, tembang, suluk, parikan).</li>
+          <li><strong>Ring 3 (Perlu Verifikasi):</strong> Ritus adat atau pertunjukan komunal yang masuk prioritas verifikasi lapangan untuk menemukan naskah tuturan bakunya.</li>
+          <li><strong>Ring 4 (Eksklusi Non-Sastra):</strong> Objek budaya yang resmi dikeluarkan karena merupakan kriya, busana, kuliner tradisional, atau penanggalan fisik tanpa unsur sastra tutur.</li>
+        </ul>
+      </div>
+
+      <h4 style="font-family:'Space Grotesk',sans-serif; font-weight:800; font-size:0.95rem; margin-bottom:8px;">
+        Daftar 40 Entri Budaya Ring 4 (Eksklusi Non-Sastra):
+      </h4>
+      <div style="max-height: 340px; overflow-y: auto; border: 2px solid #000;">
+        <table style="width:100%; border-collapse:collapse; font-size:0.78rem;">
+          <thead style="position:sticky; top:0; background:#FF3366; color:#fff;">
+            <tr>
+              <th style="padding:6px; text-align:center; width:40px;">No.</th>
+              <th style="padding:6px; text-align:left;">Nama Entri Budaya</th>
+              <th style="padding:6px; text-align:left;">Daerah Asal</th>
+              <th style="padding:6px; text-align:left;">Kategori Budaya</th>
+              <th style="padding:6px; text-align:left;">Alasan Ilmiah Eksklusi</th>
+            </tr>
+          </thead>
+          <tbody>
+    `;
+
+    ring4.forEach(function (r) {
+      html += `
+        <tr style="border-bottom:1px solid #ddd;">
+          <td style="padding:6px; text-align:center; font-weight:700;">${r.no}</td>
+          <td style="padding:6px; font-weight:700;">${r.nama}</td>
+          <td style="padding:6px;">${r.kabupaten}</td>
+          <td style="padding:6px;"><span class="neo-badge" style="background:#eee;">${r.kategori_asli}</span></td>
+          <td style="padding:6px; color:#555;">${r.alasan_eksklusi}</td>
+        </tr>
+      `;
+    });
+
+    html += `
+          </tbody>
+        </table>
+      </div>
+    `;
+
+    body.innerHTML = html;
+  }
+
+  /**
+   * Inisialisasi Event Listener
+   */
+  function setupEventListeners() {
+    // 1. Search Input
+    const searchInput = document.getElementById('search-input');
+    searchInput.addEventListener('input', function () {
+      state.searchQuery = searchInput.value;
+      applyFilters();
+    });
+
+    // 2. Ring Checkboxes
+    document.getElementById('filter-r1').addEventListener('change', function (e) {
+      state.filterR1 = e.target.checked;
+      applyFilters();
+    });
+    document.getElementById('filter-r2').addEventListener('change', function (e) {
+      state.filterR2 = e.target.checked;
+      applyFilters();
+    });
+    document.getElementById('filter-r3').addEventListener('change', function (e) {
+      state.filterR3 = e.target.checked;
+      applyFilters();
+    });
+
+    // 3. Dropdowns
+    document.getElementById('select-karesidenan').addEventListener('change', function (e) {
+      state.selectedKaresidenan = e.target.value;
+      applyFilters();
+    });
+    document.getElementById('select-ekologi').addEventListener('change', function (e) {
+      state.selectedEkologi = e.target.value;
+      applyFilters();
+    });
+
+    // 4. Toggle Boundaries
+    document.getElementById('toggle-boundaries').addEventListener('change', function (e) {
+      state.showBoundaries = e.target.checked;
+      if (window.MapLayers) {
+        window.MapLayers.toggleBoundaries(state.showBoundaries);
+      }
+    });
+
+    // 5. Reset Button
+    document.getElementById('btn-reset-filters').addEventListener('click', function () {
+      searchInput.value = '';
+      state.searchQuery = '';
+      document.getElementById('filter-r1').checked = true;
+      document.getElementById('filter-r2').checked = true;
+      document.getElementById('filter-r3').checked = true;
+      state.filterR1 = true;
+      state.filterR2 = true;
+      state.filterR3 = true;
+      document.getElementById('select-karesidenan').value = 'ALL';
+      state.selectedKaresidenan = 'ALL';
+      document.getElementById('select-ekologi').value = 'ALL';
+      state.selectedEkologi = 'ALL';
+      applyFilters();
+      if (window.MapLayers) {
+        window.MapLayers.resetView();
+      }
+    });
+
+    // 6. Toggle Panel Collapse
+    const btnTogglePanel = document.getElementById('btn-toggle-panel');
+    const panelBody = document.getElementById('panel-body-content');
+    btnTogglePanel.addEventListener('click', function () {
+      if (panelBody.style.display === 'none') {
+        panelBody.style.display = 'flex';
+        btnTogglePanel.innerHTML = '<i class="fa-solid fa-chevron-up"></i>';
+      } else {
+        panelBody.style.display = 'none';
+        btnTogglePanel.innerHTML = '<i class="fa-solid fa-chevron-down"></i>';
+      }
+    });
+
+    // 7. Drawer Close Button
+    document.getElementById('drawer-close-btn').addEventListener('click', closeDrawer);
+
+    // 8. Drawer Tab Buttons
+    document.querySelectorAll('.tab-btn').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        const target = btn.getAttribute('data-target');
+        switchDrawerTab(target);
+      });
+    });
+
+    // 9. Modals Trigger
+    document.getElementById('btn-export-gis').addEventListener('click', function () {
+      openModal('modal-export');
+    });
+
+    document.getElementById('btn-analytics').addEventListener('click', function () {
+      renderAnalyticsModal();
+      openModal('modal-analytics');
+    });
+
+    document.getElementById('btn-methodology').addEventListener('click', function () {
+      renderMethodologyModal();
+      openModal('modal-methodology');
+    });
+
+    // Modal Close buttons
+    document.querySelectorAll('.modal-close-btn').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        const modalId = btn.getAttribute('data-modal');
+        closeModal(modalId);
+      });
+    });
+
+    // Modal backdrop click
+    document.querySelectorAll('.neo-modal-backdrop').forEach(function (backdrop) {
+      backdrop.addEventListener('click', function (e) {
+        if (e.target === backdrop) {
+          backdrop.classList.remove('open');
+        }
+      });
+    });
+
+    // 10. GIS Exporter Buttons
+    document.getElementById('btn-download-geojson').addEventListener('click', function () {
+      if (window.GISExporter) {
+        window.GISExporter.exportGeoJSON(window.SASTRA_DATA);
+      }
+    });
+
+    document.getElementById('btn-download-csv').addEventListener('click', function () {
+      if (window.GISExporter) {
+        window.GISExporter.exportCSV(window.SASTRA_DATA);
+      }
+    });
+
+    document.getElementById('btn-download-boundary-geojson').addEventListener('click', function () {
+      if (window.GISExporter) {
+        window.GISExporter.exportBoundaryGeoJSON(window.JATENG_KABUPATEN);
+      }
+    });
+  }
+
+  // App Initialization
+  function init() {
+    console.log('Inisialisasi Atlas Digital Sastra Lisan Jawa Tengah...');
+    if (window.MapLayers) {
+      window.MapLayers.initMap('map');
+    }
+    setupEventListeners();
+    applyFilters();
+  }
+
+  // Expose to window
+  window.App = {
+    init: init,
+    applyFilters: applyFilters,
+    openDrawer: openDrawer,
+    closeDrawer: closeDrawer,
+    renderTranscript: renderTabTranskrip,
+    renderAnalyticsModal: renderAnalyticsModal,
+    renderMethodologyModal: renderMethodologyModal
+  };
+
+  document.addEventListener('DOMContentLoaded', init);
+})(typeof window !== 'undefined' ? window : this, document);
