@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Pengontrol Peta Leaflet & Pengelolaan Layer Spasial
  * Atlas Sastra Lisan Jawa Tengah
  */
@@ -40,26 +40,39 @@
       // Pindahkan zoom control ke kanan bawah agar tidak bertabrakan dengan floating panel
       L.control.zoom({ position: 'bottomright' }).addTo(mapInstance);
 
-      // Tile Layer: CartoDB Positron (Pilihan utama gaya Neobrutalis yang bersih)
-      const cartoPositron = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>',
-        subdomains: 'abcd',
-        maxZoom: 20
-      });
+      // Tile Layer 1: ESRI World Light Gray Canvas (Bersih, elegan, tanpa watermark, 100% tanpa API key)
+      const esriCanvas = L.layerGroup([
+        L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
+          attribution: '&copy; Esri, DeLorme, NAVTEQ',
+          maxZoom: 16
+        }),
+        L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Reference/MapServer/tile/{z}/{y}/{x}', {
+          attribution: '',
+          maxZoom: 16
+        })
+      ]);
 
-      // Alternatif: OpenStreetMap
+      // Tile Layer 2: OpenStreetMap Standard (Gratis, detail jalan & toponimi lengkap)
       const osmStandard = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; OpenStreetMap contributors',
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
         maxZoom: 19
       });
 
-      cartoPositron.addTo(mapInstance);
-      currentBaseLayer = cartoPositron;
+      // Tile Layer 3: ESRI World Topo Map (Topografi kontur pegunungan & lembah sungai)
+      const esriTopo = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}', {
+        attribution: '&copy; Esri &mdash; Topographic Mapping',
+        maxZoom: 18
+      });
 
-      // Base layer switcher control
+      // Default: ESRI Canvas yang bersih dan kontras
+      esriCanvas.addTo(mapInstance);
+      currentBaseLayer = esriCanvas;
+
+      // Base layer switcher control (di sudut kanan bawah)
       const baseMaps = {
-        'Carto Positron (Clean)': cartoPositron,
-        'OpenStreetMap': osmStandard
+        'Peta Bersih (Gray Canvas)': esriCanvas,
+        'OpenStreetMap (Detail Jalan)': osmStandard,
+        'Peta Topografi (Lanskap Alam)': esriTopo
       };
       L.control.layers(baseMaps, null, { position: 'bottomright' }).addTo(mapInstance);
 
