@@ -16,11 +16,11 @@
   const DEFAULT_ZOOM = 8;
   const STYLE_HIGHLIGHTED = {
     fillColor: '#FFE600', // Satu warna: Kuning Neobrutalis
-    weight: 2.5,
-    opacity: 1,
+    weight: 1.5, // Garis lebih tipis, rapi, dan presisi
+    opacity: 0.95,
     color: '#000000',
     dashArray: '',
-    fillOpacity: 0.45
+    fillOpacity: 0.40
   };
 
   const STYLE_INVISIBLE = {
@@ -32,7 +32,7 @@
 
   const STYLE_SUBTLE_OUTLINE = {
     fillColor: 'transparent',
-    weight: 1,
+    weight: 0.8, // Garis tepi sangat tipis untuk outline
     opacity: 0.35,
     color: '#000000',
     dashArray: '3',
@@ -206,10 +206,10 @@
           layer.on({
             mouseover: function (e) {
               if (activeHighlightedKabupaten === layer) {
-                layer.setStyle({
-                  ...STYLE_HIGHLIGHTED,
-                  fillOpacity: 0.60
-                });
+                layer.setStyle(Object.assign({}, STYLE_HIGHLIGHTED, {
+                  weight: 2.0,
+                  fillOpacity: 0.55
+                }));
               }
             },
             mouseout: function (e) {
