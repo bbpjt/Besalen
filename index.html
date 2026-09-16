@@ -1,0 +1,377 @@
+﻿<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atlas Digital Sastra Lisan Jawa Tengah [Korpus 2026]</title>
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Neobrutalist Theme Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ==================== HEADER BAR ==================== -->
+  <header id="header">
+    <div class="header-brand">
+      <div class="header-title">
+        <i class="fa-solid fa-compass text-yellow-500"></i>
+        <span>ATLAS SASTRA LISAN JATENG</span>
+        <span class="stamp-tag">KORPUS 2026</span>
+      </div>
+    </div>
+
+    <!-- Quick Stat Badges -->
+    <div class="header-stats">
+      <div class="stat-chip badge-r1" title="Ring 1: Validasi Lapangan Penuh">
+        <i class="fa-solid fa-star"></i>
+        <span id="stat-r1">3 Terverifikasi</span>
+      </div>
+      <div class="stat-chip badge-r2" title="Ring 2: Formula Teks Ilmiah">
+        <i class="fa-solid fa-feather-pointed"></i>
+        <span id="stat-r2">44 Terverifikasi Teks</span>
+      </div>
+      <div class="stat-chip badge-r3" title="Ring 3: Prioritas Verifikasi">
+        <i class="fa-solid fa-clipboard-question"></i>
+        <span id="stat-r3">44 Perlu Verifikasi</span>
+      </div>
+      <div class="stat-chip badge-kab" title="35 Kabupaten / Kota Terpetakan">
+        <i class="fa-solid fa-map-location-dot"></i>
+        <span id="stat-kab">35 Wilayah</span>
+      </div>
+    </div>
+
+    <!-- Action Buttons -->
+    <div class="header-actions">
+      <button id="btn-export-gis" class="neo-btn neo-btn-primary" title="Ekspor Data untuk QGIS dan ArcGIS">
+        <i class="fa-solid fa-file-export"></i>
+        <span>Ekspor GIS</span>
+      </button>
+      <button id="btn-analytics" class="neo-btn" title="Statistik & Analitik Wilayah">
+        <i class="fa-solid fa-chart-pie"></i>
+        <span>Analitik</span>
+      </button>
+      <button id="btn-methodology" class="neo-btn" title="Metodologi Kurasi & Ring 4 (Eksklusi)">
+        <i class="fa-solid fa-circle-info"></i>
+        <span>Metodologi</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ==================== MAIN MAP VIEW ==================== -->
+  <main id="map-container">
+    <div id="map"></div>
+
+    <!-- Floating Filter Panel -->
+    <section id="floating-panel" class="neo-border neo-shadow">
+      <div class="panel-header">
+        <h3><i class="fa-solid fa-sliders"></i> Filter Penjelajahan</h3>
+        <button id="btn-toggle-panel" class="neo-btn" style="padding: 2px 8px; font-size: 0.75rem;">
+          <i class="fa-solid fa-chevron-up"></i>
+        </button>
+      </div>
+
+      <div class="panel-body" id="panel-body-content">
+        <!-- Instant Search -->
+        <div class="search-box">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" id="search-input" placeholder="Cari tradisi, maestro, daerah...">
+        </div>
+
+        <!-- Filter Ring Validasi -->
+        <div class="filter-group">
+          <span class="filter-label">Kategori Status Verifikasi</span>
+          <div class="ring-checkboxes">
+            <label class="checkbox-pill" style="border-left: 6px solid var(--color-r1);">
+              <span>⭐ Ring 1: Terverifikasi</span>
+              <input type="checkbox" id="filter-r1" checked>
+            </label>
+            <label class="checkbox-pill" style="border-left: 6px solid var(--color-r2);">
+              <span>📖 Ring 2: Terverifikasi Teks</span>
+              <input type="checkbox" id="filter-r2" checked>
+            </label>
+            <label class="checkbox-pill" style="border-left: 6px solid var(--color-r3);">
+              <span>🔍 Ring 3: Perlu Verifikasi</span>
+              <input type="checkbox" id="filter-r3" checked>
+            </label>
+          </div>
+        </div>
+
+        <!-- Filter Wilayah Karesidenan -->
+        <div class="filter-group">
+          <span class="filter-label">Wilayah Karesidenan</span>
+          <select id="select-karesidenan" class="neo-select">
+            <option value="ALL">Semua Karesidenan (6 Wilayah)</option>
+            <option value="Banyumas">Karesidenan Banyumas</option>
+            <option value="Kedu">Karesidenan Kedu</option>
+            <option value="Pati">Karesidenan Pati (Muria Raya)</option>
+            <option value="Pekalongan">Karesidenan Pekalongan</option>
+            <option value="Semarang">Karesidenan Semarang</option>
+            <option value="Surakarta">Karesidenan Surakarta</option>
+          </select>
+        </div>
+
+        <!-- Filter Zona Ekologi Budaya -->
+        <div class="filter-group">
+          <span class="filter-label">Zona Ekologi Budaya</span>
+          <select id="select-ekologi" class="neo-select">
+            <option value="ALL">Semua Zona Ekologi Lanskap</option>
+            <option value="DAS Serayu">Lembah DAS Serayu & Serayu Hulu</option>
+            <option value="Slamet">Lereng & Kaki Gunung Slamet</option>
+            <option value="Kendeng">Karst Kendeng & Hutan Jati Rimba</option>
+            <option value="Pantura">Pesisir Pantura & Laut Jawa</option>
+            <option value="Mataram">Pusat Keraton & Mataram Islam</option>
+            <option value="Dieng">Dataran Tinggi & Kaldera Dieng</option>
+          </select>
+        </div>
+
+        <!-- Toggle Poligon Wilayah -->
+        <div class="toggle-row">
+          <span><i class="fa-solid fa-draw-polygon"></i> Poligon 35 Kab/Kota</span>
+          <input type="checkbox" id="toggle-boundaries" style="width: 16px; height: 16px; accent-color: #000;">
+        </div>
+
+        <!-- Quick Reset -->
+        <button id="btn-reset-filters" class="neo-btn" style="width: 100%; justify-content: center;">
+          <i class="fa-solid fa-arrow-rotate-left"></i> Reset Filter
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== SLIDING DETAIL DRAWER ==================== -->
+  <aside id="detail-drawer">
+    <!-- Drawer Header -->
+    <div class="drawer-header">
+      <div class="drawer-title-wrap">
+        <span id="drawer-badge" class="neo-badge badge-r1">Ring 1 - Terverifikasi</span>
+        <h2 id="drawer-title">Kentrung Blora</h2>
+      </div>
+      <button id="drawer-close-btn" class="drawer-close-btn" title="Tutup Detail">✕</button>
+    </div>
+
+    <!-- Drawer Navigation Tabs -->
+    <nav class="drawer-tabs">
+      <button class="tab-btn active" id="tab-profil" data-target="tab-pane-profil">
+        <i class="fa-solid fa-id-card"></i> Profil
+      </button>
+      <button class="tab-btn" id="tab-tuturan" data-target="tab-pane-tuturan">
+        <i class="fa-solid fa-scroll"></i> Formula Teks
+      </button>
+      <button class="tab-btn" id="tab-media" data-target="tab-pane-media">
+        <i class="fa-solid fa-photo-film"></i> Multimedia
+      </button>
+      <button class="tab-btn" id="tab-transkrip" data-target="tab-pane-transkrip">
+        <i class="fa-solid fa-book-open"></i> Transkrip
+      </button>
+      <button class="tab-btn" id="tab-pustaka" data-target="tab-pane-pustaka">
+        <i class="fa-solid fa-graduation-cap"></i> Sumber
+      </button>
+    </nav>
+
+    <!-- Drawer Content Panes -->
+    <div class="drawer-content">
+      <!-- 1. Pane Profil -->
+      <div class="tab-pane active" id="tab-pane-profil">
+        <div class="info-card">
+          <h4><i class="fa-solid fa-location-dot"></i> Lokasi & Administratif</h4>
+          <div class="info-meta-grid" id="meta-location-grid">
+            <!-- Injected by JS -->
+          </div>
+        </div>
+
+        <div class="info-card">
+          <h4><i class="fa-solid fa-user-tie"></i> Maestro & Pewarisan</h4>
+          <div class="info-meta-grid" id="meta-maestro-grid">
+            <!-- Injected by JS -->
+          </div>
+        </div>
+
+        <div class="info-card">
+          <h4><i class="fa-solid fa-align-left"></i> Narasi & Ringkasan Ilmiah</h4>
+          <p id="narrative-summary" style="line-height: 1.6; font-size: 0.85rem;">
+            <!-- Injected by JS -->
+          </p>
+        </div>
+      </div>
+
+      <!-- 2. Pane Formula Tuturan -->
+      <div class="tab-pane" id="tab-pane-tuturan">
+        <div class="info-card">
+          <h4><i class="fa-solid fa-masks-theater"></i> Bentuk Seni Tutur</h4>
+          <p id="formula-bentuk" style="line-height: 1.6; font-size: 0.88rem; font-weight: 600;">
+            <!-- Injected by JS -->
+          </p>
+        </div>
+
+        <div class="info-card">
+          <h4><i class="fa-solid fa-music"></i> Iringan & Penyangga Vokal</h4>
+          <p id="formula-musik" style="line-height: 1.6; font-size: 0.88rem;">
+            <!-- Injected by JS -->
+          </p>
+        </div>
+
+        <div class="info-card">
+          <h4><i class="fa-solid fa-quote-left"></i> Cuplikan Formula Ujaran</h4>
+          <blockquote id="formula-sample" style="font-style: italic; background: #fffbe6; border-left: 4px solid #000; padding: 10px; font-size: 0.85rem;">
+            <!-- Injected by JS -->
+          </blockquote>
+        </div>
+      </div>
+
+      <!-- 3. Pane Multimedia -->
+      <div class="tab-pane" id="tab-pane-media">
+        <!-- Video Container (YouTube / Local MP4) -->
+        <div id="media-video-section">
+          <div class="video-wrapper" id="video-wrapper">
+            <!-- Injected by JS -->
+          </div>
+          <div style="display: flex; gap: 8px; margin-bottom: 14px;">
+            <a id="btn-yt-external" href="#" target="_blank" class="neo-btn neo-btn-orange" style="font-size: 0.75rem;">
+              <i class="fa-brands fa-youtube"></i> Tonton di YouTube
+            </a>
+            <button id="btn-switch-video-source" class="neo-btn" style="font-size: 0.75rem; display: none;">
+              <i class="fa-solid fa-video"></i> Putar Video Lokal
+            </button>
+          </div>
+        </div>
+
+        <!-- Documentation Photo Gallery -->
+        <div class="info-card">
+          <h4><i class="fa-solid fa-images"></i> Galeri Dokumentasi Lapangan</h4>
+          <div class="gallery-grid" id="photo-gallery-grid">
+            <!-- Injected by JS -->
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. Pane Transkrip Naskah -->
+      <div class="tab-pane" id="tab-pane-transkrip">
+        <div class="transcript-search">
+          <div class="search-box">
+            <i class="fa-solid fa-filter"></i>
+            <input type="text" id="transcript-search-input" placeholder="Cari kata/bait dalam naskah...">
+          </div>
+        </div>
+        <div class="transcript-list" id="transcript-segments-list">
+          <!-- Injected by JS -->
+        </div>
+      </div>
+
+      <!-- 5. Pane Pustaka Ilmiah -->
+      <div class="tab-pane" id="tab-pane-pustaka">
+        <div class="info-card">
+          <h4><i class="fa-solid fa-book-bookmark"></i> Rujukan Akademik & Inventarisasi</h4>
+          <div id="citation-content" style="line-height: 1.6; font-size: 0.85rem;">
+            <!-- Injected by JS -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ==================== MODAL 1: EKSPOR GIS ==================== -->
+  <div class="neo-modal-backdrop" id="modal-export">
+    <div class="neo-modal">
+      <div class="modal-header">
+        <h3><i class="fa-solid fa-file-export text-yellow-500"></i> Pusat Ekspor Geospasial (QGIS & ArcGIS)</h3>
+        <button class="drawer-close-btn modal-close-btn" data-modal="modal-export">✕</button>
+      </div>
+      <div class="modal-body">
+        <p style="margin-bottom: 16px;">
+          Seluruh data titik koordinat dan batas wilayah dapat diunduh dalam format standar OGC untuk dianalisis di <strong>QGIS</strong>, <strong>ArcGIS Pro</strong>, atau web mapping.
+        </p>
+
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+          <!-- Format 1: GeoJSON Point -->
+          <div class="info-card" style="display: flex; align-items: center; justify-content: space-between;">
+            <div>
+              <strong style="font-size: 0.95rem;">1. GeoJSON Titik Sastra Lisan (WGS84)</strong>
+              <p style="font-size: 0.78rem; color: #555;">Format standar RFC 7946 memuat seluruh 91 titik sastra lisan (Ring 1, 2, 3) beserta atribut lengkap.</p>
+            </div>
+            <button id="btn-download-geojson" class="neo-btn neo-btn-primary">
+              <i class="fa-solid fa-download"></i> Unduh .geojson
+            </button>
+          </div>
+
+          <!-- Format 2: CSV Coordinates -->
+          <div class="info-card" style="display: flex; align-items: center; justify-content: space-between;">
+            <div>
+              <strong style="font-size: 0.95rem;">2. CSV Geospasial dengan Kolom WKT</strong>
+              <p style="font-size: 0.78rem; color: #555;">Format tabel CSV dengan kolom Latitude, Longitude, dan WKT <code>POINT(lng lat)</code> untuk menu Add Delimited Text Layer di QGIS.</p>
+            </div>
+            <button id="btn-download-csv" class="neo-btn neo-btn-cyan">
+              <i class="fa-solid fa-file-csv"></i> Unduh .csv
+            </button>
+          </div>
+
+          <!-- Format 3: Boundary GeoJSON -->
+          <div class="info-card" style="display: flex; align-items: center; justify-content: space-between;">
+            <div>
+              <strong style="font-size: 0.95rem;">3. GeoJSON Batas 35 Kab/Kota + Agregat</strong>
+              <p style="font-size: 0.78rem; color: #555;">Layer poligon administratif se-Jawa Tengah yang memuat atribut rekapitulasi jumlah sastra lisan untuk peta tematik choropleth.</p>
+            </div>
+            <button id="btn-download-boundary-geojson" class="neo-btn">
+              <i class="fa-solid fa-layer-group"></i> Unduh Poligon
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="neo-btn modal-close-btn" data-modal="modal-export">Tutup</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== MODAL 2: ANALITIK WILAYAH ==================== -->
+  <div class="neo-modal-backdrop" id="modal-analytics">
+    <div class="neo-modal">
+      <div class="modal-header">
+        <h3><i class="fa-solid fa-chart-pie text-cyan-500"></i> Ringkasan Analitik Spasial Jawa Tengah</h3>
+        <button class="drawer-close-btn modal-close-btn" data-modal="modal-analytics">✕</button>
+      </div>
+      <div class="modal-body" id="analytics-modal-body">
+        <!-- Injected by JS (Charts/Distribution Tables) -->
+      </div>
+      <div class="modal-footer">
+        <button class="neo-btn modal-close-btn" data-modal="modal-analytics">Tutup</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== MODAL 3: METODOLOGI & RING 4 ==================== -->
+  <div class="neo-modal-backdrop" id="modal-methodology">
+    <div class="neo-modal">
+      <div class="modal-header">
+        <h3><i class="fa-solid fa-circle-info text-pink-500"></i> Metodologi Kurasi & Ring 4 (Eksklusi Non-Sastra)</h3>
+        <button class="drawer-close-btn modal-close-btn" data-modal="modal-methodology">✕</button>
+      </div>
+      <div class="modal-body" id="methodology-modal-body">
+        <!-- Injected by JS (Exclusion Table & Scientific Criteria) -->
+      </div>
+      <div class="modal-footer">
+        <button class="neo-btn modal-close-btn" data-modal="modal-methodology">Tutup</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== SCRIPTS ==================== -->
+  <!-- 1. Master Data Layer -->
+  <script src="data/sastra_data.js"></script>
+  <!-- 2. Administrative Boundaries GeoJSON -->
+  <script src="data/jateng_kabupaten.js"></script>
+  <!-- 3. Full Transcription Dataset -->
+  <script src="data/transkrip_data.js"></script>
+  <!-- 4. Leaflet Map Library -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <!-- 5. GIS Exporter Engine -->
+  <script src="js/export-gis.js"></script>
+  <!-- 6. Map Controller & Layer Manager -->
+  <script src="js/map-layers.js"></script>
+  <!-- 7. Application Entrypoint & Interactive Controller -->
+  <script src="js/app.js"></script>
+</body>
+</html>
