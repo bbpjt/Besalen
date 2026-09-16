@@ -132,9 +132,9 @@ Drawer meluncur dari sisi kanan dengan lebar responsif (450–520px) yang memuat
 1. **Tab Profil & Ekologi:** Deskripsi wilayah lengkap (Desa, Kec, Kab, Karesidenan, Zona Ekologi), profil Maestro, komunitas pewaris, dan narasi kurasi Balai Bahasa.
 2. **Tab Formula Tuturan:** Klasifikasi dan kutipan teks tuturan (mantra, tembang, suluk, parikan, kidungan).
 3. **Tab Multimedia (Setara untuk Seluruh Ring 1):**
-   - *Kentrung Blora:* Pemutar video `kentrung.mp4` dengan poster cover `kentrung-Cover.jpg`.
-   - *Maca Babad Pasir Luhur:* Galeri foto dokumentasi ritus dan maestro Santoso Puji Irawan yang diekstrak dari laporan resmi.
-   - *Wayang Othok Obrol:* Galeri foto pementasan wayang tutur dan maestro Ki Makim Kartosudarmo yang diekstrak dari laporan resmi.
+   - *Kentrung Blora:* Pemutar video resmi YouTube (https://youtu.be/5XteEv2MU_g) & video lokal kentrung.mp4 + poster cover kentrung-Cover.jpg.
+   - *Maca Babad Pasir Luhur:* Pemutar video resmi YouTube Revitalisasi Maca Babad Pasir Luhur (https://youtu.be/Ixm0NVVzniM) + Galeri foto dokumentasi ritus dan maestro Santoso Puji Irawan.
+   - *Wayang Othok Obrol:* Pemutar video resmi YouTube Revitalisasi Wayang Othok Obrol Wonosobo (https://youtube.com/live/Q_JAmcKSFB0) + Galeri foto pementasan dan maestro Ki Makim Kartosudarmo.
 4. **Tab Transkrip Naskah:** Penampil teks transkripsi interaktif per segmen tuturan dilengkapi kotak pencarian kata kunci dalam bait.
 5. **Tab Pustaka Ilmiah:** Rujukan dokumen riset, artikel jurnal, dan catatan verifikasi ilmiah.
 
