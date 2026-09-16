@@ -3,3 +3,9 @@
 *.mov
 __pycache__/
 *.pyc
+*.zip
+*.pdf
+*.docx
+*.pptx
+*.ppt
+*.xlsx
