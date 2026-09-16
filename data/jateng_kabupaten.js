@@ -1,0 +1,3041 @@
+/**
+ * Batas Spasial 35 Kabupaten/Kota Jawa Tengah & Agregat Sastra Lisan (2026)
+ */
+window.JATENG_KABUPATEN = {
+  "type": "FeatureCollection",
+  "name": "Batas_Administratif_35_Kabupaten_Kota_Jawa_Tengah",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "id": "33.01",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              109.347,
+              -7.545
+            ],
+            [
+              109.32021,
+              -7.46923
+            ],
+            [
+              109.2439,
+              -7.40499
+            ],
+            [
+              109.1297,
+              -7.36207
+            ],
+            [
+              108.995,
+              -7.347
+            ],
+            [
+              108.8603,
+              -7.36207
+            ],
+            [
+              108.7461,
+              -7.40499
+            ],
+            [
+              108.66979,
+              -7.46923
+            ],
+            [
+              108.643,
+              -7.545
+            ],
+            [
+              108.66979,
+              -7.62077
+            ],
+            [
+              108.7461,
+              -7.68501
+            ],
+            [
+              108.8603,
+              -7.72793
+            ],
+            [
+              108.995,
+              -7.743
+            ],
+            [
+              109.1297,
+              -7.72793
+            ],
+            [
+              109.2439,
+              -7.68501
+            ],
+            [
+              109.32021,
+              -7.62077
+            ],
+            [
+              109.347,
+              -7.545
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "kode_wilayah": "33.01",
+        "nama": "Kabupaten Cilacap",
+        "karesidenan": "Karesidenan Banyumas",
+        "zona_ekologi": "Pesisir Selatan Samudra Hindia, Laguna Segara Anakan & Perbatasan Sunda",
+        "r1_count": 0,
+        "r2_count": 1,
+        "r3_count": 1,
+        "r4_count": 1,
+        "total_sastra": 2,
+        "status_keterwakilan": "Terwakili (Cowongan)",
+        "rencana_tindak_lanjut": "Verifikasi Sastra Lisan Sunda-Jawa & Penelusuran Mantra Nelayan 2027",
+        "centroid_lat": -7.545,
+        "centroid_lng": 108.995
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "33.02",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              109.54701,
+              -7.455
+            ],
+            [
+              109.45094,
+              -7.37566
+            ],
+            [
+              109.35474,
+              -7.34491
+            ],
+            [
+              109.2953,
+              -7.27869
+            ],
+            [
+              109.17805,
+              -7.22032
+            ],
+            [
+              109.06783,
+              -7.27727
+            ],
+            [
+              109.06312,
+              -7.38493
+            ],
+            [
+              109.06301,
+              -7.455
+            ],
+            [
+              109.01487,
+              -7.54366
+            ],
+            [
+              109.05297,
+              -7.64764
+            ],
+            [
+              109.1876,
+              -7.65618
+            ],
+            [
+              109.28575,
+              -7.59781
+            ],
+            [
+              109.3696,
+              -7.58
+            ],
+            [
+              109.49919,
+              -7.55293
+            ],
+            [
+              109.54701,
+              -7.455
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "kode_wilayah": "33.02",
+        "nama": "Kabupaten Banyumas",
+        "karesidenan": "Karesidenan Banyumas",
+        "zona_ekologi": "Lembah Daerah Aliran Sungai (DAS) Serayu & Kaki Gunung Slamet (Sendang Kaliputih)",
+        "r1_count": 1,
+        "r2_count": 5,
+        "r3_count": 1,
+        "r4_count": 2,
+        "total_sastra": 7,
+        "status_keterwakilan": "Lengkap & Kokoh (Maca Babad, Begalan, Lengger, Calung)",
+        "rencana_tindak_lanjut": "Penguatan Komunitas Omah Maca Cibun & Dalang Jemblung",
+        "centroid_lat": -7.455,
+        "centroid_lng": 109.245
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "33.03",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              109.60493,
+              -7.345
+            ],
+            [
+              109.57381,
+              -7.24464
+            ],
+            [
+              109.46364,
+              -7.21526
+            ],
+            [
+              109.38855,
+              -7.20501
+            ],
+            [
+              109.3085,
+              -7.15099
+            ],
+            [
+              109.19395,
+              -7.15266
+            ],
+            [
+              109.15489,
+              -7.25322
+            ],
+            [
+              109.19837,
+              -7.345
+            ],
+            [
+              109.20752,
+              -7.41264
+            ],
+            [
+              109.21015,
+              -7.51798
+            ],
+            [
+              109.29808,
+              -7.5825
+            ],
+            [
+              109.39897,
+              -7.52848
+            ],
+            [
+              109.44743,
+              -7.45539
+            ],
+            [
+              109.52119,
+              -7.42122
+            ],
+            [
+              109.60493,
+              -7.345
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "kode_wilayah": "33.03",
+        "nama": "Kabupaten Purbalingga",
+        "karesidenan": "Karesidenan Banyumas",
+        "zona_ekologi": "Lembah DAS Klawing & Lereng Timur Gunung Slamet (Sendang Drajat)",
+        "r1_count": 0,
+        "r2_count": 1,
+        "r3_count": 1,
+        "r4_count": 2,
+        "total_sastra": 2,
+        "status_keterwakilan": "Terwakili (Braen)",
+        "rencana_tindak_lanjut": "Pemutakhiran Profil Maestro Braen & Transmisi Syair Jawi 2026",
+        "centroid_lat": -7.345,
+        "centroid_lng": 109.355
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "33.04",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              109.84632,
+              -7.385
+            ],
+            [
+              109.82791,
+              -7.31946
+            ],
+            [
+              109.82551,
+              -7.2172
+            ],
+            [
+              109.74236,
+              -7.14566
+            ],
+            [
+              109.63928,
+              -7.19424
+            ],
+            [
+              109.59163,
+              -7.27349
+            ],
+            [
+              109.52527,
+              -7.31174
+            ],
+            [
+              109.43976,
+              -7.385
+            ],
+            [
+              109.46161,
+              -7.48746
+            ],
+            [
+              109.57202,
+              -7.51992
+            ],
+            [
+              109.65189,
+              -7.52315
+            ],
+            [
+              109.72975,
+              -7.57173
+            ],
+            [
+              109.84512,
+              -7.57622
+            ],
+            [
+              109.89157,
+              -7.47974
+            ],
+            [
+              109.84632,
+              -7.385
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "kode_wilayah": "33.04",
+        "nama": "Kabupaten Banjarnegara",
+        "karesidenan": "Karesidenan Banyumas",
+        "zona_ekologi": "Dataran Tinggi Serayu Hulu, Kawah Vulkanik Dieng, Sumur & Sendang Jalatunda",
+        "r1_count": 0,
+        "r2_count": 1,
+        "r3_count": 3,
+        "r4_count": 1,
+        "total_sastra": 4,
+        "status_keterwakilan": "Terwakili (Mitos Telaga Warna & Ruwatan)",
+        "rencana_tindak_lanjut": "Penelusuran Transkripsi Mantra Ritus Ujungan & Sumur Jalatunda 2027",
+        "centroid_lat": -7.385,
+        "centroid_lng": 109.685
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "33.05",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              109.86828,
+              -7.655
+            ],
+            [
+              109.89685,
+              -7.54867
+            ],
+            [
+              109.80674,
+              -7.48573
+            ],
+            [
+              109.70059,
+              -7.5065
+            ],
+            [
+              109.62941,
+              -7.5065
+            ],
+            [
+              109.52326,
+              -7.48573
+            ],
+            [
+              109.43315,
+              -7.54867
+            ],
+            [
+              109.46172,
+              -7.655
+            ],
+            [
+              109.53055,
+              -7.71667
+            ],
+            [
+              109.55325,
+              -7.78845
+            ],
+            [
+              109.61012,
+              -7.88399
+            ],
+            [
+              109.71988,
+              -7.88399
+            ],
+            [
+              109.77675,
+              -7.78845
+            ],
+            [
+              109.79945,
+              -7.71667
+            ],
+            [
+              109.86828,
+              -7.655
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "kode_wilayah": "33.05",
+        "nama": "Kabupaten Kebumen",
+        "karesidenan": "Karesidenan Kedu",
+        "zona_ekologi": "Lembah DAS Luk Ulo, Waduk Sempor, Waduk Wadaslintang & Pesisir Urut Sewu",
+        "r1_count": 0,
+        "r2_count": 1,
+        "r3_count": 1,
+        "r4_count": 0,
+        "total_sastra": 2,
+        "status_keterwakilan": "Terwakili (Jamjaneng, Cepetan Alas)",
+        "rencana_tindak_lanjut": "Investigasi Formula Mantra Ritual Walet Gua Karangbolong 2027",
+        "centroid_lat": -7.655,
+        "centroid_lng": 109.665
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "33.06",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              110.2261,
+              -7.715
+            ],
+            [
+              110.15151,
+              -7.65239
+            ],
+            [
+              110.1225,
+              -7.58662
+            ],
+            [
+              110.0687,
+              -7.49094
+            ],
+            [
+              109.95913,
+              -7.48188
+            ],
+            [
+              109.89871,
+              -7.57612
+            ],
+            [
+              109.88163,
+              -7.65383
+            ],
+            [
+              109.81954,
+              -7.715
+            ],
+            [
+              109.78521,
+              -7.82039
+            ],
+            [
+              109.86901,
+              -7.88934
+            ],
+            [
+              109.97823,
+              -7.86843
+            ],
+            [
+              110.0496,
+              -7.85937
+            ],
+            [
+              110.1522,
+              -7.87885
+            ],
+            [
+              110.24793,
+              -7.82183
+            ],
+            [
+              110.2261,
+              -7.715
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "kode_wilayah": "33.06",
+        "nama": "Kabupaten Purworejo",
+        "karesidenan": "Karesidenan Kedu",
+        "zona_ekologi": "Lembah DAS Bogowonto, Perbukitan Menoreh & Dataran Aluvial Bagelen",
+        "r1_count": 0,
+        "r2_count": 1,
+        "r3_count": 1,
+        "r4_count": 0,
+        "total_sastra": 2,
+        "status_keterwakilan": "Terwakili (Dolalak, Jolenan Somongari)",
+        "rencana_tindak_lanjut": "Perekaman Verbatim Ratusan Bait Pantun & Tembang Dolalak",
+        "centroid_lat": -7.715,
+        "centroid_lng": 110.015
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "33.07",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              110.1261,
+              -7.365
+            ],
+            [
+              110.05151,
+              -7.30239
+            ],
+            [
+              110.0225,
+              -7.23662
+            ],
+            [
+              109.9687,
+              -7.14094
+            ],
+            [
+              109.85913,
+              -7.13188
+            ],
+            [
+              109.79871,
+              -7.22612
+            ],
+            [
+              109.78163,
+              -7.30383
+            ],
+            [
+              109.71954,
+              -7.365
+            ],
+            [
+              109.68521,
+              -7.47039
+            ],
+            [
+              109.76901,
+              -7.53934
+            ],
+            [
+              109.87823,
+              -7.51843
+            ],
+            [
+              109.9496,
+              -7.50937
+            ],
+            [
+              110.0522,
+              -7.52885
+            ],
+            [
+              110.14793,
+              -7.47183
+            ],
+            [
+              110.1261,
+              -7.365
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "kode_wilayah": "33.07",
+        "nama": "Kabupaten Wonosobo",
+        "karesidenan": "Karesidenan Kedu",
+        "zona_ekologi": "Dataran Tinggi Vulkanik Dieng, Waduk Wadaslintang, Telaga Menjer & Sendang Panguripan",
+        "r1_count": 1,
+        "r2_count": 4,
+        "r3_count": 2,
+        "r4_count": 0,
+        "total_sastra": 7,
+        "status_keterwakilan": "Lengkap & Terverifikasi (Wayang Othok Obrol, Bundengan, Lengger)",
+        "rencana_tindak_lanjut": "Pengawalan Regenerasi Penutur Wayang Othok Obrol ke Generasi Muda",
+        "centroid_lat": -7.365,
+        "centroid_lng": 109.915
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "33.08",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              110.46493,
+              -7.535
+            ],
+            [
+              110.43381,
+              -7.43464
+            ],
+            [
+              110.32364,
+              -7.40526
+            ],
+            [
+              110.24855,
+              -7.39501
+            ],
+            [
+              110.1685,
+              -7.34099
+            ],
+            [
+              110.05395,
+              -7.34266
+            ],
+            [
+              110.01489,
+              -7.44322
+            ],
+            [
+              110.05837,
+              -7.535
+            ],
+            [
+              110.06752,
+              -7.60264
+            ],
+            [
+              110.07015,
+              -7.70798
+            ],
+            [
+              110.15808,
+              -7.7725
+            ],
+            [
+              110.25897,
+              -7.71848
+            ],
+            [
+              110.30743,
+              -7.64539
+            ],
+            [
+              110.38119,
+              -7.61122
+            ],
+            [
+              110.46493,
+              -7.535
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "kode_wilayah": "33.08",
+        "nama": "Kabupaten Magelang",
+        "karesidenan": "Karesidenan Kedu",
+        "zona_ekologi": "Dataran Lembah DAS Progo-Elo, Lereng Merapi-Merbabu & Sendang Kalimas",
+        "r1_count": 0,
+        "r2_count": 1,
+        "r3_count": 1,
+        "r4_count": 0,
+        "total_sastra": 2,
+        "status_keterwakilan": "Terwakili (Tari Soreng, Suran Tutup Ngisor)",
+        "rencana_tindak_lanjut": "Inventarisasi Sastra Tutur Keprajuritan Soreng & Ritus Tutup Ngisor",
+        "centroid_lat": -7.535,
+        "centroid_lng": 110.215
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "33.09",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              110.76632,
+              -7.525
+            ],
+            [
+              110.74791,
+              -7.45946
+            ],
+            [
+              110.74551,
+              -7.3572
+            ],
+            [
+              110.66236,
+              -7.28566
+            ],
+            [
+              110.55928,
+              -7.33424
+            ],
+            [
+              110.51163,
+              -7.41349
+            ],
+            [
+              110.44527,
+              -7.45174
+            ],
+            [
+              110.35976,
+              -7.525
+            ],
+            [
+              110.38161,
+              -7.62746
+            ],
+            [
+              110.49202,
+              -7.65992
+            ],
+            [
+              110.57189,
+              -7.66315
+            ],
+            [
+              110.64975,
+              -7.71173
+            ],
+            [
+              110.76512,
+              -7.71622
+            ],
+            [
+              110.81157,
+              -7.61974
+            ],
+            [
+              110.76632,
+              -7.525
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "kode_wilayah": "33.09",
+        "nama": "Kabupaten Boyolali",
+        "karesidenan": "Karesidenan Surakarta",
+        "zona_ekologi": "Lereng Barat Merapi-Merbabu, Waduk Kedung Ombo, Waduk Cengklik & Umbul Pengging",
+        "r1_count": 0,
+        "r2_count": 1,
+        "r3_count": 4,
+        "r4_count": 1,
+        "total_sastra": 5,
+        "status_keterwakilan": "Terwakili (Tungguk Tembakau, Kedung Ombo)",
+        "rencana_tindak_lanjut": "Verifikasi Teks Doa Bahasa Jawa Ritus Tembakau & Sedekah Waduk",
+        "centroid_lat": -7.525,
+        "centroid_lng": 110.605
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "33.10",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              110.85493,
+              -7.705
+            ],
+            [
+              110.82381,
+              -7.60464
+            ],
+            [
+              110.71364,
+              -7.57526
+            ],
+            [
+              110.63855,
+              -7.56501
+            ],
+            [
+              110.5585,
+              -7.51099
+            ],
+            [
+              110.44395,
+              -7.51266
+            ],
+            [
+              110.40489,
+              -7.61322
+            ],
+            [
+              110.44837,
+              -7.705
+            ],
+            [
+              110.45752,
+              -7.77264
+            ],
+            [
+              110.46015,
+              -7.87798
+            ],
+            [
+              110.54808,
+              -7.9425
+            ],
+            [
+              110.64897,
+              -7.88848
+            ],
+            [
+              110.69743,
+              -7.81539
+            ],
+            [
+              110.77119,
+              -7.78122
+            ],
+            [
+              110.85493,
+              -7.705
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "kode_wilayah": "33.10",
+        "nama": "Kabupaten Klaten",
+        "karesidenan": "Karesidenan Surakarta",
+        "zona_ekologi": "Dataran Prambanan, Rawa Jombor, Mata Air Ponggok, Cokro & Umbul Jatinom",
+        "r1_count": 0,
+        "r2_count": 2,
+        "r3_count": 1,
+        "r4_count": 2,
+        "total_sastra": 3,
+        "status_keterwakilan": "Terwakili (Yaqowiyu, Wayang Topeng)",
+        "rencana_tindak_lanjut": "Perekaman Konteks Alami Saparan Yaqowiyu & Antawecana Panji Pedan",
+        "centroid_lat": -7.705,
+        "centroid_lng": 110.605
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "33.11",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              111.08493,
+              -7.675
+            ],
+            [
+              111.05381,
+              -7.57464
+            ],
+            [
+              110.94364,
+              -7.54526
+            ],
+            [
+              110.86855,
+              -7.53501
+            ],
+            [
+              110.7885,
+              -7.48099
+            ],
+            [
+              110.67395,
+              -7.48266
+            ],
+            [
+              110.63489,
+              -7.58322
+            ],
+            [
+              110.67837,
+              -7.675
+            ],
+            [
+              110.68752,
+              -7.74264
+            ],
+            [
+              110.69015,
+              -7.84798
+            ],
+            [
+              110.77808,
+              -7.9125
+            ],
+            [
+              110.87897,
+              -7.85848
+            ],
+            [
+              110.92743,
+              -7.78539
+            ],
+            [
+              111.00119,
+              -7.75122
+            ],
+            [
+              111.08493,
+              -7.675
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "kode_wilayah": "33.11",
+        "nama": "Kabupaten Sukoharjo",
+        "karesidenan": "Karesidenan Surakarta",
+        "zona_ekologi": "Lembah Aluvial DAS Bengawan Solo, Waduk Mulur & Petilasan Keraton Pajang",
+        "r1_count": 0,
+        "r2_count": 0,
+        "r3_count": 2,
+        "r4_count": 2,
+        "total_sastra": 2,
+        "status_keterwakilan": "Prioritas Verifikasi (Kebo Kinul)",
+        "rencana_tindak_lanjut": "Penelusuran Transkripsi Tuturan Ritus Agraris Kebo Kinul 2027",
+        "centroid_lat": -7.675,
+        "centroid_lng": 110.835
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "33.12",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              111.17869,
+              -7.825
+            ],
+            [
+              111.09799,
+              -7.74566
+            ],
+            [
+              111.01718,
+              -7.71491
+            ],
+            [
+              110.96725,
+              -7.64869
+            ],
+            [
+              110.86876,
+              -7.59032
+            ],
+            [
+              110.77618,
+              -7.64727
+            ],
+            [
+              110.77222,
+              -7.75493
+            ],
+            [
+              110.77213,
+              -7.825
+            ],
+            [
+              110.73169,
+              -7.91366
+            ],
+            [
+              110.7637,
+              -8.01764
+            ],
+            [
+              110.87679,
+              -8.02618
+            ],
+            [
+              110.95923,
+              -7.96781
+            ],
+            [
+              111.02967,
+              -7.95
+            ],
+            [
+              111.13852,
+              -7.92293
+            ],
+            [
+              111.17869,
+              -7.825
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "kode_wilayah": "33.12",
+        "nama": "Kabupaten Wonogiri",
+        "karesidenan": "Karesidenan Surakarta",
+        "zona_ekologi": "Pegunungan Karst Sewu, Cekungan Waduk Gajah Mungkur & Pesisir Pantai Sembukan",
+        "r1_count": 0,
+        "r2_count": 0,
+        "r3_count": 4,
+        "r4_count": 0,
+        "total_sastra": 4,
+        "status_keterwakilan": "Prioritas Lapangan (Gajah Mungkur, Kethek Ogleng)",
+        "rencana_tindak_lanjut": "Investigasi Narasi Mitos Kahyangan Dlepih & Memori Bedhol Desa",
+        "centroid_lat": -7.825,
+        "centroid_lng": 110.925
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "33.13",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              111.11632,
+              -7.605
+            ],
+            [
+              111.09791,
+              -7.53946
+            ],
+            [
+              111.09551,
+              -7.4372
+            ],
+            [
+              111.01236,
+              -7.36566
+            ],
+            [
+              110.90928,
+              -7.41424
+            ],
+            [
+              110.86163,
+              -7.49349
+            ],
+            [
+              110.79527,
+              -7.53174
+            ],
+            [
+              110.70976,
+              -7.605
+            ],
+            [
+              110.73161,
+              -7.70746
+            ],
+            [
+              110.84202,
+              -7.73992
+            ],
+            [
+              110.92189,
+              -7.74315
+            ],
+            [
+              110.99975,
+              -7.79173
+            ],
+            [
+              111.11512,
+              -7.79622
+            ],
+            [
+              111.16157,
+              -7.69974
+            ],
+            [
+              111.11632,
+              -7.605
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "kode_wilayah": "33.13",
+        "nama": "Kabupaten Karanganyar",
+        "karesidenan": "Karesidenan Surakarta",
+        "zona_ekologi": "Lereng Barat Gunung Lawu, Waduk Lalung, Sendang Widodaren & Candi Cetho",
+        "r1_count": 0,
+        "r2_count": 2,
+        "r3_count": 1,
+        "r4_count": 0,
+        "total_sastra": 3,
+        "status_keterwakilan": "Terwakili (Wahyu Kliyu, Sendang Widodaren)",
+        "rencana_tindak_lanjut": "Verifikasi Naskah Kidung Ladrang Sukodok & Rapalan Mondhosio",
+        "centroid_lat": -7.605,
+        "centroid_lng": 110.955
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "33.14",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              111.27869,
+              -7.425
+            ],
+            [
+              111.19799,
+              -7.34566
+            ],
+            [
+              111.11718,
+              -7.31491
+            ],
+            [
+              111.06725,
+              -7.24869
+            ],
+            [
+              110.96876,
+              -7.19032
+            ],
+            [
+              110.87618,
+              -7.24727
+            ],
+            [
+              110.87222,
+              -7.35493
+            ],
+            [
+              110.87213,
+              -7.425
+            ],
+            [
+              110.83169,
+              -7.51366
+            ],
+            [
+              110.8637,
+              -7.61764
+            ],
+            [
+              110.97679,
+              -7.62618
+            ],
+            [
+              111.05923,
+              -7.56781
+            ],
+            [
+              111.12967,
+              -7.55
+            ],
+            [
+              111.23852,
+              -7.52293
+            ],
+            [
+              111.27869,
+              -7.425
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "kode_wilayah": "33.14",
+        "nama": "Kabupaten Sragen",
+        "karesidenan": "Karesidenan Surakarta",
+        "zona_ekologi": "Lembah Bengawan Solo Purba Sangiran, Waduk Kedung Ombo Utara & Sendang Kun Gerit",
+        "r1_count": 0,
+        "r2_count": 0,
+        "r3_count": 2,
+        "r4_count": 0,
+        "total_sastra": 2,
+        "status_keterwakilan": "Prioritas Lapangan (Mitos Sangiran, Sedekah Waduk)",
+        "rencana_tindak_lanjut": "Penelusuran Tuturan Mitos Manusia Purba Sangiran & Sedekah Air 2027",
+        "centroid_lat": -7.425,
+        "centroid_lng": 111.025
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "33.15",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              111.13856,
+              -7.115
+            ],
+            [
+              111.185,
+              -7.01098
+            ],
+            [
+              111.09339,
+              -6.93605
+            ],
+            [
+              110.96038,
+              -6.95593
+            ],
+            [
+              110.87473,
+              -6.97386
+            ],
+            [
+              110.75733,
+              -6.95683
+            ],
+            [
+              110.6376,
+              -7.00813
+            ],
+            [
+              110.65456,
+              -7.115
+            ],
+            [
+              110.74893,
+              -7.17898
+            ],
+            [
+              110.79162,
+              -7.23877
+            ],
+            [
+              110.85268,
+              -7.33342
+            ],
+            [
+              110.98243,
+              -7.35136
+            ],
+            [
+              111.0591,
+              -7.25956
+            ],
+            [
+              111.07367,
+              -7.17613
+            ],
+            [
+              111.13856,
+              -7.115
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "kode_wilayah": "33.15",
+        "nama": "Kabupaten Grobogan",
+        "karesidenan": "Karesidenan Pati (Muria Raya)",
+        "zona_ekologi": "Lembah Sungai Lusi, Karst Kendeng, Bledug Kuwu, Sendang Coyo & Waduk Kedung Ombo",
+        "r1_count": 0,
+        "r2_count": 1,
+        "r3_count": 2,
+        "r4_count": 0,
+        "total_sastra": 3,
+        "status_keterwakilan": "Terwakili (Sendang Coyo, Kedung Ombo)",
+        "rencana_tindak_lanjut": "Verifikasi Transmisi Kentrung Grobogan & Kidung Sendang Coyo",
+        "centroid_lat": -7.115,
+        "centroid_lng": 110.915
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "33.16",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              111.66869,
+              -7.015
+            ],
+            [
+              111.58799,
+              -6.93566
+            ],
+            [
+              111.50718,
+              -6.90491
+            ],
+            [
+              111.45725,
+              -6.83869
+            ],
+            [
+              111.35876,
+              -6.78032
+            ],
+            [
+              111.26618,
+              -6.83727
+            ],
+            [
+              111.26222,
+              -6.94493
+            ],
+            [
+              111.26213,
+              -7.015
+            ],
+            [
+              111.22169,
+              -7.10366
+            ],
+            [
+              111.2537,
+              -7.20764
+            ],
+            [
+              111.36679,
+              -7.21618
+            ],
+            [
+              111.44923,
+              -7.15781
+            ],
+            [
+              111.51967,
+              -7.14
+            ],
+            [
+              111.62852,
+              -7.11293
+            ],
+            [
+              111.66869,
+              -7.015
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "kode_wilayah": "33.16",
+        "nama": "Kabupaten Blora",
+        "karesidenan": "Karesidenan Pati (Muria Raya)",
+        "zona_ekologi": "Pegunungan Karst Kendeng, Rimba Hutan Jati, Waduk Greneng & Sendang Mudal",
+        "r1_count": 1,
+        "r2_count": 0,
+        "r3_count": 2,
+        "r4_count": 0,
+        "total_sastra": 3,
+        "status_keterwakilan": "Lengkap & Jangkar Emas (Kentrung Blora - Maestro Yanuri)",
+        "rencana_tindak_lanjut": "Penelusuran Sastra Tutur Gugon Tuhon Sedulur Sikep Klopoduwur 2027",
+        "centroid_lat": -7.015,
+        "centroid_lng": 111.415
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "33.17",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              111.5561,
+              -6.775
+            ],
+            [
+              111.48151,
+              -6.71239
+            ],
+            [
+              111.4525,
+              -6.64662
+            ],
+            [
+              111.3987,
+              -6.55094
+            ],
+            [
+              111.28913,
+              -6.54188
+            ],
+            [
+              111.22871,
+              -6.63612
+            ],
+            [
+              111.21163,
+              -6.71383
+            ],
+            [
+              111.14954,
+              -6.775
+            ],
+            [
+              111.11521,
+              -6.88039
+            ],
+            [
+              111.19901,
+              -6.94934
+            ],
+            [
+              111.30823,
+              -6.92843
+            ],
+            [
+              111.3796,
+              -6.91937
+            ],
+            [
+              111.4822,
+              -6.93885
+            ],
+            [
+              111.57793,
+              -6.88183
+            ],
+            [
+              111.5561,
+              -6.775
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "kode_wilayah": "33.17",
+        "nama": "Kabupaten Rembang",
+        "karesidenan": "Karesidenan Pati (Muria Raya)",
+        "zona_ekologi": "Pesisir Pantura Timur, Waduk Panohan, Gunung Lasem & Sumber Semen",
+        "r1_count": 0,
+        "r2_count": 0,
+        "r3_count": 2,
+        "r4_count": 1,
+        "total_sastra": 2,
+        "status_keterwakilan": "Prioritas Verifikasi (Pusaka Bonang)",
+        "rencana_tindak_lanjut": "Investigasi Tuturan Lisan Jamasan Bende Becak & Sedekah Laut 2027",
+        "centroid_lat": -6.775,
+        "centroid_lng": 111.345
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "33.18",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              111.28869,
+              -6.755
+            ],
+            [
+              111.20799,
+              -6.67566
+            ],
+            [
+              111.12718,
+              -6.64491
+            ],
+            [
+              111.07725,
+              -6.57869
+            ],
+            [
+              110.97876,
+              -6.52032
+            ],
+            [
+              110.88618,
+              -6.57727
+            ],
+            [
+              110.88222,
+              -6.68493
+            ],
+            [
+              110.88213,
+              -6.755
+            ],
+            [
+              110.84169,
+              -6.84366
+            ],
+            [
+              110.8737,
+              -6.94764
+            ],
+            [
+              110.98679,
+              -6.95618
+            ],
+            [
+              111.06923,
+              -6.89781
+            ],
+            [
+              111.13967,
+              -6.88
+            ],
+            [
+              111.24852,
+              -6.85293
+            ],
+            [
+              111.28869,
+              -6.755
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "kode_wilayah": "33.18",
+        "nama": "Kabupaten Pati",
+        "karesidenan": "Karesidenan Pati (Muria Raya)",
+        "zona_ekologi": "Lereng Timur Gunung Muria, DAS Juwana, Waduk Seloromo & Sendang Sani",
+        "r1_count": 0,
+        "r2_count": 1,
+        "r3_count": 2,
+        "r4_count": 2,
+        "total_sastra": 3,
+        "status_keterwakilan": "Terwakili (Sendang Sani, Meron)",
+        "rencana_tindak_lanjut": "Penelusuran Transkripsi Teks Khaul Sendang Sani & Kidung Meron",
+        "centroid_lat": -6.755,
+        "centroid_lng": 111.035
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "33.19",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              111.09869,
+              -6.805
+            ],
+            [
+              111.01799,
+              -6.72566
+            ],
+            [
+              110.93718,
+              -6.69491
+            ],
+            [
+              110.88725,
+              -6.62869
+            ],
+            [
+              110.78876,
+              -6.57032
+            ],
+            [
+              110.69618,
+              -6.62727
+            ],
+            [
+              110.69222,
+              -6.73493
+            ],
+            [
+              110.69213,
+              -6.805
+            ],
+            [
+              110.65169,
+              -6.89366
+            ],
+            [
+              110.6837,
+              -6.99764
+            ],
+            [
+              110.79679,
+              -7.00618
+            ],
+            [
+              110.87923,
+              -6.94781
+            ],
+            [
+              110.94967,
+              -6.93
+            ],
+            [
+              111.05852,
+              -6.90293
+            ],
+            [
+              111.09869,
+              -6.805
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "kode_wilayah": "33.19",
+        "nama": "Kabupaten Kudus",
+        "karesidenan": "Karesidenan Pati (Muria Raya)",
+        "zona_ekologi": "Lereng Selatan Gunung Muria, DAS Gelis, Waduk Logung & Sendang Jodo",
+        "r1_count": 0,
+        "r2_count": 0,
+        "r3_count": 2,
+        "r4_count": 1,
+        "total_sastra": 2,
+        "status_keterwakilan": "Pending Verifikasi (Dandangan Kudus)",
+        "rencana_tindak_lanjut": "Perekaman Formula Ujaran Buka Luwur & Terbang Papat Kudus 2027",
+        "centroid_lat": -6.805,
+        "centroid_lng": 110.845
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "33.20",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              110.8686,
+              -6.585
+            ],
+            [
+              110.96565,
+              -6.47555
+            ],
+            [
+              110.89746,
+              -6.38277
+            ],
+            [
+              110.79539,
+              -6.32077
+            ],
+            [
+              110.675,
+              -6.299
+            ],
+            [
+              110.55461,
+              -6.32077
+            ],
+            [
+              110.45254,
+              -6.38277
+            ],
+            [
+              110.38435,
+              -6.47555
+            ],
+            [
+              110.3604,
+              -6.585
+            ],
+            [
+              110.49614,
+              -6.65235
+            ],
+            [
+              110.5381,
+              -6.70945
+            ],
+            [
+              110.60091,
+              -6.7476
+            ],
+            [
+              110.675,
+              -6.761
+            ],
+            [
+              110.74909,
+              -6.7476
+            ],
+            [
+              110.8119,
+              -6.70945
+            ],
+            [
+              110.85386,
+              -6.65235
+            ],
+            [
+              110.8686,
+              -6.585
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "kode_wilayah": "33.20",
+        "nama": "Kabupaten Jepara",
+        "karesidenan": "Karesidenan Pati (Muria Raya)",
+        "zona_ekologi": "Semenanjung Muria Barat, Kepulauan Karimunjawa & Sumber Air Guamanik",
+        "r1_count": 0,
+        "r2_count": 0,
+        "r3_count": 4,
+        "r4_count": 1,
+        "total_sastra": 4,
+        "status_keterwakilan": "Prioritas Verifikasi (Jembul Tulakan, Barikan)",
+        "rencana_tindak_lanjut": "Verifikasi Transkripsi Doa Tutur Jembul Tulakan & Barikan Laut",
+        "centroid_lat": -6.585,
+        "centroid_lng": 110.675
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "33.21",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              110.89869,
+              -6.895
+            ],
+            [
+              110.81799,
+              -6.81566
+            ],
+            [
+              110.73718,
+              -6.78491
+            ],
+            [
+              110.68725,
+              -6.71869
+            ],
+            [
+              110.58876,
+              -6.66032
+            ],
+            [
+              110.49618,
+              -6.71727
+            ],
+            [
+              110.49222,
+              -6.82493
+            ],
+            [
+              110.49213,
+              -6.895
+            ],
+            [
+              110.45169,
+              -6.98366
+            ],
+            [
+              110.4837,
+              -7.08764
+            ],
+            [
+              110.59679,
+              -7.09618
+            ],
+            [
+              110.67923,
+              -7.03781
+            ],
+            [
+              110.74967,
+              -7.02
+            ],
+            [
+              110.85852,
+              -6.99293
+            ],
+            [
+              110.89869,
+              -6.895
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "kode_wilayah": "33.21",
+        "nama": "Kabupaten Demak",
+        "karesidenan": "Karesidenan Semarang",
+        "zona_ekologi": "Pesisir Pantura Kasultanan, Muara Kali Tuntang & Kolam Wudhu Sunan Kalijaga",
+        "r1_count": 0,
+        "r2_count": 1,
+        "r3_count": 1,
+        "r4_count": 1,
+        "total_sastra": 2,
+        "status_keterwakilan": "Terwakili (Grebeg Demak)",
+        "rencana_tindak_lanjut": "Perekaman Konteks Alami Wilujengan Jamasan Pusaka Kadilangu",
+        "centroid_lat": -6.895,
+        "centroid_lng": 110.645
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "33.22",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              110.57512,
+              -7.215
+            ],
+            [
+              110.6113,
+              -7.12955
+            ],
+            [
+              110.58586,
+              -7.02289
+            ],
+            [
+              110.47487,
+              -7.00689
+            ],
+            [
+              110.38988,
+              -7.06845
+            ],
+            [
+              110.32387,
+              -7.09422
+            ],
+            [
+              110.21738,
+              -7.11978
+            ],
+            [
+              110.16856,
+              -7.215
+            ],
+            [
+              110.24501,
+              -7.29755
+            ],
+            [
+              110.33238,
+              -7.32562
+            ],
+            [
+              110.38441,
+              -7.38439
+            ],
+            [
+              110.48035,
+              -7.44594
+            ],
+            [
+              110.57735,
+              -7.39695
+            ],
+            [
+              110.58368,
+              -7.28778
+            ],
+            [
+              110.57512,
+              -7.215
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "kode_wilayah": "33.22",
+        "nama": "Kabupaten Semarang",
+        "karesidenan": "Karesidenan Semarang",
+        "zona_ekologi": "Cekungan Rawa Pening, Lereng Gunung Ungaran, Sendang Senjoyo & Sendang Nyatnyono",
+        "r1_count": 0,
+        "r2_count": 4,
+        "r3_count": 1,
+        "r4_count": 1,
+        "total_sastra": 5,
+        "status_keterwakilan": "Sangat Lengkap (Rawa Pening, Senjoyo, Nyatnyono)",
+        "rencana_tindak_lanjut": "Penguatan Dokumentasi Ekologi Sastra Tutur Rawa & Sumber Air",
+        "centroid_lat": -7.215,
+        "centroid_lng": 110.425
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "33.23",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              110.31632,
+              -7.275
+            ],
+            [
+              110.29791,
+              -7.20946
+            ],
+            [
+              110.29551,
+              -7.1072
+            ],
+            [
+              110.21236,
+              -7.03566
+            ],
+            [
+              110.10928,
+              -7.08424
+            ],
+            [
+              110.06163,
+              -7.16349
+            ],
+            [
+              109.99527,
+              -7.20174
+            ],
+            [
+              109.90976,
+              -7.275
+            ],
+            [
+              109.93161,
+              -7.37746
+            ],
+            [
+              110.04202,
+              -7.40992
+            ],
+            [
+              110.12189,
+              -7.41315
+            ],
+            [
+              110.19975,
+              -7.46173
+            ],
+            [
+              110.31512,
+              -7.46622
+            ],
+            [
+              110.36157,
+              -7.36974
+            ],
+            [
+              110.31632,
+              -7.275
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "kode_wilayah": "33.23",
+        "nama": "Kabupaten Temanggung",
+        "karesidenan": "Karesidenan Kedu",
+        "zona_ekologi": "Lereng Kembar Sindoro-Sumbing, Hulu DAS Progo & Sumber Tuk Budoyo",
+        "r1_count": 0,
+        "r2_count": 1,
+        "r3_count": 1,
+        "r4_count": 0,
+        "total_sastra": 2,
+        "status_keterwakilan": "Terwakili (Wayang Kedu Temanggungan)",
+        "rencana_tindak_lanjut": "Inventarisasi Naskah Lakon Wayang Kedu Gaya Pedalangan Temanggung",
+        "centroid_lat": -7.275,
+        "centroid_lng": 110.155
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "33.24",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              110.37279,
+              -6.995
+            ],
+            [
+              110.4118,
+              -6.89098
+            ],
+            [
+              110.33485,
+              -6.81605
+            ],
+            [
+              110.22312,
+              -6.83593
+            ],
+            [
+              110.15118,
+              -6.85386
+            ],
+            [
+              110.05256,
+              -6.83683
+            ],
+            [
+              109.95199,
+              -6.88813
+            ],
+            [
+              109.96623,
+              -6.995
+            ],
+            [
+              110.0455,
+              -7.05898
+            ],
+            [
+              110.08136,
+              -7.11877
+            ],
+            [
+              110.13265,
+              -7.21342
+            ],
+            [
+              110.24164,
+              -7.23136
+            ],
+            [
+              110.30604,
+              -7.13956
+            ],
+            [
+              110.31829,
+              -7.05613
+            ],
+            [
+              110.37279,
+              -6.995
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "kode_wilayah": "33.24",
+        "nama": "Kabupaten Kendal",
+        "karesidenan": "Karesidenan Semarang",
+        "zona_ekologi": "Pesisir Pantura, Muara Kali Bodri, Curug Sewu & Sendang Sedangin",
+        "r1_count": 0,
+        "r2_count": 0,
+        "r3_count": 2,
+        "r4_count": 0,
+        "total_sastra": 2,
+        "status_keterwakilan": "Prioritas Lapangan (Kalang Obong)",
+        "rencana_tindak_lanjut": "Verifikasi Tuturan Lisan Ritus Kalang Obong Desa Jungsemi 2027",
+        "centroid_lat": -6.995,
+        "centroid_lng": 110.185
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "33.25",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              110.00632,
+              -7.025
+            ],
+            [
+              109.98791,
+              -6.95946
+            ],
+            [
+              109.98551,
+              -6.8572
+            ],
+            [
+              109.90236,
+              -6.78566
+            ],
+            [
+              109.79928,
+              -6.83424
+            ],
+            [
+              109.75163,
+              -6.91349
+            ],
+            [
+              109.68527,
+              -6.95174
+            ],
+            [
+              109.59976,
+              -7.025
+            ],
+            [
+              109.62161,
+              -7.12746
+            ],
+            [
+              109.73202,
+              -7.15992
+            ],
+            [
+              109.81189,
+              -7.16315
+            ],
+            [
+              109.88975,
+              -7.21173
+            ],
+            [
+              110.00512,
+              -7.21622
+            ],
+            [
+              110.05157,
+              -7.11974
+            ],
+            [
+              110.00632,
+              -7.025
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "kode_wilayah": "33.25",
+        "nama": "Kabupaten Batang",
+        "karesidenan": "Karesidenan Pekalongan",
+        "zona_ekologi": "Pesisir Karang Ujungnegoro, Perbukitan Purba Alas Roban & Curug Gombong",
+        "r1_count": 0,
+        "r2_count": 0,
+        "r3_count": 2,
+        "r4_count": 0,
+        "total_sastra": 2,
+        "status_keterwakilan": "Prioritas Lapangan (Sintren Alas Roban)",
+        "rencana_tindak_lanjut": "Inventarisasi Mantra Pawang Sintren Pesisir Batang 2027",
+        "centroid_lat": -7.025,
+        "centroid_lng": 109.845
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "33.26",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              109.77512,
+              -7.055
+            ],
+            [
+              109.8113,
+              -6.96955
+            ],
+            [
+              109.78586,
+              -6.86289
+            ],
+            [
+              109.67487,
+              -6.84689
+            ],
+            [
+              109.58988,
+              -6.90845
+            ],
+            [
+              109.52387,
+              -6.93422
+            ],
+            [
+              109.41738,
+              -6.95978
+            ],
+            [
+              109.36856,
+              -7.055
+            ],
+            [
+              109.44501,
+              -7.13755
+            ],
+            [
+              109.53238,
+              -7.16562
+            ],
+            [
+              109.58441,
+              -7.22439
+            ],
+            [
+              109.68035,
+              -7.28594
+            ],
+            [
+              109.77735,
+              -7.23695
+            ],
+            [
+              109.78368,
+              -7.12778
+            ],
+            [
+              109.77512,
+              -7.055
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "kode_wilayah": "33.26",
+        "nama": "Kabupaten Pekalongan",
+        "karesidenan": "Karesidenan Pekalongan",
+        "zona_ekologi": "Dataran Aluvial Pantura, Lereng Pegunungan Rogojembangan & Curug Bajing",
+        "r1_count": 0,
+        "r2_count": 1,
+        "r3_count": 1,
+        "r4_count": 1,
+        "total_sastra": 2,
+        "status_keterwakilan": "Terwakili (Sintren Pekalongan)",
+        "rencana_tindak_lanjut": "Verifikasi Transkripsi Mantra Kembang Kencur & Ritus Silurah",
+        "centroid_lat": -7.055,
+        "centroid_lng": 109.625
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "33.27",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              109.5961,
+              -7.015
+            ],
+            [
+              109.52151,
+              -6.95239
+            ],
+            [
+              109.4925,
+              -6.88662
+            ],
+            [
+              109.4387,
+              -6.79094
+            ],
+            [
+              109.32913,
+              -6.78188
+            ],
+            [
+              109.26871,
+              -6.87612
+            ],
+            [
+              109.25163,
+              -6.95383
+            ],
+            [
+              109.18954,
+              -7.015
+            ],
+            [
+              109.15521,
+              -7.12039
+            ],
+            [
+              109.23901,
+              -7.18934
+            ],
+            [
+              109.34823,
+              -7.16843
+            ],
+            [
+              109.4196,
+              -7.15937
+            ],
+            [
+              109.5222,
+              -7.17885
+            ],
+            [
+              109.61793,
+              -7.12183
+            ],
+            [
+              109.5961,
+              -7.015
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "kode_wilayah": "33.27",
+        "nama": "Kabupaten Pemalang",
+        "karesidenan": "Karesidenan Pekalongan",
+        "zona_ekologi": "Pesisir Muara Kali Comal, Lereng Utara Gunung Slamet & Mata Air Moga",
+        "r1_count": 0,
+        "r2_count": 0,
+        "r3_count": 2,
+        "r4_count": 1,
+        "total_sastra": 2,
+        "status_keterwakilan": "Prioritas Lapangan (Balo-Balo Pemalang)",
+        "rencana_tindak_lanjut": "Inventarisasi Sastra Tutur Balo-Balo Pesisiran Pemalang 2027",
+        "centroid_lat": -7.015,
+        "centroid_lng": 109.385
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "33.28",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              109.34279,
+              -7.025
+            ],
+            [
+              109.3818,
+              -6.92098
+            ],
+            [
+              109.30485,
+              -6.84605
+            ],
+            [
+              109.19312,
+              -6.86593
+            ],
+            [
+              109.12118,
+              -6.88386
+            ],
+            [
+              109.02256,
+              -6.86683
+            ],
+            [
+              108.92199,
+              -6.91813
+            ],
+            [
+              108.93623,
+              -7.025
+            ],
+            [
+              109.0155,
+              -7.08898
+            ],
+            [
+              109.05136,
+              -7.14877
+            ],
+            [
+              109.10265,
+              -7.24342
+            ],
+            [
+              109.21164,
+              -7.26136
+            ],
+            [
+              109.27604,
+              -7.16956
+            ],
+            [
+              109.28829,
+              -7.08613
+            ],
+            [
+              109.34279,
+              -7.025
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "kode_wilayah": "33.28",
+        "nama": "Kabupaten Tegal",
+        "karesidenan": "Karesidenan Pekalongan",
+        "zona_ekologi": "Pesisir Muara Kali Gung, Lereng Vulkanik Guci & Cekungan Waduk Cacaban",
+        "r1_count": 0,
+        "r2_count": 1,
+        "r3_count": 1,
+        "r4_count": 0,
+        "total_sastra": 2,
+        "status_keterwakilan": "Terwakili (Sedekah Bumi Waduk Cacaban)",
+        "rencana_tindak_lanjut": "Verifikasi Formula Mantra Pawang Air Cacaban & Ruwat Guci",
+        "centroid_lat": -7.025,
+        "centroid_lng": 109.155
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "33.29",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              109.19631,
+              -7.015
+            ],
+            [
+              109.10751,
+              -6.95239
+            ],
+            [
+              109.07298,
+              -6.88662
+            ],
+            [
+              109.00893,
+              -6.79094
+            ],
+            [
+              108.87849,
+              -6.78188
+            ],
+            [
+              108.80656,
+              -6.87612
+            ],
+            [
+              108.78623,
+              -6.95383
+            ],
+            [
+              108.71231,
+              -7.015
+            ],
+            [
+              108.67144,
+              -7.12039
+            ],
+            [
+              108.77121,
+              -7.18934
+            ],
+            [
+              108.90123,
+              -7.16843
+            ],
+            [
+              108.98619,
+              -7.15937
+            ],
+            [
+              109.10833,
+              -7.17885
+            ],
+            [
+              109.22229,
+              -7.12183
+            ],
+            [
+              109.19631,
+              -7.015
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "kode_wilayah": "33.29",
+        "nama": "Kabupaten Brebes",
+        "karesidenan": "Karesidenan Pekalongan",
+        "zona_ekologi": "Pesisir Muara Kali Pemali, Perbatasan Sunda, Pegunungan Jalawastu & Waduk Malahayu",
+        "r1_count": 0,
+        "r2_count": 1,
+        "r3_count": 1,
+        "r4_count": 1,
+        "total_sastra": 2,
+        "status_keterwakilan": "Terwakili (Waduk Malahayu, Ngasa Brebes)",
+        "rencana_tindak_lanjut": "Perekaman Mantra Sedekah Waduk Malahayu & Ujaran Adat Sunda Ngasa",
+        "centroid_lat": -7.015,
+        "centroid_lng": 108.945
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "33.71",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              110.29688,
+              -7.475
+            ],
+            [
+              110.27242,
+              -7.44976
+            ],
+            [
+              110.24793,
+              -7.43997
+            ],
+            [
+              110.2328,
+              -7.4189
+            ],
+            [
+              110.20296,
+              -7.40033
+            ],
+            [
+              110.1749,
+              -7.41845
+            ],
+            [
+              110.1737,
+              -7.4527
+            ],
+            [
+              110.17368,
+              -7.475
+            ],
+            [
+              110.16142,
+              -7.50321
+            ],
+            [
+              110.17112,
+              -7.53629
+            ],
+            [
+              110.20539,
+              -7.53901
+            ],
+            [
+              110.23037,
+              -7.52044
+            ],
+            [
+              110.25172,
+              -7.51477
+            ],
+            [
+              110.2847,
+              -7.50616
+            ],
+            [
+              110.29688,
+              -7.475
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "kode_wilayah": "33.71",
+        "nama": "Kota Magelang",
+        "karesidenan": "Karesidenan Kedu",
+        "zona_ekologi": "Kawasan Bukit Tidar, DAS Progo-Elo & Sumber Mata Air Tuk Kalimas",
+        "r1_count": 0,
+        "r2_count": 0,
+        "r3_count": 1,
+        "r4_count": 0,
+        "total_sastra": 1,
+        "status_keterwakilan": "Prioritas Lapangan (Mitos Gunung Tidar)",
+        "rencana_tindak_lanjut": "Inventarisasi Cerita Rakyat Syekh Subakir & Rajah Kalacakra 2027",
+        "centroid_lat": -7.475,
+        "centroid_lng": 110.22
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "33.72",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              110.90074,
+              -7.57
+            ],
+            [
+              110.89131,
+              -7.53807
+            ],
+            [
+              110.85792,
+              -7.52872
+            ],
+            [
+              110.83517,
+              -7.52546
+            ],
+            [
+              110.81091,
+              -7.50827
+            ],
+            [
+              110.7762,
+              -7.5088
+            ],
+            [
+              110.76436,
+              -7.5408
+            ],
+            [
+              110.77754,
+              -7.57
+            ],
+            [
+              110.78031,
+              -7.59152
+            ],
+            [
+              110.78111,
+              -7.62504
+            ],
+            [
+              110.80775,
+              -7.64557
+            ],
+            [
+              110.83833,
+              -7.62838
+            ],
+            [
+              110.85301,
+              -7.60512
+            ],
+            [
+              110.87536,
+              -7.59425
+            ],
+            [
+              110.90074,
+              -7.57
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "kode_wilayah": "33.72",
+        "nama": "Kota Surakarta",
+        "karesidenan": "Karesidenan Surakarta",
+        "zona_ekologi": "Dataran Karaton Lembah Bengawan Solo (Bandar Semanggi) & Baluwarti",
+        "r1_count": 0,
+        "r2_count": 11,
+        "r3_count": 10,
+        "r4_count": 6,
+        "total_sastra": 21,
+        "status_keterwakilan": "Episentrum Padat (Sastra Karaton, Bedhaya, Wayang)",
+        "rencana_tindak_lanjut": "Filterisasi Ketat Sastra Tutur Kerakyatan vs Tradisi Elit Istana",
+        "centroid_lat": -7.57,
+        "centroid_lng": 110.825
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "33.73",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              110.55049,
+              -7.33
+            ],
+            [
+              110.56146,
+              -7.30281
+            ],
+            [
+              110.55375,
+              -7.26887
+            ],
+            [
+              110.52011,
+              -7.26378
+            ],
+            [
+              110.49436,
+              -7.28337
+            ],
+            [
+              110.47435,
+              -7.29157
+            ],
+            [
+              110.44208,
+              -7.2997
+            ],
+            [
+              110.42729,
+              -7.33
+            ],
+            [
+              110.45046,
+              -7.35627
+            ],
+            [
+              110.47693,
+              -7.3652
+            ],
+            [
+              110.4927,
+              -7.3839
+            ],
+            [
+              110.52177,
+              -7.40348
+            ],
+            [
+              110.55117,
+              -7.38789
+            ],
+            [
+              110.55308,
+              -7.35316
+            ],
+            [
+              110.55049,
+              -7.33
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "kode_wilayah": "33.73",
+        "nama": "Kota Salatiga",
+        "karesidenan": "Karesidenan Semarang",
+        "zona_ekologi": "Cekungan Alami Kaki Gunung Merbabu, Sumber Air Benoyo & Sendang Senjoyo Perbatasan",
+        "r1_count": 0,
+        "r2_count": 1,
+        "r3_count": 1,
+        "r4_count": 0,
+        "total_sastra": 2,
+        "status_keterwakilan": "Terwakili (Sendang Senjoyo)",
+        "rencana_tindak_lanjut": "Penelusuran Sastra Tutur Mitos Berdirinya Sukowati/Salatiga",
+        "centroid_lat": -7.33,
+        "centroid_lng": 110.505
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "33.74",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              110.47691,
+              -6.995
+            ],
+            [
+              110.48873,
+              -6.9619
+            ],
+            [
+              110.46541,
+              -6.93806
+            ],
+            [
+              110.43155,
+              -6.94439
+            ],
+            [
+              110.40975,
+              -6.95009
+            ],
+            [
+              110.37987,
+              -6.94467
+            ],
+            [
+              110.34939,
+              -6.961
+            ],
+            [
+              110.35371,
+              -6.995
+            ],
+            [
+              110.37773,
+              -7.01536
+            ],
+            [
+              110.38859,
+              -7.03438
+            ],
+            [
+              110.40414,
+              -7.0645
+            ],
+            [
+              110.43716,
+              -7.0702
+            ],
+            [
+              110.45668,
+              -7.041
+            ],
+            [
+              110.46039,
+              -7.01445
+            ],
+            [
+              110.47691,
+              -6.995
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "kode_wilayah": "33.74",
+        "nama": "Kota Semarang",
+        "karesidenan": "Karesidenan Semarang",
+        "zona_ekologi": "Pesisir Pelabuhan Tanjung Emas, Muara Kali Garang & Sendang Gedhe Kandri",
+        "r1_count": 0,
+        "r2_count": 3,
+        "r3_count": 1,
+        "r4_count": 2,
+        "total_sastra": 4,
+        "status_keterwakilan": "Lengkap & Terverifikasi (Macapat Semarangan, Sendang Kandri)",
+        "rencana_tindak_lanjut": "Standardisasi Formula Macapat Semarangan Bersama Paguyuban",
+        "centroid_lat": -6.995,
+        "centroid_lng": 110.42
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "33.75",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              109.73191,
+              -6.89
+            ],
+            [
+              109.74373,
+              -6.8569
+            ],
+            [
+              109.72041,
+              -6.83306
+            ],
+            [
+              109.68655,
+              -6.83939
+            ],
+            [
+              109.66475,
+              -6.84509
+            ],
+            [
+              109.63487,
+              -6.83967
+            ],
+            [
+              109.60439,
+              -6.856
+            ],
+            [
+              109.60871,
+              -6.89
+            ],
+            [
+              109.63273,
+              -6.91036
+            ],
+            [
+              109.64359,
+              -6.92938
+            ],
+            [
+              109.65914,
+              -6.9595
+            ],
+            [
+              109.69216,
+              -6.9652
+            ],
+            [
+              109.71168,
+              -6.936
+            ],
+            [
+              109.71539,
+              -6.90945
+            ],
+            [
+              109.73191,
+              -6.89
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "kode_wilayah": "33.75",
+        "nama": "Kota Pekalongan",
+        "karesidenan": "Karesidenan Pekalongan",
+        "zona_ekologi": "Pesisir Muara Kali Loji, Kawasan Bandar Niaga Batik & Muara Krapyak",
+        "r1_count": 0,
+        "r2_count": 0,
+        "r3_count": 1,
+        "r4_count": 0,
+        "total_sastra": 1,
+        "status_keterwakilan": "Prioritas Verifikasi (Syawalan Krapyak)",
+        "rencana_tindak_lanjut": "Verifikasi Tuturan Lisan Syawalan & Dongeng Pesisiran Krapyak",
+        "centroid_lat": -6.89,
+        "centroid_lng": 109.675
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "33.76",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              109.1966,
+              -6.87
+            ],
+            [
+              109.20526,
+              -6.83617
+            ],
+            [
+              109.17795,
+              -6.81614
+            ],
+            [
+              109.14578,
+              -6.82275
+            ],
+            [
+              109.12422,
+              -6.82275
+            ],
+            [
+              109.09205,
+              -6.81614
+            ],
+            [
+              109.06474,
+              -6.83617
+            ],
+            [
+              109.0734,
+              -6.87
+            ],
+            [
+              109.09426,
+              -6.88962
+            ],
+            [
+              109.10114,
+              -6.91246
+            ],
+            [
+              109.11837,
+              -6.94286
+            ],
+            [
+              109.15163,
+              -6.94286
+            ],
+            [
+              109.16886,
+              -6.91246
+            ],
+            [
+              109.17574,
+              -6.88962
+            ],
+            [
+              109.1966,
+              -6.87
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "kode_wilayah": "33.76",
+        "nama": "Kota Tegal",
+        "karesidenan": "Karesidenan Pekalongan",
+        "zona_ekologi": "Pesisir Muara Kaligung, Muara Kali Ketiwon & Pelabuhan Tradisional Muarareja",
+        "r1_count": 0,
+        "r2_count": 0,
+        "r3_count": 1,
+        "r4_count": 0,
+        "total_sastra": 1,
+        "status_keterwakilan": "Pending Verifikasi (Sedekah Laut Tegal)",
+        "rencana_tindak_lanjut": "Inventarisasi Dialek Tegalan dalam Pertunjukan Rakyat & Laut",
+        "centroid_lat": -6.87,
+        "centroid_lng": 109.135
+      }
+    }
+  ]
+};
