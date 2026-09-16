@@ -113,6 +113,11 @@
     // Reset ke tab pertama (Profil)
     switchDrawerTab('tab-pane-profil');
 
+    // Sorot poligon wilayah kabupaten di peta
+    if (window.MapLayers && typeof window.MapLayers.highlightKabupaten === 'function') {
+      window.MapLayers.highlightKabupaten(item.kabupaten);
+    }
+
     // Tampilkan Drawer
     drawer.classList.add('drawer-open');
   }
@@ -124,6 +129,10 @@
     const videoWrapper = document.getElementById('video-wrapper');
     if (videoWrapper) {
       videoWrapper.innerHTML = '';
+    }
+    // Reset sorotan poligon wilayah kabupaten di peta
+    if (window.MapLayers && typeof window.MapLayers.resetKabupatenHighlight === 'function') {
+      window.MapLayers.resetKabupatenHighlight();
     }
   }
 
@@ -749,8 +758,10 @@
       state.selectedKaresidenan = 'ALL';
       document.getElementById('select-ekologi').value = 'ALL';
       state.selectedEkologi = 'ALL';
+      closeDrawer();
       applyFilters();
       if (window.MapLayers) {
+        window.MapLayers.resetKabupatenHighlight();
         window.MapLayers.resetView();
       }
     });

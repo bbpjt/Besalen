@@ -9,6 +9,8 @@
   let markerLayerGroup = null;
   let boundaryLayer = null;
   let currentBaseLayer = null;
+  let activeHighlightedKabupaten = null;
+  let wasTemporarilyAdded = false;
 
   const MAP_CENTER = [-7.15, 110.14];
   const DEFAULT_ZOOM = 8;
@@ -155,15 +157,120 @@
     toggleBoundaries: function (show) {
       if (!boundaryLayer || !mapInstance) return;
       if (show) {
+        wasTemporarilyAdded = false;
         if (!mapInstance.hasLayer(boundaryLayer)) {
           boundaryLayer.addTo(mapInstance);
           boundaryLayer.bringToBack();
         }
+        boundaryLayer.eachLayer(function (layer) {
+          boundaryLayer.resetStyle(layer);
+        });
       } else {
+        wasTemporarilyAdded = false;
         if (mapInstance.hasLayer(boundaryLayer)) {
           mapInstance.removeLayer(boundaryLayer);
         }
       }
+    },
+
+    /**
+     * Menyeleksi dan menyorot (highlight) poligon kabupaten tertentu berdasarkan nama kabupaten
+     */
+    highlightKabupaten: function (kabName) {
+      if (!boundaryLayer || !mapInstance) return;
+
+      if (!kabName) {
+        this.resetKabupatenHighlight();
+        return;
+      }
+
+      // 1. Pastikan boundaryLayer terpasang di peta
+      if (!mapInstance.hasLayer(boundaryLayer)) {
+        boundaryLayer.addTo(mapInstance);
+        boundaryLayer.bringToBack();
+        wasTemporarilyAdded = true;
+      }
+
+      // Normalisasi teks pembersih nama wilayah
+      const cleanName = function (n) {
+        if (!n) return '';
+        return String(n)
+          .toLowerCase()
+          .replace(/\b(kabupaten|kota)\b/g, '')
+          .replace(/[^a-z0-9]/g, '')
+          .trim();
+      };
+
+      const targetClean = cleanName(kabName);
+      let matchedLayer = null;
+
+      boundaryLayer.eachLayer(function (layer) {
+        const featName = layer.feature && layer.feature.properties ? layer.feature.properties.nama : '';
+        const featClean = cleanName(featName);
+
+        const isMatch = targetClean && featClean && (
+          featClean === targetClean ||
+          targetClean.includes(featClean) ||
+          featClean.includes(targetClean)
+        );
+
+        if (isMatch) {
+          matchedLayer = layer;
+          layer.setStyle({
+            fillColor: '#FFE600', // Kuning Neobrutalis menyala
+            weight: 3.5,
+            opacity: 1,
+            color: '#000000',
+            dashArray: '',
+            fillOpacity: 0.60
+          });
+          if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
+            layer.bringToFront();
+          }
+        } else {
+          // Redupkan poligon kabupaten lain agar terfokus ke wilayah yang dipilih
+          layer.setStyle({
+            fillColor: '#94a3b8',
+            weight: 1,
+            opacity: 0.35,
+            color: '#000000',
+            dashArray: '2',
+            fillOpacity: 0.08
+          });
+        }
+      });
+
+      // Pastikan titik marker tetap di atas bidang poligon
+      if (markerLayerGroup && markerLayerGroup.bringToFront) {
+        markerLayerGroup.bringToFront();
+      }
+
+      activeHighlightedKabupaten = matchedLayer;
+      return matchedLayer;
+    },
+
+    /**
+     * Mengembalikan gaya semua poligon kabupaten ke kondisi default
+     */
+    resetKabupatenHighlight: function () {
+      if (!boundaryLayer || !mapInstance) return;
+
+      activeHighlightedKabupaten = null;
+
+      const toggleEl = typeof document !== 'undefined' ? document.getElementById('toggle-boundaries') : null;
+      const isToggleChecked = toggleEl ? toggleEl.checked : false;
+
+      // Jika layer dipasang sementara saat klik tradisi dan toggle tidak dicentang
+      if (wasTemporarilyAdded && !isToggleChecked) {
+        if (mapInstance.hasLayer(boundaryLayer)) {
+          mapInstance.removeLayer(boundaryLayer);
+        }
+        wasTemporarilyAdded = false;
+      }
+
+      boundaryLayer.eachLayer(function (layer) {
+        boundaryLayer.resetStyle(layer);
+      });
     },
 
     /**
@@ -241,6 +348,7 @@
 
         marker.on('click', function () {
           self.flyToLocation(item.latitude, item.longitude, 12);
+          self.highlightKabupaten(item.kabupaten);
           if (typeof onMarkerClick === 'function') {
             onMarkerClick(item);
           }
@@ -266,6 +374,7 @@
      */
     resetView: function () {
       if (!mapInstance) return;
+      this.resetKabupatenHighlight();
       mapInstance.flyTo(MAP_CENTER, DEFAULT_ZOOM, { duration: 0.8 });
     }
   };
