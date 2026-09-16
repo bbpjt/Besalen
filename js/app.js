@@ -508,8 +508,11 @@
         url1Label = 'Buka DOI Resmi (Artikel Jurnal)';
         url1Icon = 'fa-certificate';
       } else if (url1.includes('dapobud.kemenbud.go.id')) {
-        url1Label = 'Buka Registrasi WBTB Kemendikbud';
+        url1Label = 'Buka Detail WBTB Resmi (Kemenbud)';
         url1Icon = 'fa-landmark';
+      } else if (url1.includes('balaibahasajateng') || url1.includes('.go.id')) {
+        url1Label = 'Buka Dokumentasi Resmi Pemda / Balai Bahasa';
+        url1Icon = 'fa-building-columns';
       } else if (url1.includes('youtu')) {
         url1Label = 'Tonton Rekaman Dokumentasi Lapangan';
         url1Icon = 'fa-video';
@@ -521,10 +524,21 @@
 
     // Label tombol URL 2
     let url2Label = 'Buka Tautan Alternatif / OJS';
-    if (url2 && url2.includes('doi.org')) {
-      url2Label = 'Buka DOI Resmi';
-    } else if (url2 && url2.includes('garuda.kemdiktisaintek.go.id')) {
-      url2Label = 'Buka Arsip di Portal Garuda';
+    let url2Icon = 'fa-arrow-up-right-from-square';
+    if (url2) {
+      if (url2.includes('doi.org')) {
+        url2Label = 'Buka DOI Resmi';
+        url2Icon = 'fa-certificate';
+      } else if (url2.includes('garuda.kemdiktisaintek.go.id')) {
+        url2Label = 'Buka Arsip di Portal Garuda';
+        url2Icon = 'fa-graduation-cap';
+      } else if (url2.includes('dapobud.kemenbud.go.id')) {
+        url2Label = 'Buka Detail WBTB Resmi (Kemenbud)';
+        url2Icon = 'fa-landmark';
+      } else if (url2.includes('balaibahasajateng') || url2.includes('.go.id')) {
+        url2Label = 'Buka Dokumentasi Pemda / Balai Bahasa';
+        url2Icon = 'fa-building-columns';
+      }
     }
 
     // Query pencarian yang aman (tanpa memicu bot block Google Scholar)
@@ -597,7 +611,7 @@
           <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px;">
             ${url2 ? `
               <a href="${url2}" target="_blank" rel="noopener noreferrer" class="neo-btn neo-btn-cyan" style="font-size: 0.78rem; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;">
-                <i class="fa-solid fa-arrow-up-right-from-square"></i> ${url2Label}
+                <i class="fa-solid ${url2Icon}"></i> ${url2Label}
               </a>
             ` : ''}
           </div>

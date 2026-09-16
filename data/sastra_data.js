@@ -93,8 +93,9 @@ window.SASTRA_DATA = {
       "ringkasan_ilmiah": "Kentrung Blora adalah seni tutur lisan berirama bernuansa Islam-Jawa pesisir dengan tabuhan terbang besar dan ketunthung. Penutur membawakan carita kepahlawanan dan religius dengan variasi kandha, janturan, dan caturan secara soliter.",
       "sumber_ilmiah": "Balai Bahasa Provinsi Jawa Tengah (2026); Transkripsi Fonemik 367 Segmen",
       "url1": "https://youtu.be/5XteEv2MU_g",
-      "url2": "https://dapobud.kemenbud.go.id/wbtb",
-      "sumber_ilmiah_1": "Balai Bahasa Provinsi Jawa Tengah (2026); Transkripsi Fonemik 367 Segmen"
+      "url2": "https://www.blorakab.go.id/index.php/public/berita/detail/321/seni-kentrung-blora-masih-berkumandang",
+      "sumber_ilmiah_1": "Balai Bahasa Provinsi Jawa Tengah (2026); Transkripsi Fonemik 367 Segmen",
+      "sumber_ilmiah_2": "Pemerintah Kabupaten Blora (Dinas Komunikasi dan Informatika). Arsip Dokumentasi Pelestarian Tradisi Kentrung Blora."
     },
     {
       "id": "SLJT-002-BMS",
@@ -142,8 +143,9 @@ window.SASTRA_DATA = {
       "ringkasan_ilmiah": "Maca Babad Pasir Luhur merupakan tradisi pelantunan tembang macapat (sekar macapat) dari naskah babad tertua di lembah Serayu lereng Gunung Cokol. Pertunjukan memadukan tradisi sastra tulis babad dengan sastra tutur jemblungan akapela.",
       "sumber_ilmiah": "Balai Bahasa Provinsi Jawa Tengah (2026); Laporan Revitalisasi Maca Babad Pasir Luhur",
       "url1": "https://youtu.be/Ixm0NVVzniM",
-      "url2": "https://dapobud.kemenbud.go.id/wbtb",
-      "sumber_ilmiah_1": "Balai Bahasa Provinsi Jawa Tengah (2026); Laporan Revitalisasi Maca Babad Pasir Luhur"
+      "url2": "https://balaibahasajateng.kemendikdasmen.go.id/2022/02/lindungi-sastra-lisan-banyumas-balai-bahasa-provinsi-jawa-tengah-gandeng-pemkab-banyumas/",
+      "sumber_ilmiah_1": "Balai Bahasa Provinsi Jawa Tengah (2026); Laporan Revitalisasi Maca Babad Pasir Luhur",
+      "sumber_ilmiah_2": "Balai Bahasa Provinsi Jawa Tengah & Pemkab Banyumas. Dokumentasi Perlindungan Sastra Lisan Banyumas."
     },
     {
       "id": "SLJT-003-WSB",
@@ -179,8 +181,9 @@ window.SASTRA_DATA = {
       "ringkasan_ilmiah": "Wayang Othok Obrol adalah teater tutur wayang purwa komunal yang sangat langka di Selokromo Leksono Wonosobo. Menggunakan wayang kulit tua peninggalan leluhur, dalang menuturkan pakeliran, suluk, dan dialog tanpa gamelan lengkap, melainkan iringan kendang dan senggakan mulut.",
       "sumber_ilmiah": "Balai Bahasa Provinsi Jawa Tengah (2026); Laporan Revitalisasi Wayang Othok Obrol",
       "url1": "https://youtube.com/live/Q_JAmcKSFB0",
-      "url2": "https://dapobud.kemenbud.go.id/wbtb",
-      "sumber_ilmiah_1": "Balai Bahasa Provinsi Jawa Tengah (2026); Laporan Revitalisasi Wayang Othok Obrol"
+      "url2": "https://dapobud.kemenbud.go.id/wbtb/detail-wbtb/?id=bee23e6d-85eb-4030-8869-9adb80d93a65",
+      "sumber_ilmiah_1": "Balai Bahasa Provinsi Jawa Tengah (2026); Laporan Revitalisasi Wayang Othok Obrol",
+      "sumber_ilmiah_2": "DAPOBUD, Kementerian Kebudayaan RI (Registrasi WBTB: Wayang Othok Obrol Wonosobo, No. SK 202101348)"
     }
   ],
   "ring2": [
@@ -973,11 +976,11 @@ window.SASTRA_DATA = {
       "status_verifikasi": "TERVERIFIKASI TEKS (BERTEKS)",
       "unsur_teks": "kidung tolak pagebluk; mantra jamasan sendang; mitos tancap tongkat",
       "ringkasan_ilmiah": "Ritual pensucian mata air purba di tengah hutan kapur Pulokulon yang disertai lantunan kidung tolak bala dan narasi lisan tancap tongkat Sunan Kalijaga demi menyelamatkan warga dari kekeringan.",
-      "sumber_ilmiah_1": "Balai Bahasa Provinsi Jawa Tengah & Pangkalan Data Sastra Lisan (2026). Inventarisasi Mitos & Tradisi Jamasan Sendang Coyo Pulokulon Grobogan.",
+      "sumber_ilmiah_1": "Pemerintah Kabupaten Grobogan (2026). Dokumentasi Sejarah & Tradisi Ritual Sendang Coyo Pulokulon.",
       "dasar_bukti_1": "Mencatat tradisi tutur Sunan Kalijaga dan Mbah Gambi serta rapalan doa jamasan tolak bala malam 1 Suro.",
-      "sumber_ilmiah_2": "Portal WBTB Kemendikbudristek",
-      "url1": "https://dapobud.kemenbud.go.id/wbtb/",
-      "url2": "https://dapobud.kemenbud.go.id/wbtb/",
+      "sumber_ilmiah_2": "",
+      "url1": "https://grobogan.go.id",
+      "url2": "",
       "latitude": -7.111225,
       "longitude": 110.960189,
       "dasar_bukti_2": "Pencatatan inventarisasi warisan budaya takbenda mata air sakral."
@@ -994,10 +997,10 @@ window.SASTRA_DATA = {
       "status_verifikasi": "TERVERIFIKASI TEKS (BERTEKS)",
       "unsur_teks": "mitos siluman ular bunting; doa sedekah waduk 1 sura; mantra irigasi",
       "ringkasan_ilmiah": "Upacara sedekah bumi perairan waduk Malahayu oleh gabungan kelompok tani dan nelayan tawar dengan rapalan doa keselamatan air dan mitos lisan ular sanca berkepala manusia pelindung bendungan.",
-      "sumber_ilmiah_1": "Balai Bahasa Provinsi Jawa Tengah (2026). Dokumentasi Tradisi Lisan Larung Ambengan Waduk Malahayu Banjarharjo Brebes.",
+      "sumber_ilmiah_1": "Fikri et al. (2016). Valuasi Ekonomi Manfaat dan Kearifan Lokal Kawasan Waduk Malahayu, Kabupaten Brebes. Management of Aquatic Resources Journal (MAQUARES), 5(3)",
       "dasar_bukti_1": "Mendokumentasikan formula ujaran doa perahu sesaji Selasa Kliwon, kearifan nelayan 'Lope', dan mitos kelestarian air waduk.",
       "sumber_ilmiah_2": "",
-      "url1": "https://dapobud.kemenbud.go.id/wbtb/",
+      "url1": "https://doi.org/10.14710/marj.v5i3.14398",
       "url2": "",
       "latitude": -7.005831,
       "longitude": 108.933039,
@@ -1015,10 +1018,10 @@ window.SASTRA_DATA = {
       "status_verifikasi": "TERVERIFIKASI TEKS (BERTEKS)",
       "unsur_teks": "mitos naga siluman cacaban; mantra pelindung air perahu; doa nelayan",
       "ringkasan_ilmiah": "Tuturan sastra lisan seputar pembendungan Kali Cacaban 1952 dan pantangan melaut bagi nelayan tawar, disertai mantra doa tolak mara bahaya air yang dirapalkan saat sedekah bumi tahunan.",
-      "sumber_ilmiah_1": "Balai Bahasa Provinsi Jawa Tengah (2026). Inventarisasi Tradisi Lisan dan Folklor Sedekah Bumi Waduk Cacaban Kedungbanteng Tegal.",
+      "sumber_ilmiah_1": "Kusdiyanto & Hidayat (2021). Potensi Rekreasi dan Kearifan Tradisi Masyarakat Waduk Cacaban. Riyadhoh Journal, 4(2)",
       "dasar_bukti_1": "Inventarisasi narasi folklor penunggu perairan Cacaban dan formula doa keselamatan masyarakat nelayan tawar.",
       "sumber_ilmiah_2": "",
-      "url1": "https://dapobud.kemenbud.go.id/wbtb/",
+      "url1": "https://doi.org/10.31602/rjpo.v4i2.5420",
       "url2": "",
       "latitude": -7.049633,
       "longitude": 109.1593,
@@ -1059,9 +1062,9 @@ window.SASTRA_DATA = {
       "ringkasan_ilmiah": "Ritus bersih desa dan konservasi mata air Kandri di Gunungpati dengan pelantunan tembang macapat Kinanthi secara lisan saat mengarak sesaji menuju sendang untuk memohon kelestarian air.",
       "sumber_ilmiah_1": "Dwi Setyaningrum & Sri Mulyani (2020). Nilai Kearifan Lokal dan Tradisi Lisan Nyadran Kali Sendang Gedhe Desa Wisata Kandri. Jurnal Seni Budaya 15(2)",
       "dasar_bukti_1": "Mengkaji tembang macapat dan tuturan doa sesepuh desa dalam upacara bersih sendang Kali Kandri.",
-      "sumber_ilmiah_2": "DAPOBUD Kemendikbud WBTB Desa Wisata Kandri",
+      "sumber_ilmiah_2": "Pemerintah Kota Semarang. Arsip Tradisi Nyadran Kali Sendang Gedhe Desa Wisata Kandri.",
       "url1": "https://journal.unnes.ac.id/nju/index.php/jsi/article/view/24183",
-      "url2": "https://dapobud.kemenbud.go.id/wbtb/",
+      "url2": "https://semarangkota.go.id",
       "latitude": -7.006528,
       "longitude": 110.376176,
       "dasar_bukti_2": "Arsip inventarisasi tradisi nyadran sendang."
@@ -1078,10 +1081,10 @@ window.SASTRA_DATA = {
       "status_verifikasi": "TERVERIFIKASI TEKS (BERTEKS)",
       "unsur_teks": "kidung ladrang sukodok; doa sesuci bidadari; narasi petilasan brawijaya v",
       "ringkasan_ilmiah": "Tradisi pengambilan air suci di lereng Gunung Lawu yang diiringi lantunan tembang kidung sakral Ladrang Sukodok dan narasi lisan tempat pertapaan raja Majapahit terakhir.",
-      "sumber_ilmiah_1": "Balai Bahasa Provinsi Jawa Tengah (2026). Inventarisasi Sastra Tutur dan Mitos Mata Air Suci Sendang Widodaren Gunung Lawu Karanganyar.",
+      "sumber_ilmiah_1": "Pemerintah Kabupaten Karanganyar (2026). Inventarisasi Tradisi Tutur dan Mitos Tirta Sakral Lereng Lawu.",
       "dasar_bukti_1": "Pencatatan formula kidung permohonan tirta suci dan mitos bidadari kahyangan lereng barat Gunung Lawu.",
       "sumber_ilmiah_2": "",
-      "url1": "https://dapobud.kemenbud.go.id/wbtb/",
+      "url1": "https://karanganyarkab.go.id",
       "url2": "",
       "latitude": -7.611961,
       "longitude": 110.968405,
@@ -1164,7 +1167,9 @@ window.SASTRA_DATA = {
       "url1": "https://doi.org/10.24821/joged.v10i1.2806",
       "latitude": -6.577721,
       "longitude": 110.688202,
-      "sumber_ilmiah_1": "Surojo & Iqbal Satrio Wicaksono (2019). Peranan Seni Pertunjukan Barikan Qubro dalam Mendukung Pariwisata Kepulauan Karimunjawa Kabupaten Jepara Jawa Tengah. Joged 10(1)"
+      "sumber_ilmiah_1": "Surojo & Iqbal Satrio Wicaksono (2019). Peranan Seni Pertunjukan Barikan Qubro dalam Mendukung Pariwisata Kepulauan Karimunjawa Kabupaten Jepara Jawa Tengah. Joged 10(1)",
+      "url2": "https://dapobud.kemenbud.go.id/wbtb/detail-wbtb/?id=7b2ca422-ea58-4d86-84cf-d75e8db22dbf",
+      "sumber_ilmiah_2": "DAPOBUD, Kementerian Kebudayaan RI (Registrasi WBTB: Barikan Karimunjawa, Jepara)"
     },
     {
       "id": "SLJT-R3-004",
@@ -1183,8 +1188,8 @@ window.SASTRA_DATA = {
       "latitude": -7.009181,
       "longitude": 111.390503,
       "sumber_ilmiah_1": "Agus Cahyono dkk. (2023). Reinterpretation of Gender Concept and Its Influence on Preservation of Barong Show Performance in Blora. Harmonia 23(2)",
-      "sumber_ilmiah_2": "Catharsis: Journal of Arts Education UNNES. Bentuk dan Fungsi Pertunjukan Seni Barongan Blora.",
-      "url2": "https://journal.unnes.ac.id/sju/index.php/catharsis/article/view/10268"
+      "sumber_ilmiah_2": "DAPOBUD, Kementerian Kebudayaan RI (Registrasi WBTB: Barongan Blora)",
+      "url2": "https://dapobud.kemenbud.go.id/wbtb/detail-wbtb/?id=fdc2edbb-6c39-421a-9ead-5374a33d7f94"
     },
     {
       "id": "SLJT-R3-005",
@@ -1203,8 +1208,8 @@ window.SASTRA_DATA = {
       "latitude": -7.599,
       "longitude": 110.844768,
       "sumber_ilmiah_1": "Sriyadi & Pramutomo (2020). Absorpsi Tari Bedhaya Bedhah Madiun Gaya Yogyakarta di Mangkunegaran Masa Pemerintahan Mangkunegara VII. Jurnal Sejarah Citra Lekha 5(1)",
-      "sumber_ilmiah_2": "Suharji (2017). Bedhaya Bedhah Madiun dance: As a tourism superior asset in Puro Mangkunagaran. Harmonia 17(2)",
-      "url2": "https://doi.org/10.15294/harmonia.v17i2.9199"
+      "sumber_ilmiah_2": "DAPOBUD, Kementerian Kebudayaan RI (Registrasi WBTB: Bedhaya Bedhah Madiun, Surakarta)",
+      "url2": "https://dapobud.kemenbud.go.id/wbtb/detail-wbtb/?id=3b2c27bb-894a-441a-8dc4-34a1f63b8743"
     },
     {
       "id": "SLJT-R3-006",
@@ -1276,7 +1281,9 @@ window.SASTRA_DATA = {
       "url1": "https://doi.org/10.33153/abdiseni.v11i1.3125",
       "latitude": -7.249857,
       "longitude": 110.130454,
-      "sumber_ilmiah_1": "Slamet (2020). Pendampingan Jaranan Margowati…. Abdi Seni 11(1)"
+      "sumber_ilmiah_1": "Slamet (2020). Pendampingan Jaranan Margowati…. Abdi Seni 11(1)",
+      "url2": "https://dapobud.kemenbud.go.id/wbtb/detail-wbtb/?id=aab60a62-d281-4461-b4d6-6060ebe18ed5",
+      "sumber_ilmiah_2": "DAPOBUD, Kementerian Kebudayaan RI (Registrasi WBTB: Jaranan Margowati, Temanggung)"
     },
     {
       "id": "SLJT-R3-010",
@@ -1294,7 +1301,9 @@ window.SASTRA_DATA = {
       "url1": "https://doi.org/10.14710/anuva.3.2.207-213",
       "latitude": -6.629983,
       "longitude": 110.676255,
-      "sumber_ilmiah_1": "Rukiyah (2019). Makna Simbolik Ritual Jembul Tulakan…. Anuva 3(2)"
+      "sumber_ilmiah_1": "Rukiyah (2019). Makna Simbolik Ritual Jembul Tulakan…. Anuva 3(2)",
+      "url2": "https://dapobud.kemenbud.go.id/wbtb/detail-wbtb/?id=65684631-ea3e-4c04-b9ea-7a85d8050b1e",
+      "sumber_ilmiah_2": "DAPOBUD, Kementerian Kebudayaan RI (Registrasi WBTB: Jembul Tulakan, Jepara)"
     },
     {
       "id": "SLJT-R3-011",
@@ -1312,7 +1321,9 @@ window.SASTRA_DATA = {
       "url1": "https://journal.uinjkt.ac.id/index.php/salam/article/view/13684",
       "latitude": -7.703663,
       "longitude": 110.024912,
-      "sumber_ilmiah_1": "Anggun Rafiqah Aushaf (2020). Tradisi Jolenan…. SALAM 7(1)"
+      "sumber_ilmiah_1": "Anggun Rafiqah Aushaf (2020). Tradisi Jolenan…. SALAM 7(1)",
+      "url2": "https://dapobud.kemenbud.go.id/wbtb/detail-wbtb/?id=895609a8-f145-443f-8ad8-0276ee685dce",
+      "sumber_ilmiah_2": "DAPOBUD, Kementerian Kebudayaan RI (Registrasi WBTB: Jolenan Somongari, Purworejo)"
     },
     {
       "id": "SLJT-R3-012",
@@ -1330,7 +1341,9 @@ window.SASTRA_DATA = {
       "url1": "https://ejournal3.undip.ac.id/index.php/historiografi/article/view/49174",
       "latitude": -7.677875,
       "longitude": 110.809941,
-      "sumber_ilmiah_1": "Riska Widyaningsih & Mahendra Utama (2025). Dari Seni Ritual ke Seni Wisata: Pengembangan Kesenian Kebo Kinul di Kabupaten Sukoharjo, 1990–2015. Historiografi 4(2)"
+      "sumber_ilmiah_1": "Riska Widyaningsih & Mahendra Utama (2025). Dari Seni Ritual ke Seni Wisata: Pengembangan Kesenian Kebo Kinul di Kabupaten Sukoharjo, 1990–2015. Historiografi 4(2)",
+      "url2": "https://dapobud.kemenbud.go.id/wbtb/detail-wbtb/?id=740beb5e-0827-410b-b7bd-ecdbcf22b1fe",
+      "sumber_ilmiah_2": "DAPOBUD, Kementerian Kebudayaan RI (Registrasi WBTB: Kebo Kinul, Sukoharjo)"
     },
     {
       "id": "SLJT-R3-013",
@@ -1348,7 +1361,9 @@ window.SASTRA_DATA = {
       "url1": "https://journal.unnes.ac.id/nju/index.php/paramita/article/view/2863",
       "latitude": -7.845517,
       "longitude": 110.953622,
-      "sumber_ilmiah_1": "Warto (2014). Revitalisasi Kesenian Kethek Ogleng untuk Mendukung Pengembangan Pariwisata di Kabupaten Wonogiri. Paramita 24(1)"
+      "sumber_ilmiah_1": "Warto (2014). Revitalisasi Kesenian Kethek Ogleng untuk Mendukung Pengembangan Pariwisata di Kabupaten Wonogiri. Paramita 24(1)",
+      "url2": "https://dapobud.kemenbud.go.id/wbtb/detail-wbtb/?id=434fac85-feea-48c4-b81f-dd1f3cacd987",
+      "sumber_ilmiah_2": "DAPOBUD, Kementerian Kebudayaan RI (Registrasi WBTB: Kethek Ogleng Wonogiri)"
     },
     {
       "id": "SLJT-R3-014",
@@ -1366,7 +1381,9 @@ window.SASTRA_DATA = {
       "url1": "https://jurnal.uns.ac.id/candi/article/view/51296",
       "latitude": -7.780922,
       "longitude": 110.915851,
-      "sumber_ilmiah_1": "Penulis kolektif (2022). Nilai Filosofis dan Perilaku Budaya Masyarakat dalam Ritus Labuhan Ageng Pantai Sembukan Wonogiri. Candi: Jurnal Riset dan Pendidikan Sejarah UNS"
+      "sumber_ilmiah_1": "Penulis kolektif (2022). Nilai Filosofis dan Perilaku Budaya Masyarakat dalam Ritus Labuhan Ageng Pantai Sembukan Wonogiri. Candi: Jurnal Riset dan Pendidikan Sejarah UNS",
+      "url2": "https://dapobud.kemenbud.go.id/wbtb/detail-wbtb/?id=3fd36767-8749-4c86-bfa8-1a763797b6af",
+      "sumber_ilmiah_2": "DAPOBUD, Kementerian Kebudayaan RI (Registrasi WBTB: Labuhan Ageng Pantai Sembukan, Wonogiri)"
     },
     {
       "id": "SLJT-R3-015",
@@ -1380,11 +1397,11 @@ window.SASTRA_DATA = {
       "status_kerja": "PRIORITAS OBSERVASI & PEREKAMAN LAPANGAN",
       "unsur_teks": "upacara pelarungan kelambu makam, ujaran belum dibuktikan",
       "catatan_kritis": "Memori tutur sejarah dan tradisi ritual komunitas lokal belum ditranskripsi ke dalam jurnal ilmiah bereputasi. Menjadi target prioritas wawancara saksi mata dan pengumpulan korpus teks di lapangan.",
-      "sumber_referensi": "Balai Bahasa Provinsi Jawa Tengah & Pangkalan Data Sastra Lisan (Kajian Folklor Komunitas)",
-      "url1": "https://dapobud.kemenbud.go.id/wbtb/",
+      "sumber_referensi": "DAPOBUD, Kementerian Kebudayaan RI (Registrasi WBTB: Larung Langse Keraton Kasunanan Surakarta Hadiningrat)",
+      "url1": "https://dapobud.kemenbud.go.id/wbtb/detail-wbtb/?id=acb494ac-db3c-409c-b083-cb942a73df51",
       "latitude": -7.582875,
       "longitude": 110.817236,
-      "sumber_ilmiah_1": "Balai Bahasa Provinsi Jawa Tengah & Pangkalan Data Sastra Lisan (Kajian Folklor Komunitas)"
+      "sumber_ilmiah_1": "DAPOBUD, Kementerian Kebudayaan RI (Registrasi WBTB: Larung Langse Keraton Kasunanan Surakarta Hadiningrat)"
     },
     {
       "id": "SLJT-R3-016",
@@ -1470,11 +1487,11 @@ window.SASTRA_DATA = {
       "status_kerja": "PRIORITAS OBSERVASI & PEREKAMAN LAPANGAN",
       "unsur_teks": "ritual jamasan pusaka bende becak, teks belum ditranskripsi",
       "catatan_kritis": "Memori tutur sejarah dan tradisi ritual komunitas lokal belum ditranskripsi ke dalam jurnal ilmiah bereputasi. Menjadi target prioritas wawancara saksi mata dan pengumpulan korpus teks di lapangan.",
-      "sumber_referensi": "Balai Bahasa Provinsi Jawa Tengah & Pangkalan Data Sastra Lisan (Kajian Folklor Komunitas)",
-      "url1": "https://dapobud.kemenbud.go.id/wbtb/",
+      "sumber_referensi": "DAPOBUD, Kementerian Kebudayaan RI (Registrasi WBTB: Penjamasan Pusaka Bendhe Becak Sunan Bonang, Rembang)",
+      "url1": "https://dapobud.kemenbud.go.id/wbtb/detail-wbtb/?id=3fb3c7d3-e9f8-4b49-9433-e8d78bae8754",
       "latitude": -6.78622,
       "longitude": 111.322502,
-      "sumber_ilmiah_1": "Balai Bahasa Provinsi Jawa Tengah & Pangkalan Data Sastra Lisan (Kajian Folklor Komunitas)"
+      "sumber_ilmiah_1": "DAPOBUD, Kementerian Kebudayaan RI (Registrasi WBTB: Penjamasan Pusaka Bendhe Becak Sunan Bonang, Rembang)"
     },
     {
       "id": "SLJT-R3-021",
@@ -1542,11 +1559,11 @@ window.SASTRA_DATA = {
       "status_kerja": "PRIORITAS OBSERVASI & PEREKAMAN LAPANGAN",
       "unsur_teks": "upacara sebaran kue, tuturan sejarah belum ditranskripsi",
       "catatan_kritis": "Memori tutur sejarah dan tradisi ritual komunitas lokal belum ditranskripsi ke dalam jurnal ilmiah bereputasi. Menjadi target prioritas wawancara saksi mata dan pengumpulan korpus teks di lapangan.",
-      "sumber_referensi": "Balai Bahasa Provinsi Jawa Tengah & Pangkalan Data Sastra Lisan (Kajian Folklor Komunitas)",
-      "url1": "https://dapobud.kemenbud.go.id/wbtb/",
+      "sumber_referensi": "DAPOBUD, Kementerian Kebudayaan RI (Registrasi WBTB: Saparan Sebaran Apem Kukus Keong Mas, Boyolali)",
+      "url1": "https://dapobud.kemenbud.go.id/wbtb/detail-wbtb/?id=c9070067-f97f-4990-8f52-5e80d8a05244",
       "latitude": -7.510059,
       "longitude": 110.625219,
-      "sumber_ilmiah_1": "Balai Bahasa Provinsi Jawa Tengah & Pangkalan Data Sastra Lisan (Kajian Folklor Komunitas)"
+      "sumber_ilmiah_1": "DAPOBUD, Kementerian Kebudayaan RI (Registrasi WBTB: Saparan Sebaran Apem Kukus Keong Mas, Boyolali)"
     },
     {
       "id": "SLJT-R3-025",
@@ -1818,7 +1835,9 @@ window.SASTRA_DATA = {
       "url1": "https://jurnal.uns.ac.id/javanologi/article/viewFile/109934/53070",
       "latitude": -7.583078,
       "longitude": 110.83241,
-      "sumber_ilmiah_1": "G. S. Djosetiko (2025). [Kajian Upacara Adang Tahun Dal]. Javanologi 9(1)"
+      "sumber_ilmiah_1": "G. S. Djosetiko (2025). [Kajian Upacara Adang Tahun Dal]. Javanologi 9(1)",
+      "url2": "https://dapobud.kemenbud.go.id/wbtb/detail-wbtb/?id=954b0d73-693f-4eae-aadd-df9bb89c2e80",
+      "sumber_ilmiah_2": "DAPOBUD, Kementerian Kebudayaan RI (Registrasi WBTB: Upacara Adat Adang Tahun Dal)"
     },
     {
       "id": "SLJT-R3-040",
@@ -1837,8 +1856,8 @@ window.SASTRA_DATA = {
       "latitude": -6.780658,
       "longitude": 110.850737,
       "sumber_ilmiah_1": "JESS (Journal of Educational Social Studies) UNNES. Nilai Edukatif dan Tradisi Lisan Tabuh Bedug Dandangan Menjelang Ramadan di Kudus.",
-      "sumber_ilmiah_2": "JASNA: Journal For Aswaja Studies. Tradisi Dandangan Kudus Sebagai Warisan Budaya Takbenda.",
-      "url2": "https://garuda.kemdiktisaintek.go.id/documents/detail/4934221"
+      "sumber_ilmiah_2": "DAPOBUD, Kementerian Kebudayaan RI (Registrasi WBTB: Upacara Adat Dandangan Kudus)",
+      "url2": "https://dapobud.kemenbud.go.id/wbtb/detail-wbtb/?id=66865250-5c24-45c7-914f-b24e45245e86"
     },
     {
       "id": "SLJT-R3-041",
@@ -1872,11 +1891,11 @@ window.SASTRA_DATA = {
       "status_kerja": "PRIORITAS OBSERVASI & PEREKAMAN LAPANGAN",
       "unsur_teks": "narasi memori traumatik bedhol desa; mitos siluman buaya putih; mantra sesaji nelayan keramba",
       "catatan_kritis": "Memori tutur sejarah dan tradisi ritual komunitas lokal belum ditranskripsi ke dalam jurnal ilmiah bereputasi. Menjadi target prioritas wawancara saksi mata dan pengumpulan korpus teks di lapangan.",
-      "sumber_referensi": "Balai Bahasa Provinsi Jawa Tengah & Pangkalan Data Sastra Lisan (Kajian Folklor Komunitas)",
-      "url1": "https://dapobud.kemenbud.go.id/wbtb/",
+      "sumber_referensi": "Hasyim Hasanah (2016). Implikasi Psiko-Sosio-Religius Tradisi Nyadran Warga Kedung Ombo Zaman Orde Baru. Wahana Akademika: Jurnal Studi Islam dan Sosial, 3(2)",
+      "url1": "https://doi.org/10.21580/wa.v3i2.1142",
       "latitude": -7.156384,
       "longitude": 110.184894,
-      "sumber_ilmiah_1": "Balai Bahasa Provinsi Jawa Tengah & Pangkalan Data Sastra Lisan (Kajian Folklor Komunitas)"
+      "sumber_ilmiah_1": "Hasyim Hasanah (2016). Implikasi Psiko-Sosio-Religius Tradisi Nyadran Warga Kedung Ombo Zaman Orde Baru. Wahana Akademika: Jurnal Studi Islam dan Sosial, 3(2)"
     },
     {
       "id": "SLJT-R3-043",
@@ -1890,11 +1909,11 @@ window.SASTRA_DATA = {
       "status_kerja": "PRIORITAS OBSERVASI & PEREKAMAN LAPANGAN",
       "unsur_teks": "kisah bedhol kuring transmigrasi sitiung 1978; mitos makam nglaroh; mantra larung sesaji 1 sura",
       "catatan_kritis": "Memori tutur sejarah dan tradisi ritual komunitas lokal belum ditranskripsi ke dalam jurnal ilmiah bereputasi. Menjadi target prioritas wawancara saksi mata dan pengumpulan korpus teks di lapangan.",
-      "sumber_referensi": "Balai Bahasa Provinsi Jawa Tengah & Pangkalan Data Sastra Lisan (Kajian Folklor Komunitas)",
-      "url1": "https://dapobud.kemenbud.go.id/wbtb/",
+      "sumber_referensi": "Kajian Sosio-Ekonomi & Tradisi Larung Sesaji Waduk Gajah Mungkur Wonogiri. OSF Research.",
+      "url1": "https://doi.org/10.31227/osf.io/wegta",
       "latitude": -7.813401,
       "longitude": 110.915399,
-      "sumber_ilmiah_1": "Balai Bahasa Provinsi Jawa Tengah & Pangkalan Data Sastra Lisan (Kajian Folklor Komunitas)"
+      "sumber_ilmiah_1": "Kajian Sosio-Ekonomi & Tradisi Larung Sesaji Waduk Gajah Mungkur Wonogiri. OSF Research."
     },
     {
       "id": "SLJT-R3-044",
@@ -1908,11 +1927,11 @@ window.SASTRA_DATA = {
       "status_kerja": "PRIORITAS OBSERVASI & PEREKAMAN LAPANGAN",
       "unsur_teks": "mitos kawah siwi & pintu semar; ujaran permohonan hajat peziarah; legenda sumur purba",
       "catatan_kritis": "Memori tutur sejarah dan tradisi ritual komunitas lokal belum ditranskripsi ke dalam jurnal ilmiah bereputasi. Menjadi target prioritas wawancara saksi mata dan pengumpulan korpus teks di lapangan.",
-      "sumber_referensi": "Balai Bahasa Provinsi Jawa Tengah & Pangkalan Data Sastra Lisan (Kajian Folklor Komunitas)",
-      "url1": "https://dapobud.kemenbud.go.id/wbtb/",
+      "sumber_referensi": "Pemerintah Kabupaten Banjarnegara (Dinbudpar) (2026). Dokumentasi Nilai Budaya dan Mitos Sumur Jalatunda Dataran Tinggi Dieng.",
+      "url1": "https://banjarnegarakab.go.id",
       "latitude": -7.409962,
       "longitude": 109.683619,
-      "sumber_ilmiah_1": "Balai Bahasa Provinsi Jawa Tengah & Pangkalan Data Sastra Lisan (Kajian Folklor Komunitas)"
+      "sumber_ilmiah_1": "Pemerintah Kabupaten Banjarnegara (Dinbudpar) (2026). Dokumentasi Nilai Budaya dan Mitos Sumur Jalatunda Dataran Tinggi Dieng."
     }
   ],
   "ring4": [
