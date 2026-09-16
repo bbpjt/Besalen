@@ -457,29 +457,87 @@
   }
 
   /**
-   * Render Tab 5: Sumber Pustaka Ilmiah dengan Tautan Interaktif (DOI / Jurnal / Scholar)
+   * Render Tab 5: Sumber Pustaka Ilmiah dengan Tautan Interaktif (DOI / Jurnal / Garuda / WBTB)
    */
   function renderTabPustaka(item) {
     const citationEl = document.getElementById('citation-content');
     if (!citationEl) return;
 
+    const ringLevel = item.ring_level || (item.ring && item.ring.includes('1') ? 1 : item.ring && item.ring.includes('2') ? 2 : 3);
+
     // Sumber Utama
     const s1Raw = item.sumber_ilmiah_1 || item.sumber_ilmiah || item.sumber_referensi || 'Balai Bahasa Provinsi Jawa Tengah (2026)';
     const url1 = (item.url1 && item.url1.trim().startsWith('http')) ? item.url1.trim() : null;
-    const scholarQuery1 = encodeURIComponent((item.sumber_ilmiah_1 || item.sumber_ilmiah || item.nama).replace(/[\(\)\[\]]/g, ' ').trim());
 
     // Sumber Pembanding / Kedua
     const s2Raw = item.sumber_ilmiah_2 || null;
     const url2 = (item.url2 && item.url2.trim().startsWith('http')) ? item.url2.trim() : null;
-    const scholarQuery2 = s2Raw ? encodeURIComponent(s2Raw.replace(/[\(\)\[\]]/g, ' ').trim()) : null;
+
+    // Tentukan label badge berdasarkan tipe rujukan dan level ring
+    let badgeClass = 'badge-r1';
+    let badgeTitle = 'Rujukan Utama';
+    let badgeSub = 'Verifikasi Ilmiah';
+
+    if (ringLevel === 1) {
+      badgeClass = 'badge-r1';
+      badgeTitle = 'Arsip & Bukti Lapangan';
+      badgeSub = 'Primer Balai Bahasa';
+    } else if (ringLevel === 2) {
+      badgeClass = 'badge-r2';
+      badgeTitle = 'Rujukan Akademik Berteks';
+      badgeSub = 'Jurnal Ilmiah Terindeks';
+    } else if (ringLevel === 3) {
+      badgeClass = 'badge-r3';
+      if (url1 && url1.includes('dapobud.kemenbud.go.id')) {
+        badgeTitle = 'Registrasi WBTB Nasional';
+        badgeSub = 'Prioritas Pengamatan Lapangan';
+      } else if (url1 && (url1.includes('doi.org') || url1.includes('journal') || url1.includes('ejournal') || url1.includes('garuda'))) {
+        badgeTitle = 'Kajian Akademik Pendukung';
+        badgeSub = 'Perlu Transkripsi Lapangan';
+      } else {
+        badgeTitle = 'Pencatatan Pangkalan Data';
+        badgeSub = 'Target Verifikasi Lapangan';
+      }
+    }
+
+    // Label tombol URL 1
+    let url1Label = 'Buka Tautan Sumber / DOI';
+    let url1Icon = 'fa-arrow-up-right-from-square';
+    if (url1) {
+      if (url1.includes('doi.org')) {
+        url1Label = 'Buka DOI Resmi (Artikel Jurnal)';
+        url1Icon = 'fa-certificate';
+      } else if (url1.includes('dapobud.kemenbud.go.id')) {
+        url1Label = 'Buka Registrasi WBTB Kemendikbud';
+        url1Icon = 'fa-landmark';
+      } else if (url1.includes('youtu')) {
+        url1Label = 'Tonton Rekaman Dokumentasi Lapangan';
+        url1Icon = 'fa-video';
+      } else if (url1.endsWith('.pdf')) {
+        url1Label = 'Buka Dokumen / Laporan PDF';
+        url1Icon = 'fa-file-pdf';
+      }
+    }
+
+    // Label tombol URL 2
+    let url2Label = 'Buka Tautan Alternatif / OJS';
+    if (url2 && url2.includes('doi.org')) {
+      url2Label = 'Buka DOI Resmi';
+    } else if (url2 && url2.includes('garuda.kemdiktisaintek.go.id')) {
+      url2Label = 'Buka Arsip di Portal Garuda';
+    }
+
+    // Query pencarian yang aman (tanpa memicu bot block Google Scholar)
+    const safeSearchQuery = encodeURIComponent(`${item.nama} tradisi lisan jawa tengah jurnal`);
+    const garudaSearchQuery = encodeURIComponent(item.nama);
 
     let html = `
       <div style="margin-bottom: 16px;">
         <div style="display:flex; align-items:center; gap:8px; margin-bottom:8px;">
-          <span class="neo-badge badge-r1" style="font-size:0.75rem; padding:3px 8px;">
-            <i class="fa-solid fa-bookmark"></i> Rujukan Utama
+          <span class="neo-badge ${badgeClass}" style="font-size:0.75rem; padding:3px 8px;">
+            <i class="fa-solid fa-bookmark"></i> ${badgeTitle}
           </span>
-          <span style="font-size:0.75rem; color:#555; font-weight:700;">Verifikasi Ilmiah</span>
+          <span style="font-size:0.75rem; color:#555; font-weight:700;">${badgeSub}</span>
         </div>
 
         <div style="padding: 12px; background: #fffbe6; border: 2.5px solid #000; box-shadow: 3px 3px 0px #000; margin-bottom: 10px; font-size: 0.88rem; line-height: 1.55;">
@@ -493,14 +551,24 @@
           </div>
         ` : ''}
 
+        ${(ringLevel === 3 && item.catatan_kritis) ? `
+          <div style="font-size: 0.8rem; background: #fff8f0; border: 2px solid #000; border-left: 5px solid #ea580c; padding: 8px 10px; margin-bottom: 10px; color: #111;">
+            <strong style="color: #c2410c;"><i class="fa-solid fa-clipboard-question"></i> Catatan Kritis Lapangan:</strong><br>
+            <span style="margin-top: 2px; display: inline-block;">${item.catatan_kritis}</span>
+          </div>
+        ` : ''}
+
         <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px;">
           ${url1 ? `
             <a href="${url1}" target="_blank" rel="noopener noreferrer" class="neo-btn neo-btn-cyan" style="font-size: 0.78rem; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;">
-              <i class="fa-solid fa-arrow-up-right-from-square"></i> Buka Tautan Sumber / DOI
+              <i class="fa-solid ${url1Icon}"></i> ${url1Label}
             </a>
           ` : ''}
-          <a href="https://scholar.google.com/scholar?q=${scholarQuery1}" target="_blank" rel="noopener noreferrer" class="neo-btn" style="font-size: 0.78rem; text-decoration: none; background: #fff; display: inline-flex; align-items: center; gap: 6px;">
-            <i class="fa-solid fa-graduation-cap"></i> Cari di Google Scholar
+          <a href="https://www.google.com/search?q=${safeSearchQuery}" target="_blank" rel="noreferrer" class="neo-btn" style="font-size: 0.78rem; text-decoration: none; background: #fff; display: inline-flex; align-items: center; gap: 6px;">
+            <i class="fa-brands fa-google text-blue-600"></i> Cari di Google Web
+          </a>
+          <a href="https://garuda.kemdiktisaintek.go.id/?q=${garudaSearchQuery}" target="_blank" rel="noreferrer" class="neo-btn" style="font-size: 0.78rem; text-decoration: none; background: #fff; display: inline-flex; align-items: center; gap: 6px;">
+            <i class="fa-solid fa-graduation-cap text-orange-600"></i> Cari di Portal Garuda
           </a>
         </div>
       </div>
@@ -511,7 +579,7 @@
         <div style="margin-top: 18px; border-top: 2.5px dashed #000; padding-top: 14px;">
           <div style="display:flex; align-items:center; gap:8px; margin-bottom:8px;">
             <span class="neo-badge badge-r2" style="font-size:0.75rem; padding:3px 8px;">
-              <i class="fa-solid fa-book-open"></i> Sumber Pembanding / Tambahan
+              <i class="fa-solid fa-book-open"></i> Sumber Pendamping / Repositori
             </span>
           </div>
 
@@ -529,22 +597,24 @@
           <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px;">
             ${url2 ? `
               <a href="${url2}" target="_blank" rel="noopener noreferrer" class="neo-btn neo-btn-cyan" style="font-size: 0.78rem; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;">
-                <i class="fa-solid fa-arrow-up-right-from-square"></i> Buka Tautan Sumber 2 / DOI
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> ${url2Label}
               </a>
             ` : ''}
-            <a href="https://scholar.google.com/scholar?q=${scholarQuery2}" target="_blank" rel="noopener noreferrer" class="neo-btn" style="font-size: 0.78rem; text-decoration: none; background: #fff; display: inline-flex; align-items: center; gap: 6px;">
-              <i class="fa-solid fa-graduation-cap"></i> Cari di Google Scholar
-            </a>
           </div>
         </div>
       `;
     }
 
     // Informasi Ringkasan Metodologis
+    let noteText = 'Seluruh rujukan akademik telah melalui uji kurasi komprehensif Balai Bahasa Provinsi Jawa Tengah untuk memastikan keterpenuhan korpus sastra tutur lisan.';
+    if (ringLevel === 3) {
+      noteText = 'Objek berstatus Ring 3 adalah tradisi yang tercatat dalam pangkalan data budaya daerah/WBTB, namun belum memiliki transkripsi teks sastra lisan di jurnal ilmiah bereputasi. Status ini menjadi panduan prioritas bagi tim Balai Bahasa untuk melakukan perekaman dan pengujian korpus tutur langsung di lapangan.';
+    }
+
     html += `
       <div style="margin-top: 16px; background: #fdfaf6; border: 1.5px solid #999; padding: 10px; font-size: 0.75rem; color: #444; line-height: 1.4;">
         <i class="fa-solid fa-circle-info text-blue-600"></i>
-        Seluruh rujukan akademik telah melalui uji kurasi komprehensif Balai Bahasa Provinsi Jawa Tengah untuk memastikan keberadaan korpus sastra tutur lisan.
+        ${noteText}
       </div>
     `;
 
