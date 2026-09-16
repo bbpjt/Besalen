@@ -1,6 +1,6 @@
 /**
- * Batas Wilayah Administratif Resmi 35 Kabupaten/Kota Jawa Tengah
- * Sumber Geometri: GeoBoundaries IDN ADM2 Authoritative
+ * Batas Administrasi 35 Kabupaten/Kota Provinsi Jawa Tengah
+ * Sumber: BPS / BIG / Kemendagri
  */
 window.JATENG_KABUPATEN = {
   "type": "FeatureCollection",
@@ -2048,10 +2048,10 @@ window.JATENG_KABUPATEN = {
         "nama": "Kabupaten Cilacap",
         "karesidenan": "Karesidenan Banyumas",
         "zona_ekologi": "Pesisir Selatan Samudra Hindia, Laguna Segara Anakan & Perbatasan Sunda",
-        "total_sastra": 2,
+        "total_sastra": 1,
         "r1_count": 0,
         "r2_count": 1,
-        "r3_count": 1,
+        "r3_count": 0,
         "latitude": -7.545,
         "longitude": 108.995
       }
@@ -4384,10 +4384,10 @@ window.JATENG_KABUPATEN = {
         "nama": "Kabupaten Purbalingga",
         "karesidenan": "Karesidenan Banyumas",
         "zona_ekologi": "Lembah DAS Klawing & Lereng Timur Gunung Slamet (Sendang Drajat)",
-        "total_sastra": 2,
+        "total_sastra": 1,
         "r1_count": 0,
         "r2_count": 1,
-        "r3_count": 1,
+        "r3_count": 0,
         "latitude": -7.345,
         "longitude": 109.355
       }
@@ -9336,10 +9336,10 @@ window.JATENG_KABUPATEN = {
         "nama": "Kabupaten Wonosobo",
         "karesidenan": "Karesidenan Kedu",
         "zona_ekologi": "Dataran Tinggi Vulkanik Dieng, Waduk Wadaslintang, Telaga Menjer & Sendang Panguripan",
-        "total_sastra": 7,
+        "total_sastra": 4,
         "r1_count": 1,
-        "r2_count": 4,
-        "r3_count": 2,
+        "r2_count": 3,
+        "r3_count": 0,
         "latitude": -7.365,
         "longitude": 109.915
       }
@@ -13314,10 +13314,10 @@ window.JATENG_KABUPATEN = {
         "nama": "Kabupaten Boyolali",
         "karesidenan": "Karesidenan Surakarta",
         "zona_ekologi": "Lereng Barat Merapi-Merbabu, Waduk Kedung Ombo, Waduk Cengklik & Umbul Pengging",
-        "total_sastra": 5,
+        "total_sastra": 4,
         "r1_count": 0,
         "r2_count": 1,
-        "r3_count": 4,
+        "r3_count": 3,
         "latitude": -7.525,
         "longitude": 110.605
       }
@@ -14454,10 +14454,10 @@ window.JATENG_KABUPATEN = {
         "nama": "Kabupaten Klaten",
         "karesidenan": "Karesidenan Surakarta",
         "zona_ekologi": "Dataran Prambanan, Rawa Jombor, Mata Air Ponggok, Cokro & Umbul Jatinom",
-        "total_sastra": 3,
+        "total_sastra": 2,
         "r1_count": 0,
         "r2_count": 2,
-        "r3_count": 1,
+        "r3_count": 0,
         "latitude": -7.705,
         "longitude": 110.605
       }
@@ -15722,10 +15722,10 @@ window.JATENG_KABUPATEN = {
         "nama": "Kabupaten Sukoharjo",
         "karesidenan": "Karesidenan Surakarta",
         "zona_ekologi": "Lembah Aluvial DAS Bengawan Solo, Waduk Mulur & Petilasan Keraton Pajang",
-        "total_sastra": 2,
+        "total_sastra": 1,
         "r1_count": 0,
         "r2_count": 0,
-        "r3_count": 2,
+        "r3_count": 1,
         "latitude": -7.675,
         "longitude": 110.835
       }
@@ -17514,10 +17514,10 @@ window.JATENG_KABUPATEN = {
         "nama": "Kabupaten Wonogiri",
         "karesidenan": "Karesidenan Surakarta",
         "zona_ekologi": "Pegunungan Karst Sewu, Cekungan Waduk Gajah Mungkur & Pesisir Pantai Sembukan",
-        "total_sastra": 4,
+        "total_sastra": 3,
         "r1_count": 0,
         "r2_count": 0,
-        "r3_count": 4,
+        "r3_count": 3,
         "latitude": -7.825,
         "longitude": 110.925
       }
@@ -21258,10 +21258,10 @@ window.JATENG_KABUPATEN = {
         "nama": "Kabupaten Sragen",
         "karesidenan": "Karesidenan Surakarta",
         "zona_ekologi": "Lembah Bengawan Solo Purba Sangiran, Waduk Kedung Ombo Utara & Sendang Kun Gerit",
-        "total_sastra": 2,
+        "total_sastra": 0,
         "r1_count": 0,
         "r2_count": 0,
-        "r3_count": 2,
+        "r3_count": 0,
         "latitude": -7.425,
         "longitude": 111.025
       }
@@ -23514,10 +23514,10 @@ window.JATENG_KABUPATEN = {
         "nama": "Kabupaten Grobogan",
         "karesidenan": "Karesidenan Pati (Muria Raya)",
         "zona_ekologi": "Lembah Sungai Lusi, Karst Kendeng, Bledug Kuwu, Sendang Coyo & Waduk Kedung Ombo",
-        "total_sastra": 3,
+        "total_sastra": 1,
         "r1_count": 0,
         "r2_count": 1,
-        "r3_count": 2,
+        "r3_count": 0,
         "latitude": -7.115,
         "longitude": 110.915
       }
@@ -26688,10 +26688,10 @@ window.JATENG_KABUPATEN = {
         "nama": "Kabupaten Rembang",
         "karesidenan": "Karesidenan Pati (Muria Raya)",
         "zona_ekologi": "Pesisir Pantura Timur, Waduk Panohan, Gunung Lasem & Sumber Semen",
-        "total_sastra": 2,
+        "total_sastra": 1,
         "r1_count": 0,
         "r2_count": 0,
-        "r3_count": 2,
+        "r3_count": 1,
         "latitude": -6.775,
         "longitude": 111.345
       }
@@ -28380,10 +28380,10 @@ window.JATENG_KABUPATEN = {
         "nama": "Kabupaten Pati",
         "karesidenan": "Karesidenan Pati (Muria Raya)",
         "zona_ekologi": "Lereng Timur Gunung Muria, DAS Juwana, Waduk Seloromo & Sendang Sani",
-        "total_sastra": 3,
+        "total_sastra": 2,
         "r1_count": 0,
         "r2_count": 1,
-        "r3_count": 2,
+        "r3_count": 1,
         "latitude": -6.755,
         "longitude": 111.035
       }
@@ -29280,10 +29280,10 @@ window.JATENG_KABUPATEN = {
         "nama": "Kabupaten Kudus",
         "karesidenan": "Karesidenan Pati (Muria Raya)",
         "zona_ekologi": "Lereng Selatan Gunung Muria, DAS Gelis, Waduk Logung & Sendang Jodo",
-        "total_sastra": 2,
+        "total_sastra": 1,
         "r1_count": 0,
         "r2_count": 0,
-        "r3_count": 2,
+        "r3_count": 1,
         "latitude": -6.805,
         "longitude": 110.845
       }
@@ -33426,10 +33426,10 @@ window.JATENG_KABUPATEN = {
         "nama": "Kabupaten Demak",
         "karesidenan": "Karesidenan Semarang",
         "zona_ekologi": "Pesisir Pantura Kasultanan, Muara Kali Tuntang & Kolam Wudhu Sunan Kalijaga",
-        "total_sastra": 2,
+        "total_sastra": 1,
         "r1_count": 0,
         "r2_count": 1,
-        "r3_count": 1,
+        "r3_count": 0,
         "latitude": -6.895,
         "longitude": 110.645
       }
@@ -35558,10 +35558,10 @@ window.JATENG_KABUPATEN = {
         "nama": "Kabupaten Semarang",
         "karesidenan": "Karesidenan Semarang",
         "zona_ekologi": "Cekungan Rawa Pening, Lereng Gunung Ungaran, Sendang Senjoyo & Sendang Nyatnyono",
-        "total_sastra": 5,
+        "total_sastra": 2,
         "r1_count": 0,
-        "r2_count": 4,
-        "r3_count": 1,
+        "r2_count": 2,
+        "r3_count": 0,
         "latitude": -7.215,
         "longitude": 110.425
       }
@@ -38538,10 +38538,10 @@ window.JATENG_KABUPATEN = {
         "nama": "Kabupaten Kendal",
         "karesidenan": "Karesidenan Semarang",
         "zona_ekologi": "Pesisir Pantura, Muara Kali Bodri, Curug Sewu & Sendang Sedangin",
-        "total_sastra": 2,
+        "total_sastra": 0,
         "r1_count": 0,
         "r2_count": 0,
-        "r3_count": 2,
+        "r3_count": 0,
         "latitude": -6.995,
         "longitude": 110.185
       }
@@ -39606,10 +39606,10 @@ window.JATENG_KABUPATEN = {
         "nama": "Kabupaten Batang",
         "karesidenan": "Karesidenan Pekalongan",
         "zona_ekologi": "Pesisir Karang Ujungnegoro, Perbukitan Purba Alas Roban & Curug Gombong",
-        "total_sastra": 2,
+        "total_sastra": 0,
         "r1_count": 0,
         "r2_count": 0,
-        "r3_count": 2,
+        "r3_count": 0,
         "latitude": -7.025,
         "longitude": 109.845
       }
@@ -42498,10 +42498,10 @@ window.JATENG_KABUPATEN = {
         "nama": "Kabupaten Pemalang",
         "karesidenan": "Karesidenan Pekalongan",
         "zona_ekologi": "Pesisir Muara Kali Comal, Lereng Utara Gunung Slamet & Mata Air Moga",
-        "total_sastra": 2,
+        "total_sastra": 0,
         "r1_count": 0,
         "r2_count": 0,
-        "r3_count": 2,
+        "r3_count": 0,
         "latitude": -7.015,
         "longitude": 109.385
       }
@@ -43902,10 +43902,10 @@ window.JATENG_KABUPATEN = {
         "nama": "Kabupaten Tegal",
         "karesidenan": "Karesidenan Pekalongan",
         "zona_ekologi": "Pesisir Muara Kali Gung, Lereng Vulkanik Guci & Cekungan Waduk Cacaban",
-        "total_sastra": 2,
+        "total_sastra": 1,
         "r1_count": 0,
         "r2_count": 1,
-        "r3_count": 1,
+        "r3_count": 0,
         "latitude": -7.025,
         "longitude": 109.155
       }
@@ -46070,10 +46070,10 @@ window.JATENG_KABUPATEN = {
         "nama": "Kota Magelang",
         "karesidenan": "Karesidenan Kedu",
         "zona_ekologi": "Kawasan Bukit Tidar, DAS Progo-Elo & Sumber Mata Air Tuk Kalimas",
-        "total_sastra": 1,
+        "total_sastra": 0,
         "r1_count": 0,
         "r2_count": 0,
-        "r3_count": 1,
+        "r3_count": 0,
         "latitude": -7.475,
         "longitude": 110.22
       }
@@ -46374,10 +46374,10 @@ window.JATENG_KABUPATEN = {
         "nama": "Kota Surakarta",
         "karesidenan": "Karesidenan Surakarta",
         "zona_ekologi": "Dataran Karaton Lembah Bengawan Solo (Bandar Semanggi) & Baluwarti",
-        "total_sastra": 21,
+        "total_sastra": 28,
         "r1_count": 0,
-        "r2_count": 11,
-        "r3_count": 10,
+        "r2_count": 12,
+        "r3_count": 16,
         "latitude": -7.57,
         "longitude": 110.825
       }
@@ -46686,10 +46686,10 @@ window.JATENG_KABUPATEN = {
         "nama": "Kota Salatiga",
         "karesidenan": "Karesidenan Semarang",
         "zona_ekologi": "Cekungan Alami Kaki Gunung Merbabu, Sumber Air Benoyo & Sendang Senjoyo Perbatasan",
-        "total_sastra": 2,
+        "total_sastra": 0,
         "r1_count": 0,
-        "r2_count": 1,
-        "r3_count": 1,
+        "r2_count": 0,
+        "r3_count": 0,
         "latitude": -7.33,
         "longitude": 110.505
       }
@@ -47670,9 +47670,9 @@ window.JATENG_KABUPATEN = {
         "nama": "Kota Semarang",
         "karesidenan": "Karesidenan Semarang",
         "zona_ekologi": "Pesisir Pelabuhan Tanjung Emas, Muara Kali Garang & Sendang Gedhe Kandri",
-        "total_sastra": 4,
+        "total_sastra": 5,
         "r1_count": 0,
-        "r2_count": 3,
+        "r2_count": 4,
         "r3_count": 1,
         "latitude": -6.995,
         "longitude": 110.42
@@ -48010,10 +48010,10 @@ window.JATENG_KABUPATEN = {
         "nama": "Kota Pekalongan",
         "karesidenan": "Karesidenan Pekalongan",
         "zona_ekologi": "Pesisir Muara Kali Loji, Kawasan Bandar Niaga Batik & Muara Krapyak",
-        "total_sastra": 1,
+        "total_sastra": 0,
         "r1_count": 0,
         "r2_count": 0,
-        "r3_count": 1,
+        "r3_count": 0,
         "latitude": -6.89,
         "longitude": 109.675
       }
@@ -48206,10 +48206,10 @@ window.JATENG_KABUPATEN = {
         "nama": "Kota Tegal",
         "karesidenan": "Karesidenan Pekalongan",
         "zona_ekologi": "Pesisir Muara Kaligung, Muara Kali Ketiwon & Pelabuhan Tradisional Muarareja",
-        "total_sastra": 1,
+        "total_sastra": 0,
         "r1_count": 0,
         "r2_count": 0,
-        "r3_count": 1,
+        "r3_count": 0,
         "latitude": -6.87,
         "longitude": 109.135
       }
