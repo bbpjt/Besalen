@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Modul Ekspor Geospasial Sastra Lisan Jawa Tengah
  * Mendukung format GeoJSON (RFC 7946) dan CSV WKT (QGIS & ArcGIS Ready)
  */
@@ -54,6 +54,8 @@
             formula_teks: item.unsur_teks || item.bentuk_tuturan || '',
             ringkasan: item.ringkasan_ilmiah || '',
             sumber_ilmiah: item.sumber_ilmiah || item.sumber_ilmiah_1 || item.sumber_referensi || '',
+            url_sumber_1: item.url1 || '',
+            url_sumber_2: item.url2 || '',
             youtube_url: item.youtube_url || ''
           }
         };
@@ -61,7 +63,7 @@
 
       return {
         type: 'FeatureCollection',
-        name: 'Peta_Sastra_Lisan_Jawa_Tengah_2026',
+        name: 'Peta_Sastra_Lisan_Jawa_Tengah',
         crs: {
           type: 'name',
           properties: {
@@ -91,6 +93,8 @@
         'formula_teks',
         'ringkasan_ilmiah',
         'sumber_ilmiah',
+        'url_sumber_1',
+        'url_sumber_2',
         'latitude',
         'longitude',
         'wkt_geom',
@@ -118,6 +122,8 @@
           escapeCSV(item.unsur_teks || item.bentuk_tuturan || ''),
           escapeCSV(item.ringkasan_ilmiah || ''),
           escapeCSV(item.sumber_ilmiah || item.sumber_ilmiah_1 || item.sumber_referensi || ''),
+          escapeCSV(item.url1 || ''),
+          escapeCSV(item.url2 || ''),
           lat,
           lng,
           escapeCSV(wkt),

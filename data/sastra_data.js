@@ -1,10 +1,10 @@
 /**
- * Pangkalan Data Pemetaan Sastra Lisan Jawa Tengah (2026)
+ * Peta Sastra Lisan di Jawa Tengah
  * Balai Bahasa Provinsi Jawa Tengah
  */
 window.SASTRA_DATA = {
   "metadata": {
-    "judul": "Pangkalan Data Pemetaan Sastra Lisan Jawa Tengah",
+    "judul": "Peta Sastra Lisan di Jawa Tengah",
     "tahun": 2026,
     "instansi": "Balai Bahasa Provinsi Jawa Tengah",
     "total_ring1": 3,
@@ -38,10 +38,61 @@ window.SASTRA_DATA = {
       "video_local": "kentrung.mp4",
       "cover_image": "kentrung-Cover.jpg",
       "gallery_images": [
-        "kentrung-Cover.jpg"
+        "media/kentrung/kentrung_01_20260621_132746.jpg",
+        "media/kentrung/kentrung_02_20260621_132749.jpg",
+        "media/kentrung/kentrung_03_20260621_132847.jpg",
+        "media/kentrung/kentrung_04_20260621_132858.jpg",
+        "media/kentrung/kentrung_05_20260621_132911.jpg",
+        "media/kentrung/kentrung_06_20260621_132920.jpg",
+        "media/kentrung/kentrung_07_20260621_140405.jpg",
+        "media/kentrung/kentrung_08_20260622_094155.jpg",
+        "media/kentrung/kentrung_09_20260622_094211.jpg",
+        "media/kentrung/kentrung_10_20260622_094216.jpg",
+        "media/kentrung/kentrung_11_20260622_094234.jpg",
+        "media/kentrung/kentrung_12_20260622_094249.jpg",
+        "media/kentrung/kentrung_13_20260622_094528.jpg",
+        "media/kentrung/kentrung_14_20260622_094535.jpg",
+        "media/kentrung/kentrung_15_20260622_094657.jpg",
+        "media/kentrung/kentrung_16_20260622_095023.jpg",
+        "media/kentrung/kentrung_17_20260622_095028.jpg",
+        "media/kentrung/kentrung_18_20260622_095148.jpg",
+        "media/kentrung/kentrung_19_20260622_095202.jpg",
+        "media/kentrung/kentrung_20_20260622_095217.jpg",
+        "media/kentrung/kentrung_21_20260622_095244.jpg",
+        "media/kentrung/kentrung_22_20260622_095313.jpg",
+        "media/kentrung/kentrung_23_20260622_095957.jpg",
+        "media/kentrung/kentrung_24_20260622_100104.jpg",
+        "media/kentrung/kentrung_25_20260622_100908.jpg",
+        "media/kentrung/kentrung_26_20260622_100919.jpg",
+        "media/kentrung/kentrung_27_20260622_102821.jpg",
+        "media/kentrung/kentrung_28_20260622_102826.jpg",
+        "media/kentrung/kentrung_29_20260622_105803.jpg",
+        "media/kentrung/kentrung_30_20260622_110004.jpg",
+        "media/kentrung/kentrung_31_20260622_110009.jpg",
+        "media/kentrung/kentrung_32_img_7296.jpg",
+        "media/kentrung/kentrung_33_img_7297.jpg",
+        "media/kentrung/kentrung_34_img_7298.jpg",
+        "media/kentrung/kentrung_35_img_7299.jpg",
+        "media/kentrung/kentrung_36_img_7300.jpg",
+        "media/kentrung/kentrung_37_img_7301.jpg",
+        "media/kentrung/kentrung_38_img_7302.jpg",
+        "media/kentrung/kentrung_39_img_7303.jpg",
+        "media/kentrung/kentrung_40_img_7304.jpg",
+        "media/kentrung/kentrung_41_img_7305.jpg",
+        "media/kentrung/kentrung_42_img_7306.jpg",
+        "media/kentrung/kentrung_43_img_7307.jpg",
+        "media/kentrung/kentrung_44_img_7308.jpg",
+        "media/kentrung/kentrung_45_img_7309.jpg",
+        "media/kentrung/kentrung_46_img_7310.jpg",
+        "media/kentrung/kentrung_47_img_7311.jpg",
+        "media/kentrung/kentrung_48_img_7312.jpg",
+        "media/kentrung/kentrung_49_img_7313.jpg",
+        "media/kentrung/kentrung_50_img_7314.jpg"
       ],
       "ringkasan_ilmiah": "Kentrung Blora adalah seni tutur lisan berirama bernuansa Islam-Jawa pesisir dengan tabuhan terbang besar dan ketunthung. Penutur membawakan carita kepahlawanan dan religius dengan variasi kandha, janturan, dan caturan secara soliter.",
-      "sumber_ilmiah": "Balai Bahasa Provinsi Jawa Tengah (2026); Transkripsi Fonemik 367 Segmen"
+      "sumber_ilmiah": "Balai Bahasa Provinsi Jawa Tengah (2026); Transkripsi Fonemik 367 Segmen",
+      "url1": "https://youtu.be/5XteEv2MU_g",
+      "url2": "https://dapobud.kemenbud.go.id/wbtb"
     },
     {
       "id": "SLJT-002-BMS",
@@ -78,10 +129,18 @@ window.SASTRA_DATA = {
         "media/banyumas/image17.jpeg",
         "media/banyumas/image18.jpg",
         "media/banyumas/image19.jpg",
-        "media/banyumas/image2.jpeg"
+        "media/banyumas/image2.jpeg",
+        "media/banyumas/image20.jpeg",
+        "media/banyumas/image21.jpg",
+        "media/banyumas/image22.jpeg",
+        "media/banyumas/image23.jpg",
+        "media/banyumas/image24.jpeg",
+        "media/banyumas/image25.jpg"
       ],
       "ringkasan_ilmiah": "Maca Babad Pasir Luhur merupakan tradisi pelantunan tembang macapat (sekar macapat) dari naskah babad tertua di lembah Serayu lereng Gunung Cokol. Pertunjukan memadukan tradisi sastra tulis babad dengan sastra tutur jemblungan akapela.",
-      "sumber_ilmiah": "Balai Bahasa Provinsi Jawa Tengah (2026); Laporan Revitalisasi Maca Babad Pasir Luhur"
+      "sumber_ilmiah": "Balai Bahasa Provinsi Jawa Tengah (2026); Laporan Revitalisasi Maca Babad Pasir Luhur",
+      "url1": "https://youtu.be/Ixm0NVVzniM",
+      "url2": "https://dapobud.kemenbud.go.id/wbtb"
     },
     {
       "id": "SLJT-003-WSB",
@@ -115,7 +174,9 @@ window.SASTRA_DATA = {
         "media/wonosobo/image6.jpeg"
       ],
       "ringkasan_ilmiah": "Wayang Othok Obrol adalah teater tutur wayang purwa komunal yang sangat langka di Selokromo Leksono Wonosobo. Menggunakan wayang kulit tua peninggalan leluhur, dalang menuturkan pakeliran, suluk, dan dialog tanpa gamelan lengkap, melainkan iringan kendang dan senggakan mulut.",
-      "sumber_ilmiah": "Balai Bahasa Provinsi Jawa Tengah (2026); Laporan Revitalisasi Wayang Othok Obrol"
+      "sumber_ilmiah": "Balai Bahasa Provinsi Jawa Tengah (2026); Laporan Revitalisasi Wayang Othok Obrol",
+      "url1": "https://youtube.com/live/Q_JAmcKSFB0",
+      "url2": "https://dapobud.kemenbud.go.id/wbtb"
     }
   ],
   "ring2": [
@@ -134,6 +195,8 @@ window.SASTRA_DATA = {
       "sumber_ilmiah_1": "Irawati (2018). Bentuk dan Makna Tari Bedhaya Ela-Ela. Mudra 33(2)",
       "dasar_bukti_1": "Menyebut teks sindhenan dan vokal pengiring.",
       "sumber_ilmiah_2": "Suwaji (2016). Vokal Pengiring Tari Bedhaya Keraton Surakarta. Keteg 16(1)",
+      "url1": "https://jurnal.ugm.ac.id/kawistara/article/view/26417",
+      "url2": "",
       "latitude": -7.173863,
       "longitude": 110.165805
     },
@@ -152,6 +215,8 @@ window.SASTRA_DATA = {
       "sumber_ilmiah_1": "Sri Hastuti (2007). Profil Penari Bedhaya Ketawang di Kraton Kasunanan Surakarta. Panggung 17(4)",
       "dasar_bukti_1": "Memuat dan menganalisis teks sindhenan kemanak.",
       "sumber_ilmiah_2": "Sunardi (2013). Musik Tari Bedhaya Ketawang: Tinjauan Bentuk dan Fungsi. Resital 14(2)",
+      "url1": "https://digilib.isi.ac.id/2778/",
+      "url2": "https://ejournal3.undip.ac.id/index.php/sulukindo/article/download/1430/1434",
       "latitude": -7.10514,
       "longitude": 110.136423
     },
@@ -170,6 +235,8 @@ window.SASTRA_DATA = {
       "sumber_ilmiah_1": "Kusmayati (2020). Simbolisme dan Fungsi Tuturan Begalan dalam Pernikahan Adat Banyumas. Lingua 17(1)",
       "dasar_bukti_1": "Menganalisis teks dialog tutur begalan.",
       "sumber_ilmiah_2": "Purwadi (2018). Tradisi Begalan Banyumas: Kajian Folklor dan Nilai Edukasi. Jurnal Kebudayaan 13(2)",
+      "url1": "https://journal.unnes.ac.id/nju/index.php/sutasoma/article/view/17855",
+      "url2": "https://ejournal.mandalanursa.org/index.php/JISIP/article/download/2076/1739",
       "latitude": -7.466825,
       "longitude": 109.235693
     },
@@ -188,6 +255,8 @@ window.SASTRA_DATA = {
       "sumber_ilmiah_1": "Haryanto (2021). Kesenian Braen di Kabupaten Purbalingga: Bentuk Penyajian dan Teks Puji-Pujian. Gelar: Jurnal Seni Budaya 19(1)",
       "dasar_bukti_1": "Mentranskripsi lirik tembang braen.",
       "sumber_ilmiah_2": "Subagyo (2019). Nilai-Nilai Religiusitas Tembang Braen Purbalingga. Sabda 14(2)",
+      "url1": "https://mabasan.kemendikdasmen.go.id/index.php/MABASAN/article/view/795",
+      "url2": "",
       "latitude": -7.340857,
       "longitude": 109.379858
     },
@@ -206,6 +275,8 @@ window.SASTRA_DATA = {
       "sumber_ilmiah_1": "Mulyono (2020). Bundengan Wonosobo: Eksplorasi Bunyi dan Pelestarian Tradisi Tutur Penggembala. Resital 21(3)",
       "dasar_bukti_1": "Mengulas teks tembang pengiring kowangan.",
       "sumber_ilmiah_2": "Pujianto (2022). Revitalisasi Seni Tradisi Bundengan di Dusun Ngabean. Seloka 11(1)",
+      "url1": "https://journal.unnes.ac.id/nju/index.php/jsm/article/view/73207",
+      "url2": "https://ejournal3.undip.ac.id/index.php/anuva/article/view/24183",
       "latitude": -7.345962,
       "longitude": 109.885386
     },
@@ -224,6 +295,8 @@ window.SASTRA_DATA = {
       "sumber_ilmiah_1": "Sugeng (2019). Karakteristik Vokal dan Parikan dalam Musik Calung Banyumasan. Harmonia 19(2)",
       "dasar_bukti_1": "Menganalisis cakepan parikan calung.",
       "sumber_ilmiah_2": "Waryatno (2021). Eksistensi Calung Banyumasan di Era Digital. Gondang 5(2)",
+      "url1": "https://journal.isi.ac.id/index.php/resital/article/view/15664/0",
+      "url2": "",
       "latitude": -7.498556,
       "longitude": 109.256406
     },
@@ -242,6 +315,8 @@ window.SASTRA_DATA = {
       "sumber_ilmiah_1": "Astuti (2019). Struktur Mantra dan Nilai Kearifan Lokal Cowongan di Nusawungu Cilacap. Seloka 8(2)",
       "dasar_bukti_1": "Mentranskripsi teks mantra lengkap ritual cowongan.",
       "sumber_ilmiah_2": "Maryatun (2021). Cowongan: Kajian Etnopuitika Tradisi Lisan Pesisir Cilacap. Nusa 16(3)",
+      "url1": "https://jurnal.isi-ska.ac.id/index.php/gendang/article/view/3194",
+      "url2": "https://journal.unnes.ac.id/nju/index.php/jsi/article/view/30045",
       "latitude": -7.531748,
       "longitude": 109.002089
     },
@@ -260,6 +335,8 @@ window.SASTRA_DATA = {
       "sumber_ilmiah_1": "Suwito (2020). Struktur Teks Pantun dan Nilai Kultural Kesenian Dolalak Purworejo. Widyaparwa 48(2)",
       "dasar_bukti_1": "Menganalisis puluhan bait teks pantun dolalak.",
       "sumber_ilmiah_2": "Handayani (2022). Nilai Moral dan Sosial dalam Syair Kesenian Dolalak. Litera 21(1)",
+      "url1": "https://doi.org/10.31291/hn.v2i2.109",
+      "url2": "https://journal.walisongo.ac.id/index.php/attaqaddum/article/view/1786",
       "latitude": -7.723375,
       "longitude": 109.991229
     },
@@ -278,6 +355,8 @@ window.SASTRA_DATA = {
       "sumber_ilmiah_1": "Rohman (2020). Analisis Mantra Pemanggilan Indang pada Pertunjukan Kesenian Ebeg di Banyumas. Jurnal Pendidikan Bahasa dan Sastra Jawa 9(2)",
       "dasar_bukti_1": "Mentranskripsi teks mantra ebeg.",
       "sumber_ilmiah_2": "Susanto (2021). Fungsi Sosial dan Struktur Tembang Ebeg Banyumas. Dewa Ruci 16(1)",
+      "url1": "https://journal.isi.ac.id/index.php/resital/article/view/15664/0",
+      "url2": "",
       "latitude": -7.468631,
       "longitude": 109.277512
     },
@@ -296,6 +375,8 @@ window.SASTRA_DATA = {
       "sumber_ilmiah_1": "Hendarto (2019). Nilai Filosofis dan Struktur Pantun dalam Musik Gambang Semarang. Greget 18(2)",
       "dasar_bukti_1": "Menganalisis teks pantun Gambang Semarang.",
       "sumber_ilmiah_2": "Triyono (2022). Akulturasi Etnis Tionghoa-Jawa dalam Lirik Lagu Gambang Semarang. Sabda 17(1)",
+      "url1": "https://ejournal3.undip.ac.id/index.php/jiip/article/view/28169",
+      "url2": "https://journal.unika.ac.id/index.php/celt/article/view/1300",
       "latitude": -7.17408,
       "longitude": 110.406126
     },
@@ -314,6 +395,8 @@ window.SASTRA_DATA = {
       "sumber_ilmiah_1": "Nartosabdo & Soetarno (2018). Analisis Estetika Suluk dan Pocapan Lakon Gatotkaca Gandrung. Keteg 18(2)",
       "dasar_bukti_1": "Membedah teks suluk dan pocapan pakeliran.",
       "sumber_ilmiah_2": "Suparno (2020). Struktur Dramaturgi Suluk Wayang Surakarta. Dewa Ruci 15(2)",
+      "url1": "https://journal.unnes.ac.id/sju/index.php/jst/issue/view/1647",
+      "url2": "https://jurnal.isbi.ac.id/index.php/makalangan/article/view/2710",
       "latitude": -7.164274,
       "longitude": 110.135353
     },
@@ -332,6 +415,8 @@ window.SASTRA_DATA = {
       "sumber_ilmiah_1": "Dhanu Priyo Prabowo (2019). Perkembangan Bentuk dan Estetika Geguritan Surakarta Periode Pasca-Kemerdekaan. Widyaparwa 47(1)",
       "dasar_bukti_1": "Mengkaji teks geguritan dan teknik deklamasi lisan.",
       "sumber_ilmiah_2": "Suwardi Endraswara (2021). Stilistika Sastra Lisan dan Tulis Jawa Modern. Litera 20(3)",
+      "url1": "https://jurnal.uns.ac.id/javanologi/article/view/97152",
+      "url2": "https://jurnal.uns.ac.id/sab/article/view/63240",
       "latitude": -7.55765,
       "longitude": 110.846928
     },
@@ -350,6 +435,8 @@ window.SASTRA_DATA = {
       "sumber_ilmiah_1": "Muhaimin (2020). Dimensi Simbolik dan Tuturan Doa Tradisi Grebeg Besar Demak. Jurnal Sejarah dan Budaya 14(2)",
       "dasar_bukti_1": "Mendokumentasikan tuturan doa sesepuh Kadilangu.",
       "sumber_ilmiah_2": "Rahmawati (2022). Grebeg Besar Demak: Kajian Living Islam dan Tradisi Lisan Pesisiran. Living Islam 5(1)",
+      "url1": "https://garuda.kemdiktisaintek.go.id/documents/detail/488893",
+      "url2": "https://journal.unnes.ac.id/sju/index.php/catharsis/article/view/29294",
       "latitude": -6.887193,
       "longitude": 110.610633
     },
@@ -368,6 +455,8 @@ window.SASTRA_DATA = {
       "sumber_ilmiah_1": "Masruroh (2019). Jamjaneng di Kebumen: Analisis Tekstual Syair Shalawat dan Makna Kultural. Thaqafiyyat 20(1)",
       "dasar_bukti_1": "Mentranskripsi bait-bait syi'ir Jamjaneng.",
       "sumber_ilmiah_2": "Fathurrahman (2021). Dialektika Islam dan Budaya Lokal dalam Kesenian Jamjaneng. Al-Qalam 27(2)",
+      "url1": "https://journal.unnes.ac.id/nju/index.php/jsm/article/view/15476",
+      "url2": "",
       "latitude": -7.187032,
       "longitude": 110.165766
     },
@@ -386,6 +475,8 @@ window.SASTRA_DATA = {
       "sumber_ilmiah_1": "RM Soedarsono (2017). Langendriyan Mandraswara: Drama Tari Jawa Gaya Mangkunegaran dan Struktur Sastra Vokalnya. Jurnal Seni Pertunjukan 8(1)",
       "dasar_bukti_1": "Membedah teks naskah antawecana tembang.",
       "sumber_ilmiah_2": "Supanggah (2019). Musikalitas dan Kompleksitas Vokal Teater Langendriyan. Resital 20(2)",
+      "url1": "https://eprints.uny.ac.id/20485/",
+      "url2": "https://digilib.isi.ac.id/5386/1/Karya%20Cipta%20Seni%20Pertunjukan_PROOF.pdf",
       "latitude": -7.135141,
       "longitude": 110.142071
     },
@@ -404,6 +495,8 @@ window.SASTRA_DATA = {
       "sumber_ilmiah_1": "Sunaryo (2020). Estetika Sastra Lisan Parikan pada Seni Pertunjukan Lengger Banyumas. Gelar 18(2)",
       "dasar_bukti_1": "Menganalisis puluhan lirik parikan lengger.",
       "sumber_ilmiah_2": "Hartono (2022). Fungsi Sosial dan Identitas Budaya Lengger Lanang Banyumas. Harmonia 22(1)",
+      "url1": "https://doi.org/10.31947/etnosia.v9i1.34560",
+      "url2": "https://proceedings.uinsaizu.ac.id/index.php/nuraicon/article/view/1143",
       "latitude": -7.470948,
       "longitude": 109.225583
     },
@@ -422,6 +515,8 @@ window.SASTRA_DATA = {
       "sumber_ilmiah_1": "Suroto (2019). Ciri Musikal dan Gaya Tembang Macapat Semarangan. Resital 20(1)",
       "dasar_bukti_1": "Menganalisis cengkok teks dhandhanggula Semarangan.",
       "sumber_ilmiah_2": "Purnomo (2021). Revitalisasi Paguyuban Macapat di Pesisir Semarang. Seloka 10(3)",
+      "url1": "https://doi.org/10.15294/harmonia.v20i1.25050",
+      "url2": "https://journal.unnes.ac.id/nju/index.php/harmonia/article/view/25050",
       "latitude": -6.996744,
       "longitude": 110.455219
     },
@@ -440,6 +535,8 @@ window.SASTRA_DATA = {
       "sumber_ilmiah_1": "Waridi (2018). Santiswara Larasmadya: Perpaduan Islam dan Budaya Keraton Jawa dalam Teks Musikal. Keteg 18(1)",
       "dasar_bukti_1": "Menganalisis teks tembang macapat santiswara.",
       "sumber_ilmiah_2": "Ahmad (2020). Nilai-Nilai Tasawuf dalam Syair Larasmadya Surakarta. Jurnal Sastra Jawa 9(2)",
+      "url1": "https://garuda.kemdiktisaintek.go.id/documents/detail/6241575",
+      "url2": "https://garuda.kemdiktisaintek.go.id/documents/detail/1676375",
       "latitude": -7.117988,
       "longitude": 110.108126
     },
@@ -458,6 +555,8 @@ window.SASTRA_DATA = {
       "sumber_ilmiah_1": "Kusniati (2020). Struktur Mantra Pawang dan Teks Syair Pertunjukan Sintren di Kabupaten Pekalongan. Litera 19(2)",
       "dasar_bukti_1": "Mentranskripsi teks syair Kembang Kencur & mantra kurungan.",
       "sumber_ilmiah_2": "Mulyadi (2021). Sintren Pekalongan: Transformasi Mitos Cinta Sulasih-Sulandjana. Sabda 16(1)",
+      "url1": "https://doi.org/10.14710/nusa.14.1.104-114",
+      "url2": "https://ejournal.undip.ac.id/index.php/nusa/article/view/23827",
       "latitude": -7.069989,
       "longitude": 109.62557
     },
@@ -476,6 +575,8 @@ window.SASTRA_DATA = {
       "sumber_ilmiah_1": "Maryono (2019). Implikatur Presentasi Komplementarisme Verbal dan Nonverbal Tari Gambiranom Susunan S. Ngaliman. Mudra 34(1)",
       "dasar_bukti_1": "Menganalisis teks tembang vokal pengiring tari.",
       "sumber_ilmiah_2": "Sumaryono (2021). Estetika Tari Tunggal Gaya Surakarta. Jurnal Seni Tari 10(2)",
+      "url1": "https://doi.org/10.31091/mudra.v34i1.646",
+      "url2": "",
       "latitude": -7.550942,
       "longitude": 110.841323
     },
@@ -494,6 +595,8 @@ window.SASTRA_DATA = {
       "sumber_ilmiah_1": "Dewi Purnama Sari (2023). Bentuk Pertunjukan dan Teks Syair Tari Soreng di Lereng Gunung Merbabu. Greget 22(1)",
       "dasar_bukti_1": "Mentranskripsi teks tembang dolanan pengiring soreng.",
       "sumber_ilmiah_2": "Puput Yuliastuti (2018). Tari Soreng Kelompok Sri Rahayu Dusun Bandung. Jurnal Tari 7(2)",
+      "url1": "https://doi.org/10.33153/grt.v22i1.4288",
+      "url2": "",
       "latitude": -7.154372,
       "longitude": 110.105002
     },
@@ -512,6 +615,8 @@ window.SASTRA_DATA = {
       "sumber_ilmiah_1": "Penulis Kolektif (2024). Cengkok Sindhenan pada Parikan Karawitan Tari Topeng Lengger Wonosobo. IDEA: Jurnal Desain dan Seni Pertunjukan 12(1)",
       "dasar_bukti_1": "Mentranskripsi parikan sindhenan tari topeng lengger.",
       "sumber_ilmiah_2": "Klara dkk. (2023). Nilai Kearifan Lokal Kesenian Lengger Wonosobo. Jurnal Al-Amin 1(2)",
+      "url1": "",
+      "url2": "",
       "latitude": -7.391014,
       "longitude": 109.952024
     },
@@ -530,6 +635,8 @@ window.SASTRA_DATA = {
       "sumber_ilmiah_1": "Rudiansyah & Siti Yumna Annisa (2024). Tedhak Siten: Cultural Values and Spoken Prayers During the Fast Pacing World. LINGTERSA 5(1)",
       "dasar_bukti_1": "Memuat teks doa dan ujaran simbolik tedhak siten.",
       "sumber_ilmiah_2": "Kusuma (2023). Kajian Etnolinguistik Tuturan Ritual Tedhak Siten. Ranah 12(1)",
+      "url1": "https://idjpcr.usu.ac.id/lingtersa/article/download/12061/7167",
+      "url2": "",
       "latitude": -7.555338,
       "longitude": 110.821804
     },
@@ -548,6 +655,8 @@ window.SASTRA_DATA = {
       "sumber_ilmiah_1": "Sri Hastuti (2007). Profil Penari Bedhaya Ketawang di Kraton Kasunanan Surakarta. Panggung 17(4)",
       "dasar_bukti_1": "Menyertakan teks tembang doa sakral jumenengan.",
       "sumber_ilmiah_2": "Widiyanto (2018). Ritual Jumenengan Dalem dan Legitimasi Kultural Karaton. Patrawidya 19(2)",
+      "url1": "",
+      "url2": "",
       "latitude": -7.591585,
       "longitude": 110.812276
     },
@@ -566,6 +675,8 @@ window.SASTRA_DATA = {
       "sumber_ilmiah_1": "Hayu Adi Darmarastri dkk. (2024). Tari Bedhaya Anglir Mendhung di Mangkunegaran: Teks Sastra dan Legitimasi Penguasa. Mozaik 15(2)",
       "dasar_bukti_1": "Mengkaji teks vokal Sekar Macapat Durma.",
       "sumber_ilmiah_2": "Suraji (2021). Transformasi Sekar Macapat Durma Menjadi Gending Kemanak Anglirmendhung. Keteg 21(1)",
+      "url1": "",
+      "url2": "",
       "latitude": -7.559646,
       "longitude": 110.858727
     },
@@ -584,6 +695,8 @@ window.SASTRA_DATA = {
       "sumber_ilmiah_1": "Ani Rakhmawati dkk. (2024). Tobacco harvesting ceremony on Merapi mountainsides: Critical discourse analysis of oral prayers. Cogent Arts & Humanities 11(1)",
       "dasar_bukti_1": "Mentranskripsi ujaran doa dan pidato adat bahasa Jawa.",
       "sumber_ilmiah_2": "Prasetyo (2021). Kearifan Ekologis Petani Tembakau Boyolali. Sabda 16(2)",
+      "url1": "https://jurnal.uns.ac.id/candi/article/view/42435",
+      "url2": "",
       "latitude": -7.50578,
       "longitude": 110.563957
     },
@@ -602,6 +715,8 @@ window.SASTRA_DATA = {
       "sumber_ilmiah_1": "Syamsuddin (2020). Dimensi Living Islam dalam Upacara Sebaran Apem Yaqowiyu Klaten. Jurnal SMaRT 6(1)",
       "dasar_bukti_1": "Menganalisis teks doa dan ujaran pelindung bala.",
       "sumber_ilmiah_2": "Hidayatullah (2022). Nilai Solidaritas Sosial dalam Tradisi Yaqowiyu Jatinom. Endogami 5(2)",
+      "url1": "https://doi.org/10.33507/an-nidzam.v12i2.3135",
+      "url2": "https://doi.org/10.18860/el.v0i0.426",
       "latitude": -7.718886,
       "longitude": 110.610725
     },
@@ -620,6 +735,8 @@ window.SASTRA_DATA = {
       "sumber_ilmiah_1": "Sudardi (2018). Mitos Hutan Krendhawahana dan Mantra Wilujengan Mahesa Lawung Karaton Kasunanan Surakarta. Patrawidya 19(3)",
       "dasar_bukti_1": "Mentranskripsi mantra persembahan Mahesa Lawung.",
       "sumber_ilmiah_2": "Nurcahyo (2021). Kajian Simbolik Sesaji Mahesa Lawung. Dewa Ruci 16(2)",
+      "url1": "https://doi.org/10.17977/um063v4i10p10",
+      "url2": "https://repositori.kemendikdasmen.go.id/5130/1/Jantra_Vol._8_No._-2_Desember_2013.pdf",
       "latitude": -7.546548,
       "longitude": 110.833736
     },
@@ -638,6 +755,8 @@ window.SASTRA_DATA = {
       "sumber_ilmiah_1": "Widodo (2021). Tradisi Wahyu Kliyu di Jatipuro Karanganyar: Analisis Hermeneutika Teks Doa. Jurnal Sutasoma 9(2)",
       "dasar_bukti_1": "Mentranskripsi lafal doa dan kidung warga.",
       "sumber_ilmiah_2": "Rohmadi (2023). Nilai Karakter dalam Tradisi Lisan Wahyu Kliyu. Sabda 18(1)",
+      "url1": "https://journal.student.uny.ac.id/agora/article/view/14774",
+      "url2": "https://ejournal.umm.ac.id/index.php/JICC/article/view/19294",
       "latitude": -7.62102,
       "longitude": 110.923605
     },
@@ -656,6 +775,8 @@ window.SASTRA_DATA = {
       "sumber_ilmiah_1": "Bambang Murtiyoso (2018). Antawecana: Karakterisasi Tuturan Vokal dalam Pedalangan Wayang Kulit Purwa Gaya Surakarta. Mudra 33(3)",
       "dasar_bukti_1": "Mengkaji teks antawecana dan suluk pedalangan.",
       "sumber_ilmiah_2": "Soetarno (2020). Nilai Filosofis Suluk Wayang Purwa Jawa. Keteg 20(2)",
+      "url1": "",
+      "url2": "",
       "latitude": -7.161838,
       "longitude": 110.183755
     },
@@ -674,6 +795,8 @@ window.SASTRA_DATA = {
       "sumber_ilmiah_1": "Sarwono (2020). Karakteristik Lakon dan Bahasa Pedalangan Wayang Kedu Temanggungan. Resital 21(1)",
       "dasar_bukti_1": "Mentranskripsi janturan khas dalang Kedu.",
       "sumber_ilmiah_2": "Dananjaya (2022). Identitas Budaya Wayang Kedu di Tengah Pusaran Wayang Mataraman. Dewa Ruci 17(1)",
+      "url1": "https://jurnal.isbi.ac.id/index.php/panggung/article/download/4282/2401",
+      "url2": "https://opac.isi.ac.id/index.php?id=56450&keywords=&p=show_detail",
       "latitude": -7.262315,
       "longitude": 110.146929
     },
@@ -692,6 +815,8 @@ window.SASTRA_DATA = {
       "sumber_ilmiah_1": "Budi Santoso (2021). Kajian Filologis dan Pertunjukan Wayang Othok Obrol Wonosobo. Jurnal Lakon 18(2)",
       "dasar_bukti_1": "Mentranskripsi suluk dan caturan dalang Ki Makim.",
       "sumber_ilmiah_2": "Sukirno (2023). Revitalisasi Wayang Othok Obrol di Wonosobo. Gelar 21(1)",
+      "url1": "",
+      "url2": "",
       "latitude": -7.389602,
       "longitude": 109.91052
     },
@@ -710,6 +835,8 @@ window.SASTRA_DATA = {
       "sumber_ilmiah_1": "Haryono (2019). Struktur Dramaturgi dan Teks Pocapan Wayang Topeng Dalang Klaten. Jurnal Seni Tari 8(2)",
       "dasar_bukti_1": "Mentranskripsi pocapan dalang wayang topeng.",
       "sumber_ilmiah_2": "Kusumo (2021). Pelestarian Kesenian Wayang Topeng di Pedan Klaten. Dewa Ruci 16(1)",
+      "url1": "https://journal.isi.ac.id/index.php/DTR/article/viewFile/3164/1388",
+      "url2": "https://digilib.isi.ac.id/4055/1/BAB%20I.pdf",
       "latitude": -7.683804,
       "longitude": 110.633106
     },
@@ -728,6 +855,8 @@ window.SASTRA_DATA = {
       "sumber_ilmiah_1": "Subarkah (2020). Nilai Simbolik dan Tuturan Tembang pada Wayang Topeng Kedung Panjang Banyumas. Seloka 9(3)",
       "dasar_bukti_1": "Mentranskripsi tuturan kandha dan parikan.",
       "sumber_ilmiah_2": "Sudaryanto (2022). Rekonstruksi Seni Wayang Topeng Kedung Panjang. Gelar 20(2)",
+      "url1": "https://doi.org/10.22460/collase.v6i3.17343",
+      "url2": "",
       "latitude": -7.450906,
       "longitude": 109.199805
     },
@@ -746,6 +875,8 @@ window.SASTRA_DATA = {
       "sumber_ilmiah_1": "Rizal & Saddhono (2023). Nilai Edukasi dan Mitologi Baru Klinthing pada Tradisi Merti Rawa Pening. Widyaparwa BRIN 51(2), DOI: 10.26499/wdprw.v51i2.789",
       "dasar_bukti_1": "Kajian folklor dan transkripsi doa merti rawa berteks.",
       "sumber_ilmiah_2": "Setyaningrum (2018). Kajian Folklor Mitos Rawa Pening dan Fungsinya bagi Komunitas Nelayan. Seloka 7(1)",
+      "url1": "",
+      "url2": "",
       "latitude": -7.226097,
       "longitude": 110.435173
     },
@@ -764,6 +895,8 @@ window.SASTRA_DATA = {
       "sumber_ilmiah_1": "Ciptowiyono (2021). Makna Simbolik dan Tradisi Kungkum Sendang Senjoyo di Desa Tegalwaton. Patrawidya: Jurnal Penelitian Sejarah dan Budaya 22(3)",
       "dasar_bukti_1": "Transkripsi rapalan doa juru kunci dan narasi peziarah.",
       "sumber_ilmiah_2": "Triyanto (2019). Nilai Ekologis dan Mitos Mata Air Senjaya dalam Perspektif Sastra Lisan. Sabda 14(2)",
+      "url1": "",
+      "url2": "",
       "latitude": -7.19,
       "longitude": 110.42509
     },
@@ -782,6 +915,8 @@ window.SASTRA_DATA = {
       "sumber_ilmiah_1": "Handayani (2019). Fungsi Mitos Sendang Sani bagi Pelestarian Lingkungan di Pati. Jurnal Sabda 14(1)",
       "dasar_bukti_1": "Analisis etika ekologis dan teks tuturan khaul sendang.",
       "sumber_ilmiah_2": "Sukron (2020). Tradisi Ziarah dan Mitos Sumber Air Sendang Sani Tamansari. Endogami 3(2)",
+      "url1": "",
+      "url2": "",
       "latitude": -6.780724,
       "longitude": 111.0111
     },
@@ -800,6 +935,8 @@ window.SASTRA_DATA = {
       "sumber_ilmiah_1": "Wahyudi (2022). Nilai Filosofis dan Ekologis Jamasan Sendang Coyo Pulokulon. Jurnal Sutasoma 10(1)",
       "dasar_bukti_1": "Transkripsi teks kidung tolak pagebluk saat jamasan.",
       "sumber_ilmiah_2": "Nugraha (2021). Folklor dan Konservasi Sumber Daya Air Sendang Coyo Grobogan. Jurnal Budaya Nusantara 4(2)",
+      "url1": "",
+      "url2": "",
       "latitude": -7.111225,
       "longitude": 110.960189
     },
@@ -818,6 +955,8 @@ window.SASTRA_DATA = {
       "sumber_ilmiah_1": "Kurniawan (2020). Tradisi Sedekah Waduk Malahayu: Mitos dan Solidaritas Sosial Petani Brebes. Dialektika: Jurnal Bahasa, Sastra, dan Budaya 10(2)",
       "dasar_bukti_1": "Dokumentasi teks doa pawang waduk dan cerita lisan.",
       "sumber_ilmiah_2": "Astuti (2019). Ekologi Budaya dan Cerita Rakyat Perairan Waduk Malahayu Brebes. Lingua 15(1)",
+      "url1": "",
+      "url2": "",
       "latitude": -7.005831,
       "longitude": 108.933039
     },
@@ -836,6 +975,8 @@ window.SASTRA_DATA = {
       "sumber_ilmiah_1": "Fauziyah (2022). Mitos dan Tradisi Sedekah Bumi Waduk Cacaban Kabupaten Tegal. Jurnal Sastra Indonesia 11(3)",
       "dasar_bukti_1": "Mengkaji teks mantra dan memori lisan bedhol desa.",
       "sumber_ilmiah_2": "Wibowo (2020). Memori Kolektif Komunitas Nelayan Tawar Waduk Cacaban. Harmonika 5(1)",
+      "url1": "",
+      "url2": "",
       "latitude": -7.049633,
       "longitude": 109.1593
     },
@@ -854,6 +995,8 @@ window.SASTRA_DATA = {
       "sumber_ilmiah_1": "Hidayat (2020). Living Qur'an dan Tradisi Ngalap Berkah di Sendang Nyatnyono Ungaran. Jurnal Living Islam 3(1)",
       "dasar_bukti_1": "Transkripsi naskah syi'ir Jawa lisan penolak pagebluk.",
       "sumber_ilmiah_2": "Muthohar (2019). Tradisi Ziarah Makam Hasan Munadi dan Sendang Kalimah Toyyibah. Dialog 42(2)",
+      "url1": "",
+      "url2": "",
       "latitude": -7.185535,
       "longitude": 110.444041
     },
@@ -872,6 +1015,8 @@ window.SASTRA_DATA = {
       "sumber_ilmiah_1": "Prasetyo & Utomo (2023). Struktur Pertunjukan dan Makna Simbolik Nyadran Kali Sendang Gedhe Kandri. Jurnal Seni Tari 12(1)",
       "dasar_bukti_1": "Transkripsi teks tembang Kinanthi pelestari sendang.",
       "sumber_ilmiah_2": "Rahayu (2021). Kearifan Lokal Konservasi Air dalam Tradisi Nyadran Desa Wisata Kandri. Jurnal Seni 8(2)",
+      "url1": "",
+      "url2": "",
       "latitude": -7.006528,
       "longitude": 110.376176
     },
@@ -890,6 +1035,8 @@ window.SASTRA_DATA = {
       "sumber_ilmiah_1": "Suryani (2022). Eksplorasi Gerak dan Vokal Ritus Sendang Widodaren Lereng Lawu. Greget: Jurnal Pengkajian Tari 21(2)",
       "dasar_bukti_1": "Mentranskripsi bait teks kidung ladrang penyuci tirta.",
       "sumber_ilmiah_2": "Wardoyo (2020). Mitologi Mata Air Pegunungan Lawu dan Praktik Spiritual. Dewa Ruci 15(1)",
+      "url1": "",
+      "url2": "",
       "latitude": -7.611961,
       "longitude": 110.968405
     },
@@ -908,6 +1055,8 @@ window.SASTRA_DATA = {
       "sumber_ilmiah_1": "Prabowo & Wardani (2021). Mitologi Air Telaga Warna Dieng sebagai Bentuk Ekokritik Sastra Lisan. Seloka: Jurnal Sastra 10(2)",
       "dasar_bukti_1": "Transkripsi teks cerita lisan dan rapalan mantra telaga.",
       "sumber_ilmiah_2": "Kusuma (2019). Rekonstruksi Narasi Lisan Telaga Warna dan Telaga Pengilon. Kawistara 9(3)",
+      "url1": "",
+      "url2": "",
       "latitude": -7.341487,
       "longitude": 109.906436
     }
@@ -926,6 +1075,7 @@ window.SASTRA_DATA = {
       "unsur_teks": "arak-arakan/ritual, teks belum ditranskripsi",
       "catatan_kritis": "Sumber yang ditemukan membahas arak-arakan, ritual dan pertunjukan pendukung, tetapi belum memberikan transkripsi teks, mantra, tembang, dialog, atau kisahan yang dapat diuji.",
       "sumber_referensi": "Widodo (2019). Ritual Sam Poo Tay Djien: Harmoni Multikultural Pesisir Semarang. Sabda 14(1)",
+      "url1": "",
       "latitude": -6.96303,
       "longitude": 110.405648
     },
@@ -942,6 +1092,7 @@ window.SASTRA_DATA = {
       "unsur_teks": "dialog/seruan belum dibuktikan pada sumber yang ditelaah",
       "catatan_kritis": "Artikel membahas gerak, simbol dan interaksi penari Bambangan Cakil. Teks pertunjukan yang spesifik untuk bentuk Surakarta belum ditranskripsi.",
       "sumber_referensi": "Anom Sutejo & Sestri Indah Pebrianti (2025). Symbolic Interaction of Bambangan Cakil Dancers at Weddings in Rembang Regency. Acintya 16(2)",
+      "url1": "https://doi.org/10.33153/acy.v16i2.6757",
       "latitude": -7.612681,
       "longitude": 110.810614
     },
@@ -958,6 +1109,7 @@ window.SASTRA_DATA = {
       "unsur_teks": "doa/ungkapan syukur disebut, teks belum ditranskripsi",
       "catatan_kritis": "Artikel ilmiah menyebut Barikan Qubra sebagai upacara syukur dan harapan keselamatan yang kini dikemas sebagai arak-arakan pertunjukan. Namun teks doa/ujaran tidak ditranskripsi, sehingga belum cukup untuk menyatakan ada karya sastra lisan.",
       "sumber_referensi": "Surojo & Iqbal Satrio Wicaksono (2019). Peranan Seni Pertunjukan Barikan Qubro dalam Mendukung Pariwisata Kepulauan Karimunjawa Kabupaten Jepara Jawa Tengah. Joged 10(1)",
+      "url1": "https://doi.org/10.24821/joged.v10i1.2806",
       "latitude": -6.577721,
       "longitude": 110.688202
     },
@@ -974,6 +1126,7 @@ window.SASTRA_DATA = {
       "unsur_teks": "pertunjukan barong, teks belum dibuktikan",
       "catatan_kritis": "Artikel membahas pelestarian, gender, visualisasi topeng dan pertunjukan Barongan Blora, tetapi bukti tekstual/ujaran yang tampil dalam pertunjukan belum ditunjukkan.",
       "sumber_referensi": "Agus Cahyono dkk. (2023). Reinterpretation of Gender Concept and Its Influence on Preservation of Barong Show Performance in Blora. Harmonia 23(2)",
+      "url1": "https://doi.org/10.15294/harmonia.v23i2.46332",
       "latitude": -7.009181,
       "longitude": 111.390503
     },
@@ -990,6 +1143,7 @@ window.SASTRA_DATA = {
       "unsur_teks": "tari bedhaya, teks vokal belum dibuktikan",
       "catatan_kritis": "Artikel membahas konteks historis-politis Bedhaya Bedhah Madiun di Karaton Kasunanan Surakarta. Teks sindhenan/tembang belum ditranskripsikan dalam telaah ringkas.",
       "sumber_referensi": "Suparno (2020). Bedhaya Bedhah Madiun: Tari Pusaka Legitimasi Politik Jawa. Panggung 30(2)",
+      "url1": "https://doi.org/10.14710/jscl.v5i1.26657",
       "latitude": -7.599,
       "longitude": 110.844768
     },
@@ -1006,6 +1160,7 @@ window.SASTRA_DATA = {
       "unsur_teks": "tari penyambutan, teks vokal belum dianalisis",
       "catatan_kritis": "Kajian tari Gambyong Pareanom berfokus pada teknik gerak, kostum, dan estetik pementasan; unsur sastra vokal (cakepan gendhing pengiring) belum dikaji secara khusus sebagai teks sastra lisan.",
       "sumber_referensi": "Endang Caturwati (2018). Karakteristik Koreografi Tari Gambyong di Mangkunegaran. Dewa Ruci 13(1)",
+      "url1": "https://diajeng.lldikti6.id/articles/14402",
       "latitude": -7.105488,
       "longitude": 110.14666
     },
@@ -1022,6 +1177,7 @@ window.SASTRA_DATA = {
       "unsur_teks": "tari klasik, teks vokal belum dibuktikan",
       "catatan_kritis": "Karya ilmiah membahas rekonstruksi gerak dan busana Tari Gambyong Retno Kusumo ciptaan BRAy Retno Nooryani, namun teks tembang vokal belum dianalisis secara tekstual.",
       "sumber_referensi": "Sri Hastuti (2019). Kontinuitas dan Perubahan Tari Gambyong Retno Kusumo. Gelar 17(1)",
+      "url1": "https://journal.student.uny.ac.id/tari/article/view/9911",
       "latitude": -7.159453,
       "longitude": 110.128262
     },
@@ -1038,6 +1194,7 @@ window.SASTRA_DATA = {
       "unsur_teks": "seni musik instrumental, teks vokal belum dipilah",
       "catatan_kritis": "Gamelan adalah seni instrumental musikal; teks sindhenan dan gerongan yang menyertai komposisi gamelan perlu dipilah secara spesifik per gendhing agar memenuhi kriteria sastra lisan.",
       "sumber_referensi": "Rahayu Supanggah (2017). Bothekan Karawitan II: Garap. ISI Press Surakarta",
+      "url1": "",
       "latitude": -7.571495,
       "longitude": 110.850175
     },
@@ -1054,6 +1211,7 @@ window.SASTRA_DATA = {
       "unsur_teks": "kesenian kuda kepang, mantra belum ditranskripsi",
       "catatan_kritis": "Kajian tentang Jaranan Margowati di Temanggung berfokus pada pola interaksi komunal dan atraksi tari; teks mantra pemanggilan roh penari belum didokumentasikan dalam naskah ilmiah terbuka.",
       "sumber_referensi": "Wibowo (2021). Nilai Komunal Kesenian Jaranan Margowati Temanggung. Sabda 16(1)",
+      "url1": "https://doi.org/10.33153/abdiseni.v11i1.3125",
       "latitude": -7.249857,
       "longitude": 110.130454
     },
@@ -1070,6 +1228,7 @@ window.SASTRA_DATA = {
       "unsur_teks": "upacara sedekah bumi, doa tutur belum ditranskripsi",
       "catatan_kritis": "Upacara adat penghormatan kepada Ratu Kalinyamat di Desa Tulakan Donorojo; kajian antropologis menyebut adanya ujaran permohonan berkah, namun transkripsi teks sastra tutur belum dipublikasikan utuh.",
       "sumber_referensi": "Siswanto (2020). Tradisi Upacara Jembul Tulakan Jepara dalam Perspektif Teori Solidaritas. Endogami 4(1)",
+      "url1": "https://doi.org/10.14710/anuva.3.2.207-213",
       "latitude": -6.629983,
       "longitude": 110.676255
     },
@@ -1086,6 +1245,7 @@ window.SASTRA_DATA = {
       "unsur_teks": "upacara merti desa, tuturan sejarah lisan belum utuh",
       "catatan_kritis": "Tradisi arak-arakan jolenan (gunungan) dua tahunan di Somongari Kaligesing untuk mengenang Eyang Kedono Kedini; memuat cerita lisan sejarah lokal yang perlu ditranskripsi secara etnosastra.",
       "sumber_referensi": "Pramudito (2021). Nilai Kearifan Lokal Upacara Adat Jolenan Somongari Purworejo. Jurnal Sejarah dan Budaya 15(2)",
+      "url1": "https://journal.uinjkt.ac.id/index.php/salam/article/view/13684",
       "latitude": -7.703663,
       "longitude": 110.024912
     },
@@ -1102,6 +1262,7 @@ window.SASTRA_DATA = {
       "unsur_teks": "kesenian agraris, dialog tutur belum ditranskripsi",
       "catatan_kritis": "Tradisi seni pertunjukan agraris warga Sukoharjo yang menggambarkan penanggulangan hama tanaman padi; memuat dialog simbolik petani yang perlu diverifikasi ada/tidaknya formula teks sastra lisan baku.",
       "sumber_referensi": "Sutiyono (2020). Simbolisme Ritual Kebo Kinul dalam Ketahanan Pangan Masyarakat Sukoharjo. Acintya 12(2)",
+      "url1": "https://ejournal3.undip.ac.id/index.php/historiografi/article/view/49174",
       "latitude": -7.677875,
       "longitude": 110.809941
     },
@@ -1118,6 +1279,7 @@ window.SASTRA_DATA = {
       "unsur_teks": "seni tari akrobatik kera, teks vokal belum dibuktikan",
       "catatan_kritis": "Kesenian tari menirukan gerak kera ciptaan Ki Oetomo di Wonogiri; kajian menekankan pada aspek koreografi dan mitos Panji, namun narasi lisan dalang/pengiring belum terdokumentasi dalam transkripsi baku.",
       "sumber_referensi": "Yuliatun (2019). Dinamika Pertunjukan Kethek Ogleng di Kabupaten Wonogiri. Jurnal Seni Tari 8(1)",
+      "url1": "https://journal.unnes.ac.id/nju/index.php/paramita/article/view/2863",
       "latitude": -7.845517,
       "longitude": 110.953622
     },
@@ -1134,6 +1296,7 @@ window.SASTRA_DATA = {
       "unsur_teks": "ritual larung sesaji laut, teks doa belum ditranskripsi",
       "catatan_kritis": "Ritus persembahan sesaji abdi dalem Karaton Surakarta di Pantai Sembukan Paranggupito; terdapat pembacaan doa wilujengan laut selatan yang perlu ditranskripsikan teks ujaran dan mantranya.",
       "sumber_referensi": "Damayanti (2022). Nilai Spiritual Tradisi Labuhan Ageng di Pantai Sembukan Wonogiri. Jurnal Khasanah Ilmu 13(1)",
+      "url1": "https://jurnal.uns.ac.id/candi/article/view/51296",
       "latitude": -7.780922,
       "longitude": 110.915851
     },
@@ -1150,6 +1313,7 @@ window.SASTRA_DATA = {
       "unsur_teks": "upacara pelarungan kelambu makam, ujaran belum dibuktikan",
       "catatan_kritis": "Ritual pelarungan potongan kelambu (langse) penutup makam raja-raja Imogiri ke Samudra Hindia; memuat tata upacara sakral yang memerlukan verifikasi ada/tidaknya teks sastra lisan khusus.",
       "sumber_referensi": "Sudarmono (2021). Makna Simbolik Upacara Larung Langse Kasunanan Surakarta. Patrawidya 22(1)",
+      "url1": "",
       "latitude": -7.582875,
       "longitude": 110.817236
     },
@@ -1166,6 +1330,7 @@ window.SASTRA_DATA = {
       "unsur_teks": "upacara maulid nabi, kidung belum ditranskripsi",
       "catatan_kritis": "Upacara adat arak-arakan gunungan meron di Sukolilo Pati saat Maulid Nabi; artikel ilmiah mencatat adanya pembacaan shalawat dan kidung Jawa, namun transkripsi teks belum diverifikasi tuntas.",
       "sumber_referensi": "Kurniawati (2020). Tradisi Upacara Adat Meron Sukolilo Pati: Perspektif Nilai Karakter. Sabda 15(2)",
+      "url1": "",
       "latitude": -6.747843,
       "longitude": 111.059121
     },
@@ -1182,6 +1347,7 @@ window.SASTRA_DATA = {
       "unsur_teks": "upacara bersih dusun, teks doa belum ditranskripsi",
       "catatan_kritis": "Upacara adat tujuh bulanan (Wuku Mondhosio) di lereng Gunung Lawu dengan tradisi pelemparan ayam ke atap balai dusun; memuat cerita lisan Prabu Baka yang perlu dicatat transkripsinya.",
       "sumber_referensi": "Wahyuningtyas (2021). Nilai Sosial dan Mitos Prabu Baka dalam Tradisi Mondhosio Pancot. Seloka 10(1)",
+      "url1": "",
       "latitude": -7.589736,
       "longitude": 110.923224
     },
@@ -1198,6 +1364,7 @@ window.SASTRA_DATA = {
       "unsur_teks": "upacara adat sunda-jawa, ujaran adat belum ditranskripsi",
       "catatan_kritis": "Ritus tahunan masyarakat adat Dusun Jalawastu Ciseureuh Brebes berupa penyajian jagung dan doa kepada Batara Windu Buana; memuat tuturan adat Sunda-Brebes yang mendesak untuk ditranskripsi di lapangan.",
       "sumber_referensi": "Kusumawati (2020). Kearifan Lokal Masyarakat Adat Kampung Jalawastu Brebes pada Upacara Ngasa. Jurnal Lingua 16(2)",
+      "url1": "",
       "latitude": -7.056825,
       "longitude": 108.961729
     },
@@ -1214,6 +1381,7 @@ window.SASTRA_DATA = {
       "unsur_teks": "ritual agraris pegunungan, mantra belum ditranskripsi",
       "catatan_kritis": "Upacara potong kambing kendit dan slametan sumber air di Desa Silurah Wonokerto; memuat doa mantra tolak bala sesepuh gunung yang belum terdokumentasi naskah verbalnya.",
       "sumber_referensi": "Hidayat (2021). Tradisi Nyadran Gunung Desa Silurah Kabupaten Pekalongan: Kajian Ekologi Budaya. Nusa 16(2)",
+      "url1": "",
       "latitude": -7.040981,
       "longitude": 109.630377
     },
@@ -1230,6 +1398,7 @@ window.SASTRA_DATA = {
       "unsur_teks": "ritual jamasan pusaka bende becak, teks belum ditranskripsi",
       "catatan_kritis": "Pencucian bende becak peninggalan Sunan Bonang di Desa Bonang Lasem setiap 10 Dzulhijjah; terdapat tuturan sejarah lisan dan doa wilujengan yang memerlukan perekaman langsung.",
       "sumber_referensi": "Subekti (2020). Tradisi Penjamasan Bende Becak di Desa Bonang Rembang. Jurnal Penelitian Humaniora 21(2)",
+      "url1": "",
       "latitude": -6.78622,
       "longitude": 111.322502
     },
@@ -1246,6 +1415,7 @@ window.SASTRA_DATA = {
       "unsur_teks": "atraksi pertunjukan api, mitos belum ditranskripsi utuh",
       "catatan_kritis": "Upacara penolak bala di Desa Tegalsambi dengan saling memukulkan obor pelepah kelapa; mitos Ki Babadan dan Ki Gemblong melandasi tradisi ini namun teks tuturan lisan belum dianalisis secara filologis.",
       "sumber_referensi": "Ali Imron (2019). Rekonstruksi Mitos Ki Babadan dalam Tradisi Perang Obor Tegalsambi Jepara. Sabda 14(1)",
+      "url1": "",
       "latitude": -6.594544,
       "longitude": 110.708897
     },
@@ -1262,6 +1432,7 @@ window.SASTRA_DATA = {
       "unsur_teks": "pesta sedekah laut kupatan, doa belum ditranskripsi",
       "catatan_kritis": "Pesta laut pelarungan kepala kerbau seminggu setelah Idulfitri di Teluk Jepara; artikel ilmiah membahas keramaian dan ekonomi pariwisata, belum mendokumentasikan doa mantra juru kunci laut.",
       "sumber_referensi": "Puji Lestari (2020). Transformasi Budaya Pesta Lomban di Pantai Kartini Jepara. Jurnal Pariwisata Terapan 4(1)",
+      "url1": "",
       "latitude": -6.546707,
       "longitude": 110.651208
     },
@@ -1278,6 +1449,7 @@ window.SASTRA_DATA = {
       "unsur_teks": "upacara pencukuran anak gembel, mantra belum ditranskripsi",
       "catatan_kritis": "Ritus pemotongan rambut gimbal titipan Kyai Kolodete di Dataran Tinggi Dieng; memuat ujaran permintaan anak gembel dan rapalan doa pemangku adat yang perlu ditranskripsi secara verbatim.",
       "sumber_referensi": "Dwi Wahyuni (2020). Mitos Kyai Kolodete dan Eksistensi Anak Rambut Gimbal di Dataran Tinggi Dieng. Jurnal Sastra Indonesia 9(2)",
+      "url1": "",
       "latitude": -7.164734,
       "longitude": 110.137165
     },
@@ -1294,6 +1466,7 @@ window.SASTRA_DATA = {
       "unsur_teks": "upacara sebaran kue, tuturan sejarah belum ditranskripsi",
       "catatan_kritis": "Ritus tahunan di Pengging Banyudono mengenang legenda Kyai Ageng Pantaran dan Ki Ageng Pengging; cerita lisan dan doa sebaran apem kukus belum dibukukan secara etnosastra.",
       "sumber_referensi": "Wardani (2021). Kajian Folklor Tradisi Sebaran Apem Keong Mas di Pengging Boyolali. Jurnal Sutasoma 9(1)",
+      "url1": "",
       "latitude": -7.510059,
       "longitude": 110.625219
     },
@@ -1310,6 +1483,7 @@ window.SASTRA_DATA = {
       "unsur_teks": "upacara panen, mantra belum dibuktikan",
       "catatan_kritis": "Upacara syukur hasil pertanian masyarakat Desa Jlarang Banjarnegara; perlu investigasi lapangan untuk memastikan ada/tidaknya teks doa berbahasa Jawa kuno dalam prosesi.",
       "sumber_referensi": "Santosa (2020). Tradisi Sedekah Bumi Masyarakat Agraris Desa Jlarang Banjarnegara. Jurnal Pendidikan Geografi 17(2)",
+      "url1": "",
       "latitude": -7.381468,
       "longitude": 109.649887
     },
@@ -1326,6 +1500,7 @@ window.SASTRA_DATA = {
       "unsur_teks": "ajaran gugon tuhon samin, teks tuturan lisan belum dihimpun",
       "catatan_kritis": "Komunitas penganut ajaran Samin Surosentiko di Klopoduwur Blora; memiliki ajaran lisan 'angkat piring' dan falsafah hidup bertutur lugas yang perlu dihimpun dalam korpus teks sastra lisan.",
       "sumber_referensi": "Amrih Widodo (2019). Saminisme dan Tradisi Tutur Perlawanan Petani Hutan Jati Jawa Tengah. Jurnal Kajian Wilayah 10(2)",
+      "url1": "",
       "latitude": -7.04859,
       "longitude": 111.445171
     },
@@ -1342,6 +1517,7 @@ window.SASTRA_DATA = {
       "unsur_teks": "upacara maulid nabi, gendhing kemanak belum dipilah teksnya",
       "catatan_kritis": "Peringatan Maulud Nabi Muhammad SAW dengan pembunyian gamelan pusaka Kyai Gunturmadu dan Kyai Guntursari; khotbah dan ujaran wilujengan kraton perlu diverifikasi aspek sastra lisannya.",
       "sumber_referensi": "Sunardi (2018). Musikalitas dan Spiritualitas Gamelan Sekaten Karaton Surakarta. Keteg 18(1)",
+      "url1": "",
       "latitude": -7.555001,
       "longitude": 110.825205
     },
@@ -1358,6 +1534,7 @@ window.SASTRA_DATA = {
       "unsur_teks": "tari istana, teks tembang belum ditranskripsi",
       "catatan_kritis": "Tari srimpi ciptaan KGPAA Mangkunagoro IV; artikel mengulas sejarah dukacita atas wafatnya putra mahkota, namun teks tembang vokal pelengkap tari belum dianalisis secara mandiri.",
       "sumber_referensi": "Soedarsono (2018). Srimpi Ludiramadu: Ekspresi Duka Cita Penguasa Jawa dalam Karya Seni Tari. Panggung 28(3)",
+      "url1": "",
       "latitude": -7.588204,
       "longitude": 110.807714
     },
@@ -1374,6 +1551,7 @@ window.SASTRA_DATA = {
       "unsur_teks": "tari bedhaya-srimpi, teks sindhenan belum ditelaah",
       "catatan_kritis": "Karya tari klasik putri Karaton Surakarta yang diiringi gendhing berlaras pelog barang; teks vokal sindhenan perlu diuji apakah memiliki nilai sastra puitik yang utuh.",
       "sumber_referensi": "Theresia (2020). Nilai Estetis dan Garap Gerak Tari Srimpi Mondrorini. Resital 21(2)",
+      "url1": "",
       "latitude": -7.567412,
       "longitude": 110.860211
     },
@@ -1390,6 +1568,7 @@ window.SASTRA_DATA = {
       "unsur_teks": "tari klasik ksatria putri, teks belum dibuktikan",
       "catatan_kritis": "Tari srimpi gaya Surakarta berlakon perseteruan Dewi Menakjingga dan Ratu Ayu Kencana Wungu; teks pocapan antawecana tari belum dipublikasikan dalam sumber kajian.",
       "sumber_referensi": "Kusumastuti (2021). Koreografi dan Simbol Busana Tari Srimpi Muncar Surakarta. Mudra 36(1)",
+      "url1": "",
       "latitude": -7.54214,
       "longitude": 110.789351
     },
@@ -1406,6 +1585,7 @@ window.SASTRA_DATA = {
       "unsur_teks": "tari keraton, teks tembang belum ditranskripsi",
       "catatan_kritis": "Tarian klasik srimpi bertema peperangan halus; analisis tekstual atas teks tembang gendhing Pandhelori belum dilakukan oleh peneliti tari.",
       "sumber_referensi": "Darmawan (2019). Kajian Struktur Musikal Gendhing Pandhelori Pengiring Tari Srimpi. Dewa Ruci 14(2)",
+      "url1": "",
       "latitude": -7.584805,
       "longitude": 110.827434
     },
@@ -1422,6 +1602,7 @@ window.SASTRA_DATA = {
       "unsur_teks": "tari intrik diplomasi, teks belum ditranskripsi",
       "catatan_kritis": "Tari srimpi politis PB IX untuk menjamu dan memperdaya pejabat kolonial Belanda; narasi simbolik racun sangupati perlu diuji bukti transkripsi tembang vokal pengiringnya.",
       "sumber_referensi": "Rustopo (2020). Menari di Bawah Todongan Bedil: Makna Simbolik Tari Srimpi Sangupati. ISI Press Surakarta",
+      "url1": "",
       "latitude": -7.549089,
       "longitude": 110.838823
     },
@@ -1438,6 +1619,7 @@ window.SASTRA_DATA = {
       "unsur_teks": "upacara suran seniman petani, tuturan doa belum dihimpun",
       "catatan_kritis": "Ritus perayaan malam 1 Suro oleh komunitas seniman petani Dusun Tutup Ngisor lereng Gunung Merapi; memuat doa keselamatan dan lakon wayang orang yang perlu dihimpun teks naskahnya.",
       "sumber_referensi": "Yustiono (2019). Estetika Komunitas Petani Seniman Padepokan Tutup Ngisor Magelang. Gelar 17(2)",
+      "url1": "",
       "latitude": -7.543628,
       "longitude": 110.180785
     },
@@ -1454,6 +1636,7 @@ window.SASTRA_DATA = {
       "unsur_teks": "tradisi lisan lokal, teks belum ditemukan dalam jurnal",
       "catatan_kritis": "Kesenian tutur tradisi khas Banyumasan; pustaka daring belum memberikan transkripsi verbatim naskah tuturan, diprioritaskan untuk pelacakan narasumber sanggar budaya.",
       "sumber_referensi": "Dinas Porabudpar Banyumas (2021). Inventarisasi Seni Budaya Tradisional Kabupaten Banyumas",
+      "url1": "",
       "latitude": -7.476279,
       "longitude": 109.284989
     },
@@ -1470,6 +1653,7 @@ window.SASTRA_DATA = {
       "unsur_teks": "tari topeng kayu liar, mantra pemanggil belum ditranskripsi",
       "catatan_kritis": "Seni tari rakyat di Karanggayam Kebumen mengenang perlawanan pejuang menyamar menjadi hantu hutan (cepetan); mantra pawang pengundang suasana mistis belum terdokumentasi naskah verbalnya.",
       "sumber_referensi": "Triyanto (2020). Nilai Perjuangan dan Estetika Seni Tari Cepetan Alas di Kebumen. Harmonia 20(1)",
+      "url1": "",
       "latitude": -7.640842,
       "longitude": 109.660001
     },
@@ -1486,6 +1670,7 @@ window.SASTRA_DATA = {
       "unsur_teks": "tari rakyat ke keraton, teks parikan awal belum dipilah",
       "catatan_kritis": "Sejarah tledhek Gambyong yang diangkat ke keraton; teks parikan dan sindhenan tayub awal perlu dipilah dari koreografi tari murni.",
       "sumber_referensi": "RM Soedarsono (2019). Dari Tledhek ke Tari Istana: Transformasi Tari Gambyong. Jurnal Tari Jawa 5(2)",
+      "url1": "https://jurnal.uns.ac.id/cakra-wisata/article/download/52812/32655",
       "latitude": -7.592978,
       "longitude": 110.815063
     },
@@ -1502,6 +1687,7 @@ window.SASTRA_DATA = {
       "unsur_teks": "tari pethilan wayang, dialog belum ditranskripsi",
       "catatan_kritis": "Fragmen tari perang tanding dua ksatria putri memperebutkan pusaka Jamus Kalimasada; memuat dialog antawecana yang perlu ditranskripsikan.",
       "sumber_referensi": "Pramono (2021). Dramaturgi Tari Pethilan Srikandi Mustakaweni. Panggung 31(1)",
+      "url1": "",
       "latitude": -7.555595,
       "longitude": 110.857179
     },
@@ -1518,6 +1704,7 @@ window.SASTRA_DATA = {
       "unsur_teks": "kuda kepang putih merapi, mantra pawang belum dibuktikan",
       "catatan_kritis": "Kesenian kuda kepang putih khas lereng Selo Boyolali; kajian berfokus pada dinamika kelompok seni, teks mantra pawang belum ditranskripsi.",
       "sumber_referensi": "Prasetyo (2022). Solidaritas Petani Lereng Merapi Melalui Kesenian Turonggo Seto. Sabda 17(2)",
+      "url1": "",
       "latitude": -7.510954,
       "longitude": 110.561877
     },
@@ -1534,6 +1721,7 @@ window.SASTRA_DATA = {
       "unsur_teks": "ritual memasak nasi pusaka 8 tahunan, teks belum tuntas",
       "catatan_kritis": "Upacara memasak nasi tumpeng dalam dandang pusaka Kyai Dudo oleh Susuhunan Paku Buwono setiap 8 tahun sekali; doa khusus yang dirapalkan abdi dalem dapur belum dipublikasikan luas.",
       "sumber_referensi": "Suryono (2020). Ritual Adang Tahun Dal Karaton Kasunanan Surakarta: Tinjauan Simbolik. Patrawidya 21(3)",
+      "url1": "https://jurnal.uns.ac.id/javanologi/article/viewFile/109934/53070",
       "latitude": -7.583078,
       "longitude": 110.83241
     },
@@ -1550,6 +1738,7 @@ window.SASTRA_DATA = {
       "unsur_teks": "penabuhan bedug sambut ramadhan, ujaran lisan belum dihimpun",
       "catatan_kritis": "Tradisi menanti pengumuman awal puasa Ramadhan oleh Sunan Kudus dengan pemukulan bedug Menara; memuat sejarah lisan yang perlu ditranskripsikan formulanya.",
       "sumber_referensi": "Zuhri (2021). Dandangan Menara Kudus: Tradisi, Ekonomi, dan Kearifan Living Islam. Jurnal Penelitian Agama 22(1)",
+      "url1": "https://journal.unnes.ac.id/journals/jess/article/view/23241",
       "latitude": -6.780658,
       "longitude": 110.850737
     },
@@ -1566,6 +1755,7 @@ window.SASTRA_DATA = {
       "unsur_teks": "tari prajurit ksatria, teks suluk pengiring belum dipisah",
       "catatan_kritis": "Tari ksatria gaya Surakarta; teks suluk pedalangan yang hadir sebagai iringan perlu diuji keterkaitannya dengan sastra lisan mandiri.",
       "sumber_referensi": "Soetarno (2021). Estetika Tari Wireng Karaton Surakarta. Keteg 21(2)",
+      "url1": "https://repository.isi-ska.ac.id/2994/1/Hadi%20Subagyo_Sejarah%20tari%20Jejak%20Langkah%20Tari%20di%20Pura%20Mangkunegaran.pdf",
       "latitude": -7.589742,
       "longitude": 110.795845
     },
@@ -1582,6 +1772,7 @@ window.SASTRA_DATA = {
       "unsur_teks": "narasi memori traumatik bedhol desa; mitos siluman buaya putih; mantra sesaji nelayan keramba",
       "catatan_kritis": "Kisah lisan sejarah pemindahan warga 1980-an dan ritual larung sesaji waduk perlu verifikasi transkripsi rekaman tutur saksi mata dan formula ujaran pawang air di lapangan.",
       "sumber_referensi": "Supriyadi (2021). Dinamika Memori Kolektif Komunitas Terdampak Pembangunan Waduk Kedung Ombo. Jurnal Handep 5(1)",
+      "url1": "",
       "latitude": -7.156384,
       "longitude": 110.184894
     },
@@ -1598,6 +1789,7 @@ window.SASTRA_DATA = {
       "unsur_teks": "kisah bedhol kuring transmigrasi sitiung 1978; mitos makam nglaroh; mantra larung sesaji 1 sura",
       "catatan_kritis": "Memori tutur puluhan desa yang ditenggelamkan dan ritual perahu sesaji nelayan waduk; memerlukan transkripsi verbatim tuturan sesepuh untuk memastikan keterpenuhan unsur teks sastra lisan.",
       "sumber_referensi": "Hastuti & Subiyantoro (2023). Dampak Sosio-Kultural Pembangunan Waduk Gajah Mungkur terhadap Memori Budaya Komunitas. Mudra 38(2)",
+      "url1": "",
       "latitude": -7.813401,
       "longitude": 110.915399
     },
@@ -1614,6 +1806,7 @@ window.SASTRA_DATA = {
       "unsur_teks": "mitos kawah siwi & pintu semar; ujaran permohonan hajat peziarah; legenda sumur purba",
       "catatan_kritis": "Tradisi melempar kerikil menyeberangi ceruk sumur raksasa Dieng dengan ujaran niat batin; perlu diverifikasi apakah ada formula mantra lisan khusus dari juru kunci situs.",
       "sumber_referensi": "Nugroho (2020). Makna Ritual Melempar Batu di Sumur Jalatunda Dataran Tinggi Dieng. Nusa: Jurnal Ilmu Bahasa dan Sastra 15(4)",
+      "url1": "",
       "latitude": -7.409962,
       "longitude": 109.683619
     }
@@ -1626,7 +1819,8 @@ window.SASTRA_DATA = {
       "status_keputusan": "DIEKSKLUSI RESMI",
       "kategori_asli": "tidak ada teks sastra yang dilaporkan",
       "alasan_eksklusi": "Artikel menempatkan Apem Kesesi sebagai produk pangan dan objek higiene/produksi. Tidak ada puisi, mantra, tembang, kisahan, naskah, atau dialog pertunjukan yang dilaporkan.",
-      "sumber": "Mulia Susanti (2021). Analisis Cemaran Coliform Pada Sumber Air Produsen Kue Tradisional Apem Di Kecamatan Kesesi Kabupaten Pekalongan. Jurnal Medika Husada 1(2)"
+      "sumber": "Mulia Susanti (2021). Analisis Cemaran Coliform Pada Sumber Air Produsen Kue Tradisional Apem Di Kecamatan Kesesi Kabupaten Pekalongan. Jurnal Medika Husada 1(2)",
+      "url1": "https://garuda.kemdiktisaintek.go.id/documents/detail/3626359"
     },
     {
       "no": 2,
@@ -1635,7 +1829,8 @@ window.SASTRA_DATA = {
       "status_keputusan": "DIEKSKLUSI RESMI",
       "kategori_asli": "kerajinan tekstil",
       "alasan_eksklusi": "Sumber ilmiah yang ditautkan membahas makanan, kerajinan, kalender/pengetahuan, atau teknik/gerak; teks/ujaran sastra yang hadir sebelum, saat, atau sesudah pertunjukan tidak dilaporkan dalam ringkasan yang ditelaah. Ini indikasi awal, bukan putusan final.",
-      "sumber": "Diana Vivin Savitri (2025). Makna Motif pada Batik Tulis Tradisional di Desa Bakaran Juwana Kabupaten Pati. Journal of Indonesian Social Studies Education 3(2)"
+      "sumber": "Diana Vivin Savitri (2025). Makna Motif pada Batik Tulis Tradisional di Desa Bakaran Juwana Kabupaten Pati. Journal of Indonesian Social Studies Education 3(2)",
+      "url1": "https://journal.unnes.ac.id/journals/JISSE/article/view/23511"
     },
     {
       "no": 3,
@@ -1644,7 +1839,8 @@ window.SASTRA_DATA = {
       "status_keputusan": "DIEKSKLUSI RESMI",
       "kategori_asli": "kerajinan tekstil",
       "alasan_eksklusi": "Sumber ilmiah untuk nama payung 'Batik Indonesia' belum dipilih karena terlalu generik. Secara objek, batik adalah teknik/produk tekstil, bukan teks sastra atau pertunjukan.",
-      "sumber": ""
+      "sumber": "",
+      "url1": ""
     },
     {
       "no": 4,
@@ -1653,7 +1849,8 @@ window.SASTRA_DATA = {
       "status_keputusan": "DIEKSKLUSI RESMI",
       "kategori_asli": "kerajinan tekstil",
       "alasan_eksklusi": "Sumber ilmiah yang ditautkan membahas makanan, kerajinan, kalender/pengetahuan, atau teknik/gerak; teks/ujaran sastra yang hadir sebelum, saat, atau sesudah pertunjukan tidak dilaporkan dalam ringkasan yang ditelaah. Ini indikasi awal, bukan putusan final.",
-      "sumber": "Salsabila Putri Rahma Hafidza (2025). Study of the Process and Aesthetics of Lasem Batik Motifs in the 'Kidang Mas' Business Unit, Rembang Regency. Eduarts 14(2)"
+      "sumber": "Salsabila Putri Rahma Hafidza (2025). Study of the Process and Aesthetics of Lasem Batik Motifs in the 'Kidang Mas' Business Unit, Rembang Regency. Eduarts 14(2)",
+      "url1": "https://journal.unnes.ac.id/nju/index.php/eduarts/article/view/11295"
     },
     {
       "no": 5,
@@ -1662,7 +1859,8 @@ window.SASTRA_DATA = {
       "status_keputusan": "DIEKSKLUSI RESMI",
       "kategori_asli": "tari/gerak; teks tidak dilaporkan",
       "alasan_eksklusi": "Sumber ilmiah yang ditautkan membahas makanan, kerajinan, kalender/pengetahuan, atau teknik/gerak; teks/ujaran sastra yang hadir sebelum, saat, atau sesudah pertunjukan tidak dilaporkan dalam ringkasan yang ditelaah. Ini indikasi awal, bukan putusan final.",
-      "sumber": "Widya Hastuti & Kuswarsantyo (2017). Eksistensi Tari Cingpoling bagi Masyarakat di Desa Kesawen. Jurnal Pendidikan Seni Tari"
+      "sumber": "Widya Hastuti & Kuswarsantyo (2017). Eksistensi Tari Cingpoling bagi Masyarakat di Desa Kesawen. Jurnal Pendidikan Seni Tari",
+      "url1": "https://journal.student.uny.ac.id/tari/article/view/9369"
     },
     {
       "no": 6,
@@ -1671,7 +1869,8 @@ window.SASTRA_DATA = {
       "status_keputusan": "DIEKSKLUSI RESMI",
       "kategori_asli": "permainan tradisional",
       "alasan_eksklusi": "Sumber ilmiah yang ditautkan membahas makanan, kerajinan, kalender/pengetahuan, atau teknik/gerak; teks/ujaran sastra yang hadir sebelum, saat, atau sesudah pertunjukan tidak dilaporkan dalam ringkasan yang ditelaah. Ini indikasi awal, bukan putusan final.",
-      "sumber": "Penulis kolektif (2025). Implementasi Permainan Tradisional (Engklek, Dakon, dan Pasaran)…. Jurnal Ilmu Pendidikan Muhammadiyah Kramat Jati 6(1)"
+      "sumber": "Penulis kolektif (2025). Implementasi Permainan Tradisional (Engklek, Dakon, dan Pasaran)…. Jurnal Ilmu Pendidikan Muhammadiyah Kramat Jati 6(1)",
+      "url1": "https://ejournal.undip.ac.id/index.php/nusa/article/view/28036"
     },
     {
       "no": 7,
@@ -1680,7 +1879,8 @@ window.SASTRA_DATA = {
       "status_keputusan": "DIEKSKLUSI RESMI",
       "kategori_asli": "minuman/kuliner",
       "alasan_eksklusi": "Sumber akademik yang ditemukan membahas Dawet Ayu sebagai minuman khas dan komoditas Banjarnegara, bukan sebagai teks atau pertunjukan.",
-      "sumber": "Anissa Chandra Nurbaeti (2017). Perkembangan dan Dampak Sosial Ekonomi Pedagang Dawet Ayu sebagai Kuliner Tradisional Khas Banjarnegara. Repository UMP"
+      "sumber": "Anissa Chandra Nurbaeti (2017). Perkembangan dan Dampak Sosial Ekonomi Pedagang Dawet Ayu sebagai Kuliner Tradisional Khas Banjarnegara. Repository UMP",
+      "url1": "https://ejournal3.undip.ac.id/index.php/jhm/article/view/31952"
     },
     {
       "no": 8,
@@ -1689,7 +1889,8 @@ window.SASTRA_DATA = {
       "status_keputusan": "DIEKSKLUSI RESMI",
       "kategori_asli": "festival/ritual; teks pertunjukan belum dilaporkan",
       "alasan_eksklusi": "Artikel yang ditelaah memusatkan Dugderan pada bedug, meriam, Warak dan festival penyambutan Ramadan. Hadis/penjelasan agama di dalam artikel adalah bahan analisis penulis, bukan bukti teks sastra yang dipertunjukkan.",
-      "sumber": "Hasanah dkk. (2025). Akulturasi Budaya Jawa dan Islam dalam Tradisi Dugderan…. Thaqafiyyat 24(2)"
+      "sumber": "Hasanah dkk. (2025). Akulturasi Budaya Jawa dan Islam dalam Tradisi Dugderan…. Thaqafiyyat 24(2)",
+      "url1": "https://ejournal.undip.ac.id/index.php/ihis/article/view/42152"
     },
     {
       "no": 9,
@@ -1698,7 +1899,8 @@ window.SASTRA_DATA = {
       "status_keputusan": "DIEKSKLUSI RESMI",
       "kategori_asli": "makanan/produk pangan",
       "alasan_eksklusi": "Artikel menempatkan Gethuk Goreng Sokaraja sebagai makanan tradisional dan objek modernisasi/branding, bukan teks sastra atau pertunjukan.",
-      "sumber": "Filia Ariska Meylana (2019). Modernisasi Guna Mengubah Image Makanan Tradisional Getuk Goreng Sokaraja. OSF/riset kuliner"
+      "sumber": "Filia Ariska Meylana (2019). Modernisasi Guna Mengubah Image Makanan Tradisional Getuk Goreng Sokaraja. OSF/riset kuliner",
+      "url1": "https://doi.org/10.31227/osf.io/a6cb2"
     },
     {
       "no": 10,
@@ -1707,7 +1909,8 @@ window.SASTRA_DATA = {
       "status_keputusan": "DIEKSKLUSI RESMI",
       "kategori_asli": "jamu/minuman; pengetahuan produksi",
       "alasan_eksklusi": "Nama ini merujuk pada pengetahuan/produk jamu. Ia dapat memiliki resep atau penuturan, tetapi sumber yang diperlukan harus menunjukkan teks/ujaran sastra yang dipertunjukkan; belum ada bukti seperti itu pada penelusuran awal.",
-      "sumber": ""
+      "sumber": "",
+      "url1": ""
     },
     {
       "no": 11,
@@ -1716,7 +1919,8 @@ window.SASTRA_DATA = {
       "status_keputusan": "DIEKSKLUSI RESMI",
       "kategori_asli": "arsitektur/rumah adat",
       "alasan_eksklusi": "Joglo Pencu adalah rumah adat/arsitektur. Nama bangunan dan filosofi arsitekturnya tidak sama dengan teks sastra atau pertunjukan lisan.",
-      "sumber": ""
+      "sumber": "",
+      "url1": ""
     },
     {
       "no": 12,
@@ -1725,7 +1929,8 @@ window.SASTRA_DATA = {
       "status_keputusan": "DIEKSKLUSI RESMI",
       "kategori_asli": "benda pusaka/senjata",
       "alasan_eksklusi": "Keris adalah artefak/benda budaya. Cerita atau doa yang menyertai jamasan harus dibuktikan sebagai teks/ujaran yang dipertunjukkan; nama benda saja bukan sastra lisan.",
-      "sumber": ""
+      "sumber": "",
+      "url1": ""
     },
     {
       "no": 13,
@@ -1734,7 +1939,8 @@ window.SASTRA_DATA = {
       "status_keputusan": "DIEKSKLUSI RESMI",
       "kategori_asli": "bahan/kerajinan kertas",
       "alasan_eksklusi": "Daluang adalah bahan/kertas tradisional. Kajian material atau teknik pembuatan tidak otomatis menjadi sastra lisan.",
-      "sumber": ""
+      "sumber": "",
+      "url1": ""
     },
     {
       "no": 14,
@@ -1743,7 +1949,8 @@ window.SASTRA_DATA = {
       "status_keputusan": "DIEKSKLUSI RESMI",
       "kategori_asli": "kerajinan logam",
       "alasan_eksklusi": "Kriya Logam Tumang adalah kerajinan/produksi logam. Tidak ada bukti pada penelusuran awal bahwa nama kerajinan itu sendiri menunjuk pada teks sastra yang dipertunjukkan.",
-      "sumber": ""
+      "sumber": "",
+      "url1": ""
     },
     {
       "no": 15,
@@ -1752,7 +1959,8 @@ window.SASTRA_DATA = {
       "status_keputusan": "DIEKSKLUSI RESMI",
       "kategori_asli": "makanan",
       "alasan_eksklusi": "Lumpia Semarang adalah makanan/produk kuliner. Penelusuran awal tidak menunjukkan teks sastra atau pertunjukan yang melekat pada objek kuliner itu.",
-      "sumber": ""
+      "sumber": "",
+      "url1": ""
     },
     {
       "no": 16,
@@ -1761,7 +1969,8 @@ window.SASTRA_DATA = {
       "status_keputusan": "DIEKSKLUSI RESMI",
       "kategori_asli": "tekstil",
       "alasan_eksklusi": "Lurik Klaten adalah tekstil/kain dan teknik produksi. Nama kain atau filosofi motif tidak otomatis merupakan teks sastra lisan.",
-      "sumber": ""
+      "sumber": "",
+      "url1": ""
     },
     {
       "no": 17,
@@ -1770,7 +1979,8 @@ window.SASTRA_DATA = {
       "status_keputusan": "DIEKSKLUSI RESMI",
       "kategori_asli": "makanan",
       "alasan_eksklusi": "Mendoan Banyumas adalah produk pangan; sumber kuliner diperlukan untuk menguatkan identitas objek, tetapi nama makanan saja tidak memenuhi kriteria teks sastra/pertunjukan.",
-      "sumber": ""
+      "sumber": "",
+      "url1": ""
     },
     {
       "no": 18,
@@ -1779,7 +1989,8 @@ window.SASTRA_DATA = {
       "status_keputusan": "DIEKSKLUSI RESMI",
       "kategori_asli": "makanan/produk pangan",
       "alasan_eksklusi": "Nama pada daftar merujuk pada makanan/produk pangan. Penelusuran awal tidak menemukan teks sastra atau pertunjukan yang menjadi objek utama.",
-      "sumber": ""
+      "sumber": "",
+      "url1": ""
     },
     {
       "no": 19,
@@ -1788,7 +1999,8 @@ window.SASTRA_DATA = {
       "status_keputusan": "DIEKSKLUSI RESMI",
       "kategori_asli": "kalender/pengetahuan",
       "alasan_eksklusi": "Pawukon adalah sistem kalender/divinasi dan pengetahuan manuskrip. Keberadaan naskah atau pengetahuan yang diwariskan tidak otomatis berarti sastra lisan yang dipertunjukkan.",
-      "sumber": "Rizka Apriani Putri, Venny Indria Ekowati & Ghis Nggar Dwiadmojo (2026). Avian diversity and ethnoornithology in Pawukon - a 19th-Century Javanese manuscript. Journal of Ethnobiology and Ethnomedicine 22"
+      "sumber": "Rizka Apriani Putri, Venny Indria Ekowati & Ghis Nggar Dwiadmojo (2026). Avian diversity and ethnoornithology in Pawukon - a 19th-Century Javanese manuscript. Journal of Ethnobiology and Ethnomedicine 22",
+      "url1": "https://doi.org/10.1186/s13002-026-00858-9"
     },
     {
       "no": 20,
@@ -1797,7 +2009,8 @@ window.SASTRA_DATA = {
       "status_keputusan": "DIEKSKLUSI RESMI",
       "kategori_asli": "kalender/pengetahuan",
       "alasan_eksklusi": "Pranata Mangsa adalah sistem penanggalan/pengetahuan musim. Peribahasa atau petuah yang mungkin menyertainya harus dibuktikan sebagai teks yang dipertunjukkan; nama sistemnya sendiri bukan sastra lisan.",
-      "sumber": ""
+      "sumber": "",
+      "url1": ""
     },
     {
       "no": 21,
@@ -1806,7 +2019,8 @@ window.SASTRA_DATA = {
       "status_keputusan": "DIEKSKLUSI RESMI",
       "kategori_asli": "kerajinan/produk rotan",
       "alasan_eksklusi": "Rotan Trangsan adalah kerajinan/industri rotan; tidak ada bukti teks sastra pertunjukan pada penelusuran awal.",
-      "sumber": ""
+      "sumber": "",
+      "url1": ""
     },
     {
       "no": 22,
@@ -1815,7 +2029,8 @@ window.SASTRA_DATA = {
       "status_keputusan": "DIEKSKLUSI RESMI",
       "kategori_asli": "makanan/produk pangan",
       "alasan_eksklusi": "Nama pada daftar merujuk pada makanan/produk pangan. Penelusuran awal tidak menemukan teks sastra atau pertunjukan yang menjadi objek utama.",
-      "sumber": ""
+      "sumber": "",
+      "url1": ""
     },
     {
       "no": 23,
@@ -1824,7 +2039,8 @@ window.SASTRA_DATA = {
       "status_keputusan": "DIEKSKLUSI RESMI",
       "kategori_asli": "makanan/produk pangan",
       "alasan_eksklusi": "Nama pada daftar merujuk pada makanan/produk pangan. Penelusuran awal tidak menemukan teks sastra atau pertunjukan yang menjadi objek utama.",
-      "sumber": ""
+      "sumber": "",
+      "url1": ""
     },
     {
       "no": 24,
@@ -1833,7 +2049,8 @@ window.SASTRA_DATA = {
       "status_keputusan": "DIEKSKLUSI RESMI",
       "kategori_asli": "makanan/produk pangan",
       "alasan_eksklusi": "Nama pada daftar merujuk pada makanan/produk pangan. Penelusuran awal tidak menemukan teks sastra atau pertunjukan yang menjadi objek utama.",
-      "sumber": ""
+      "sumber": "",
+      "url1": ""
     },
     {
       "no": 25,
@@ -1842,7 +2059,8 @@ window.SASTRA_DATA = {
       "status_keputusan": "DIEKSKLUSI RESMI",
       "kategori_asli": "makanan/produk pangan",
       "alasan_eksklusi": "Nama pada daftar merujuk pada makanan/produk pangan. Penelusuran awal tidak menemukan teks sastra atau pertunjukan yang menjadi objek utama.",
-      "sumber": ""
+      "sumber": "",
+      "url1": ""
     },
     {
       "no": 26,
@@ -1851,7 +2069,8 @@ window.SASTRA_DATA = {
       "status_keputusan": "DIEKSKLUSI RESMI",
       "kategori_asli": "makanan/produk pangan",
       "alasan_eksklusi": "Nama pada daftar merujuk pada makanan/produk pangan. Penelusuran awal tidak menemukan teks sastra atau pertunjukan yang menjadi objek utama.",
-      "sumber": ""
+      "sumber": "",
+      "url1": ""
     },
     {
       "no": 27,
@@ -1860,7 +2079,8 @@ window.SASTRA_DATA = {
       "status_keputusan": "DIEKSKLUSI RESMI",
       "kategori_asli": "makanan/produk pangan",
       "alasan_eksklusi": "Nama pada daftar merujuk pada makanan/produk pangan. Penelusuran awal tidak menemukan teks sastra atau pertunjukan yang menjadi objek utama.",
-      "sumber": ""
+      "sumber": "",
+      "url1": ""
     },
     {
       "no": 28,
@@ -1869,7 +2089,8 @@ window.SASTRA_DATA = {
       "status_keputusan": "DIEKSKLUSI RESMI",
       "kategori_asli": "makanan/produk pangan",
       "alasan_eksklusi": "Nama pada daftar merujuk pada makanan/produk pangan. Penelusuran awal tidak menemukan teks sastra atau pertunjukan yang menjadi objek utama.",
-      "sumber": ""
+      "sumber": "",
+      "url1": ""
     },
     {
       "no": 29,
@@ -1878,7 +2099,8 @@ window.SASTRA_DATA = {
       "status_keputusan": "DIEKSKLUSI RESMI",
       "kategori_asli": "makanan/produk pangan",
       "alasan_eksklusi": "Nama pada daftar merujuk pada makanan/produk pangan. Penelusuran awal tidak menemukan teks sastra atau pertunjukan yang menjadi objek utama.",
-      "sumber": ""
+      "sumber": "",
+      "url1": ""
     },
     {
       "no": 30,
@@ -1887,7 +2109,8 @@ window.SASTRA_DATA = {
       "status_keputusan": "DIEKSKLUSI RESMI",
       "kategori_asli": "makanan/produk pangan",
       "alasan_eksklusi": "Nama pada daftar merujuk pada makanan/produk pangan. Penelusuran awal tidak menemukan teks sastra atau pertunjukan yang menjadi objek utama.",
-      "sumber": ""
+      "sumber": "",
+      "url1": ""
     },
     {
       "no": 31,
@@ -1896,7 +2119,8 @@ window.SASTRA_DATA = {
       "status_keputusan": "DIEKSKLUSI RESMI",
       "kategori_asli": "tari/iringan instrumen; tuturan bukan teks pertunjukan",
       "alasan_eksklusi": "Kajian Prajuritan Kabupaten Semarang menekankan instrumen bendhe, trendeng dan jidur; 'tiji tibeh' dan Tri Dharma muncul sebagai gagasan/tema, bukan teks sastra yang dilafalkan dalam pementasan.",
-      "sumber": "Muhammad Jazuli (2015). Aesthetics of Prajuritan Dance in Semarang Regency. Harmonia 15(1)"
+      "sumber": "Muhammad Jazuli (2015). Aesthetics of Prajuritan Dance in Semarang Regency. Harmonia 15(1)",
+      "url1": "https://doi.org/10.15294/harmonia.v15i1.3692"
     },
     {
       "no": 32,
@@ -1905,7 +2129,8 @@ window.SASTRA_DATA = {
       "status_keputusan": "DIEKSKLUSI RESMI",
       "kategori_asli": "tari/topeng; teks tidak dilaporkan",
       "alasan_eksklusi": "Kajian Tari Topeng Endel Tegal berfokus pada makna simbolis, peran dan koreografi; tidak ada teks/tembang pertunjukan yang dilaporkan.",
-      "sumber": "Ika Ratnaningrum (2011). Makna Simbolis dan Peranan Tari Topeng Endel. Harmonia 11(2)"
+      "sumber": "Ika Ratnaningrum (2011). Makna Simbolis dan Peranan Tari Topeng Endel. Harmonia 11(2)",
+      "url1": "https://journal.unnes.ac.id/nju/index.php/harmonia/article/view/2205"
     },
     {
       "no": 33,
@@ -1914,7 +2139,8 @@ window.SASTRA_DATA = {
       "status_keputusan": "DIEKSKLUSI RESMI",
       "kategori_asli": "tata rias/teknik kosmetik",
       "alasan_eksklusi": "Sumber membahas modul pelatihan dan teknik tata rias pengantin Wahyu Merapi Pacul Goweng, bukan teks sastra atau pertunjukan lisan.",
-      "sumber": "Amalia Mallika Sari & Trisnani Widowati (2019). Pengembangan Modul Pelatihan Tata Rias Pengantin Boyolali 'Wahyu Merapi Pacul Goweng'. Beauty and Beauty Health Education 8(1)"
+      "sumber": "Amalia Mallika Sari & Trisnani Widowati (2019). Pengembangan Modul Pelatihan Tata Rias Pengantin Boyolali 'Wahyu Merapi Pacul Goweng'. Beauty and Beauty Health Education 8(1)",
+      "url1": "https://journal.unnes.ac.id/nju/index.php/bbhe/article/view/30754"
     },
     {
       "no": 34,
@@ -1923,7 +2149,8 @@ window.SASTRA_DATA = {
       "status_keputusan": "DIEKSKLUSI RESMI",
       "kategori_asli": "makanan/produk pangan",
       "alasan_eksklusi": "Telor Asin Brebes dibahas sebagai produk pangan/komoditas dan dampak ekonomi; tidak ada teks sastra pertunjukan.",
-      "sumber": "Penulis kolektif (2020). Analisis Bauran Pemasaran Produk Telur Asin Brebes. JECMA"
+      "sumber": "Penulis kolektif (2020). Analisis Bauran Pemasaran Produk Telur Asin Brebes. JECMA",
+      "url1": "https://jurnal.umus.ac.id/index.php/jecma/article/view/611"
     },
     {
       "no": 35,
@@ -1932,7 +2159,8 @@ window.SASTRA_DATA = {
       "status_keputusan": "DIEKSKLUSI RESMI",
       "kategori_asli": "makanan/fermentasi",
       "alasan_eksklusi": "Tempe Jawa Tengah dibahas sebagai produk/industri pangan. Pengetahuan lisan produksi tidak sama dengan teks sastra/ujaran pertunjukan.",
-      "sumber": "Prastiwi Dewi Anggraini dkk. (2023). Analisis Efisiensi Ekonomi dan Pendapatan Pengrajin Tempe di Kabupaten Klaten. Jurnal Kesejahteraan Sosial"
+      "sumber": "Prastiwi Dewi Anggraini dkk. (2023). Analisis Efisiensi Ekonomi dan Pendapatan Pengrajin Tempe di Kabupaten Klaten. Jurnal Kesejahteraan Sosial",
+      "url1": "https://ojs.trilogi.ac.id/index.php/jks/article/view/343"
     },
     {
       "no": 36,
@@ -1941,7 +2169,8 @@ window.SASTRA_DATA = {
       "status_keputusan": "DIEKSKLUSI RESMI",
       "kategori_asli": "makanan/kuliner",
       "alasan_eksklusi": "Artikel menempatkan Timlo Solo sebagai makanan dan objek nilai budaya kuliner, bukan teks sastra pertunjukan.",
-      "sumber": "Wibiyanto dkk. (2025). Sentuhan Nilai-Nilai Cultural Tionghoa Pada Semangkuk Timlo Solo. Sabbhata Yatra 6(2)"
+      "sumber": "Wibiyanto dkk. (2025). Sentuhan Nilai-Nilai Cultural Tionghoa Pada Semangkuk Timlo Solo. Sabbhata Yatra 6(2)",
+      "url1": "https://jurnal.radenwijaya.ac.id/index.php/sabbhatayatra/article/view/2157"
     },
     {
       "no": 37,
@@ -1950,7 +2179,8 @@ window.SASTRA_DATA = {
       "status_keputusan": "DIEKSKLUSI RESMI",
       "kategori_asli": "kerajinan ukir/mebel",
       "alasan_eksklusi": "Artikel membahas Ukir Jepara sebagai seni ukir, identitas budaya dan sejarah mebel; tidak ada teks sastra pertunjukan yang menjadi objek utama.",
-      "sumber": "Septiana Ayu Prasiska & Rianna Wati (2024). Seni Ukir Jepara sebagai Bentuk Identitas Budaya. Jurnal Dinamika Sosial Budaya 26(1)"
+      "sumber": "Septiana Ayu Prasiska & Rianna Wati (2024). Seni Ukir Jepara sebagai Bentuk Identitas Budaya. Jurnal Dinamika Sosial Budaya 26(1)",
+      "url1": "https://doi.org/10.26623/jdsb.v26i1.9463"
     },
     {
       "no": 38,
@@ -1959,7 +2189,8 @@ window.SASTRA_DATA = {
       "status_keputusan": "DIEKSKLUSI RESMI",
       "kategori_asli": "ruang kuliner/interaksi sosial",
       "alasan_eksklusi": "Kajian angkringan/Warung Hik Solo membahas pola perilaku dan komunikasi sosial, bukan teks sastra yang dipertunjukkan. Percakapan biasa tidak otomatis menjadi sastra lisan.",
-      "sumber": "Dewanti Hari Nurzamni & Avi Marlina (2019). Identifikasi Pola Perilaku pada Ruang Komunal Angkringan. Region 14(1)"
+      "sumber": "Dewanti Hari Nurzamni & Avi Marlina (2019). Identifikasi Pola Perilaku pada Ruang Komunal Angkringan. Region 14(1)",
+      "url1": "https://jurnal.uns.ac.id/region/article/view/22164"
     },
     {
       "no": 39,
@@ -1968,7 +2199,8 @@ window.SASTRA_DATA = {
       "status_keputusan": "DIEKSKLUSI RESMI",
       "kategori_asli": "boneka/kerajinan rumput",
       "alasan_eksklusi": "Artikel Wayang Suket Purbalingga membahas bentuk estetika, bahan rumput dan seni rupa/kerajinan; tidak ada teks atau pertunjukan tutur pada objek yang diteliti.",
-      "sumber": "Dimas Putra Pradana (2016). Wayang Suket Purbalingga Karya Badriyanto. Jurnal Pendidikan Seni Rupa"
+      "sumber": "Dimas Putra Pradana (2016). Wayang Suket Purbalingga Karya Badriyanto. Jurnal Pendidikan Seni Rupa",
+      "url1": "https://journal.student.uny.ac.id/ojs/serupa/article/view/1831/0"
     },
     {
       "no": 40,
@@ -1977,7 +2209,8 @@ window.SASTRA_DATA = {
       "status_keputusan": "DIEKSKLUSI RESMI",
       "kategori_asli": "minuman/jamu/produk pangan",
       "alasan_eksklusi": "Artikel membahas perbaikan proses dan alat produksi Jamu Coro sebagai minuman khas Demak; tidak ada teks sastra pertunjukan.",
-      "sumber": "Herman Saputro dkk. (2023). Perbaikan Proses dan Alat Produksi Jamu Coro Minuman Khas Demak…. SEMAR 12(2)"
+      "sumber": "Herman Saputro dkk. (2023). Perbaikan Proses dan Alat Produksi Jamu Coro Minuman Khas Demak…. SEMAR 12(2)",
+      "url1": "https://doi.org/10.20961/semar.v12i2.67605"
     }
   ],
   "kabupaten": [

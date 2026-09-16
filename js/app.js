@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Aplikasi Utama Atlas Sastra Lisan Jawa Tengah
  * Logika filter reaktif, drawer detail multimedia, transkrip, dan dialog modal
  */
@@ -179,7 +179,23 @@
     `;
 
     const narrative = document.getElementById('narrative-summary');
-    narrative.textContent = item.ringkasan_ilmiah || item.catatan_kritis || 'Belum ada catatan deskriptif naratif.';
+    const sourceSummary = item.sumber_ilmiah_1 || item.sumber_ilmiah || item.sumber_referensi || 'Balai Bahasa Provinsi Jawa Tengah (2026)';
+    narrative.innerHTML = `
+      <div style="margin-bottom: 12px; line-height: 1.6; font-size: 0.86rem;">
+        ${item.ringkasan_ilmiah || item.catatan_kritis || 'Belum ada catatan deskriptif naratif.'}
+      </div>
+      <div style="background: #fdfbf7; border: 2px solid #000; box-shadow: 2px 2px 0px #000; padding: 10px; margin-top: 10px;">
+        <div style="font-size: 0.75rem; color: #555; font-weight: 700; margin-bottom: 4px; display: flex; align-items: center; gap: 6px;">
+          <i class="fa-solid fa-graduation-cap text-yellow-600"></i> Rujukan Ilmiah Verifikasi:
+        </div>
+        <div style="font-size: 0.82rem; font-style: italic; color: #111; margin-bottom: 8px;">
+          "${sourceSummary}"
+        </div>
+        <button type="button" class="neo-btn neo-btn-cyan" style="font-size: 0.74rem; padding: 4px 10px; font-weight: 700;" onclick="document.getElementById('tab-pustaka').click();">
+          <i class="fa-solid fa-arrow-up-right-from-square"></i> Lihat Tautan & Detail Sumber
+        </button>
+      </div>
+    `;
   }
 
   /**
@@ -289,17 +305,40 @@
       photos = [item.cover_image];
     }
 
+    const galleryCard = galleryGrid.closest('.info-card');
+    if (galleryCard) {
+      const h4 = galleryCard.querySelector('h4');
+      if (h4) {
+        h4.innerHTML = `<i class="fa-solid fa-images"></i> Galeri Dokumentasi Lapangan (${photos.length} Foto)`;
+      }
+    }
+
     if (photos.length > 0) {
-      photos.forEach(function (src) {
+      photos.forEach(function (src, idx) {
         const img = document.createElement('img');
         img.src = src;
-        img.alt = `Dokumentasi ${item.nama}`;
+        img.alt = `Dokumentasi ${item.nama} (${idx + 1})`;
+        img.title = `Foto ke-${idx + 1} &bull; Klik untuk membuka ukuran penuh`;
         img.className = 'gallery-thumb';
+        img.loading = 'lazy';
         img.onclick = function () {
           window.open(src, '_blank');
         };
         galleryGrid.appendChild(img);
       });
+
+      // Tambahkan tautan langsung ke folder Google Drive bila Kentrung Blora
+      if (item.nama && item.nama.includes('Blora')) {
+        const driveDiv = document.createElement('div');
+        driveDiv.style.gridColumn = '1 / -1';
+        driveDiv.style.marginTop = '8px';
+        driveDiv.innerHTML = `
+          <a href="https://drive.google.com/drive/folders/18w4WNaHh6PTtLBR11E406lFkM9far-rF?usp=sharing" target="_blank" rel="noopener noreferrer" class="neo-btn" style="font-size:0.75rem; text-decoration:none; background:#fff; display:inline-flex; align-items:center; gap:6px;">
+            <i class="fa-brands fa-google-drive text-green-600"></i> Buka Folder Google Drive Asli (50 Foto Dokumentasi)
+          </a>
+        `;
+        galleryGrid.appendChild(driveDiv);
+      }
     } else {
       galleryGrid.innerHTML = '<p style="font-size:0.8rem; color:#777;">Tidak ada foto tambahan untuk tradisi ini.</p>';
     }
@@ -399,24 +438,108 @@
   }
 
   /**
-   * Render Tab 5: Sumber Pustaka Ilmiah
+   * Mengubah teks URL menjadi tautan HTML interaktif
+   */
+  function linkifyText(text) {
+    if (!text) return '';
+    return text.replace(/(https?:\/\/[^\s<>"']+)/g, function (url) {
+      return `<a href="${url}" target="_blank" rel="noopener noreferrer" style="color: #0044cc; font-weight: 700; text-decoration: underline; word-break: break-all;">${url} <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.75em;"></i></a>`;
+    });
+  }
+
+  /**
+   * Render Tab 5: Sumber Pustaka Ilmiah dengan Tautan Interaktif (DOI / Jurnal / Scholar)
    */
   function renderTabPustaka(item) {
     const citationEl = document.getElementById('citation-content');
-    citationEl.innerHTML = `
-      <p style="font-weight: 700; margin-bottom: 6px;">Sumber Ilmiah / Inventarisasi Lapangan:</p>
-      <div style="padding: 10px; background: #fffbe6; border-left: 4px solid #000; margin-bottom: 12px; font-size: 0.85rem;">
-        ${item.sumber_ilmiah || item.sumber_ilmiah_1 || item.sumber_referensi || 'Balai Bahasa Provinsi Jawa Tengah (2026)'}
+    if (!citationEl) return;
+
+    // Sumber Utama
+    const s1Raw = item.sumber_ilmiah_1 || item.sumber_ilmiah || item.sumber_referensi || 'Balai Bahasa Provinsi Jawa Tengah (2026)';
+    const url1 = (item.url1 && item.url1.trim().startsWith('http')) ? item.url1.trim() : null;
+    const scholarQuery1 = encodeURIComponent((item.sumber_ilmiah_1 || item.sumber_ilmiah || item.nama).replace(/[\(\)\[\]]/g, ' ').trim());
+
+    // Sumber Pembanding / Kedua
+    const s2Raw = item.sumber_ilmiah_2 || null;
+    const url2 = (item.url2 && item.url2.trim().startsWith('http')) ? item.url2.trim() : null;
+    const scholarQuery2 = s2Raw ? encodeURIComponent(s2Raw.replace(/[\(\)\[\]]/g, ' ').trim()) : null;
+
+    let html = `
+      <div style="margin-bottom: 16px;">
+        <div style="display:flex; align-items:center; gap:8px; margin-bottom:8px;">
+          <span class="neo-badge badge-r1" style="font-size:0.75rem; padding:3px 8px;">
+            <i class="fa-solid fa-bookmark"></i> Rujukan Utama
+          </span>
+          <span style="font-size:0.75rem; color:#555; font-weight:700;">Verifikasi Ilmiah</span>
+        </div>
+
+        <div style="padding: 12px; background: #fffbe6; border: 2.5px solid #000; box-shadow: 3px 3px 0px #000; margin-bottom: 10px; font-size: 0.88rem; line-height: 1.55;">
+          ${linkifyText(s1Raw)}
+        </div>
+
+        ${item.dasar_bukti_1 ? `
+          <div style="font-size: 0.8rem; background: #fff; border: 2px solid #000; border-left: 5px solid #FF6B35; padding: 8px 10px; margin-bottom: 10px; color: #111;">
+            <strong style="color: #c2410c;"><i class="fa-solid fa-check-double"></i> Dasar Bukti Tekstual:</strong><br>
+            <span style="margin-top: 2px; display: inline-block;">${item.dasar_bukti_1}</span>
+          </div>
+        ` : ''}
+
+        <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px;">
+          ${url1 ? `
+            <a href="${url1}" target="_blank" rel="noopener noreferrer" class="neo-btn neo-btn-cyan" style="font-size: 0.78rem; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> Buka Tautan Sumber / DOI
+            </a>
+          ` : ''}
+          <a href="https://scholar.google.com/scholar?q=${scholarQuery1}" target="_blank" rel="noopener noreferrer" class="neo-btn" style="font-size: 0.78rem; text-decoration: none; background: #fff; display: inline-flex; align-items: center; gap: 6px;">
+            <i class="fa-solid fa-graduation-cap"></i> Cari di Google Scholar
+          </a>
+        </div>
       </div>
-      ${item.dasar_bukti_1 ? `
-        <p style="font-weight: 700; margin-bottom: 4px;">Dasar Pembuktian Tekstual:</p>
-        <p style="font-size: 0.85rem; color: #333; margin-bottom: 10px;">${item.dasar_bukti_1}</p>
-      ` : ''}
-      ${item.sumber_ilmiah_2 ? `
-        <p style="font-weight: 700; margin-bottom: 4px;">Sumber Pembanding Tambahan:</p>
-        <p style="font-size: 0.85rem; color: #555;">${item.sumber_ilmiah_2}</p>
-      ` : ''}
     `;
+
+    if (s2Raw) {
+      html += `
+        <div style="margin-top: 18px; border-top: 2.5px dashed #000; padding-top: 14px;">
+          <div style="display:flex; align-items:center; gap:8px; margin-bottom:8px;">
+            <span class="neo-badge badge-r2" style="font-size:0.75rem; padding:3px 8px;">
+              <i class="fa-solid fa-book-open"></i> Sumber Pembanding / Tambahan
+            </span>
+          </div>
+
+          <div style="padding: 12px; background: #e0f2fe; border: 2.5px solid #000; box-shadow: 3px 3px 0px #000; margin-bottom: 10px; font-size: 0.88rem; line-height: 1.55;">
+            ${linkifyText(s2Raw)}
+          </div>
+
+          ${item.dasar_bukti_2 ? `
+            <div style="font-size: 0.8rem; background: #fff; border: 2px solid #000; border-left: 5px solid #00E5FF; padding: 8px 10px; margin-bottom: 10px; color: #111;">
+              <strong style="color: #0284c7;"><i class="fa-solid fa-check"></i> Dasar Bukti Tambahan:</strong><br>
+              <span style="margin-top: 2px; display: inline-block;">${item.dasar_bukti_2}</span>
+            </div>
+          ` : ''}
+
+          <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px;">
+            ${url2 ? `
+              <a href="${url2}" target="_blank" rel="noopener noreferrer" class="neo-btn neo-btn-cyan" style="font-size: 0.78rem; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Buka Tautan Sumber 2 / DOI
+              </a>
+            ` : ''}
+            <a href="https://scholar.google.com/scholar?q=${scholarQuery2}" target="_blank" rel="noopener noreferrer" class="neo-btn" style="font-size: 0.78rem; text-decoration: none; background: #fff; display: inline-flex; align-items: center; gap: 6px;">
+              <i class="fa-solid fa-graduation-cap"></i> Cari di Google Scholar
+            </a>
+          </div>
+        </div>
+      `;
+    }
+
+    // Informasi Ringkasan Metodologis
+    html += `
+      <div style="margin-top: 16px; background: #fdfaf6; border: 1.5px solid #999; padding: 10px; font-size: 0.75rem; color: #444; line-height: 1.4;">
+        <i class="fa-solid fa-circle-info text-blue-600"></i>
+        Seluruh rujukan akademik telah melalui uji kurasi komprehensif Balai Bahasa Provinsi Jawa Tengah untuk memastikan keberadaan korpus sastra tutur lisan.
+      </div>
+    `;
+
+    citationEl.innerHTML = html;
   }
 
   /**

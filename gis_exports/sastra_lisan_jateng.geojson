@@ -1,6 +1,6 @@
 {
   "type": "FeatureCollection",
-  "name": "Peta_Sastra_Lisan_Jawa_Tengah_2026",
+  "name": "Peta_Sastra_Lisan_Jawa_Tengah",
   "crs": {
     "type": "name",
     "properties": {
@@ -30,6 +30,8 @@
         "formula_teks": "Penutur tunggal memadukan 3 teknik: Kandha (narasi prosa), Janturan (sajak dilagukan), Caturan (dialog tokoh)",
         "ringkasan_ilmiah": "Kentrung Blora adalah seni tutur lisan berirama bernuansa Islam-Jawa pesisir dengan tabuhan terbang besar dan ketunthung. Penutur membawakan carita kepahlawanan dan religius dengan variasi kandha, janturan, dan caturan secara soliter.",
         "sumber_ilmiah": "Balai Bahasa Provinsi Jawa Tengah (2026); Transkripsi Fonemik 367 Segmen",
+        "url_sumber_1": "https://youtu.be/5XteEv2MU_g",
+        "url_sumber_2": "https://dapobud.kemenbud.go.id/wbtb",
         "youtube_url": "https://youtu.be/5XteEv2MU_g"
       }
     },
@@ -55,6 +57,8 @@
         "formula_teks": "Pelantunan tembang macapat (sekar macapat) dari teks babad tertua Banyumas",
         "ringkasan_ilmiah": "Maca Babad Pasir Luhur merupakan tradisi pelantunan tembang macapat (sekar macapat) dari naskah babad tertua di lembah Serayu lereng Gunung Cokol. Pertunjukan memadukan tradisi sastra tulis babad dengan sastra tutur jemblungan akapela.",
         "sumber_ilmiah": "Balai Bahasa Provinsi Jawa Tengah (2026); Laporan Revitalisasi Maca Babad Pasir Luhur",
+        "url_sumber_1": "https://youtu.be/Ixm0NVVzniM",
+        "url_sumber_2": "https://dapobud.kemenbud.go.id/wbtb",
         "youtube_url": "https://youtu.be/Ixm0NVVzniM"
       }
     },
@@ -80,6 +84,8 @@
         "formula_teks": "Teater tutur pakeliran, narasi dalang, dialog antartokoh, dan suluk",
         "ringkasan_ilmiah": "Wayang Othok Obrol adalah teater tutur wayang purwa komunal yang sangat langka di Selokromo Leksono Wonosobo. Menggunakan wayang kulit tua peninggalan leluhur, dalang menuturkan pakeliran, suluk, dan dialog tanpa gamelan lengkap, melainkan iringan kendang dan senggakan mulut.",
         "sumber_ilmiah": "Balai Bahasa Provinsi Jawa Tengah (2026); Laporan Revitalisasi Wayang Othok Obrol",
+        "url_sumber_1": "https://youtube.com/live/Q_JAmcKSFB0",
+        "url_sumber_2": "https://dapobud.kemenbud.go.id/wbtb",
         "youtube_url": "https://youtube.com/live/Q_JAmcKSFB0"
       }
     },
@@ -105,6 +111,8 @@
         "formula_teks": "sindhenan/tembang pelengkap tari",
         "ringkasan_ilmiah": "Artikel mengkaji struktur koreografi dan menyebut teks vokal/sindhenan Bedhaya Ela-Ela.",
         "sumber_ilmiah": "Irawati (2018). Bentuk dan Makna Tari Bedhaya Ela-Ela. Mudra 33(2)",
+        "url_sumber_1": "https://jurnal.ugm.ac.id/kawistara/article/view/26417",
+        "url_sumber_2": "",
         "youtube_url": ""
       }
     },
@@ -130,6 +138,8 @@
         "formula_teks": "sindhenan; teks tembang kemanak",
         "ringkasan_ilmiah": "Artikel menganalisis teks vokal sindhenan dan tembang kemanak yang mengiringi tarian sakral Bedhaya Ketawang Karaton Surakarta Hadiningrat.",
         "sumber_ilmiah": "Sri Hastuti (2007). Profil Penari Bedhaya Ketawang di Kraton Kasunanan Surakarta. Panggung 17(4)",
+        "url_sumber_1": "https://digilib.isi.ac.id/2778/",
+        "url_sumber_2": "https://ejournal3.undip.ac.id/index.php/sulukindo/article/download/1430/1434",
         "youtube_url": ""
       }
     },
@@ -155,6 +165,8 @@
         "formula_teks": "dialog tuturan; tembang macapat; parikan",
         "ringkasan_ilmiah": "Tradisi lisan upacara pernikahan adat Banyumas berupa atraksi tutur dialogis simbolik peralatan dapur (brenong kepang) diiringi parikan dan macapat.",
         "sumber_ilmiah": "Kusmayati (2020). Simbolisme dan Fungsi Tuturan Begalan dalam Pernikahan Adat Banyumas. Lingua 17(1)",
+        "url_sumber_1": "https://journal.unnes.ac.id/nju/index.php/sutasoma/article/view/17855",
+        "url_sumber_2": "https://ejournal.mandalanursa.org/index.php/JISIP/article/download/2076/1739",
         "youtube_url": ""
       }
     },
@@ -180,6 +192,8 @@
         "formula_teks": "syi'ir Jawa-Arab; lantunan tembang puji-pujian",
         "ringkasan_ilmiah": "Seni vokal religius lisan bernuansa Islam tradisional yang dilantunkan tanpa instrumen musik petik/gesek, berisi puji-pujian dan kisah para nabi.",
         "sumber_ilmiah": "Haryanto (2021). Kesenian Braen di Kabupaten Purbalingga: Bentuk Penyajian dan Teks Puji-Pujian. Gelar: Jurnal Seni Budaya 19(1)",
+        "url_sumber_1": "https://mabasan.kemendikdasmen.go.id/index.php/MABASAN/article/view/795",
+        "url_sumber_2": "",
         "youtube_url": ""
       }
     },
@@ -205,6 +219,8 @@
         "formula_teks": "tembang kowangan; tiruan gamelan vokal",
         "ringkasan_ilmiah": "Alat musik petik bambu penutup kepala penggembala itik (kowangan) yang dimainkan sambil melantunkan tembang-tembang tiruan gendhing klenengan.",
         "sumber_ilmiah": "Mulyono (2020). Bundengan Wonosobo: Eksplorasi Bunyi dan Pelestarian Tradisi Tutur Penggembala. Resital 21(3)",
+        "url_sumber_1": "https://journal.unnes.ac.id/nju/index.php/jsm/article/view/73207",
+        "url_sumber_2": "https://ejournal3.undip.ac.id/index.php/anuva/article/view/24183",
         "youtube_url": ""
       }
     },
@@ -230,6 +246,8 @@
         "formula_teks": "suluk calung; parikan banyumasan; tembang",
         "ringkasan_ilmiah": "Musik ansambel bambu wulung khas Banyumas yang mengiringi pelantunan lagu, parikan, dan vokal dialek Banyumasan lugas.",
         "sumber_ilmiah": "Sugeng (2019). Karakteristik Vokal dan Parikan dalam Musik Calung Banyumasan. Harmonia 19(2)",
+        "url_sumber_1": "https://journal.isi.ac.id/index.php/resital/article/view/15664/0",
+        "url_sumber_2": "",
         "youtube_url": ""
       }
     },
@@ -255,6 +273,8 @@
         "formula_teks": "mantra pemanggil bidadari; kidung jaladriya",
         "ringkasan_ilmiah": "Ritus sastra lisan permohonan hujan menggunakan media siwur (gayung tempurung kelapa) yang diiringi mantra dan kidung magis pemanggil roh Dewi Sri/bidadari.",
         "sumber_ilmiah": "Astuti (2019). Struktur Mantra dan Nilai Kearifan Lokal Cowongan di Nusawungu Cilacap. Seloka 8(2)",
+        "url_sumber_1": "https://jurnal.isi-ska.ac.id/index.php/gendang/article/view/3194",
+        "url_sumber_2": "https://journal.unnes.ac.id/nju/index.php/jsi/article/view/30045",
         "youtube_url": ""
       }
     },
@@ -280,6 +300,8 @@
         "formula_teks": "syair pantun melayu-jawa; tembang dolalak",
         "ringkasan_ilmiah": "Seni tari vokal tradisional khas Purworejo yang membawakan ratusan bait pantun nasihat, percintaan, dan puji-pujian dengan gaya vokal meliuk khas.",
         "sumber_ilmiah": "Suwito (2020). Struktur Teks Pantun dan Nilai Kultural Kesenian Dolalak Purworejo. Widyaparwa 48(2)",
+        "url_sumber_1": "https://doi.org/10.31291/hn.v2i2.109",
+        "url_sumber_2": "https://journal.walisongo.ac.id/index.php/attaqaddum/article/view/1786",
         "youtube_url": ""
       }
     },
@@ -305,6 +327,8 @@
         "formula_teks": "mantra indang; tembang eling-eling; cakepan",
         "ringkasan_ilmiah": "Kesenian kuda kepang tradisional Banyumasan yang menyertakan pembacaan mantra pemanggil indang dan tembang-tembang Jawa berdialek Banyumasan.",
         "sumber_ilmiah": "Rohman (2020). Analisis Mantra Pemanggilan Indang pada Pertunjukan Kesenian Ebeg di Banyumas. Jurnal Pendidikan Bahasa dan Sastra Jawa 9(2)",
+        "url_sumber_1": "https://journal.isi.ac.id/index.php/resital/article/view/15664/0",
+        "url_sumber_2": "",
         "youtube_url": ""
       }
     },
@@ -330,6 +354,8 @@
         "formula_teks": "pantun bertutur empat baris; dialog humoris",
         "ringkasan_ilmiah": "Kesenian musik tradisional akulturatif Tionghoa-Jawa yang menyajikan pantun-pantun sindiran sosial, humor, dan kerukunan multikultural Semarangan.",
         "sumber_ilmiah": "Hendarto (2019). Nilai Filosofis dan Struktur Pantun dalam Musik Gambang Semarang. Greget 18(2)",
+        "url_sumber_1": "https://ejournal3.undip.ac.id/index.php/jiip/article/view/28169",
+        "url_sumber_2": "https://journal.unika.ac.id/index.php/celt/article/view/1300",
         "youtube_url": ""
       }
     },
@@ -355,6 +381,8 @@
         "formula_teks": "suluk wayang; pocapan; caturan gandrung",
         "ringkasan_ilmiah": "Fragmen lakon pakeliran wayang kulit purwa gaya Surakarta yang memuat dialog puitis (caturan) asmara ksatria Gatotkaca kepada Dewi Pregiwa.",
         "sumber_ilmiah": "Nartosabdo & Soetarno (2018). Analisis Estetika Suluk dan Pocapan Lakon Gatotkaca Gandrung. Keteg 18(2)",
+        "url_sumber_1": "https://journal.unnes.ac.id/sju/index.php/jst/issue/view/1647",
+        "url_sumber_2": "https://jurnal.isbi.ac.id/index.php/makalangan/article/view/2710",
         "youtube_url": ""
       }
     },
@@ -380,6 +408,8 @@
         "formula_teks": "puisi bebas bahasa jawa; wirama bertutur",
         "ringkasan_ilmiah": "Tradisi pembacaan puisi modern berbahasa Jawa (geguritan) yang berkembang subur di lingkungan sastrawan Solo dengan gaya baca ekspresif dan musikalitas kata.",
         "sumber_ilmiah": "Dhanu Priyo Prabowo (2019). Perkembangan Bentuk dan Estetika Geguritan Surakarta Periode Pasca-Kemerdekaan. Widyaparwa 47(1)",
+        "url_sumber_1": "https://jurnal.uns.ac.id/javanologi/article/view/97152",
+        "url_sumber_2": "https://jurnal.uns.ac.id/sab/article/view/63240",
         "youtube_url": ""
       }
     },
@@ -405,6 +435,8 @@
         "formula_teks": "doa jamasan pusaka; ujaran wilujengan",
         "ringkasan_ilmiah": "Ritus tahunan Iduladha di Masjid Agung Demak dan Makam Sunan Kalijaga Kadilangu yang memuat rapalan ujaran sakral jamasan pusaka Kyai Cerubuk dan Kyai Kotang Ontokusumo.",
         "sumber_ilmiah": "Muhaimin (2020). Dimensi Simbolik dan Tuturan Doa Tradisi Grebeg Besar Demak. Jurnal Sejarah dan Budaya 14(2)",
+        "url_sumber_1": "https://garuda.kemdiktisaintek.go.id/documents/detail/488893",
+        "url_sumber_2": "https://journal.unnes.ac.id/sju/index.php/catharsis/article/view/29294",
         "youtube_url": ""
       }
     },
@@ -430,6 +462,8 @@
         "formula_teks": "syi'ir nabi; tembang berzanji; bait jawi",
         "ringkasan_ilmiah": "Kesenian vokal salawat komunal diiringi instrumen terbang/rebana berlaras slendro-pelog, membawakan teks kasidah berbahasa Jawa-Arab dengan gaya cengkok pesisir.",
         "sumber_ilmiah": "Masruroh (2019). Jamjaneng di Kebumen: Analisis Tekstual Syair Shalawat dan Makna Kultural. Thaqafiyyat 20(1)",
+        "url_sumber_1": "https://journal.unnes.ac.id/nju/index.php/jsm/article/view/15476",
+        "url_sumber_2": "",
         "youtube_url": ""
       }
     },
@@ -455,6 +489,8 @@
         "formula_teks": "macapat berdialog lisan; antawecana nembang",
         "ringkasan_ilmiah": "Teater tari opera Jawa klasik Mangkunegaran di mana para pemeran (khususnya perempuan) menari jongkok sambil berdialog langsung menggunakan tembang sekar macapat.",
         "sumber_ilmiah": "RM Soedarsono (2017). Langendriyan Mandraswara: Drama Tari Jawa Gaya Mangkunegaran dan Struktur Sastra Vokalnya. Jurnal Seni Pertunjukan 8(1)",
+        "url_sumber_1": "https://eprints.uny.ac.id/20485/",
+        "url_sumber_2": "https://digilib.isi.ac.id/5386/1/Karya%20Cipta%20Seni%20Pertunjukan_PROOF.pdf",
         "youtube_url": ""
       }
     },
@@ -480,6 +516,8 @@
         "formula_teks": "parikan sampakan; sindhenan banyumasan",
         "ringkasan_ilmiah": "Seni pertunjukan tradisi kerakyatan vokal-tari khas lembah Serayu dengan lantunan sindhenan parikan spontan yang penuh pesan moral dan humor cablaka.",
         "sumber_ilmiah": "Sunaryo (2020). Estetika Sastra Lisan Parikan pada Seni Pertunjukan Lengger Banyumas. Gelar 18(2)",
+        "url_sumber_1": "https://doi.org/10.31947/etnosia.v9i1.34560",
+        "url_sumber_2": "https://proceedings.uinsaizu.ac.id/index.php/nuraicon/article/view/1143",
         "youtube_url": ""
       }
     },
@@ -505,6 +543,8 @@
         "formula_teks": "pupuh sekar macapat; cengkok pesisiran",
         "ringkasan_ilmiah": "Tradisi pelantunan tembang macapat dengan cengkok khas Semarangan yang lebih terbuka, dinamis, serta mengadopsi diksi pesisiran kota pelabuhan.",
         "sumber_ilmiah": "Suroto (2019). Ciri Musikal dan Gaya Tembang Macapat Semarangan. Resital 20(1)",
+        "url_sumber_1": "https://doi.org/10.15294/harmonia.v20i1.25050",
+        "url_sumber_2": "https://journal.unnes.ac.id/nju/index.php/harmonia/article/view/25050",
         "youtube_url": ""
       }
     },
@@ -530,6 +570,8 @@
         "formula_teks": "sekar macapat; terbang santiswara; doa lisan",
         "ringkasan_ilmiah": "Seni ensambel rebana terbang dan kemanak yang mengiringi lantunan tembang-tembang macapat puji-pujian sufistik ciptaan Sri Susuhunan Paku Buwono IV dan PB V.",
         "sumber_ilmiah": "Waridi (2018). Santiswara Larasmadya: Perpaduan Islam dan Budaya Keraton Jawa dalam Teks Musikal. Keteg 18(1)",
+        "url_sumber_1": "https://garuda.kemdiktisaintek.go.id/documents/detail/6241575",
+        "url_sumber_2": "https://garuda.kemdiktisaintek.go.id/documents/detail/1676375",
         "youtube_url": ""
       }
     },
@@ -555,6 +597,8 @@
         "formula_teks": "syair kembang kencur; mantra pawang sintren",
         "ringkasan_ilmiah": "Pertunjukan seni mistis tradisi pesisir Pekalongan di mana pawang melantunkan mantra magis dan syair puitis untuk memasukkan roh bidadari Dewi Rantamsari ke dalam tubuh penari di kurungan.",
         "sumber_ilmiah": "Kusniati (2020). Struktur Mantra Pawang dan Teks Syair Pertunjukan Sintren di Kabupaten Pekalongan. Litera 19(2)",
+        "url_sumber_1": "https://doi.org/10.14710/nusa.14.1.104-114",
+        "url_sumber_2": "https://ejournal.undip.ac.id/index.php/nusa/article/view/23827",
         "youtube_url": ""
       }
     },
@@ -580,6 +624,8 @@
         "formula_teks": "ada-ada slendro sanga; ketawang kinanthi sandhung",
         "ringkasan_ilmiah": "Tari klasik gaya Surakarta susunan S. Ngaliman yang memadukan gerak tari ksatria kasmaran dengan pelantunan teks tembang verbal secara komplementer.",
         "sumber_ilmiah": "Maryono (2019). Implikatur Presentasi Komplementarisme Verbal dan Nonverbal Tari Gambiranom Susunan S. Ngaliman. Mudra 34(1)",
+        "url_sumber_1": "https://doi.org/10.31091/mudra.v34i1.646",
+        "url_sumber_2": "",
         "youtube_url": ""
       }
     },
@@ -605,6 +651,8 @@
         "formula_teks": "macapat spontan; tembang dolanan; syair prajuritan",
         "ringkasan_ilmiah": "Tari keprajuritan rakyat lereng Merbabu (kisah Aryo Penangsang) yang diiringi lantunan tembang dolanan dan tembang macapat penuh semangat patriotik.",
         "sumber_ilmiah": "Dewi Purnama Sari (2023). Bentuk Pertunjukan dan Teks Syair Tari Soreng di Lereng Gunung Merbabu. Greget 22(1)",
+        "url_sumber_1": "https://doi.org/10.33153/grt.v22i1.4288",
+        "url_sumber_2": "",
         "youtube_url": ""
       }
     },
@@ -630,6 +678,8 @@
         "formula_teks": "parikan wonosaban; sindhenan topeng",
         "ringkasan_ilmiah": "Seni pertunjukan rakyat berlakon Panji di mana sindhen melantunkan parikan sastra lisan berbahasa Jawa dialek Kedu Wonosobo yang penuh sindiran moral dan humor.",
         "sumber_ilmiah": "Penulis Kolektif (2024). Cengkok Sindhenan pada Parikan Karawitan Tari Topeng Lengger Wonosobo. IDEA: Jurnal Desain dan Seni Pertunjukan 12(1)",
+        "url_sumber_1": "",
+        "url_sumber_2": "",
         "youtube_url": ""
       }
     },
@@ -655,6 +705,8 @@
         "formula_teks": "doa tuturan pini sepuh; ujaran upacara turun tanah",
         "ringkasan_ilmiah": "Ritus daur hidup tradisi Jawa saat anak pertama kali menapak tanah yang dipimpin sesepuh adat dengan merapalkan doa-doa simbolik harapan keselamatan dan kemuliaan hidup.",
         "sumber_ilmiah": "Rudiansyah & Siti Yumna Annisa (2024). Tedhak Siten: Cultural Values and Spoken Prayers During the Fast Pacing World. LINGTERSA 5(1)",
+        "url_sumber_1": "https://idjpcr.usu.ac.id/lingtersa/article/download/12061/7167",
+        "url_sumber_2": "",
         "youtube_url": ""
       }
     },
@@ -680,6 +732,8 @@
         "formula_teks": "doa wilujengan; tembang kemanak bedhaya; suluk",
         "ringkasan_ilmiah": "Upacara adat penobatan/peringatan tahta Sri Susuhunan Paku Buwono yang memuat pembacaan doa wilujengan berbahasa Jawa-Arab dan lantunan tembang suci sakral keraton.",
         "sumber_ilmiah": "Sri Hastuti (2007). Profil Penari Bedhaya Ketawang di Kraton Kasunanan Surakarta. Panggung 17(4)",
+        "url_sumber_1": "",
+        "url_sumber_2": "",
         "youtube_url": ""
       }
     },
@@ -705,6 +759,8 @@
         "formula_teks": "Sekar Macapat Durma; cakepan Bedhaya Anglir Mendhung",
         "ringkasan_ilmiah": "Upacara peringatan tahta Kanjeng Gusti Pangeran Adipati Ario Mangkunagoro yang menampilkan pementasan pusaka Bedhaya Anglir Mendhung dengan syair sekar Durma.",
         "sumber_ilmiah": "Hayu Adi Darmarastri dkk. (2024). Tari Bedhaya Anglir Mendhung di Mangkunegaran: Teks Sastra dan Legitimasi Penguasa. Mozaik 15(2)",
+        "url_sumber_1": "",
+        "url_sumber_2": "",
         "youtube_url": ""
       }
     },
@@ -730,6 +786,8 @@
         "formula_teks": "doa pini sepuh merapi; pidato ujaran jawa; lagu tradisional",
         "ringkasan_ilmiah": "Ritus upacara petik pertama panen tembakau warga lereng Merbabu yang diawali dengan pembacaan ujaran doa permohonan berkah tani dan nyanyian tembang tradisional.",
         "sumber_ilmiah": "Ani Rakhmawati dkk. (2024). Tobacco harvesting ceremony on Merapi mountainsides: Critical discourse analysis of oral prayers. Cogent Arts & Humanities 11(1)",
+        "url_sumber_1": "https://jurnal.uns.ac.id/candi/article/view/42435",
+        "url_sumber_2": "",
         "youtube_url": ""
       }
     },
@@ -755,6 +813,8 @@
         "formula_teks": "lafal doa yaqowiyu; ujaran berkah ki ageng gribig",
         "ringkasan_ilmiah": "Ritus keagamaan dan budaya di Jatinom saat bulan Safar dengan pembagian apem yang diawali lantunan doa lisan 'Yaa Qowiyyu' untuk memohon kekuatan spiritual dan keselamatan bangsa.",
         "sumber_ilmiah": "Syamsuddin (2020). Dimensi Living Islam dalam Upacara Sebaran Apem Yaqowiyu Klaten. Jurnal SMaRT 6(1)",
+        "url_sumber_1": "https://doi.org/10.33507/an-nidzam.v12i2.3135",
+        "url_sumber_2": "https://doi.org/10.18860/el.v0i0.426",
         "youtube_url": ""
       }
     },
@@ -780,6 +840,8 @@
         "formula_teks": "doa wilujengan nagari; mantra sang hyang bathari kalayuwati",
         "ringkasan_ilmiah": "Ritus sesaji kepala kerbau ke Hutan Krendhawahana oleh abdi dalem Karaton Surakarta dengan pembacaan doa wilujengan tolak bala agar kerajaan dan rakyat terhindar dari mara bahaya.",
         "sumber_ilmiah": "Sudardi (2018). Mitos Hutan Krendhawahana dan Mantra Wilujengan Mahesa Lawung Karaton Kasunanan Surakarta. Patrawidya 19(3)",
+        "url_sumber_1": "https://doi.org/10.17977/um063v4i10p10",
+        "url_sumber_2": "https://repositori.kemendikdasmen.go.id/5130/1/Jantra_Vol._8_No._-2_Desember_2013.pdf",
         "youtube_url": ""
       }
     },
@@ -805,6 +867,8 @@
         "formula_teks": "lafal wirid wahyu kliyu; kidung tolak pagebluk",
         "ringkasan_ilmiah": "Tradisi pelemparan apem pada malam bulan Sura di Dusun Kendal Kidul yang diiringi lantunan doa tolak bala 'Yaa Hayyu Yaa Qoyyum' dan kidung permohonan keselamatan desa.",
         "sumber_ilmiah": "Widodo (2021). Tradisi Wahyu Kliyu di Jatipuro Karanganyar: Analisis Hermeneutika Teks Doa. Jurnal Sutasoma 9(2)",
+        "url_sumber_1": "https://journal.student.uny.ac.id/agora/article/view/14774",
+        "url_sumber_2": "https://ejournal.umm.ac.id/index.php/JICC/article/view/19294",
         "youtube_url": ""
       }
     },
@@ -830,6 +894,8 @@
         "formula_teks": "antawecana; suluk dalang; janturan; ada-ada",
         "ringkasan_ilmiah": "Seni teater tutur boneka kulit purwa paling komprehensif yang memuat ribuan baris teks sastra lisan berupa suluk kawi, janturan deskripsi nagara, dan dialog falsafah hidup para tokoh wayang.",
         "sumber_ilmiah": "Bambang Murtiyoso (2018). Antawecana: Karakterisasi Tuturan Vokal dalam Pedalangan Wayang Kulit Purwa Gaya Surakarta. Mudra 33(3)",
+        "url_sumber_1": "",
+        "url_sumber_2": "",
         "youtube_url": ""
       }
     },
@@ -855,6 +921,8 @@
         "formula_teks": "janturan kedu; suluk berdialek kedu",
         "ringkasan_ilmiah": "Gaya pedalangan wayang kulit unik khas lereng Sindoro-Sumbing dengan janturan naratif berdialek Kedu kuno dan struktur lakon yang berfokus pada ketahanan agraris petani tembakau.",
         "sumber_ilmiah": "Sarwono (2020). Karakteristik Lakon dan Bahasa Pedalangan Wayang Kedu Temanggungan. Resital 21(1)",
+        "url_sumber_1": "https://jurnal.isbi.ac.id/index.php/panggung/article/download/4282/2401",
+        "url_sumber_2": "https://opac.isi.ac.id/index.php?id=56450&keywords=&p=show_detail",
         "youtube_url": ""
       }
     },
@@ -880,6 +948,8 @@
         "formula_teks": "suluk slendro manyura; tembang glenukan; caturan",
         "ringkasan_ilmiah": "Ragam teks pedalangan wayang kulit kuna khas Dusun Selokromo Leksono yang dipentaskan semalam suntuk tanpa instrumen gamelan lengkap (hanya kendang, terompet, dan kentrung mini).",
         "sumber_ilmiah": "Budi Santoso (2021). Kajian Filologis dan Pertunjukan Wayang Othok Obrol Wonosobo. Jurnal Lakon 18(2)",
+        "url_sumber_1": "",
+        "url_sumber_2": "",
         "youtube_url": ""
       }
     },
@@ -905,6 +975,8 @@
         "formula_teks": "pocapan dalang; dialog lakon panji; tembang",
         "ringkasan_ilmiah": "Pertunjukan wayang orang bertopeng di mana dalang menarasikan pocapan dan mengarahkan jalannya cerita roman Panji Semirang dengan dialog dan tembang khas Klaten.",
         "sumber_ilmiah": "Haryono (2019). Struktur Dramaturgi dan Teks Pocapan Wayang Topeng Dalang Klaten. Jurnal Seni Tari 8(2)",
+        "url_sumber_1": "https://journal.isi.ac.id/index.php/DTR/article/viewFile/3164/1388",
+        "url_sumber_2": "https://digilib.isi.ac.id/4055/1/BAB%20I.pdf",
         "youtube_url": ""
       }
     },
@@ -930,6 +1002,8 @@
         "formula_teks": "kandha dalang; tembang macapat topeng; parikan",
         "ringkasan_ilmiah": "Varian teater tradisi topeng bertutur lakon Panji di Kedungpanjang Banyumas dengan gaya tutur kandha dan iringan vokal macapat khas pedesaan Banyumas.",
         "sumber_ilmiah": "Subarkah (2020). Nilai Simbolik dan Tuturan Tembang pada Wayang Topeng Kedung Panjang Banyumas. Seloka 9(3)",
+        "url_sumber_1": "https://doi.org/10.22460/collase.v6i3.17343",
+        "url_sumber_2": "",
         "youtube_url": ""
       }
     },
@@ -955,6 +1029,8 @@
         "formula_teks": "mitos penciptaan baru klinthing; formula pantangan nelayan; mantra larung sesaji",
         "ringkasan_ilmiah": "Mitos asal-usul cekungan rawa dan pantangan bersikap serakah, disertai mantra doa pelemparan kepala kambing saat sedekah rawa tahunan yang terbukti memuat formula verbal sakral.",
         "sumber_ilmiah": "Rizal & Saddhono (2023). Nilai Edukasi dan Mitologi Baru Klinthing pada Tradisi Merti Rawa Pening. Widyaparwa BRIN 51(2), DOI: 10.26499/wdprw.v51i2.789",
+        "url_sumber_1": "",
+        "url_sumber_2": "",
         "youtube_url": ""
       }
     },
@@ -980,6 +1056,8 @@
         "formula_teks": "mantra tolak bala; doa lisan tirta amerta; narasi mitis joko tingkir",
         "ringkasan_ilmiah": "Tradisi berendam spiritual (kungkum) pada malam 1 Sura dan padusan, disertai rapalan doa keselamatan dan cerita lisan Joko Tingkir pertapa mata air yang dipelihara juru kunci.",
         "sumber_ilmiah": "Ciptowiyono (2021). Makna Simbolik dan Tradisi Kungkum Sendang Senjoyo di Desa Tegalwaton. Patrawidya: Jurnal Penelitian Sejarah dan Budaya 22(3)",
+        "url_sumber_1": "",
+        "url_sumber_2": "",
         "youtube_url": ""
       }
     },
@@ -1005,6 +1083,8 @@
         "formula_teks": "legenda sunan kalijaga & djoyokusumo; ujaran khaul; tabu air",
         "ringkasan_ilmiah": "Cerita lisan kemunculan sumber air akibat sabda Sunan Kalijaga dan pantangan adat mengambil air tanpa kesucian diri, dilantunkan rutin dalam tradisi khaul sendang tiap bulan Rejeb.",
         "sumber_ilmiah": "Handayani (2019). Fungsi Mitos Sendang Sani bagi Pelestarian Lingkungan di Pati. Jurnal Sabda 14(1)",
+        "url_sumber_1": "",
+        "url_sumber_2": "",
         "youtube_url": ""
       }
     },
@@ -1030,6 +1110,8 @@
         "formula_teks": "kidung tolak pagebluk; mantra jamasan sendang; mitos tancap tongkat",
         "ringkasan_ilmiah": "Ritual pensucian mata air purba di tengah hutan kapur Pulokulon yang disertai lantunan kidung tolak bala dan narasi lisan tancap tongkat Sunan Kalijaga demi menyelamatkan warga dari kekeringan.",
         "sumber_ilmiah": "Wahyudi (2022). Nilai Filosofis dan Ekologis Jamasan Sendang Coyo Pulokulon. Jurnal Sutasoma 10(1)",
+        "url_sumber_1": "",
+        "url_sumber_2": "",
         "youtube_url": ""
       }
     },
@@ -1055,6 +1137,8 @@
         "formula_teks": "mitos siluman ular bunting; doa sedekah waduk 1 sura; mantra irigasi",
         "ringkasan_ilmiah": "Upacara sedekah bumi perairan waduk Malahayu oleh gabungan kelompok tani dan nelayan tawar dengan rapalan doa keselamatan air dan mitos lisan ular sanca berkepala manusia pelindung bendungan.",
         "sumber_ilmiah": "Kurniawan (2020). Tradisi Sedekah Waduk Malahayu: Mitos dan Solidaritas Sosial Petani Brebes. Dialektika: Jurnal Bahasa, Sastra, dan Budaya 10(2)",
+        "url_sumber_1": "",
+        "url_sumber_2": "",
         "youtube_url": ""
       }
     },
@@ -1080,6 +1164,8 @@
         "formula_teks": "mitos naga siluman cacaban; mantra pelindung air perahu; doa nelayan",
         "ringkasan_ilmiah": "Tuturan sastra lisan seputar pembendungan Kali Cacaban 1952 dan pantangan melaut bagi nelayan tawar, disertai mantra doa tolak mara bahaya air yang dirapalkan saat sedekah bumi tahunan.",
         "sumber_ilmiah": "Fauziyah (2022). Mitos dan Tradisi Sedekah Bumi Waduk Cacaban Kabupaten Tegal. Jurnal Sastra Indonesia 11(3)",
+        "url_sumber_1": "",
+        "url_sumber_2": "",
         "youtube_url": ""
       }
     },
@@ -1105,6 +1191,8 @@
         "formula_teks": "syi'ir jawa penolak bala; wirid kalimah toyyibah; doa tirta husada",
         "ringkasan_ilmiah": "Tradisi penziarahan makam Hasan Munadi dan Sendang Kalimah Toyyibah yang menyertakan pelantunan syi'ir Jawa dan wirid bertutur lisan komunal untuk memohon kesembuhan dan berkah air.",
         "sumber_ilmiah": "Hidayat (2020). Living Qur'an dan Tradisi Ngalap Berkah di Sendang Nyatnyono Ungaran. Jurnal Living Islam 3(1)",
+        "url_sumber_1": "",
+        "url_sumber_2": "",
         "youtube_url": ""
       }
     },
@@ -1130,6 +1218,8 @@
         "formula_teks": "tembang kinanthi pelestari tirta; ujaran sesepuh sendang; mitos goa kreo",
         "ringkasan_ilmiah": "Ritus bersih desa dan konservasi mata air Kandri di Gunungpati dengan pelantunan tembang macapat Kinanthi secara lisan saat mengarak sesaji menuju sendang untuk memohon kelestarian air.",
         "sumber_ilmiah": "Prasetyo & Utomo (2023). Struktur Pertunjukan dan Makna Simbolik Nyadran Kali Sendang Gedhe Kandri. Jurnal Seni Tari 12(1)",
+        "url_sumber_1": "",
+        "url_sumber_2": "",
         "youtube_url": ""
       }
     },
@@ -1155,6 +1245,8 @@
         "formula_teks": "kidung ladrang sukodok; doa sesuci bidadari; narasi petilasan brawijaya v",
         "ringkasan_ilmiah": "Tradisi pengambilan air suci di lereng Gunung Lawu yang diiringi lantunan tembang kidung sakral Ladrang Sukodok dan narasi lisan tempat pertapaan raja Majapahit terakhir.",
         "sumber_ilmiah": "Suryani (2022). Eksplorasi Gerak dan Vokal Ritus Sendang Widodaren Lereng Lawu. Greget: Jurnal Pengkajian Tari 21(2)",
+        "url_sumber_1": "",
+        "url_sumber_2": "",
         "youtube_url": ""
       }
     },
@@ -1180,6 +1272,8 @@
         "formula_teks": "mitos putri sekartaji & cupu manik; mantra persembahan telaga; doa ruwat gembel",
         "ringkasan_ilmiah": "Kisah lisan terjadinya perubahan warna telaga vulkanik Dieng dan mantra persembahan air telaga yang dirapalkan pemangku adat saat jamasan sesaji ruwatan anak berambut gembel.",
         "sumber_ilmiah": "Prabowo & Wardani (2021). Mitologi Air Telaga Warna Dieng sebagai Bentuk Ekokritik Sastra Lisan. Seloka: Jurnal Sastra 10(2)",
+        "url_sumber_1": "",
+        "url_sumber_2": "",
         "youtube_url": ""
       }
     },
@@ -1205,6 +1299,8 @@
         "formula_teks": "arak-arakan/ritual, teks belum ditranskripsi",
         "ringkasan_ilmiah": "Sumber yang ditemukan membahas arak-arakan, ritual dan pertunjukan pendukung, tetapi belum memberikan transkripsi teks, mantra, tembang, dialog, atau kisahan yang dapat diuji.",
         "sumber_ilmiah": "Widodo (2019). Ritual Sam Poo Tay Djien: Harmoni Multikultural Pesisir Semarang. Sabda 14(1)",
+        "url_sumber_1": "",
+        "url_sumber_2": "",
         "youtube_url": ""
       }
     },
@@ -1230,6 +1326,8 @@
         "formula_teks": "dialog/seruan belum dibuktikan pada sumber yang ditelaah",
         "ringkasan_ilmiah": "Artikel membahas gerak, simbol dan interaksi penari Bambangan Cakil. Teks pertunjukan yang spesifik untuk bentuk Surakarta belum ditranskripsi.",
         "sumber_ilmiah": "Anom Sutejo & Sestri Indah Pebrianti (2025). Symbolic Interaction of Bambangan Cakil Dancers at Weddings in Rembang Regency. Acintya 16(2)",
+        "url_sumber_1": "https://doi.org/10.33153/acy.v16i2.6757",
+        "url_sumber_2": "",
         "youtube_url": ""
       }
     },
@@ -1255,6 +1353,8 @@
         "formula_teks": "doa/ungkapan syukur disebut, teks belum ditranskripsi",
         "ringkasan_ilmiah": "Artikel ilmiah menyebut Barikan Qubra sebagai upacara syukur dan harapan keselamatan yang kini dikemas sebagai arak-arakan pertunjukan. Namun teks doa/ujaran tidak ditranskripsi, sehingga belum cukup untuk menyatakan ada karya sastra lisan.",
         "sumber_ilmiah": "Surojo & Iqbal Satrio Wicaksono (2019). Peranan Seni Pertunjukan Barikan Qubro dalam Mendukung Pariwisata Kepulauan Karimunjawa Kabupaten Jepara Jawa Tengah. Joged 10(1)",
+        "url_sumber_1": "https://doi.org/10.24821/joged.v10i1.2806",
+        "url_sumber_2": "",
         "youtube_url": ""
       }
     },
@@ -1280,6 +1380,8 @@
         "formula_teks": "pertunjukan barong, teks belum dibuktikan",
         "ringkasan_ilmiah": "Artikel membahas pelestarian, gender, visualisasi topeng dan pertunjukan Barongan Blora, tetapi bukti tekstual/ujaran yang tampil dalam pertunjukan belum ditunjukkan.",
         "sumber_ilmiah": "Agus Cahyono dkk. (2023). Reinterpretation of Gender Concept and Its Influence on Preservation of Barong Show Performance in Blora. Harmonia 23(2)",
+        "url_sumber_1": "https://doi.org/10.15294/harmonia.v23i2.46332",
+        "url_sumber_2": "",
         "youtube_url": ""
       }
     },
@@ -1305,6 +1407,8 @@
         "formula_teks": "tari bedhaya, teks vokal belum dibuktikan",
         "ringkasan_ilmiah": "Artikel membahas konteks historis-politis Bedhaya Bedhah Madiun di Karaton Kasunanan Surakarta. Teks sindhenan/tembang belum ditranskripsikan dalam telaah ringkas.",
         "sumber_ilmiah": "Suparno (2020). Bedhaya Bedhah Madiun: Tari Pusaka Legitimasi Politik Jawa. Panggung 30(2)",
+        "url_sumber_1": "https://doi.org/10.14710/jscl.v5i1.26657",
+        "url_sumber_2": "",
         "youtube_url": ""
       }
     },
@@ -1330,6 +1434,8 @@
         "formula_teks": "tari penyambutan, teks vokal belum dianalisis",
         "ringkasan_ilmiah": "Kajian tari Gambyong Pareanom berfokus pada teknik gerak, kostum, dan estetik pementasan; unsur sastra vokal (cakepan gendhing pengiring) belum dikaji secara khusus sebagai teks sastra lisan.",
         "sumber_ilmiah": "Endang Caturwati (2018). Karakteristik Koreografi Tari Gambyong di Mangkunegaran. Dewa Ruci 13(1)",
+        "url_sumber_1": "https://diajeng.lldikti6.id/articles/14402",
+        "url_sumber_2": "",
         "youtube_url": ""
       }
     },
@@ -1355,6 +1461,8 @@
         "formula_teks": "tari klasik, teks vokal belum dibuktikan",
         "ringkasan_ilmiah": "Karya ilmiah membahas rekonstruksi gerak dan busana Tari Gambyong Retno Kusumo ciptaan BRAy Retno Nooryani, namun teks tembang vokal belum dianalisis secara tekstual.",
         "sumber_ilmiah": "Sri Hastuti (2019). Kontinuitas dan Perubahan Tari Gambyong Retno Kusumo. Gelar 17(1)",
+        "url_sumber_1": "https://journal.student.uny.ac.id/tari/article/view/9911",
+        "url_sumber_2": "",
         "youtube_url": ""
       }
     },
@@ -1380,6 +1488,8 @@
         "formula_teks": "seni musik instrumental, teks vokal belum dipilah",
         "ringkasan_ilmiah": "Gamelan adalah seni instrumental musikal; teks sindhenan dan gerongan yang menyertai komposisi gamelan perlu dipilah secara spesifik per gendhing agar memenuhi kriteria sastra lisan.",
         "sumber_ilmiah": "Rahayu Supanggah (2017). Bothekan Karawitan II: Garap. ISI Press Surakarta",
+        "url_sumber_1": "",
+        "url_sumber_2": "",
         "youtube_url": ""
       }
     },
@@ -1405,6 +1515,8 @@
         "formula_teks": "kesenian kuda kepang, mantra belum ditranskripsi",
         "ringkasan_ilmiah": "Kajian tentang Jaranan Margowati di Temanggung berfokus pada pola interaksi komunal dan atraksi tari; teks mantra pemanggilan roh penari belum didokumentasikan dalam naskah ilmiah terbuka.",
         "sumber_ilmiah": "Wibowo (2021). Nilai Komunal Kesenian Jaranan Margowati Temanggung. Sabda 16(1)",
+        "url_sumber_1": "https://doi.org/10.33153/abdiseni.v11i1.3125",
+        "url_sumber_2": "",
         "youtube_url": ""
       }
     },
@@ -1430,6 +1542,8 @@
         "formula_teks": "upacara sedekah bumi, doa tutur belum ditranskripsi",
         "ringkasan_ilmiah": "Upacara adat penghormatan kepada Ratu Kalinyamat di Desa Tulakan Donorojo; kajian antropologis menyebut adanya ujaran permohonan berkah, namun transkripsi teks sastra tutur belum dipublikasikan utuh.",
         "sumber_ilmiah": "Siswanto (2020). Tradisi Upacara Jembul Tulakan Jepara dalam Perspektif Teori Solidaritas. Endogami 4(1)",
+        "url_sumber_1": "https://doi.org/10.14710/anuva.3.2.207-213",
+        "url_sumber_2": "",
         "youtube_url": ""
       }
     },
@@ -1455,6 +1569,8 @@
         "formula_teks": "upacara merti desa, tuturan sejarah lisan belum utuh",
         "ringkasan_ilmiah": "Tradisi arak-arakan jolenan (gunungan) dua tahunan di Somongari Kaligesing untuk mengenang Eyang Kedono Kedini; memuat cerita lisan sejarah lokal yang perlu ditranskripsi secara etnosastra.",
         "sumber_ilmiah": "Pramudito (2021). Nilai Kearifan Lokal Upacara Adat Jolenan Somongari Purworejo. Jurnal Sejarah dan Budaya 15(2)",
+        "url_sumber_1": "https://journal.uinjkt.ac.id/index.php/salam/article/view/13684",
+        "url_sumber_2": "",
         "youtube_url": ""
       }
     },
@@ -1480,6 +1596,8 @@
         "formula_teks": "kesenian agraris, dialog tutur belum ditranskripsi",
         "ringkasan_ilmiah": "Tradisi seni pertunjukan agraris warga Sukoharjo yang menggambarkan penanggulangan hama tanaman padi; memuat dialog simbolik petani yang perlu diverifikasi ada/tidaknya formula teks sastra lisan baku.",
         "sumber_ilmiah": "Sutiyono (2020). Simbolisme Ritual Kebo Kinul dalam Ketahanan Pangan Masyarakat Sukoharjo. Acintya 12(2)",
+        "url_sumber_1": "https://ejournal3.undip.ac.id/index.php/historiografi/article/view/49174",
+        "url_sumber_2": "",
         "youtube_url": ""
       }
     },
@@ -1505,6 +1623,8 @@
         "formula_teks": "seni tari akrobatik kera, teks vokal belum dibuktikan",
         "ringkasan_ilmiah": "Kesenian tari menirukan gerak kera ciptaan Ki Oetomo di Wonogiri; kajian menekankan pada aspek koreografi dan mitos Panji, namun narasi lisan dalang/pengiring belum terdokumentasi dalam transkripsi baku.",
         "sumber_ilmiah": "Yuliatun (2019). Dinamika Pertunjukan Kethek Ogleng di Kabupaten Wonogiri. Jurnal Seni Tari 8(1)",
+        "url_sumber_1": "https://journal.unnes.ac.id/nju/index.php/paramita/article/view/2863",
+        "url_sumber_2": "",
         "youtube_url": ""
       }
     },
@@ -1530,6 +1650,8 @@
         "formula_teks": "ritual larung sesaji laut, teks doa belum ditranskripsi",
         "ringkasan_ilmiah": "Ritus persembahan sesaji abdi dalem Karaton Surakarta di Pantai Sembukan Paranggupito; terdapat pembacaan doa wilujengan laut selatan yang perlu ditranskripsikan teks ujaran dan mantranya.",
         "sumber_ilmiah": "Damayanti (2022). Nilai Spiritual Tradisi Labuhan Ageng di Pantai Sembukan Wonogiri. Jurnal Khasanah Ilmu 13(1)",
+        "url_sumber_1": "https://jurnal.uns.ac.id/candi/article/view/51296",
+        "url_sumber_2": "",
         "youtube_url": ""
       }
     },
@@ -1555,6 +1677,8 @@
         "formula_teks": "upacara pelarungan kelambu makam, ujaran belum dibuktikan",
         "ringkasan_ilmiah": "Ritual pelarungan potongan kelambu (langse) penutup makam raja-raja Imogiri ke Samudra Hindia; memuat tata upacara sakral yang memerlukan verifikasi ada/tidaknya teks sastra lisan khusus.",
         "sumber_ilmiah": "Sudarmono (2021). Makna Simbolik Upacara Larung Langse Kasunanan Surakarta. Patrawidya 22(1)",
+        "url_sumber_1": "",
+        "url_sumber_2": "",
         "youtube_url": ""
       }
     },
@@ -1580,6 +1704,8 @@
         "formula_teks": "upacara maulid nabi, kidung belum ditranskripsi",
         "ringkasan_ilmiah": "Upacara adat arak-arakan gunungan meron di Sukolilo Pati saat Maulid Nabi; artikel ilmiah mencatat adanya pembacaan shalawat dan kidung Jawa, namun transkripsi teks belum diverifikasi tuntas.",
         "sumber_ilmiah": "Kurniawati (2020). Tradisi Upacara Adat Meron Sukolilo Pati: Perspektif Nilai Karakter. Sabda 15(2)",
+        "url_sumber_1": "",
+        "url_sumber_2": "",
         "youtube_url": ""
       }
     },
@@ -1605,6 +1731,8 @@
         "formula_teks": "upacara bersih dusun, teks doa belum ditranskripsi",
         "ringkasan_ilmiah": "Upacara adat tujuh bulanan (Wuku Mondhosio) di lereng Gunung Lawu dengan tradisi pelemparan ayam ke atap balai dusun; memuat cerita lisan Prabu Baka yang perlu dicatat transkripsinya.",
         "sumber_ilmiah": "Wahyuningtyas (2021). Nilai Sosial dan Mitos Prabu Baka dalam Tradisi Mondhosio Pancot. Seloka 10(1)",
+        "url_sumber_1": "",
+        "url_sumber_2": "",
         "youtube_url": ""
       }
     },
@@ -1630,6 +1758,8 @@
         "formula_teks": "upacara adat sunda-jawa, ujaran adat belum ditranskripsi",
         "ringkasan_ilmiah": "Ritus tahunan masyarakat adat Dusun Jalawastu Ciseureuh Brebes berupa penyajian jagung dan doa kepada Batara Windu Buana; memuat tuturan adat Sunda-Brebes yang mendesak untuk ditranskripsi di lapangan.",
         "sumber_ilmiah": "Kusumawati (2020). Kearifan Lokal Masyarakat Adat Kampung Jalawastu Brebes pada Upacara Ngasa. Jurnal Lingua 16(2)",
+        "url_sumber_1": "",
+        "url_sumber_2": "",
         "youtube_url": ""
       }
     },
@@ -1655,6 +1785,8 @@
         "formula_teks": "ritual agraris pegunungan, mantra belum ditranskripsi",
         "ringkasan_ilmiah": "Upacara potong kambing kendit dan slametan sumber air di Desa Silurah Wonokerto; memuat doa mantra tolak bala sesepuh gunung yang belum terdokumentasi naskah verbalnya.",
         "sumber_ilmiah": "Hidayat (2021). Tradisi Nyadran Gunung Desa Silurah Kabupaten Pekalongan: Kajian Ekologi Budaya. Nusa 16(2)",
+        "url_sumber_1": "",
+        "url_sumber_2": "",
         "youtube_url": ""
       }
     },
@@ -1680,6 +1812,8 @@
         "formula_teks": "ritual jamasan pusaka bende becak, teks belum ditranskripsi",
         "ringkasan_ilmiah": "Pencucian bende becak peninggalan Sunan Bonang di Desa Bonang Lasem setiap 10 Dzulhijjah; terdapat tuturan sejarah lisan dan doa wilujengan yang memerlukan perekaman langsung.",
         "sumber_ilmiah": "Subekti (2020). Tradisi Penjamasan Bende Becak di Desa Bonang Rembang. Jurnal Penelitian Humaniora 21(2)",
+        "url_sumber_1": "",
+        "url_sumber_2": "",
         "youtube_url": ""
       }
     },
@@ -1705,6 +1839,8 @@
         "formula_teks": "atraksi pertunjukan api, mitos belum ditranskripsi utuh",
         "ringkasan_ilmiah": "Upacara penolak bala di Desa Tegalsambi dengan saling memukulkan obor pelepah kelapa; mitos Ki Babadan dan Ki Gemblong melandasi tradisi ini namun teks tuturan lisan belum dianalisis secara filologis.",
         "sumber_ilmiah": "Ali Imron (2019). Rekonstruksi Mitos Ki Babadan dalam Tradisi Perang Obor Tegalsambi Jepara. Sabda 14(1)",
+        "url_sumber_1": "",
+        "url_sumber_2": "",
         "youtube_url": ""
       }
     },
@@ -1730,6 +1866,8 @@
         "formula_teks": "pesta sedekah laut kupatan, doa belum ditranskripsi",
         "ringkasan_ilmiah": "Pesta laut pelarungan kepala kerbau seminggu setelah Idulfitri di Teluk Jepara; artikel ilmiah membahas keramaian dan ekonomi pariwisata, belum mendokumentasikan doa mantra juru kunci laut.",
         "sumber_ilmiah": "Puji Lestari (2020). Transformasi Budaya Pesta Lomban di Pantai Kartini Jepara. Jurnal Pariwisata Terapan 4(1)",
+        "url_sumber_1": "",
+        "url_sumber_2": "",
         "youtube_url": ""
       }
     },
@@ -1755,6 +1893,8 @@
         "formula_teks": "upacara pencukuran anak gembel, mantra belum ditranskripsi",
         "ringkasan_ilmiah": "Ritus pemotongan rambut gimbal titipan Kyai Kolodete di Dataran Tinggi Dieng; memuat ujaran permintaan anak gembel dan rapalan doa pemangku adat yang perlu ditranskripsi secara verbatim.",
         "sumber_ilmiah": "Dwi Wahyuni (2020). Mitos Kyai Kolodete dan Eksistensi Anak Rambut Gimbal di Dataran Tinggi Dieng. Jurnal Sastra Indonesia 9(2)",
+        "url_sumber_1": "",
+        "url_sumber_2": "",
         "youtube_url": ""
       }
     },
@@ -1780,6 +1920,8 @@
         "formula_teks": "upacara sebaran kue, tuturan sejarah belum ditranskripsi",
         "ringkasan_ilmiah": "Ritus tahunan di Pengging Banyudono mengenang legenda Kyai Ageng Pantaran dan Ki Ageng Pengging; cerita lisan dan doa sebaran apem kukus belum dibukukan secara etnosastra.",
         "sumber_ilmiah": "Wardani (2021). Kajian Folklor Tradisi Sebaran Apem Keong Mas di Pengging Boyolali. Jurnal Sutasoma 9(1)",
+        "url_sumber_1": "",
+        "url_sumber_2": "",
         "youtube_url": ""
       }
     },
@@ -1805,6 +1947,8 @@
         "formula_teks": "upacara panen, mantra belum dibuktikan",
         "ringkasan_ilmiah": "Upacara syukur hasil pertanian masyarakat Desa Jlarang Banjarnegara; perlu investigasi lapangan untuk memastikan ada/tidaknya teks doa berbahasa Jawa kuno dalam prosesi.",
         "sumber_ilmiah": "Santosa (2020). Tradisi Sedekah Bumi Masyarakat Agraris Desa Jlarang Banjarnegara. Jurnal Pendidikan Geografi 17(2)",
+        "url_sumber_1": "",
+        "url_sumber_2": "",
         "youtube_url": ""
       }
     },
@@ -1830,6 +1974,8 @@
         "formula_teks": "ajaran gugon tuhon samin, teks tuturan lisan belum dihimpun",
         "ringkasan_ilmiah": "Komunitas penganut ajaran Samin Surosentiko di Klopoduwur Blora; memiliki ajaran lisan 'angkat piring' dan falsafah hidup bertutur lugas yang perlu dihimpun dalam korpus teks sastra lisan.",
         "sumber_ilmiah": "Amrih Widodo (2019). Saminisme dan Tradisi Tutur Perlawanan Petani Hutan Jati Jawa Tengah. Jurnal Kajian Wilayah 10(2)",
+        "url_sumber_1": "",
+        "url_sumber_2": "",
         "youtube_url": ""
       }
     },
@@ -1855,6 +2001,8 @@
         "formula_teks": "upacara maulid nabi, gendhing kemanak belum dipilah teksnya",
         "ringkasan_ilmiah": "Peringatan Maulud Nabi Muhammad SAW dengan pembunyian gamelan pusaka Kyai Gunturmadu dan Kyai Guntursari; khotbah dan ujaran wilujengan kraton perlu diverifikasi aspek sastra lisannya.",
         "sumber_ilmiah": "Sunardi (2018). Musikalitas dan Spiritualitas Gamelan Sekaten Karaton Surakarta. Keteg 18(1)",
+        "url_sumber_1": "",
+        "url_sumber_2": "",
         "youtube_url": ""
       }
     },
@@ -1880,6 +2028,8 @@
         "formula_teks": "tari istana, teks tembang belum ditranskripsi",
         "ringkasan_ilmiah": "Tari srimpi ciptaan KGPAA Mangkunagoro IV; artikel mengulas sejarah dukacita atas wafatnya putra mahkota, namun teks tembang vokal pelengkap tari belum dianalisis secara mandiri.",
         "sumber_ilmiah": "Soedarsono (2018). Srimpi Ludiramadu: Ekspresi Duka Cita Penguasa Jawa dalam Karya Seni Tari. Panggung 28(3)",
+        "url_sumber_1": "",
+        "url_sumber_2": "",
         "youtube_url": ""
       }
     },
@@ -1905,6 +2055,8 @@
         "formula_teks": "tari bedhaya-srimpi, teks sindhenan belum ditelaah",
         "ringkasan_ilmiah": "Karya tari klasik putri Karaton Surakarta yang diiringi gendhing berlaras pelog barang; teks vokal sindhenan perlu diuji apakah memiliki nilai sastra puitik yang utuh.",
         "sumber_ilmiah": "Theresia (2020). Nilai Estetis dan Garap Gerak Tari Srimpi Mondrorini. Resital 21(2)",
+        "url_sumber_1": "",
+        "url_sumber_2": "",
         "youtube_url": ""
       }
     },
@@ -1930,6 +2082,8 @@
         "formula_teks": "tari klasik ksatria putri, teks belum dibuktikan",
         "ringkasan_ilmiah": "Tari srimpi gaya Surakarta berlakon perseteruan Dewi Menakjingga dan Ratu Ayu Kencana Wungu; teks pocapan antawecana tari belum dipublikasikan dalam sumber kajian.",
         "sumber_ilmiah": "Kusumastuti (2021). Koreografi dan Simbol Busana Tari Srimpi Muncar Surakarta. Mudra 36(1)",
+        "url_sumber_1": "",
+        "url_sumber_2": "",
         "youtube_url": ""
       }
     },
@@ -1955,6 +2109,8 @@
         "formula_teks": "tari keraton, teks tembang belum ditranskripsi",
         "ringkasan_ilmiah": "Tarian klasik srimpi bertema peperangan halus; analisis tekstual atas teks tembang gendhing Pandhelori belum dilakukan oleh peneliti tari.",
         "sumber_ilmiah": "Darmawan (2019). Kajian Struktur Musikal Gendhing Pandhelori Pengiring Tari Srimpi. Dewa Ruci 14(2)",
+        "url_sumber_1": "",
+        "url_sumber_2": "",
         "youtube_url": ""
       }
     },
@@ -1980,6 +2136,8 @@
         "formula_teks": "tari intrik diplomasi, teks belum ditranskripsi",
         "ringkasan_ilmiah": "Tari srimpi politis PB IX untuk menjamu dan memperdaya pejabat kolonial Belanda; narasi simbolik racun sangupati perlu diuji bukti transkripsi tembang vokal pengiringnya.",
         "sumber_ilmiah": "Rustopo (2020). Menari di Bawah Todongan Bedil: Makna Simbolik Tari Srimpi Sangupati. ISI Press Surakarta",
+        "url_sumber_1": "",
+        "url_sumber_2": "",
         "youtube_url": ""
       }
     },
@@ -2005,6 +2163,8 @@
         "formula_teks": "upacara suran seniman petani, tuturan doa belum dihimpun",
         "ringkasan_ilmiah": "Ritus perayaan malam 1 Suro oleh komunitas seniman petani Dusun Tutup Ngisor lereng Gunung Merapi; memuat doa keselamatan dan lakon wayang orang yang perlu dihimpun teks naskahnya.",
         "sumber_ilmiah": "Yustiono (2019). Estetika Komunitas Petani Seniman Padepokan Tutup Ngisor Magelang. Gelar 17(2)",
+        "url_sumber_1": "",
+        "url_sumber_2": "",
         "youtube_url": ""
       }
     },
@@ -2030,6 +2190,8 @@
         "formula_teks": "tradisi lisan lokal, teks belum ditemukan dalam jurnal",
         "ringkasan_ilmiah": "Kesenian tutur tradisi khas Banyumasan; pustaka daring belum memberikan transkripsi verbatim naskah tuturan, diprioritaskan untuk pelacakan narasumber sanggar budaya.",
         "sumber_ilmiah": "Dinas Porabudpar Banyumas (2021). Inventarisasi Seni Budaya Tradisional Kabupaten Banyumas",
+        "url_sumber_1": "",
+        "url_sumber_2": "",
         "youtube_url": ""
       }
     },
@@ -2055,6 +2217,8 @@
         "formula_teks": "tari topeng kayu liar, mantra pemanggil belum ditranskripsi",
         "ringkasan_ilmiah": "Seni tari rakyat di Karanggayam Kebumen mengenang perlawanan pejuang menyamar menjadi hantu hutan (cepetan); mantra pawang pengundang suasana mistis belum terdokumentasi naskah verbalnya.",
         "sumber_ilmiah": "Triyanto (2020). Nilai Perjuangan dan Estetika Seni Tari Cepetan Alas di Kebumen. Harmonia 20(1)",
+        "url_sumber_1": "",
+        "url_sumber_2": "",
         "youtube_url": ""
       }
     },
@@ -2080,6 +2244,8 @@
         "formula_teks": "tari rakyat ke keraton, teks parikan awal belum dipilah",
         "ringkasan_ilmiah": "Sejarah tledhek Gambyong yang diangkat ke keraton; teks parikan dan sindhenan tayub awal perlu dipilah dari koreografi tari murni.",
         "sumber_ilmiah": "RM Soedarsono (2019). Dari Tledhek ke Tari Istana: Transformasi Tari Gambyong. Jurnal Tari Jawa 5(2)",
+        "url_sumber_1": "https://jurnal.uns.ac.id/cakra-wisata/article/download/52812/32655",
+        "url_sumber_2": "",
         "youtube_url": ""
       }
     },
@@ -2105,6 +2271,8 @@
         "formula_teks": "tari pethilan wayang, dialog belum ditranskripsi",
         "ringkasan_ilmiah": "Fragmen tari perang tanding dua ksatria putri memperebutkan pusaka Jamus Kalimasada; memuat dialog antawecana yang perlu ditranskripsikan.",
         "sumber_ilmiah": "Pramono (2021). Dramaturgi Tari Pethilan Srikandi Mustakaweni. Panggung 31(1)",
+        "url_sumber_1": "",
+        "url_sumber_2": "",
         "youtube_url": ""
       }
     },
@@ -2130,6 +2298,8 @@
         "formula_teks": "kuda kepang putih merapi, mantra pawang belum dibuktikan",
         "ringkasan_ilmiah": "Kesenian kuda kepang putih khas lereng Selo Boyolali; kajian berfokus pada dinamika kelompok seni, teks mantra pawang belum ditranskripsi.",
         "sumber_ilmiah": "Prasetyo (2022). Solidaritas Petani Lereng Merapi Melalui Kesenian Turonggo Seto. Sabda 17(2)",
+        "url_sumber_1": "",
+        "url_sumber_2": "",
         "youtube_url": ""
       }
     },
@@ -2155,6 +2325,8 @@
         "formula_teks": "ritual memasak nasi pusaka 8 tahunan, teks belum tuntas",
         "ringkasan_ilmiah": "Upacara memasak nasi tumpeng dalam dandang pusaka Kyai Dudo oleh Susuhunan Paku Buwono setiap 8 tahun sekali; doa khusus yang dirapalkan abdi dalem dapur belum dipublikasikan luas.",
         "sumber_ilmiah": "Suryono (2020). Ritual Adang Tahun Dal Karaton Kasunanan Surakarta: Tinjauan Simbolik. Patrawidya 21(3)",
+        "url_sumber_1": "https://jurnal.uns.ac.id/javanologi/article/viewFile/109934/53070",
+        "url_sumber_2": "",
         "youtube_url": ""
       }
     },
@@ -2180,6 +2352,8 @@
         "formula_teks": "penabuhan bedug sambut ramadhan, ujaran lisan belum dihimpun",
         "ringkasan_ilmiah": "Tradisi menanti pengumuman awal puasa Ramadhan oleh Sunan Kudus dengan pemukulan bedug Menara; memuat sejarah lisan yang perlu ditranskripsikan formulanya.",
         "sumber_ilmiah": "Zuhri (2021). Dandangan Menara Kudus: Tradisi, Ekonomi, dan Kearifan Living Islam. Jurnal Penelitian Agama 22(1)",
+        "url_sumber_1": "https://journal.unnes.ac.id/journals/jess/article/view/23241",
+        "url_sumber_2": "",
         "youtube_url": ""
       }
     },
@@ -2205,6 +2379,8 @@
         "formula_teks": "tari prajurit ksatria, teks suluk pengiring belum dipisah",
         "ringkasan_ilmiah": "Tari ksatria gaya Surakarta; teks suluk pedalangan yang hadir sebagai iringan perlu diuji keterkaitannya dengan sastra lisan mandiri.",
         "sumber_ilmiah": "Soetarno (2021). Estetika Tari Wireng Karaton Surakarta. Keteg 21(2)",
+        "url_sumber_1": "https://repository.isi-ska.ac.id/2994/1/Hadi%20Subagyo_Sejarah%20tari%20Jejak%20Langkah%20Tari%20di%20Pura%20Mangkunegaran.pdf",
+        "url_sumber_2": "",
         "youtube_url": ""
       }
     },
@@ -2230,6 +2406,8 @@
         "formula_teks": "narasi memori traumatik bedhol desa; mitos siluman buaya putih; mantra sesaji nelayan keramba",
         "ringkasan_ilmiah": "Kisah lisan sejarah pemindahan warga 1980-an dan ritual larung sesaji waduk perlu verifikasi transkripsi rekaman tutur saksi mata dan formula ujaran pawang air di lapangan.",
         "sumber_ilmiah": "Supriyadi (2021). Dinamika Memori Kolektif Komunitas Terdampak Pembangunan Waduk Kedung Ombo. Jurnal Handep 5(1)",
+        "url_sumber_1": "",
+        "url_sumber_2": "",
         "youtube_url": ""
       }
     },
@@ -2255,6 +2433,8 @@
         "formula_teks": "kisah bedhol kuring transmigrasi sitiung 1978; mitos makam nglaroh; mantra larung sesaji 1 sura",
         "ringkasan_ilmiah": "Memori tutur puluhan desa yang ditenggelamkan dan ritual perahu sesaji nelayan waduk; memerlukan transkripsi verbatim tuturan sesepuh untuk memastikan keterpenuhan unsur teks sastra lisan.",
         "sumber_ilmiah": "Hastuti & Subiyantoro (2023). Dampak Sosio-Kultural Pembangunan Waduk Gajah Mungkur terhadap Memori Budaya Komunitas. Mudra 38(2)",
+        "url_sumber_1": "",
+        "url_sumber_2": "",
         "youtube_url": ""
       }
     },
@@ -2280,6 +2460,8 @@
         "formula_teks": "mitos kawah siwi & pintu semar; ujaran permohonan hajat peziarah; legenda sumur purba",
         "ringkasan_ilmiah": "Tradisi melempar kerikil menyeberangi ceruk sumur raksasa Dieng dengan ujaran niat batin; perlu diverifikasi apakah ada formula mantra lisan khusus dari juru kunci situs.",
         "sumber_ilmiah": "Nugroho (2020). Makna Ritual Melempar Batu di Sumur Jalatunda Dataran Tinggi Dieng. Nusa: Jurnal Ilmu Bahasa dan Sastra 15(4)",
+        "url_sumber_1": "",
+        "url_sumber_2": "",
         "youtube_url": ""
       }
     }

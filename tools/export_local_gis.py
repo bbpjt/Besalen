@@ -1,4 +1,4 @@
-﻿import json
+import json
 import os
 import re
 
@@ -33,6 +33,8 @@ def export_local():
                 "formula_teks": item.get("unsur_teks") or item.get("bentuk_tuturan", ""),
                 "ringkasan_ilmiah": item.get("ringkasan_ilmiah") or item.get("catatan_kritis", ""),
                 "sumber_ilmiah": item.get("sumber_ilmiah") or item.get("sumber_ilmiah_1") or item.get("sumber_referensi", ""),
+                "url_sumber_1": item.get("url1", ""),
+                "url_sumber_2": item.get("url2", ""),
                 "youtube_url": item.get("youtube_url", "")
             }
         }
@@ -40,7 +42,7 @@ def export_local():
         
     point_geojson = {
         "type": "FeatureCollection",
-        "name": "Peta_Sastra_Lisan_Jawa_Tengah_2026",
+        "name": "Peta_Sastra_Lisan_Jawa_Tengah",
         "crs": {
             "type": "name",
             "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" }
@@ -53,7 +55,7 @@ def export_local():
     
     # 2. Coordinates CSV with WKT
     with open("gis_exports/sastra_lisan_jateng_coords.csv", "w", encoding="utf-8") as f:
-        headers = ["id", "nama", "ring_kategori", "ring_level", "kabupaten", "karesidenan", "zona_ekologi", "latitude", "longitude", "wkt_geom", "youtube_url"]
+        headers = ["id", "nama", "ring_kategori", "ring_level", "kabupaten", "karesidenan", "zona_ekologi", "latitude", "longitude", "wkt_geom", "url_sumber_1", "url_sumber_2", "youtube_url"]
         f.write(",".join(headers) + "\n")
         for item in items:
             lat = float(item["latitude"])
@@ -70,6 +72,8 @@ def export_local():
                 str(lat),
                 str(lng),
                 f'"{wkt}"',
+                f'"{item.get("url1", "")}"',
+                f'"{item.get("url2", "")}"',
                 f'"{item.get("youtube_url", "")}"'
             ]
             f.write(",".join(row) + "\n")
