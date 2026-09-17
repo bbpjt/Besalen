@@ -2,7 +2,7 @@
  * Peta Sastra Lisan di Jawa Tengah
  * Balai Bahasa Provinsi Jawa Tengah
  * Data Terverifikasi 100% Sesuai Rujukan Akademik & Registrasi WBTB
- * Terakhir Diperbarui melalui Panel Admin: Kamis, 17 September 2026 pukul 10.06
+ * Terakhir Diperbarui melalui Panel Admin: Kamis, 17 September 2026 pukul 15.11
  */
 window.SASTRA_DATA = {
   "metadata": {
@@ -14,7 +14,7 @@ window.SASTRA_DATA = {
     "total_ring3": 44,
     "total_ring4": 39,
     "total_kabupaten": 35,
-    "terakhir_diperbarui": "2026-09-17T03:35:00.000Z"
+    "terakhir_diperbarui": "2026-09-17T08:11:07.425Z"
   },
   "ring1": [
     {
@@ -32,7 +32,7 @@ window.SASTRA_DATA = {
       "usia_garis": "63 th (17 Juli 1963) / Putra tunggal alm. Mbah Sutrisno (Mbah Tris)",
       "komunitas": "Keluarga besar Mbah Tris & warga desa Sendanggayam",
       "bentuk_tuturan": "Seni pertunjukan sastra tutur lisan prosa-liris dan tembang berima yang dipadukan dengan caturan (dialog dramatik antartokoh) serta diiringi instrumen perkusi rebana (terbang).",
-      "iringan_musik": "Terbang besar dan dua ketunthung",
+      "iringan_musik": "Tiga buah instrumen perkusi rebana (terbang): satu buah terbang gedhe (bass ritmis penentu ketukan) serta dua buah ketunthung (ketunthung kempul dan ketunthung ploncon)",
       "repertoar": "Transkripsi fonemik verbatim 367 segmen (Lakon Kelahiran Nabi Ibrahim)",
       "latitude": -6.9944,
       "longitude": 111.3789,
@@ -41,13 +41,6 @@ window.SASTRA_DATA = {
       "video_local": "kentrung.mp4",
       "cover_image": "kentrung-Cover.jpg",
       "gallery_images": [
-        "media/kentrung/kentrung_01_20260621_132746.jpg",
-        "media/kentrung/kentrung_02_20260621_132749.jpg",
-        "media/kentrung/kentrung_03_20260621_132847.jpg",
-        "media/kentrung/kentrung_04_20260621_132858.jpg",
-        "media/kentrung/kentrung_05_20260621_132911.jpg",
-        "media/kentrung/kentrung_06_20260621_132920.jpg",
-        "media/kentrung/kentrung_07_20260621_140405.jpg",
         "media/kentrung/kentrung_08_20260622_094155.jpg",
         "media/kentrung/kentrung_09_20260622_094211.jpg",
         "media/kentrung/kentrung_10_20260622_094216.jpg",
@@ -55,40 +48,6 @@ window.SASTRA_DATA = {
         "media/kentrung/kentrung_12_20260622_094249.jpg",
         "media/kentrung/kentrung_13_20260622_094528.jpg",
         "media/kentrung/kentrung_14_20260622_094535.jpg",
-        "media/kentrung/kentrung_15_20260622_094657.jpg",
-        "media/kentrung/kentrung_16_20260622_095023.jpg",
-        "media/kentrung/kentrung_17_20260622_095028.jpg",
-        "media/kentrung/kentrung_18_20260622_095148.jpg",
-        "media/kentrung/kentrung_19_20260622_095202.jpg",
-        "media/kentrung/kentrung_20_20260622_095217.jpg",
-        "media/kentrung/kentrung_21_20260622_095244.jpg",
-        "media/kentrung/kentrung_22_20260622_095313.jpg",
-        "media/kentrung/kentrung_23_20260622_095957.jpg",
-        "media/kentrung/kentrung_24_20260622_100104.jpg",
-        "media/kentrung/kentrung_25_20260622_100908.jpg",
-        "media/kentrung/kentrung_26_20260622_100919.jpg",
-        "media/kentrung/kentrung_27_20260622_102821.jpg",
-        "media/kentrung/kentrung_28_20260622_102826.jpg",
-        "media/kentrung/kentrung_29_20260622_105803.jpg",
-        "media/kentrung/kentrung_30_20260622_110004.jpg",
-        "media/kentrung/kentrung_31_20260622_110009.jpg",
-        "media/kentrung/kentrung_32_img_7296.jpg",
-        "media/kentrung/kentrung_33_img_7297.jpg",
-        "media/kentrung/kentrung_34_img_7298.jpg",
-        "media/kentrung/kentrung_35_img_7299.jpg",
-        "media/kentrung/kentrung_36_img_7300.jpg",
-        "media/kentrung/kentrung_37_img_7301.jpg",
-        "media/kentrung/kentrung_38_img_7302.jpg",
-        "media/kentrung/kentrung_39_img_7303.jpg",
-        "media/kentrung/kentrung_40_img_7304.jpg",
-        "media/kentrung/kentrung_41_img_7305.jpg",
-        "media/kentrung/kentrung_42_img_7306.jpg",
-        "media/kentrung/kentrung_43_img_7307.jpg",
-        "media/kentrung/kentrung_44_img_7308.jpg",
-        "media/kentrung/kentrung_45_img_7309.jpg",
-        "media/kentrung/kentrung_46_img_7310.jpg",
-        "media/kentrung/kentrung_47_img_7311.jpg",
-        "media/kentrung/kentrung_48_img_7312.jpg",
         "media/kentrung/kentrung_49_img_7313.jpg",
         "media/kentrung/kentrung_50_img_7314.jpg"
       ],
@@ -103,7 +62,10 @@ window.SASTRA_DATA = {
       "alat_musik": "Tiga buah instrumen perkusi rebana (terbang): satu buah terbang gedhe (bass ritmis penentu ketukan) serta dua buah ketunthung (ketunthung kempul dan ketunthung ploncon)",
       "kostum": "Pakaian tradisional Jawa, berupa kemeja/beskap sederhana atau lurik, kain jarik/batik khas Blora, serta mengenakan ikat kepala atau peci/songkok",
       "bahasa": "Bahasa Jawa",
-      "deskripsi_pertunjukan": "Pertunjukan disajikan secara bersahaja, merakyat, komunikatif, dan diselingi humor serta parikan lokal. Di dalamnya terkandung ajaran ketuhanan, bakti kepada orang tua dan guru, nilai moral-kesusilaan, kerukunan sosial, serta doa tolak bala dan keselamatan bagi pemangku hajat."
+      "deskripsi_pertunjukan": "Pertunjukan disajikan secara bersahaja, merakyat, komunikatif, dan diselingi humor serta parikan lokal. Di dalamnya terkandung ajaran ketuhanan, bakti kepada orang tua dan guru, nilai moral-kesusilaan, kerukunan sosial, serta doa tolak bala dan keselamatan bagi pemangku hajat.",
+      "usia": "63 th (17 Juli 1963)",
+      "pewarisan": "Putra tunggal alm. Mbah Sutrisno (Mbah Tris)",
+      "unsur_teks": ""
     },
     {
       "id": "SLJT-002-BMS",
