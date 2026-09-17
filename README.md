@@ -15,9 +15,9 @@ Aplikasi ini menyajikan visualisasi persebaran sastra tutur lisan di 35 Kabupate
 
 2. **Ring Validasi Ilmiah:**
    - **⭐ Ring 1: Terverifikasi (3 Tradisi):** *Kentrung Blora*, *Maca Babad Pasir Luhur* (Banyumas), dan *Wayang Othok Obrol* (Wonosobo) dilengkapi validasi lapangan, GPS presisi, audio-video resmi, dan transkrip fonemik.
-   - **📖 Ring 2: Terverifikasi Teks (44 Tradisi):** Terbukti secara tekstual ilmiah memiliki formula tuturan (mantra, tembang, suluk, caturan).
-   - **🔍 Ring 3: Perlu Verifikasi (44 Tradisi):** Ritus adat komunal yang menjadi prioritas penelitian lapangan lebih lanjut.
-   - **Ring 4: Eksklusi Non-Sastra (40 Objek):** Objek budaya fisik/kriya/kuliner yang resmi dipisahkan untuk menjaga kemurnian korpus sastra tutur.
+   - **📖 Ring 2: Ada referensi (45 Tradisi):** Datanya berasal dari referensi tertulis dengan indikasi formula tuturan (mantra, tembang, suluk, parikan).
+   - **🔍 Ring 3: Tercatat WBTB (44 Tradisi):** Datanya dari inventarisasi WBTB atau tulisan yang belum memperlihatkan teks tuturannya.
+   - **Ring 4: Bukan Sastra Lisan (39 Objek):** Objek budaya berupa kerajinan, busana, kuliner, atau kalender fisik tanpa unsur sastra lisan.
 
 3. **Dokumentasi Multimedia & Transkrip:**
    - Pemutar video YouTube resmi dan opsi video lokal.

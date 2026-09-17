@@ -203,7 +203,7 @@ def main():
             "sumber_ilmiah": sumber
         })
         
-    # 2. Ring 2: Terverifikasi Teks (44 items)
+    # 2. Ring 2: Ada referensi (44 items)
     s2 = wb["Ring 2 - Tervalidasi Teks (44)"]
     ring2 = []
     for r in range(2, 46):
@@ -226,7 +226,7 @@ def main():
         ring2.append({
             "id": f"SLJT-R2-{int(no):03d}",
             "nama": nama,
-            "ring": "Ring 2 - Terverifikasi Teks",
+            "ring": "Ring 2 - Ada referensi",
             "ring_level": 2,
             "status_label": "TERVERIFIKASI TEKS ILMIAH",
             "kabupaten": kab,
@@ -242,8 +242,8 @@ def main():
             "longitude": lng
         })
         
-    # 3. Ring 3: Perlu Verifikasi (44 items)
-    s3 = wb["Ring 3 - Perlu Verifikasi (44)"]
+    # 3. Ring 3: Tercatat WBTB (44 items)
+    s3 = wb["Ring 3 - Tercatat WBTB (44)"]
     ring3 = []
     for r in range(2, 46):
         row = [s3.cell(r, c).value for c in range(1, 12)]
@@ -263,7 +263,7 @@ def main():
         ring3.append({
             "id": f"SLJT-R3-{int(no):03d}",
             "nama": nama,
-            "ring": "Ring 3 - Perlu Verifikasi",
+            "ring": "Ring 3 - Tercatat WBTB",
             "ring_level": 3,
             "status_label": "PERLU VERIFIKASI LAPANGAN",
             "kabupaten": kab,

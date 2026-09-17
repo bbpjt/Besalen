@@ -43,8 +43,8 @@ def verify_all():
         kab = data.get("kabupaten", [])
         
         print(f"[OK] Ring 1 (Terverifikasi): {len(r1)} / 3")
-        print(f"[OK] Ring 2 (Terverifikasi Teks): {len(r2)} / 45")
-        print(f"[OK] Ring 3 (Perlu Verifikasi): {len(r3)} / 44")
+        print(f"[OK] Ring 2 (Ada referensi): {len(r2)} / 45")
+        print(f"[OK] Ring 3 (Tercatat WBTB): {len(r3)} / 44")
         print(f"[OK] Ring 4 (Eksklusi Non-Sastra): {len(r4)} / 39")
         print(f"[OK] 35 Kabupaten/Kota: {len(kab)} / 35")
         

@@ -193,7 +193,7 @@ window.SASTRA_DATA = {
     {
       "id": "SLJT-R2-001",
       "nama": "Bedhaya Ela-Ela (Tari)",
-      "ring": "Ring 2 - Terverifikasi Teks",
+      "ring": "Ring 2 - Ada referensi",
       "ring_level": 2,
       "status_label": "TERVERIFIKASI TEKS ILMIAH",
       "kabupaten": "Kota Surakarta",
@@ -214,7 +214,7 @@ window.SASTRA_DATA = {
     {
       "id": "SLJT-R2-002",
       "nama": "Bedhaya Ketawang",
-      "ring": "Ring 2 - Terverifikasi Teks",
+      "ring": "Ring 2 - Ada referensi",
       "ring_level": 2,
       "status_label": "TERVERIFIKASI TEKS ILMIAH",
       "kabupaten": "Kota Surakarta",
@@ -235,7 +235,7 @@ window.SASTRA_DATA = {
     {
       "id": "SLJT-R2-003",
       "nama": "Begalan Banyumas",
-      "ring": "Ring 2 - Terverifikasi Teks",
+      "ring": "Ring 2 - Ada referensi",
       "ring_level": 2,
       "status_label": "TERVERIFIKASI TEKS ILMIAH",
       "kabupaten": "Kabupaten Banyumas",
@@ -256,7 +256,7 @@ window.SASTRA_DATA = {
     {
       "id": "SLJT-R2-004",
       "nama": "Braen",
-      "ring": "Ring 2 - Terverifikasi Teks",
+      "ring": "Ring 2 - Ada referensi",
       "ring_level": 2,
       "status_label": "TERVERIFIKASI TEKS ILMIAH",
       "kabupaten": "Kabupaten Purbalingga",
@@ -277,7 +277,7 @@ window.SASTRA_DATA = {
     {
       "id": "SLJT-R2-005",
       "nama": "Bundengan",
-      "ring": "Ring 2 - Terverifikasi Teks",
+      "ring": "Ring 2 - Ada referensi",
       "ring_level": 2,
       "status_label": "TERVERIFIKASI TEKS ILMIAH",
       "kabupaten": "Kabupaten Wonosobo",
@@ -298,7 +298,7 @@ window.SASTRA_DATA = {
     {
       "id": "SLJT-R2-006",
       "nama": "Calung Banyumas dan Jawa Barat",
-      "ring": "Ring 2 - Terverifikasi Teks",
+      "ring": "Ring 2 - Ada referensi",
       "ring_level": 2,
       "status_label": "TERVERIFIKASI TEKS ILMIAH",
       "kabupaten": "Kabupaten Banyumas",
@@ -319,7 +319,7 @@ window.SASTRA_DATA = {
     {
       "id": "SLJT-R2-007",
       "nama": "Cowongan Cilacap",
-      "ring": "Ring 2 - Terverifikasi Teks",
+      "ring": "Ring 2 - Ada referensi",
       "ring_level": 2,
       "status_label": "TERVERIFIKASI TEKS ILMIAH",
       "kabupaten": "Kabupaten Cilacap",
@@ -340,7 +340,7 @@ window.SASTRA_DATA = {
     {
       "id": "SLJT-R2-008",
       "nama": "Dolalak",
-      "ring": "Ring 2 - Terverifikasi Teks",
+      "ring": "Ring 2 - Ada referensi",
       "ring_level": 2,
       "status_label": "TERVERIFIKASI TEKS ILMIAH",
       "kabupaten": "Kabupaten Purworejo",
@@ -361,7 +361,7 @@ window.SASTRA_DATA = {
     {
       "id": "SLJT-R2-009",
       "nama": "Ebeg Banyumas",
-      "ring": "Ring 2 - Terverifikasi Teks",
+      "ring": "Ring 2 - Ada referensi",
       "ring_level": 2,
       "status_label": "TERVERIFIKASI TEKS ILMIAH",
       "kabupaten": "Kabupaten Banyumas",
@@ -382,7 +382,7 @@ window.SASTRA_DATA = {
     {
       "id": "SLJT-R2-010",
       "nama": "Gambang Semarang",
-      "ring": "Ring 2 - Terverifikasi Teks",
+      "ring": "Ring 2 - Ada referensi",
       "ring_level": 2,
       "status_label": "TERVERIFIKASI TEKS ILMIAH",
       "kabupaten": "Kabupaten Semarang & Kota Semarang",
@@ -403,7 +403,7 @@ window.SASTRA_DATA = {
     {
       "id": "SLJT-R2-011",
       "nama": "Gatotkaca Gandrung",
-      "ring": "Ring 2 - Terverifikasi Teks",
+      "ring": "Ring 2 - Ada referensi",
       "ring_level": 2,
       "status_label": "TERVERIFIKASI TEKS ILMIAH",
       "kabupaten": "Kota Surakarta",
@@ -424,7 +424,7 @@ window.SASTRA_DATA = {
     {
       "id": "SLJT-R2-012",
       "nama": "Geguritan Surakarta",
-      "ring": "Ring 2 - Terverifikasi Teks",
+      "ring": "Ring 2 - Ada referensi",
       "ring_level": 2,
       "status_label": "TERVERIFIKASI TEKS ILMIAH",
       "kabupaten": "Kota Surakarta",
@@ -445,7 +445,7 @@ window.SASTRA_DATA = {
     {
       "id": "SLJT-R2-013",
       "nama": "Grebeg Besar Demak",
-      "ring": "Ring 2 - Terverifikasi Teks",
+      "ring": "Ring 2 - Ada referensi",
       "ring_level": 2,
       "status_label": "TERVERIFIKASI TEKS ILMIAH",
       "kabupaten": "Kabupaten Demak",
@@ -466,7 +466,7 @@ window.SASTRA_DATA = {
     {
       "id": "SLJT-R2-014",
       "nama": "Jamjaneng",
-      "ring": "Ring 2 - Terverifikasi Teks",
+      "ring": "Ring 2 - Ada referensi",
       "ring_level": 2,
       "status_label": "TERVERIFIKASI TEKS ILMIAH",
       "kabupaten": "Kabupaten Kebumen",
@@ -487,7 +487,7 @@ window.SASTRA_DATA = {
     {
       "id": "SLJT-R2-015",
       "nama": "Langendriyan",
-      "ring": "Ring 2 - Terverifikasi Teks",
+      "ring": "Ring 2 - Ada referensi",
       "ring_level": 2,
       "status_label": "TERVERIFIKASI TEKS ILMIAH",
       "kabupaten": "Kota Surakarta",
@@ -508,7 +508,7 @@ window.SASTRA_DATA = {
     {
       "id": "SLJT-R2-016",
       "nama": "Lengger Banyumas",
-      "ring": "Ring 2 - Terverifikasi Teks",
+      "ring": "Ring 2 - Ada referensi",
       "ring_level": 2,
       "status_label": "TERVERIFIKASI TEKS ILMIAH",
       "kabupaten": "Kabupaten Banyumas",
@@ -529,7 +529,7 @@ window.SASTRA_DATA = {
     {
       "id": "SLJT-R2-017",
       "nama": "Macapat Semarangan",
-      "ring": "Ring 2 - Terverifikasi Teks",
+      "ring": "Ring 2 - Ada referensi",
       "ring_level": 2,
       "status_label": "TERVERIFIKASI TEKS ILMIAH",
       "kabupaten": "Kota Semarang",
@@ -550,7 +550,7 @@ window.SASTRA_DATA = {
     {
       "id": "SLJT-R2-018",
       "nama": "Santiswara Larasmadya",
-      "ring": "Ring 2 - Terverifikasi Teks",
+      "ring": "Ring 2 - Ada referensi",
       "ring_level": 2,
       "status_label": "TERVERIFIKASI TEKS ILMIAH",
       "kabupaten": "Kota Surakarta",
@@ -571,7 +571,7 @@ window.SASTRA_DATA = {
     {
       "id": "SLJT-R2-019",
       "nama": "Sintren Kabupaten Pekalongan",
-      "ring": "Ring 2 - Terverifikasi Teks",
+      "ring": "Ring 2 - Ada referensi",
       "ring_level": 2,
       "status_label": "TERVERIFIKASI TEKS ILMIAH",
       "kabupaten": "Kabupaten Pekalongan",
@@ -592,7 +592,7 @@ window.SASTRA_DATA = {
     {
       "id": "SLJT-R2-020",
       "nama": "Tari Gambiranom Surakarta",
-      "ring": "Ring 2 - Terverifikasi Teks",
+      "ring": "Ring 2 - Ada referensi",
       "ring_level": 2,
       "status_label": "TERVERIFIKASI TEKS ILMIAH",
       "kabupaten": "Kota Surakarta",
@@ -613,7 +613,7 @@ window.SASTRA_DATA = {
     {
       "id": "SLJT-R2-021",
       "nama": "Tari Soreng",
-      "ring": "Ring 2 - Terverifikasi Teks",
+      "ring": "Ring 2 - Ada referensi",
       "ring_level": 2,
       "status_label": "TERVERIFIKASI TEKS ILMIAH",
       "kabupaten": "Kabupaten Magelang",
@@ -634,7 +634,7 @@ window.SASTRA_DATA = {
     {
       "id": "SLJT-R2-022",
       "nama": "Tari Topeng Lengger Wonosobo",
-      "ring": "Ring 2 - Terverifikasi Teks",
+      "ring": "Ring 2 - Ada referensi",
       "ring_level": 2,
       "status_label": "TERVERIFIKASI TEKS ILMIAH",
       "kabupaten": "Kabupaten Wonosobo",
@@ -655,7 +655,7 @@ window.SASTRA_DATA = {
     {
       "id": "SLJT-R2-023",
       "nama": "Tedhak Siten Surakarta",
-      "ring": "Ring 2 - Terverifikasi Teks",
+      "ring": "Ring 2 - Ada referensi",
       "ring_level": 2,
       "status_label": "TERVERIFIKASI TEKS ILMIAH",
       "kabupaten": "Kota Surakarta",
@@ -676,7 +676,7 @@ window.SASTRA_DATA = {
     {
       "id": "SLJT-R2-024",
       "nama": "Tingalan Jumenengan Dalem Karaton Surakarta",
-      "ring": "Ring 2 - Terverifikasi Teks",
+      "ring": "Ring 2 - Ada referensi",
       "ring_level": 2,
       "status_label": "TERVERIFIKASI TEKS ILMIAH",
       "kabupaten": "Kota Surakarta",
@@ -697,7 +697,7 @@ window.SASTRA_DATA = {
     {
       "id": "SLJT-R2-025",
       "nama": "Tingalan Jumenengan Dalem Puro Mangkunegaran",
-      "ring": "Ring 2 - Terverifikasi Teks",
+      "ring": "Ring 2 - Ada referensi",
       "ring_level": 2,
       "status_label": "TERVERIFIKASI TEKS ILMIAH",
       "kabupaten": "Kota Surakarta",
@@ -718,7 +718,7 @@ window.SASTRA_DATA = {
     {
       "id": "SLJT-R2-026",
       "nama": "Tungguk Tembakau Boyolali",
-      "ring": "Ring 2 - Terverifikasi Teks",
+      "ring": "Ring 2 - Ada referensi",
       "ring_level": 2,
       "status_label": "TERVERIFIKASI TEKS ILMIAH",
       "kabupaten": "Kabupaten Boyolali",
@@ -739,7 +739,7 @@ window.SASTRA_DATA = {
     {
       "id": "SLJT-R2-027",
       "nama": "Upacara Adat Apeman Yaqowiyu",
-      "ring": "Ring 2 - Terverifikasi Teks",
+      "ring": "Ring 2 - Ada referensi",
       "ring_level": 2,
       "status_label": "TERVERIFIKASI TEKS ILMIAH",
       "kabupaten": "Kabupaten Klaten",
@@ -760,7 +760,7 @@ window.SASTRA_DATA = {
     {
       "id": "SLJT-R2-028",
       "nama": "Upacara Adat Mahesa Lawung",
-      "ring": "Ring 2 - Terverifikasi Teks",
+      "ring": "Ring 2 - Ada referensi",
       "ring_level": 2,
       "status_label": "TERVERIFIKASI TEKS ILMIAH",
       "kabupaten": "Kota Surakarta",
@@ -781,7 +781,7 @@ window.SASTRA_DATA = {
     {
       "id": "SLJT-R2-029",
       "nama": "Wahyu Kliyu",
-      "ring": "Ring 2 - Terverifikasi Teks",
+      "ring": "Ring 2 - Ada referensi",
       "ring_level": 2,
       "status_label": "TERVERIFIKASI TEKS ILMIAH",
       "kabupaten": "Kabupaten Karanganyar",
@@ -802,7 +802,7 @@ window.SASTRA_DATA = {
     {
       "id": "SLJT-R2-030",
       "nama": "Wayang Kulit Purwa Jawa Tengah",
-      "ring": "Ring 2 - Terverifikasi Teks",
+      "ring": "Ring 2 - Ada referensi",
       "ring_level": 2,
       "status_label": "TERVERIFIKASI TEKS ILMIAH",
       "kabupaten": "Kota Surakarta",
@@ -823,7 +823,7 @@ window.SASTRA_DATA = {
     {
       "id": "SLJT-R2-031",
       "nama": "Wayang Kedu Temanggungan",
-      "ring": "Ring 2 - Terverifikasi Teks",
+      "ring": "Ring 2 - Ada referensi",
       "ring_level": 2,
       "status_label": "TERVERIFIKASI TEKS ILMIAH",
       "kabupaten": "Kabupaten Temanggung",
@@ -844,7 +844,7 @@ window.SASTRA_DATA = {
     {
       "id": "SLJT-R2-032",
       "nama": "Wayang Othok Obrol (Varian Naskah)",
-      "ring": "Ring 2 - Terverifikasi Teks",
+      "ring": "Ring 2 - Ada referensi",
       "ring_level": 2,
       "status_label": "TERVERIFIKASI TEKS ILMIAH",
       "kabupaten": "Kabupaten Wonosobo",
@@ -865,7 +865,7 @@ window.SASTRA_DATA = {
     {
       "id": "SLJT-R2-033",
       "nama": "Wayang Topeng Dalang Klaten",
-      "ring": "Ring 2 - Terverifikasi Teks",
+      "ring": "Ring 2 - Ada referensi",
       "ring_level": 2,
       "status_label": "TERVERIFIKASI TEKS ILMIAH",
       "kabupaten": "Kabupaten Klaten",
@@ -886,7 +886,7 @@ window.SASTRA_DATA = {
     {
       "id": "SLJT-R2-034",
       "nama": "Wayang Topeng Kedung Panjang",
-      "ring": "Ring 2 - Terverifikasi Teks",
+      "ring": "Ring 2 - Ada referensi",
       "ring_level": 2,
       "status_label": "TERVERIFIKASI TEKS ILMIAH",
       "kabupaten": "Kabupaten Banyumas",
@@ -907,7 +907,7 @@ window.SASTRA_DATA = {
     {
       "id": "SLJT-R2-035",
       "nama": "Legenda Baru Klinthing & Merti Rawa Pening",
-      "ring": "Ring 2 - Terverifikasi Teks",
+      "ring": "Ring 2 - Ada referensi",
       "ring_level": 2,
       "status_label": "TERVERIFIKASI TEKS ILMIAH",
       "kabupaten": "Kabupaten Semarang",
@@ -928,7 +928,7 @@ window.SASTRA_DATA = {
     {
       "id": "SLJT-R2-036",
       "nama": "Tradisi Kungkum & Mitos Sendang Senjoyo",
-      "ring": "Ring 2 - Terverifikasi Teks",
+      "ring": "Ring 2 - Ada referensi",
       "ring_level": 2,
       "status_label": "TERVERIFIKASI TEKS ILMIAH",
       "kabupaten": "Kabupaten Semarang & Kota Salatiga",
@@ -949,7 +949,7 @@ window.SASTRA_DATA = {
     {
       "id": "SLJT-R2-037",
       "nama": "Legenda & Ritus Khaul Sendang Sani",
-      "ring": "Ring 2 - Terverifikasi Teks",
+      "ring": "Ring 2 - Ada referensi",
       "ring_level": 2,
       "status_label": "TERVERIFIKASI TEKS ILMIAH",
       "kabupaten": "Kabupaten Pati",
@@ -970,7 +970,7 @@ window.SASTRA_DATA = {
     {
       "id": "SLJT-R2-038",
       "nama": "Jamasan & Mitos Sendang Coyo",
-      "ring": "Ring 2 - Terverifikasi Teks",
+      "ring": "Ring 2 - Ada referensi",
       "ring_level": 2,
       "status_label": "TERVERIFIKASI TEKS ILMIAH",
       "kabupaten": "Kabupaten Grobogan",
@@ -991,7 +991,7 @@ window.SASTRA_DATA = {
     {
       "id": "SLJT-R2-039",
       "nama": "Sedekah Waduk & Mitos Ular Malahayu",
-      "ring": "Ring 2 - Terverifikasi Teks",
+      "ring": "Ring 2 - Ada referensi",
       "ring_level": 2,
       "status_label": "TERVERIFIKASI TEKS ILMIAH",
       "kabupaten": "Kabupaten Brebes",
@@ -1012,7 +1012,7 @@ window.SASTRA_DATA = {
     {
       "id": "SLJT-R2-040",
       "nama": "Sedekah Bumi & Mitos Naga Cacaban",
-      "ring": "Ring 2 - Terverifikasi Teks",
+      "ring": "Ring 2 - Ada referensi",
       "ring_level": 2,
       "status_label": "TERVERIFIKASI TEKS ILMIAH",
       "kabupaten": "Kabupaten Tegal",
@@ -1033,7 +1033,7 @@ window.SASTRA_DATA = {
     {
       "id": "SLJT-R2-041",
       "nama": "Syi'iran & Wirid Sendang Nyatnyono",
-      "ring": "Ring 2 - Terverifikasi Teks",
+      "ring": "Ring 2 - Ada referensi",
       "ring_level": 2,
       "status_label": "TERVERIFIKASI TEKS ILMIAH",
       "kabupaten": "Kabupaten Semarang",
@@ -1054,7 +1054,7 @@ window.SASTRA_DATA = {
     {
       "id": "SLJT-R2-042",
       "nama": "Nyadran & Tembang Sendang Gedhe Kandri",
-      "ring": "Ring 2 - Terverifikasi Teks",
+      "ring": "Ring 2 - Ada referensi",
       "ring_level": 2,
       "status_label": "TERVERIFIKASI TEKS ILMIAH",
       "kabupaten": "Kota Semarang",
@@ -1075,7 +1075,7 @@ window.SASTRA_DATA = {
     {
       "id": "SLJT-R2-043",
       "nama": "Kidung Tirta & Mitos Sendang Widodaren",
-      "ring": "Ring 2 - Terverifikasi Teks",
+      "ring": "Ring 2 - Ada referensi",
       "ring_level": 2,
       "status_label": "TERVERIFIKASI TEKS ILMIAH",
       "kabupaten": "Kabupaten Karanganyar",
@@ -1096,7 +1096,7 @@ window.SASTRA_DATA = {
     {
       "id": "SLJT-R2-044",
       "nama": "Mitos Asal-Usul & Ruwatan Telaga Warna",
-      "ring": "Ring 2 - Terverifikasi Teks",
+      "ring": "Ring 2 - Ada referensi",
       "ring_level": 2,
       "status_label": "TERVERIFIKASI TEKS ILMIAH",
       "kabupaten": "Kabupaten Wonosobo & Banjarnegara",
@@ -1117,7 +1117,7 @@ window.SASTRA_DATA = {
     {
       "id": "SLJT-R2-045",
       "nama": "Wayang Suket Purbalingga",
-      "ring": "Ring 2 - Terverifikasi Teks",
+      "ring": "Ring 2 - Ada referensi",
       "ring_level": 2,
       "status_label": "TERVERIFIKASI TEKS ILMIAH (WBTB 2020)",
       "kabupaten": "Kabupaten Purbalingga",
@@ -1147,7 +1147,7 @@ window.SASTRA_DATA = {
     {
       "id": "SLJT-R3-001",
       "nama": "Arak-Arakan Sam Poo Tay Djien",
-      "ring": "Ring 3 - Perlu Verifikasi",
+      "ring": "Ring 3 - Tercatat WBTB",
       "ring_level": 3,
       "status_label": "PERLU VERIFIKASI LAPANGAN",
       "kabupaten": "Kota Semarang",
@@ -1165,7 +1165,7 @@ window.SASTRA_DATA = {
     {
       "id": "SLJT-R3-002",
       "nama": "Bambangan Cakil Surakarta",
-      "ring": "Ring 3 - Perlu Verifikasi",
+      "ring": "Ring 3 - Tercatat WBTB",
       "ring_level": 3,
       "status_label": "PERLU VERIFIKASI LAPANGAN",
       "kabupaten": "Kota Surakarta",
@@ -1185,7 +1185,7 @@ window.SASTRA_DATA = {
     {
       "id": "SLJT-R3-003",
       "nama": "Barikan Karimunjawa",
-      "ring": "Ring 3 - Perlu Verifikasi",
+      "ring": "Ring 3 - Tercatat WBTB",
       "ring_level": 3,
       "status_label": "PERLU VERIFIKASI LAPANGAN",
       "kabupaten": "Kabupaten Jepara",
@@ -1205,7 +1205,7 @@ window.SASTRA_DATA = {
     {
       "id": "SLJT-R3-004",
       "nama": "Barongan Blora",
-      "ring": "Ring 3 - Perlu Verifikasi",
+      "ring": "Ring 3 - Tercatat WBTB",
       "ring_level": 3,
       "status_label": "PERLU VERIFIKASI LAPANGAN",
       "kabupaten": "Kabupaten Blora",
@@ -1225,7 +1225,7 @@ window.SASTRA_DATA = {
     {
       "id": "SLJT-R3-005",
       "nama": "Bedhaya Bedhah Madiun",
-      "ring": "Ring 3 - Perlu Verifikasi",
+      "ring": "Ring 3 - Tercatat WBTB",
       "ring_level": 3,
       "status_label": "PERLU VERIFIKASI LAPANGAN",
       "kabupaten": "Kota Surakarta",
@@ -1245,7 +1245,7 @@ window.SASTRA_DATA = {
     {
       "id": "SLJT-R3-006",
       "nama": "Gambyong Pareanom",
-      "ring": "Ring 3 - Perlu Verifikasi",
+      "ring": "Ring 3 - Tercatat WBTB",
       "ring_level": 3,
       "status_label": "PERLU VERIFIKASI LAPANGAN",
       "kabupaten": "Kota Surakarta",
@@ -1263,7 +1263,7 @@ window.SASTRA_DATA = {
     {
       "id": "SLJT-R3-007",
       "nama": "Gambyong Retno Kusumo",
-      "ring": "Ring 3 - Perlu Verifikasi",
+      "ring": "Ring 3 - Tercatat WBTB",
       "ring_level": 3,
       "status_label": "PERLU VERIFIKASI LAPANGAN",
       "kabupaten": "Kota Surakarta",
@@ -1281,7 +1281,7 @@ window.SASTRA_DATA = {
     {
       "id": "SLJT-R3-008",
       "nama": "Gamelan Jawa Gaya Surakarta",
-      "ring": "Ring 3 - Perlu Verifikasi",
+      "ring": "Ring 3 - Tercatat WBTB",
       "ring_level": 3,
       "status_label": "PERLU VERIFIKASI LAPANGAN",
       "kabupaten": "Kota Surakarta",
@@ -1299,7 +1299,7 @@ window.SASTRA_DATA = {
     {
       "id": "SLJT-R3-009",
       "nama": "Jaranan Margowati",
-      "ring": "Ring 3 - Perlu Verifikasi",
+      "ring": "Ring 3 - Tercatat WBTB",
       "ring_level": 3,
       "status_label": "PERLU VERIFIKASI LAPANGAN",
       "kabupaten": "Kabupaten Temanggung",
@@ -1319,7 +1319,7 @@ window.SASTRA_DATA = {
     {
       "id": "SLJT-R3-010",
       "nama": "Jembul Tulakan",
-      "ring": "Ring 3 - Perlu Verifikasi",
+      "ring": "Ring 3 - Tercatat WBTB",
       "ring_level": 3,
       "status_label": "PERLU VERIFIKASI LAPANGAN",
       "kabupaten": "Kabupaten Jepara",
@@ -1339,7 +1339,7 @@ window.SASTRA_DATA = {
     {
       "id": "SLJT-R3-011",
       "nama": "Jolenan Somongari",
-      "ring": "Ring 3 - Perlu Verifikasi",
+      "ring": "Ring 3 - Tercatat WBTB",
       "ring_level": 3,
       "status_label": "PERLU VERIFIKASI LAPANGAN",
       "kabupaten": "Kabupaten Purworejo",
@@ -1359,7 +1359,7 @@ window.SASTRA_DATA = {
     {
       "id": "SLJT-R3-012",
       "nama": "Kebo Kinul",
-      "ring": "Ring 3 - Perlu Verifikasi",
+      "ring": "Ring 3 - Tercatat WBTB",
       "ring_level": 3,
       "status_label": "PERLU VERIFIKASI LAPANGAN",
       "kabupaten": "Kabupaten Sukoharjo",
@@ -1379,7 +1379,7 @@ window.SASTRA_DATA = {
     {
       "id": "SLJT-R3-013",
       "nama": "Kethek Ogleng Wonogiri",
-      "ring": "Ring 3 - Perlu Verifikasi",
+      "ring": "Ring 3 - Tercatat WBTB",
       "ring_level": 3,
       "status_label": "PERLU VERIFIKASI LAPANGAN",
       "kabupaten": "Kabupaten Wonogiri",
@@ -1399,7 +1399,7 @@ window.SASTRA_DATA = {
     {
       "id": "SLJT-R3-014",
       "nama": "Labuhan Ageng Pantai Sembukan",
-      "ring": "Ring 3 - Perlu Verifikasi",
+      "ring": "Ring 3 - Tercatat WBTB",
       "ring_level": 3,
       "status_label": "PERLU VERIFIKASI LAPANGAN",
       "kabupaten": "Kabupaten Wonogiri",
@@ -1419,7 +1419,7 @@ window.SASTRA_DATA = {
     {
       "id": "SLJT-R3-015",
       "nama": "Larung Langse Keraton Surakarta",
-      "ring": "Ring 3 - Perlu Verifikasi",
+      "ring": "Ring 3 - Tercatat WBTB",
       "ring_level": 3,
       "status_label": "PERLU VERIFIKASI LAPANGAN",
       "kabupaten": "Kota Surakarta",
@@ -1437,7 +1437,7 @@ window.SASTRA_DATA = {
     {
       "id": "SLJT-R3-016",
       "nama": "Meron Pati",
-      "ring": "Ring 3 - Perlu Verifikasi",
+      "ring": "Ring 3 - Tercatat WBTB",
       "ring_level": 3,
       "status_label": "PERLU VERIFIKASI LAPANGAN",
       "kabupaten": "Kabupaten Pati",
@@ -1455,7 +1455,7 @@ window.SASTRA_DATA = {
     {
       "id": "SLJT-R3-017",
       "nama": "Mondhosio Pancot",
-      "ring": "Ring 3 - Perlu Verifikasi",
+      "ring": "Ring 3 - Tercatat WBTB",
       "ring_level": 3,
       "status_label": "PERLU VERIFIKASI LAPANGAN",
       "kabupaten": "Kabupaten Karanganyar",
@@ -1473,7 +1473,7 @@ window.SASTRA_DATA = {
     {
       "id": "SLJT-R3-018",
       "nama": "Ngasa Kabupaten Brebes",
-      "ring": "Ring 3 - Perlu Verifikasi",
+      "ring": "Ring 3 - Tercatat WBTB",
       "ring_level": 3,
       "status_label": "PERLU VERIFIKASI LAPANGAN",
       "kabupaten": "Kabupaten Brebes",
@@ -1491,7 +1491,7 @@ window.SASTRA_DATA = {
     {
       "id": "SLJT-R3-019",
       "nama": "Nyadran Gunung Silurah",
-      "ring": "Ring 3 - Perlu Verifikasi",
+      "ring": "Ring 3 - Tercatat WBTB",
       "ring_level": 3,
       "status_label": "PERLU VERIFIKASI LAPANGAN",
       "kabupaten": "Kabupaten Pekalongan",
@@ -1509,7 +1509,7 @@ window.SASTRA_DATA = {
     {
       "id": "SLJT-R3-020",
       "nama": "Penjamasan Pusaka Sunan Bonang",
-      "ring": "Ring 3 - Perlu Verifikasi",
+      "ring": "Ring 3 - Tercatat WBTB",
       "ring_level": 3,
       "status_label": "PERLU VERIFIKASI LAPANGAN",
       "kabupaten": "Kabupaten Rembang",
@@ -1527,7 +1527,7 @@ window.SASTRA_DATA = {
     {
       "id": "SLJT-R3-021",
       "nama": "Perang Obor Tegalsambi",
-      "ring": "Ring 3 - Perlu Verifikasi",
+      "ring": "Ring 3 - Tercatat WBTB",
       "ring_level": 3,
       "status_label": "PERLU VERIFIKASI LAPANGAN",
       "kabupaten": "Kabupaten Jepara",
@@ -1545,7 +1545,7 @@ window.SASTRA_DATA = {
     {
       "id": "SLJT-R3-022",
       "nama": "Pesta Lomban",
-      "ring": "Ring 3 - Perlu Verifikasi",
+      "ring": "Ring 3 - Tercatat WBTB",
       "ring_level": 3,
       "status_label": "PERLU VERIFIKASI LAPANGAN",
       "kabupaten": "Kabupaten Jepara",
@@ -1563,7 +1563,7 @@ window.SASTRA_DATA = {
     {
       "id": "SLJT-R3-023",
       "nama": "Ruwatan Rambut Gimbal Dieng",
-      "ring": "Ring 3 - Perlu Verifikasi",
+      "ring": "Ring 3 - Tercatat WBTB",
       "ring_level": 3,
       "status_label": "PERLU VERIFIKASI LAPANGAN",
       "kabupaten": "Kabupaten Banjarnegara & Wonosobo",
@@ -1581,7 +1581,7 @@ window.SASTRA_DATA = {
     {
       "id": "SLJT-R3-024",
       "nama": "Saparan Sebaran Apem Keong Mas",
-      "ring": "Ring 3 - Perlu Verifikasi",
+      "ring": "Ring 3 - Tercatat WBTB",
       "ring_level": 3,
       "status_label": "PERLU VERIFIKASI LAPANGAN",
       "kabupaten": "Kabupaten Boyolali",
@@ -1599,7 +1599,7 @@ window.SASTRA_DATA = {
     {
       "id": "SLJT-R3-025",
       "nama": "Sedekah Hasil Bumi Jlarang",
-      "ring": "Ring 3 - Perlu Verifikasi",
+      "ring": "Ring 3 - Tercatat WBTB",
       "ring_level": 3,
       "status_label": "PERLU VERIFIKASI LAPANGAN",
       "kabupaten": "Kabupaten Banjarnegara",
@@ -1617,7 +1617,7 @@ window.SASTRA_DATA = {
     {
       "id": "SLJT-R3-026",
       "nama": "Sedulur Sikep Blora",
-      "ring": "Ring 3 - Perlu Verifikasi",
+      "ring": "Ring 3 - Tercatat WBTB",
       "ring_level": 3,
       "status_label": "PERLU VERIFIKASI LAPANGAN",
       "kabupaten": "Kabupaten Blora",
@@ -1635,7 +1635,7 @@ window.SASTRA_DATA = {
     {
       "id": "SLJT-R3-027",
       "nama": "Sekaten Surakarta",
-      "ring": "Ring 3 - Perlu Verifikasi",
+      "ring": "Ring 3 - Tercatat WBTB",
       "ring_level": 3,
       "status_label": "PERLU VERIFIKASI LAPANGAN",
       "kabupaten": "Kota Surakarta",
@@ -1653,7 +1653,7 @@ window.SASTRA_DATA = {
     {
       "id": "SLJT-R3-028",
       "nama": "Srimpi Ludiramadu",
-      "ring": "Ring 3 - Perlu Verifikasi",
+      "ring": "Ring 3 - Tercatat WBTB",
       "ring_level": 3,
       "status_label": "PERLU VERIFIKASI LAPANGAN",
       "kabupaten": "Kota Surakarta",
@@ -1671,7 +1671,7 @@ window.SASTRA_DATA = {
     {
       "id": "SLJT-R3-029",
       "nama": "Srimpi Mondrorini",
-      "ring": "Ring 3 - Perlu Verifikasi",
+      "ring": "Ring 3 - Tercatat WBTB",
       "ring_level": 3,
       "status_label": "PERLU VERIFIKASI LAPANGAN",
       "kabupaten": "Kota Surakarta",
@@ -1689,7 +1689,7 @@ window.SASTRA_DATA = {
     {
       "id": "SLJT-R3-030",
       "nama": "Srimpi Muncar",
-      "ring": "Ring 3 - Perlu Verifikasi",
+      "ring": "Ring 3 - Tercatat WBTB",
       "ring_level": 3,
       "status_label": "PERLU VERIFIKASI LAPANGAN",
       "kabupaten": "Kota Surakarta",
@@ -1707,7 +1707,7 @@ window.SASTRA_DATA = {
     {
       "id": "SLJT-R3-031",
       "nama": "Srimpi Pandhelori",
-      "ring": "Ring 3 - Perlu Verifikasi",
+      "ring": "Ring 3 - Tercatat WBTB",
       "ring_level": 3,
       "status_label": "PERLU VERIFIKASI LAPANGAN",
       "kabupaten": "Kota Surakarta",
@@ -1725,7 +1725,7 @@ window.SASTRA_DATA = {
     {
       "id": "SLJT-R3-032",
       "nama": "Srimpi Sangupati",
-      "ring": "Ring 3 - Perlu Verifikasi",
+      "ring": "Ring 3 - Tercatat WBTB",
       "ring_level": 3,
       "status_label": "PERLU VERIFIKASI LAPANGAN",
       "kabupaten": "Kota Surakarta",
@@ -1743,7 +1743,7 @@ window.SASTRA_DATA = {
     {
       "id": "SLJT-R3-033",
       "nama": "Suran Tutup Ngisor Kabupaten Magelang",
-      "ring": "Ring 3 - Perlu Verifikasi",
+      "ring": "Ring 3 - Tercatat WBTB",
       "ring_level": 3,
       "status_label": "PERLU VERIFIKASI LAPANGAN",
       "kabupaten": "Kabupaten Magelang",
@@ -1761,7 +1761,7 @@ window.SASTRA_DATA = {
     {
       "id": "SLJT-R3-034",
       "nama": "Talang Tawing",
-      "ring": "Ring 3 - Perlu Verifikasi",
+      "ring": "Ring 3 - Tercatat WBTB",
       "ring_level": 3,
       "status_label": "PERLU VERIFIKASI LAPANGAN",
       "kabupaten": "Kabupaten Banyumas",
@@ -1779,7 +1779,7 @@ window.SASTRA_DATA = {
     {
       "id": "SLJT-R3-035",
       "nama": "Tari Cepetan Alas",
-      "ring": "Ring 3 - Perlu Verifikasi",
+      "ring": "Ring 3 - Tercatat WBTB",
       "ring_level": 3,
       "status_label": "PERLU VERIFIKASI LAPANGAN",
       "kabupaten": "Kabupaten Kebumen",
@@ -1797,7 +1797,7 @@ window.SASTRA_DATA = {
     {
       "id": "SLJT-R3-036",
       "nama": "Tari Gambyong",
-      "ring": "Ring 3 - Perlu Verifikasi",
+      "ring": "Ring 3 - Tercatat WBTB",
       "ring_level": 3,
       "status_label": "PERLU VERIFIKASI LAPANGAN",
       "kabupaten": "Kota Surakarta",
@@ -1817,7 +1817,7 @@ window.SASTRA_DATA = {
     {
       "id": "SLJT-R3-037",
       "nama": "Tari Srikandi Mustakaweni",
-      "ring": "Ring 3 - Perlu Verifikasi",
+      "ring": "Ring 3 - Tercatat WBTB",
       "ring_level": 3,
       "status_label": "PERLU VERIFIKASI LAPANGAN",
       "kabupaten": "Kota Surakarta",
@@ -1835,7 +1835,7 @@ window.SASTRA_DATA = {
     {
       "id": "SLJT-R3-038",
       "nama": "Turonggo Seto Boyolali",
-      "ring": "Ring 3 - Perlu Verifikasi",
+      "ring": "Ring 3 - Tercatat WBTB",
       "ring_level": 3,
       "status_label": "PERLU VERIFIKASI LAPANGAN",
       "kabupaten": "Kabupaten Boyolali",
@@ -1853,7 +1853,7 @@ window.SASTRA_DATA = {
     {
       "id": "SLJT-R3-039",
       "nama": "Upacara Adat Adang Tahun Dal",
-      "ring": "Ring 3 - Perlu Verifikasi",
+      "ring": "Ring 3 - Tercatat WBTB",
       "ring_level": 3,
       "status_label": "PERLU VERIFIKASI LAPANGAN",
       "kabupaten": "Kota Surakarta",
@@ -1873,7 +1873,7 @@ window.SASTRA_DATA = {
     {
       "id": "SLJT-R3-040",
       "nama": "Upacara Adat Dandangan Kudus",
-      "ring": "Ring 3 - Perlu Verifikasi",
+      "ring": "Ring 3 - Tercatat WBTB",
       "ring_level": 3,
       "status_label": "PERLU VERIFIKASI LAPANGAN",
       "kabupaten": "Kabupaten Kudus",
@@ -1893,7 +1893,7 @@ window.SASTRA_DATA = {
     {
       "id": "SLJT-R3-041",
       "nama": "Wireng Gatutkaca Dadhungawuk",
-      "ring": "Ring 3 - Perlu Verifikasi",
+      "ring": "Ring 3 - Tercatat WBTB",
       "ring_level": 3,
       "status_label": "PERLU VERIFIKASI LAPANGAN",
       "kabupaten": "Kota Surakarta",
@@ -1913,7 +1913,7 @@ window.SASTRA_DATA = {
     {
       "id": "SLJT-R3-042",
       "nama": "Sedekah Waduk & Memori Geger Kedung Ombo",
-      "ring": "Ring 3 - Perlu Verifikasi",
+      "ring": "Ring 3 - Tercatat WBTB",
       "ring_level": 3,
       "status_label": "PERLU VERIFIKASI LAPANGAN",
       "kabupaten": "Kab. Grobogan, Boyolali, Sragen",
@@ -1931,7 +1931,7 @@ window.SASTRA_DATA = {
     {
       "id": "SLJT-R3-043",
       "nama": "Memori Bedhol Desa & Larung Sesaji Waduk Gajah Mungkur",
-      "ring": "Ring 3 - Perlu Verifikasi",
+      "ring": "Ring 3 - Tercatat WBTB",
       "ring_level": 3,
       "status_label": "PERLU VERIFIKASI LAPANGAN",
       "kabupaten": "Kabupaten Wonogiri",
@@ -1949,7 +1949,7 @@ window.SASTRA_DATA = {
     {
       "id": "SLJT-R3-044",
       "nama": "Ritus Melempar Batu Sumur & Sendang Jalatunda",
-      "ring": "Ring 3 - Perlu Verifikasi",
+      "ring": "Ring 3 - Tercatat WBTB",
       "ring_level": 3,
       "status_label": "PERLU VERIFIKASI LAPANGAN",
       "kabupaten": "Kabupaten Banjarnegara & Wonosobo",

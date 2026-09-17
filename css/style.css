@@ -15,9 +15,9 @@
   --color-border: #000000;
   --color-r1: #FFE600;        /* Ring 1: Terverifikasi (Kuning Kenari) */
   --color-r1-light: #FFF8B3;
-  --color-r2: #00E5FF;        /* Ring 2: Terverifikasi Teks (Cyan Elektrik) */
+  --color-r2: #00E5FF;        /* Ring 2: Ada referensi (Cyan Elektrik) */
   --color-r2-light: #C2F9FF;
-  --color-r3: #FF6B35;        /* Ring 3: Perlu Verifikasi (Oranye Tangelo) */
+  --color-r3: #FF6B35;        /* Ring 3: Tercatat WBTB (Oranye Tangelo) */
   --color-r3-light: #FFD5C2;
   --color-r4: #FF3366;        /* Ring 4: Eksklusi (Hot Pink) */
   --color-kab: #A78BFA;       /* Wilayah / Kab-Kota (Ungu Pastel) */

@@ -236,10 +236,10 @@
       drawerBadge.textContent = '⭐ Ring 1: Terverifikasi';
     } else if (item.ring_level === 2) {
       drawerBadge.classList.add('badge-r2');
-      drawerBadge.textContent = '📖 Ring 2: Terverifikasi Teks';
+      drawerBadge.textContent = '📖 Ring 2: Ada referensi';
     } else {
       drawerBadge.classList.add('badge-r3');
-      drawerBadge.textContent = '🔍 Ring 3: Perlu Verifikasi';
+      drawerBadge.textContent = '🔍 Ring 3: Tercatat WBTB';
     }
 
     // Render Tab Content
@@ -845,10 +845,10 @@
           <div><div style="font-size:1.4rem; font-weight:800;">${data.metadata.total_ring1}</div><div style="font-size:0.75rem;">Ring 1 (Terverifikasi)</div></div>
         </div>
         <div class="stat-chip badge-r2" style="justify-content:center; padding:10px;">
-          <div><div style="font-size:1.4rem; font-weight:800;">${data.metadata.total_ring2}</div><div style="font-size:0.75rem;">Ring 2 (Terverifikasi Teks)</div></div>
+          <div><div style="font-size:1.4rem; font-weight:800;">${data.metadata.total_ring2}</div><div style="font-size:0.75rem;">Ring 2 (Ada referensi)</div></div>
         </div>
         <div class="stat-chip badge-r3" style="justify-content:center; padding:10px;">
-          <div><div style="font-size:1.4rem; font-weight:800;">${data.metadata.total_ring3}</div><div style="font-size:0.75rem;">Ring 3 (Perlu Verifikasi)</div></div>
+          <div><div style="font-size:1.4rem; font-weight:800;">${data.metadata.total_ring3}</div><div style="font-size:0.75rem;">Ring 3 (Tercatat WBTB)</div></div>
         </div>
         <div class="stat-chip badge-r4" style="justify-content:center; padding:10px;">
           <div><div style="font-size:1.4rem; font-weight:800;">${data.metadata.total_ring4}</div><div style="font-size:0.75rem;">Ring 4 (Eksklusi)</div></div>
@@ -1056,7 +1056,7 @@
 
     const r2 = window.SASTRA_DATA ? (window.SASTRA_DATA.ring2 || []) : [];
     if (r2.length > 0) {
-      html += `<optgroup label="📖 Ring 2: Terverifikasi Teks Ilmiah (${r2.length})">`;
+      html += `<optgroup label="📖 Ring 2: Ada referensi (${r2.length})">`;
       r2.forEach(function (x) {
         html += `<option value="${x.id}">📖 ${x.nama} — ${x.kabupaten}</option>`;
       });
@@ -1065,7 +1065,7 @@
 
     const r3 = window.SASTRA_DATA ? (window.SASTRA_DATA.ring3 || []) : [];
     if (r3.length > 0) {
-      html += `<optgroup label="🔍 Ring 3: Perlu Verifikasi Lapangan (${r3.length})">`;
+      html += `<optgroup label="🔍 Ring 3: Tercatat WBTB (${r3.length})">`;
       r3.forEach(function (x) {
         html += `<option value="${x.id}">🔍 ${x.nama} — ${x.kabupaten}</option>`;
       });
@@ -1249,7 +1249,7 @@
     }
 
     const ringLevel = parseInt(fRing ? fRing.value : '2', 10);
-    const ringStr = ringLevel === 1 ? 'Ring 1 - Terverifikasi' : (ringLevel === 2 ? 'Ring 2 - Terverifikasi Teks' : 'Ring 3 - Perlu Verifikasi');
+    const ringStr = ringLevel === 1 ? 'Ring 1 - Terverifikasi' : (ringLevel === 2 ? 'Ring 2 - Ada referensi' : 'Ring 3 - Tercatat WBTB');
     const defaultStatus = ringLevel === 1 ? 'TERVERIFIKASI (VALIDASI LAPANGAN PENUH)' : (ringLevel === 2 ? 'TERVERIFIKASI TEKS ILMIAH' : 'PERLU VERIFIKASI LAPANGAN');
     const statusLabel = (fStatus && fStatus.value.trim()) || defaultStatus;
 
