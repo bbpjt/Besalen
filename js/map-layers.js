@@ -202,12 +202,9 @@
               ${props.nama}
             </div>
             <div style="font-size: 0.75rem; color: #444; margin-top: 2px;">
-              ${props.karesidenan} &bull; ${props.zona_ekologi}
+              ${props.karesidenan}
             </div>
-            <div style="font-size: 0.8rem; font-weight: 700; margin-top: 5px; color: #000;">
-              Total Potensi: <span class="neo-badge badge-kab">${props.total_sastra} Tradisi</span>
-            </div>
-            <div style="font-size: 0.72rem; color: #555; margin-top: 3px;">
+            <div style="font-size: 0.72rem; color: #555; margin-top: 4px;">
               ⭐ Ring 1: ${props.r1_count} &nbsp;|&nbsp; 📖 Ring 2: ${props.r2_count} &nbsp;|&nbsp; 🔍 Ring 3: ${props.r3_count}
             </div>
           `;

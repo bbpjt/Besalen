@@ -353,7 +353,7 @@
       <span class="meta-value">${item.desa || '-'}</span>
       <span class="meta-label">Karesidenan:</span>
       <span class="meta-value">${item.karesidenan || '-'}</span>
-      <span class="meta-label">Zona Ekologi:</span>
+      <span class="meta-label">Topografis:</span>
       <span class="meta-value">${item.zona_ekologi || '-'}</span>
       <span class="meta-label">Koordinat GPS:</span>
       <span class="meta-value">${item.latitude.toFixed(4)}, ${item.longitude.toFixed(4)}</span>
@@ -364,8 +364,8 @@
       <span class="meta-label">Nama Maestro:</span>
       <span class="meta-value" style="font-weight: 800; color: #000;">${item.maestro || 'Belum terdaftar profil maestro perorangan'}</span>
       <span class="meta-label">Usia / Garis:</span>
-      <span class="meta-value">${item.usia_garis || '-'}</span>
-      <span class="meta-label">Komunitas Pewaris:</span>
+      <span class="meta-value">${item.usia_garis || (item.usia && item.pewarisan ? `${item.usia} / ${item.pewarisan}` : (item.usia || item.pewarisan || '-'))}</span>
+      <span class="meta-label">Komunitas:</span>
       <span class="meta-value">${item.komunitas || 'Masyarakat adat dan sanggar seni setempat'}</span>
     `;
 
@@ -377,7 +377,7 @@
       </div>
       <div style="background: #fdfbf7; border: 2px solid #000; box-shadow: 2px 2px 0px #000; padding: 10px; margin-top: 10px;">
         <div style="font-size: 0.75rem; color: #555; font-weight: 700; margin-bottom: 4px; display: flex; align-items: center; gap: 6px;">
-          <i class="fa-solid fa-graduation-cap text-yellow-600"></i> Rujukan Ilmiah:
+          <i class="fa-solid fa-graduation-cap text-yellow-600"></i> Referensi:
         </div>
         <div style="font-size: 0.82rem; font-style: italic; color: #111; margin-bottom: 8px;">
           "${sourceSummary}"
@@ -658,12 +658,12 @@
     // Tentukan label badge berdasarkan tipe rujukan dan level ring
     let badgeClass = 'badge-r1';
     let badgeTitle = 'Rujukan Utama';
-    let badgeSub = 'Verifikasi Ilmiah';
+    let badgeSub = '';
 
     if (ringLevel === 1) {
       badgeClass = 'badge-r1';
       badgeTitle = 'Arsip & Bukti Lapangan';
-      badgeSub = 'Primer Balai Bahasa';
+      badgeSub = '';
     } else if (ringLevel === 2) {
       badgeClass = 'badge-r2';
       badgeTitle = 'Rujukan Akademik';
@@ -1099,6 +1099,7 @@
     const fYt = document.getElementById('admin-field-youtube');
     const fMaestro = document.getElementById('admin-field-maestro');
     const fUsia = document.getElementById('admin-field-usia');
+    const fPewarisan = document.getElementById('admin-field-pewarisan');
     const fKom = document.getElementById('admin-field-komunitas');
     const fDesc = document.getElementById('admin-field-deskripsi');
     const fS1 = document.getElementById('admin-field-sumber1');
@@ -1123,6 +1124,7 @@
       if (fYt) fYt.value = '';
       if (fMaestro) fMaestro.value = '';
       if (fUsia) fUsia.value = '';
+      if (fPewarisan) fPewarisan.value = '';
       if (fKom) fKom.value = '';
       if (fDesc) fDesc.value = '';
       if (fS1) fS1.value = '';
@@ -1174,7 +1176,26 @@
     if (fLng) fLng.value = (typeof item.longitude === 'number') ? item.longitude : '';
     if (fYt) fYt.value = item.youtube_id || item.youtube_url || '';
     if (fMaestro) fMaestro.value = item.maestro || '';
-    if (fUsia) fUsia.value = item.usia_garis || '';
+    if (fUsia) {
+      if (item.usia) {
+        fUsia.value = item.usia;
+      } else if (item.usia_garis) {
+        const parts = item.usia_garis.split(' / ');
+        fUsia.value = parts.length > 1 ? parts[0].trim() : (item.usia_garis.match(/\d+\s*(th|tahun)/i) ? item.usia_garis.trim() : '');
+      } else {
+        fUsia.value = '';
+      }
+    }
+    if (fPewarisan) {
+      if (item.pewarisan) {
+        fPewarisan.value = item.pewarisan;
+      } else if (item.usia_garis) {
+        const parts = item.usia_garis.split(' / ');
+        fPewarisan.value = parts.length > 1 ? parts.slice(1).join(' / ').trim() : (!item.usia_garis.match(/\d+\s*(th|tahun)/i) ? item.usia_garis.trim() : '');
+      } else {
+        fPewarisan.value = '';
+      }
+    }
     if (fKom) fKom.value = item.komunitas || '';
 
     if (fDesc) {
@@ -1205,6 +1226,7 @@
     const fYt = document.getElementById('admin-field-youtube');
     const fMaestro = document.getElementById('admin-field-maestro');
     const fUsia = document.getElementById('admin-field-usia');
+    const fPewarisan = document.getElementById('admin-field-pewarisan');
     const fKom = document.getElementById('admin-field-komunitas');
     const fDesc = document.getElementById('admin-field-deskripsi');
     const fS1 = document.getElementById('admin-field-sumber1');
@@ -1277,7 +1299,11 @@
     item.youtube_id = ytId;
     item.youtube_url = ytUrl;
     item.maestro = fMaestro ? fMaestro.value.trim() : '';
-    item.usia_garis = fUsia ? fUsia.value.trim() : '';
+    const usiaVal = fUsia ? fUsia.value.trim() : '';
+    const pewarisanVal = fPewarisan ? fPewarisan.value.trim() : '';
+    item.usia = usiaVal;
+    item.pewarisan = pewarisanVal;
+    item.usia_garis = (usiaVal && pewarisanVal) ? `${usiaVal} / ${pewarisanVal}` : (usiaVal || pewarisanVal || '');
     item.komunitas = fKom ? fKom.value.trim() : '';
 
     const descVal = fDesc ? fDesc.value.trim() : '';
