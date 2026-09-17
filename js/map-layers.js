@@ -448,6 +448,26 @@
     },
 
     /**
+     * Menyesuaikan zoom dan posisi kamera peta agar pas mencakup semua marker terfilter
+     */
+    fitFilteredMarkers: function (items) {
+      if (!mapInstance || !items || !items.length) return;
+      const valid = items.filter(function (i) {
+        return typeof i.latitude === 'number' && typeof i.longitude === 'number';
+      });
+      if (!valid.length) return;
+
+      if (valid.length === 1) {
+        mapInstance.flyTo([valid[0].latitude, valid[0].longitude], 12, { duration: 0.8 });
+      } else {
+        const bounds = L.latLngBounds(valid.map(function (i) {
+          return [i.latitude, i.longitude];
+        }));
+        mapInstance.fitBounds(bounds, { padding: [40, 40], maxZoom: 12, animate: true, duration: 0.8 });
+      }
+    },
+
+    /**
      * Reset pandangan peta ke keseluruhan Jawa Tengah
      */
     resetView: function () {

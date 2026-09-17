@@ -30,9 +30,100 @@
   }
 
   /**
+   * Pemetaan cerdas zona ekologi budaya
+   */
+  function matchEkologi(item, selected) {
+    if (!selected || selected === 'ALL') return true;
+    const eko = (item.zona_ekologi || '').toLowerCase();
+    const kab = (item.kabupaten || '').toLowerCase();
+
+    if (selected === 'DAS Serayu') {
+      return eko.includes('serayu') || eko.includes('klawing') || kab.includes('banyumas') || kab.includes('purbalingga');
+    }
+    if (selected === 'Slamet') {
+      return eko.includes('slamet') || eko.includes('cokol');
+    }
+    if (selected === 'Kendeng') {
+      return eko.includes('kendeng') || eko.includes('jati') || eko.includes('karst') || kab.includes('blora') || kab.includes('grobogan');
+    }
+    if (selected === 'Pantura') {
+      return eko.includes('pantura') || eko.includes('pesisir') || eko.includes('laut') || kab.includes('demak') || kab.includes('jepara') || kab.includes('rembang') || kab.includes('batang') || kab.includes('kendal') || kab.includes('pekalongan');
+    }
+    if (selected === 'Mataram') {
+      return eko.includes('mataram') || eko.includes('karaton') || eko.includes('surakarta') || eko.includes('mangkunegaran') || kab.includes('surakarta') || kab.includes('klaten') || kab.includes('boyolali') || kab.includes('sukoharjo');
+    }
+    if (selected === 'Dieng') {
+      return eko.includes('dieng') || eko.includes('wonosobo') || eko.includes('banjarnegara') || eko.includes('sindoro') || eko.includes('sumbing');
+    }
+    return eko.includes(selected.toLowerCase());
+  }
+
+  /**
+   * Render dropdown preview instan pencarian teks
+   */
+  function renderSearchPreview(query, matches) {
+    const previewEl = document.getElementById('search-results-preview');
+    if (!previewEl) return;
+
+    if (!query || query.trim().length === 0) {
+      previewEl.classList.remove('active');
+      previewEl.style.display = 'none';
+      previewEl.innerHTML = '';
+      return;
+    }
+
+    if (matches.length === 0) {
+      previewEl.innerHTML = '<div class="search-no-results"><i class="fa-solid fa-circle-question"></i> Tidak ada sastra lisan yang cocok dengan "' + query + '"</div>';
+      previewEl.classList.add('active');
+      previewEl.style.display = 'flex';
+      return;
+    }
+
+    let html = '';
+    const displayList = matches.slice(0, 6);
+    displayList.forEach(function (item) {
+      let ringBadge = '⭐ R1';
+      if (item.ring_level === 2) ringBadge = '📖 R2';
+      if (item.ring_level === 3) ringBadge = '🔍 R3';
+
+      html += `
+        <div class="search-result-item" data-id="${item.id}">
+          <div class="search-res-title">${ringBadge} ${item.nama}</div>
+          <div class="search-res-sub">${item.kabupaten} • ${item.zona_ekologi || item.karesidenan}</div>
+        </div>
+      `;
+    });
+
+    if (matches.length > 6) {
+      html += `<div style="padding: 6px 10px; font-size: 0.72rem; color: #555; font-weight: 700; background: #fafafa; border-top: 2px solid #000; text-align: center;">+ ${matches.length - 6} tradisi lainnya di peta</div>`;
+    }
+
+    previewEl.innerHTML = html;
+    previewEl.classList.add('active');
+    previewEl.style.display = 'flex';
+
+    // Click handler untuk tiap item hasil pencarian
+    previewEl.querySelectorAll('.search-result-item').forEach(function (el) {
+      el.addEventListener('click', function () {
+        const id = el.getAttribute('data-id');
+        const item = getAllItems().find(function (x) { return x.id === id; });
+        if (item) {
+          previewEl.classList.remove('active');
+          previewEl.style.display = 'none';
+          closeMobilePanel();
+          if (window.MapLayers) {
+            window.MapLayers.flyToLocation(item.latitude, item.longitude, 13);
+          }
+          openDrawer(item);
+        }
+      });
+    });
+  }
+
+  /**
    * Filter reaktif titik sastra lisan
    */
-  function applyFilters() {
+  function applyFilters(shouldZoom) {
     const all = getAllItems();
     const query = state.searchQuery.toLowerCase().trim();
 
@@ -52,8 +143,7 @@
 
       // 3. Filter Zona Ekologi
       if (state.selectedEkologi !== 'ALL') {
-        const itemEko = (item.zona_ekologi || '').toLowerCase();
-        if (!itemEko.includes(state.selectedEkologi.toLowerCase())) {
+        if (!matchEkologi(item, state.selectedEkologi)) {
           return false;
         }
       }
@@ -76,6 +166,19 @@
     // Perbarui layer marker di peta
     if (window.MapLayers) {
       window.MapLayers.renderMarkers(filtered, openDrawer);
+      if (shouldZoom && filtered.length > 0 && filtered.length < all.length) {
+        window.MapLayers.fitFilteredMarkers(filtered);
+      }
+    }
+
+    // Perbarui Banner Status Filter
+    const filterCountBadge = document.getElementById('filter-count-badge');
+    if (filterCountBadge) {
+      let subDesc = '';
+      if (state.selectedKaresidenan !== 'ALL') subDesc = ` (${state.selectedKaresidenan})`;
+      else if (state.selectedEkologi !== 'ALL') subDesc = ` (${state.selectedEkologi})`;
+      else if (query.length > 0) subDesc = ` ("${query}")`;
+      filterCountBadge.innerHTML = `<i class="fa-solid fa-list-check text-yellow-600"></i> Menampilkan <strong>${filtered.length}</strong> dari ${all.length} Sastra Lisan${subDesc}`;
     }
 
     // Perbarui badge counter pada tombol filter mobile
@@ -83,6 +186,28 @@
     if (mobileCountBadge) {
       mobileCountBadge.textContent = `Filter & Cari (${filtered.length})`;
     }
+
+    // Perbarui tombol Terapkan di ponsel
+    const btnApplyFilterMobile = document.getElementById('btn-apply-filter-mobile');
+    if (btnApplyFilterMobile) {
+      btnApplyFilterMobile.innerHTML = `<i class="fa-solid fa-map-location-dot"></i> Terapkan & Lihat ${filtered.length} Sastra Lisan di Peta`;
+    }
+
+    // Perbarui baris statistik mobile di dalam panel filter
+    const r1Count = filtered.filter(function (i) { return i.ring_level === 1; }).length;
+    const r2Count = filtered.filter(function (i) { return i.ring_level === 2; }).length;
+    const r3Count = filtered.filter(function (i) { return i.ring_level === 3; }).length;
+    const mobR1 = document.getElementById('mob-stat-r1');
+    const mobR2 = document.getElementById('mob-stat-r2');
+    const mobR3 = document.getElementById('mob-stat-r3');
+    const mobTotal = document.getElementById('mob-stat-total');
+    if (mobR1) mobR1.textContent = `⭐ ${r1Count} R1`;
+    if (mobR2) mobR2.textContent = `📖 ${r2Count} R2`;
+    if (mobR3) mobR3.textContent = `🔍 ${r3Count} R3`;
+    if (mobTotal) mobTotal.textContent = `🗺️ ${filtered.length} Total`;
+
+    // Render Live Search Autocomplete Preview
+    renderSearchPreview(query, filtered);
   }
 
   /**
@@ -816,33 +941,38 @@
   function setupEventListeners() {
     // 1. Search Input
     const searchInput = document.getElementById('search-input');
+    let searchDebounceTimer = null;
     searchInput.addEventListener('input', function () {
       state.searchQuery = searchInput.value;
-      applyFilters();
+      clearTimeout(searchDebounceTimer);
+      searchDebounceTimer = setTimeout(function () {
+        const queryLen = state.searchQuery.trim().length;
+        applyFilters(queryLen >= 3);
+      }, 150);
     });
 
     // 2. Ring Checkboxes
     document.getElementById('filter-r1').addEventListener('change', function (e) {
       state.filterR1 = e.target.checked;
-      applyFilters();
+      applyFilters(true);
     });
     document.getElementById('filter-r2').addEventListener('change', function (e) {
       state.filterR2 = e.target.checked;
-      applyFilters();
+      applyFilters(true);
     });
     document.getElementById('filter-r3').addEventListener('change', function (e) {
       state.filterR3 = e.target.checked;
-      applyFilters();
+      applyFilters(true);
     });
 
     // 3. Dropdowns
     document.getElementById('select-karesidenan').addEventListener('change', function (e) {
       state.selectedKaresidenan = e.target.value;
-      applyFilters();
+      applyFilters(true);
     });
     document.getElementById('select-ekologi').addEventListener('change', function (e) {
       state.selectedEkologi = e.target.value;
-      applyFilters();
+      applyFilters(true);
     });
 
     // 4. Toggle Boundaries
@@ -867,8 +997,14 @@
       state.selectedKaresidenan = 'ALL';
       document.getElementById('select-ekologi').value = 'ALL';
       state.selectedEkologi = 'ALL';
+      const previewEl = document.getElementById('search-results-preview');
+      if (previewEl) {
+        previewEl.classList.remove('active');
+        previewEl.style.display = 'none';
+        previewEl.innerHTML = '';
+      }
       closeDrawer();
-      applyFilters();
+      applyFilters(false);
       if (window.MapLayers) {
         window.MapLayers.resetKabupatenHighlight();
         window.MapLayers.resetView();
@@ -878,12 +1014,15 @@
     // 6. Toggle Panel Collapse
     const btnTogglePanel = document.getElementById('btn-toggle-panel');
     const panelBody = document.getElementById('panel-body-content');
+    const actionBtns = document.querySelector('.panel-action-buttons');
     btnTogglePanel.addEventListener('click', function () {
       if (panelBody.style.display === 'none') {
         panelBody.style.display = 'flex';
+        if (actionBtns) actionBtns.style.display = 'flex';
         btnTogglePanel.innerHTML = '<i class="fa-solid fa-chevron-up"></i>';
       } else {
         panelBody.style.display = 'none';
+        if (actionBtns) actionBtns.style.display = 'none';
         btnTogglePanel.innerHTML = '<i class="fa-solid fa-chevron-down"></i>';
       }
     });
@@ -980,7 +1119,7 @@
       window.MapLayers.initMap('map');
     }
     setupEventListeners();
-    applyFilters();
+    applyFilters(false);
   }
 
   // Expose to window
@@ -996,5 +1135,9 @@
     renderMethodologyModal: renderMethodologyModal
   };
 
-  document.addEventListener('DOMContentLoaded', init);
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
 })(typeof window !== 'undefined' ? window : this, document);

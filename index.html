@@ -10,7 +10,7 @@
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <!-- Neobrutalist Theme Stylesheet -->
-  <link rel="stylesheet" href="css/style.css?v=20260917_05">
+  <link rel="stylesheet" href="css/style.css?v=20260917_06">
 </head>
 <body>
 
@@ -94,18 +94,28 @@
       </div>
 
       <div class="panel-body" id="panel-body-content">
+        <!-- Live Filter Status Banner -->
+        <div class="filter-status-banner" style="background:#FFF9D2; border:2px solid #000; padding:8px 10px; box-shadow:2px 2px 0px #000; display:flex; align-items:center; justify-content:space-between; font-family:'Space Grotesk', sans-serif;">
+          <span id="filter-count-badge" style="font-size:0.8rem; font-weight:800; color:#111;">
+            <i class="fa-solid fa-list-check text-yellow-600"></i> Menampilkan 91 Sastra Lisan
+          </span>
+        </div>
+
         <!-- Instant Search -->
         <div class="search-box">
           <i class="fa-solid fa-magnifying-glass"></i>
           <input type="text" id="search-input" placeholder="Cari tradisi, maestro, daerah...">
         </div>
 
+        <!-- Search Results Instant Preview Dropdown -->
+        <div id="search-results-preview" class="search-results-preview" style="display: none;"></div>
+
         <!-- Mobile Quick Stats Row (shown on mobile when header stats are hidden) -->
         <div class="mobile-stats-row">
-          <div class="stat-chip badge-r1"><span>⭐ 3 Emas</span></div>
-          <div class="stat-chip badge-r2"><span>📖 44 Teks</span></div>
-          <div class="stat-chip badge-r3"><span>🔍 44 Ritus</span></div>
-          <div class="stat-chip badge-kab"><span>🗺️ 35 Kab</span></div>
+          <div class="stat-chip badge-r1"><span id="mob-stat-r1">⭐ 3 R1</span></div>
+          <div class="stat-chip badge-r2"><span id="mob-stat-r2">📖 44 R2</span></div>
+          <div class="stat-chip badge-r3"><span id="mob-stat-r3">🔍 44 R3</span></div>
+          <div class="stat-chip badge-kab"><span id="mob-stat-total">🗺️ 91 Total</span></div>
         </div>
 
         <!-- Filter Ring Validasi -->
@@ -160,17 +170,17 @@
           <span><i class="fa-solid fa-draw-polygon"></i> Poligon 35 Kab/Kota</span>
           <input type="checkbox" id="toggle-boundaries" style="width: 16px; height: 16px; accent-color: #000;">
         </div>
+      </div>
 
-        <div style="display: flex; gap: 8px; flex-direction: column;">
-          <!-- Quick Reset -->
-          <button id="btn-reset-filters" class="neo-btn" style="width: 100%; justify-content: center;">
-            <i class="fa-solid fa-arrow-rotate-left"></i> Reset Filter
-          </button>
-          <!-- Mobile Apply & View Map Button -->
-          <button id="btn-apply-filter-mobile" class="neo-btn neo-btn-primary mobile-apply-btn" style="width: 100%; justify-content: center; padding: 10px;">
-            <i class="fa-solid fa-map-location-dot"></i> Terapkan & Lihat Peta
-          </button>
-        </div>
+      <div class="panel-action-buttons">
+        <!-- Quick Reset -->
+        <button id="btn-reset-filters" class="neo-btn" style="width: 100%; justify-content: center;">
+          <i class="fa-solid fa-arrow-rotate-left"></i> Reset Filter
+        </button>
+        <!-- Mobile Apply & View Map Button -->
+        <button id="btn-apply-filter-mobile" class="neo-btn neo-btn-primary mobile-apply-btn" style="width: 100%; justify-content: center; padding: 10px;">
+          <i class="fa-solid fa-map-location-dot"></i> Terapkan & Lihat Peta
+        </button>
       </div>
     </section>
   </main>
@@ -393,11 +403,11 @@
 
   <!-- ==================== SCRIPTS ==================== -->
   <!-- 1. Master Data Layer -->
-  <script src="data/sastra_data.js?v=20260917_05"></script>
+  <script src="data/sastra_data.js?v=20260917_06"></script>
   <!-- 2. Administrative Boundaries GeoJSON -->
-  <script src="data/jateng_kabupaten.js?v=20260917_05"></script>
+  <script src="data/jateng_kabupaten.js?v=20260917_06"></script>
   <!-- 3. Full Transcription Dataset -->
-  <script src="data/transkrip_data.js?v=20260917_05"></script>
+  <script src="data/transkrip_data.js?v=20260917_06"></script>
   <!-- 4. Leaflet Map Library (Local offline bundle with CDN fallback) -->
   <script src="lib/leaflet/leaflet.js"></script>
   <script>
@@ -406,10 +416,10 @@
     }
   </script>
   <!-- 5. GIS Exporter Engine -->
-  <script src="js/export-gis.js?v=20260917_05"></script>
+  <script src="js/export-gis.js?v=20260917_06"></script>
   <!-- 6. Map Controller & Layer Manager -->
-  <script src="js/map-layers.js?v=20260917_05"></script>
+  <script src="js/map-layers.js?v=20260917_06"></script>
   <!-- 7. Application Entrypoint & Interactive Controller -->
-  <script src="js/app.js?v=20260917_05"></script>
+  <script src="js/app.js?v=20260917_06"></script>
 </body>
 </html>

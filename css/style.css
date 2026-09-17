@@ -360,6 +360,10 @@ html, body {
   gap: 14px;
 }
 
+.panel-body > * {
+  flex-shrink: 0;
+}
+
 .search-box {
   position: relative;
 }
@@ -388,6 +392,66 @@ html, body {
   transform: translateY(-50%);
   color: #666;
   font-size: 0.85rem;
+}
+
+/* Live Search Autocomplete Preview */
+.search-results-preview {
+  background: #fff;
+  border: 2px solid #000;
+  box-shadow: 3px 3px 0px #000;
+  max-height: 220px;
+  overflow-y: auto;
+  display: none;
+  flex-direction: column;
+  flex-shrink: 0;
+  margin-top: -6px;
+  z-index: 10;
+}
+
+.search-results-preview.active {
+  display: flex;
+}
+
+.search-result-item {
+  padding: 8px 10px;
+  border-bottom: 2px solid #f0f0f0;
+  cursor: pointer;
+  background: #fff;
+  flex-shrink: 0;
+  min-height: 46px;
+  transition: background 0.1s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2px;
+}
+
+.search-result-item:hover,
+.search-result-item:active {
+  background-color: #FFF9D2;
+}
+
+.search-res-title {
+  font-family: var(--font-display);
+  font-size: 0.82rem;
+  font-weight: 800;
+  color: #000;
+}
+
+.search-res-sub {
+  font-size: 0.72rem;
+  color: #555;
+  font-weight: 600;
+}
+
+.search-no-results {
+  padding: 12px 10px;
+  font-size: 0.78rem;
+  color: #555;
+  font-weight: 600;
+  text-align: center;
+  background: #fff;
+  flex-shrink: 0;
 }
 
 .filter-group {
@@ -461,6 +525,20 @@ html, body {
   box-shadow: 2px 2px 0px #000;
   font-size: 0.8rem;
   font-weight: 700;
+}
+
+.panel-action-buttons {
+  padding: 10px 14px 14px 14px;
+  background-color: var(--color-surface);
+  border-top: 2px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.mobile-apply-btn {
+  display: none;
 }
 
 /* ==========================================================================
@@ -1005,7 +1083,7 @@ html, body {
     border-bottom: none;
     border-top: var(--neo-border-width) solid var(--color-border);
     box-shadow: 0 -8px 28px rgba(0, 0, 0, 0.35);
-    z-index: 1500;
+    z-index: 1600;
     transform: translateY(105%);
     transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1);
   }
@@ -1059,6 +1137,16 @@ html, body {
 
   .mobile-apply-btn {
     display: inline-flex;
+  }
+
+  .panel-action-buttons {
+    padding: 10px 14px calc(12px + env(safe-area-inset-bottom, 0px)) 14px;
+    background-color: var(--color-surface);
+    border-top: 2px solid var(--color-border);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex-shrink: 0;
   }
 
   /* Large readable form controls to prevent iOS zoom */
