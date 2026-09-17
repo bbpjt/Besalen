@@ -164,6 +164,16 @@ html, body {
   white-space: nowrap;
 }
 
+.header-logo {
+  height: 36px;
+  width: auto;
+  object-fit: contain;
+  vertical-align: middle;
+  flex-shrink: 0;
+  filter: drop-shadow(1.5px 1.5px 0px rgba(0, 0, 0, 0.45));
+  margin-right: 2px;
+}
+
 .brand-text-full {
   display: inline;
 }
@@ -865,6 +875,75 @@ html, body {
 }
 
 /* ==========================================================================
+   ADMIN FORM CONTROLS & MAP PICKER
+   ========================================================================== */
+.neo-input {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  padding: 8px 10px;
+  border: var(--neo-border-width) solid var(--color-border);
+  box-shadow: 2px 2px 0px #000000;
+  background-color: var(--color-surface);
+  color: var(--color-ink);
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 2px;
+  transition: all 0.12s ease;
+}
+
+.neo-input:focus {
+  outline: none;
+  border-color: #000;
+  box-shadow: 3.5px 3.5px 0px #000000;
+}
+
+.admin-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.admin-form-group label {
+  font-family: var(--font-display);
+  font-size: 0.74rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: #222;
+}
+
+.admin-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.map-picker-banner {
+  position: absolute;
+  top: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2500;
+  background-color: var(--color-r1);
+  border: var(--neo-border-width) solid #000;
+  box-shadow: var(--neo-shadow-md);
+  padding: 8px 16px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  animation: pulsePicker 1.5s infinite;
+  white-space: nowrap;
+}
+
+@keyframes pulsePicker {
+  0%, 100% { transform: translateX(-50%) scale(1); }
+  50% { transform: translateX(-50%) scale(1.02); }
+}
+
+/* ==========================================================================
    CUSTOM LEAFLET MARKERS & TOOLTIPS
    ========================================================================== */
 .custom-pin {
@@ -1306,6 +1385,10 @@ html, body {
     text-overflow: ellipsis;
   }
 
+  .header-logo {
+    height: 28px;
+  }
+
   .brand-text-short {
     display: inline-block !important;
     font-size: 0.9rem;
@@ -1595,6 +1678,33 @@ html, body {
     min-height: 42px;
   }
 
+  /* Admin form stacks vertically on mobile */
+  .admin-grid-2 {
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+  }
+
+  /* Admin modal buttons full-width on mobile */
+  #modal-admin .modal-footer {
+    padding: 10px 14px calc(10px + env(safe-area-inset-bottom, 0px)) 14px;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 8px !important;
+  }
+
+  #modal-admin #admin-editor-actions {
+    flex-direction: column !important;
+    width: 100% !important;
+    gap: 8px !important;
+  }
+
+  #modal-admin .modal-footer .neo-btn {
+    width: 100% !important;
+    justify-content: center !important;
+    min-height: 40px;
+    font-size: 0.82rem;
+  }
+
   /* Leaflet Controls positioning */
   .leaflet-top.leaflet-left {
     top: 10px;
@@ -1632,6 +1742,10 @@ html, body {
    4. EXTRA SMALL PHONES (<= 480px, e.g. iPhone SE, Compact Android)
    -------------------------------------------------------------------------- */
 @media (max-width: 480px) {
+  .header-logo {
+    height: 24px;
+  }
+
   .header-title span {
     font-size: 0.85rem;
     max-width: 44vw;
@@ -1675,6 +1789,10 @@ html, body {
   #header {
     height: 48px;
     padding: 0 8px;
+  }
+
+  .header-logo {
+    height: 26px;
   }
 
   #map-container {

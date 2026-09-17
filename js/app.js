@@ -962,6 +962,581 @@
     body.innerHTML = html;
   }
 
+  // ==========================================================================
+  // ADMIN SYSTEM & DATA EDITOR (OPTION A)
+  // ==========================================================================
+
+  /**
+   * Ekstraksi ID YouTube 11-karakter dari URL atau teks ID
+   */
+  function extractYouTubeId(urlOrId) {
+    if (!urlOrId) return '';
+    const trimmed = String(urlOrId).trim();
+    if (/^[a-zA-Z0-9_-]{11}$/.test(trimmed)) {
+      return trimmed;
+    }
+    const match = trimmed.match(/(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))([\w-]{11})/);
+    return match ? match[1] : trimmed;
+  }
+
+  /**
+   * Pembaruan dinamis widget statistik di header & mobile
+   */
+  function updateHeaderStats() {
+    if (!window.SASTRA_DATA) return;
+    const r1 = (window.SASTRA_DATA.ring1 || []).length;
+    const r2 = (window.SASTRA_DATA.ring2 || []).length;
+    const r3 = (window.SASTRA_DATA.ring3 || []).length;
+    const total = r1 + r2 + r3;
+    const totalKab = (window.SASTRA_DATA.metadata && window.SASTRA_DATA.metadata.total_kabupaten) || 35;
+
+    const elR1 = document.getElementById('stat-r1');
+    const elR2 = document.getElementById('stat-r2');
+    const elR3 = document.getElementById('stat-r3');
+    const elKab = document.getElementById('stat-kab');
+    if (elR1) elR1.textContent = r1;
+    if (elR2) elR2.textContent = r2;
+    if (elR3) elR3.textContent = r3;
+    if (elKab) elKab.textContent = totalKab;
+
+    const mobR1 = document.getElementById('mob-stat-r1');
+    const mobR2 = document.getElementById('mob-stat-r2');
+    const mobR3 = document.getElementById('mob-stat-r3');
+    const mobTot = document.getElementById('mob-stat-total');
+    if (mobR1) mobR1.textContent = `⭐ ${r1} R1`;
+    if (mobR2) mobR2.textContent = `📖 ${r2} R2`;
+    if (mobR3) mobR3.textContent = `🔍 ${r3} R3`;
+    if (mobTot) mobTot.textContent = `🗺️ ${total} Total`;
+  }
+
+  /**
+   * Tampilkan pesan notifikasi feedback di dalam modal admin
+   */
+  function showAdminFeedback(message, type) {
+    const el = document.getElementById('admin-feedback-msg');
+    if (!el) return;
+    el.style.display = 'block';
+    if (type === 'error') {
+      el.style.backgroundColor = '#FEE2E2';
+      el.style.color = '#991B1B';
+      el.style.border = '2px solid #000';
+      el.style.borderLeft = '8px solid #EF4444';
+    } else if (type === 'success') {
+      el.style.backgroundColor = '#DCFCE7';
+      el.style.color = '#166534';
+      el.style.border = '2px solid #000';
+      el.style.borderLeft = '8px solid #22C55E';
+    } else {
+      el.style.backgroundColor = 'var(--color-r1-light)';
+      el.style.color = '#000';
+      el.style.border = '2px solid #000';
+      el.style.borderLeft = '8px solid var(--color-r1)';
+    }
+    el.innerHTML = message;
+    el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+
+  /**
+   * Isi dropdown pilihan tradisi admin
+   */
+  function populateAdminSelect(selectedId) {
+    const select = document.getElementById('admin-select-tradisi');
+    const badge = document.getElementById('admin-tradisi-count-badge');
+    if (!select) return;
+
+    const all = getAllItems();
+    if (badge) {
+      badge.textContent = `${all.length} Tradisi`;
+    }
+
+    let html = '<option value="__NEW__">➕ Tambah Sastra Lisan Baru</option>';
+
+    const r1 = window.SASTRA_DATA ? (window.SASTRA_DATA.ring1 || []) : [];
+    if (r1.length > 0) {
+      html += `<optgroup label="⭐ Ring 1: Terverifikasi Lapangan (${r1.length})">`;
+      r1.forEach(function (x) {
+        html += `<option value="${x.id}">⭐ ${x.nama} — ${x.kabupaten}</option>`;
+      });
+      html += '</optgroup>';
+    }
+
+    const r2 = window.SASTRA_DATA ? (window.SASTRA_DATA.ring2 || []) : [];
+    if (r2.length > 0) {
+      html += `<optgroup label="📖 Ring 2: Terverifikasi Teks Ilmiah (${r2.length})">`;
+      r2.forEach(function (x) {
+        html += `<option value="${x.id}">📖 ${x.nama} — ${x.kabupaten}</option>`;
+      });
+      html += '</optgroup>';
+    }
+
+    const r3 = window.SASTRA_DATA ? (window.SASTRA_DATA.ring3 || []) : [];
+    if (r3.length > 0) {
+      html += `<optgroup label="🔍 Ring 3: Perlu Verifikasi Lapangan (${r3.length})">`;
+      r3.forEach(function (x) {
+        html += `<option value="${x.id}">🔍 ${x.nama} — ${x.kabupaten}</option>`;
+      });
+      html += '</optgroup>';
+    }
+
+    select.innerHTML = html;
+
+    if (selectedId) {
+      select.value = selectedId;
+    } else if (r1.length > 0) {
+      select.value = r1[0].id;
+    }
+  }
+
+  /**
+   * Isi form data editor sesuai objek tradisi yang dipilih
+   */
+  function loadTraditionIntoAdminForm(id) {
+    const fId = document.getElementById('admin-field-id');
+    const fNama = document.getElementById('admin-field-nama');
+    const fRing = document.getElementById('admin-field-ring');
+    const fStatus = document.getElementById('admin-field-status');
+    const fKab = document.getElementById('admin-field-kabupaten');
+    const fKares = document.getElementById('admin-field-karesidenan');
+    const fKec = document.getElementById('admin-field-kecamatan');
+    const fDesa = document.getElementById('admin-field-desa');
+    const fEko = document.getElementById('admin-field-ekologi');
+    const fLat = document.getElementById('admin-field-lat');
+    const fLng = document.getElementById('admin-field-lng');
+    const fYt = document.getElementById('admin-field-youtube');
+    const fMaestro = document.getElementById('admin-field-maestro');
+    const fUsia = document.getElementById('admin-field-usia');
+    const fKom = document.getElementById('admin-field-komunitas');
+    const fDesc = document.getElementById('admin-field-deskripsi');
+    const fS1 = document.getElementById('admin-field-sumber1');
+    const fU1 = document.getElementById('admin-field-url1');
+    const fS2 = document.getElementById('admin-field-sumber2');
+    const fU2 = document.getElementById('admin-field-url2');
+    const fbMsg = document.getElementById('admin-feedback-msg');
+    if (fbMsg) fbMsg.style.display = 'none';
+
+    if (id === '__NEW__') {
+      if (fId) fId.value = 'SLJT-NEW-' + Math.floor(100 + Math.random() * 900);
+      if (fNama) fNama.value = '';
+      if (fRing) fRing.value = '2';
+      if (fStatus) fStatus.value = 'TERVERIFIKASI TEKS ILMIAH';
+      if (fKab) fKab.selectedIndex = 0;
+      if (fKares) fKares.selectedIndex = 0;
+      if (fKec) fKec.value = '';
+      if (fDesa) fDesa.value = '';
+      if (fEko) fEko.value = '';
+      if (fLat) fLat.value = '-7.000000';
+      if (fLng) fLng.value = '110.400000';
+      if (fYt) fYt.value = '';
+      if (fMaestro) fMaestro.value = '';
+      if (fUsia) fUsia.value = '';
+      if (fKom) fKom.value = '';
+      if (fDesc) fDesc.value = '';
+      if (fS1) fS1.value = '';
+      if (fU1) fU1.value = '';
+      if (fS2) fS2.value = '';
+      if (fU2) fU2.value = '';
+      if (fNama) fNama.focus();
+      return;
+    }
+
+    const all = getAllItems();
+    const item = all.find(function (x) { return x.id === id; });
+    if (!item) return;
+
+    if (fId) fId.value = item.id || '';
+    if (fNama) fNama.value = item.nama || '';
+    if (fRing) fRing.value = String(item.ring_level || 1);
+    if (fStatus) fStatus.value = item.status_label || '';
+
+    if (fKab) {
+      let matched = false;
+      const targetKab = (item.kabupaten || '').toLowerCase();
+      for (let i = 0; i < fKab.options.length; i++) {
+        if (fKab.options[i].value.toLowerCase() === targetKab) {
+          fKab.selectedIndex = i;
+          matched = true;
+          break;
+        }
+      }
+      if (!matched && item.kabupaten) {
+        fKab.value = item.kabupaten;
+      }
+    }
+
+    if (fKares) {
+      const targetKares = (item.karesidenan || '').toLowerCase();
+      for (let i = 0; i < fKares.options.length; i++) {
+        if (targetKares.includes(fKares.options[i].value.toLowerCase().replace('karesidenan ', ''))) {
+          fKares.selectedIndex = i;
+          break;
+        }
+      }
+    }
+
+    if (fKec) fKec.value = item.kecamatan || '';
+    if (fDesa) fDesa.value = item.desa || '';
+    if (fEko) fEko.value = item.zona_ekologi || '';
+    if (fLat) fLat.value = (typeof item.latitude === 'number') ? item.latitude : '';
+    if (fLng) fLng.value = (typeof item.longitude === 'number') ? item.longitude : '';
+    if (fYt) fYt.value = item.youtube_id || item.youtube_url || '';
+    if (fMaestro) fMaestro.value = item.maestro || '';
+    if (fUsia) fUsia.value = item.usia_garis || '';
+    if (fKom) fKom.value = item.komunitas || '';
+
+    if (fDesc) {
+      fDesc.value = item.narasi_panjang || item.ringkasan_ilmiah || item.catatan_kritis || item.deskripsi || '';
+    }
+
+    if (fS1) fS1.value = item.sumber_ilmiah_1 || item.sumber_referensi || '';
+    if (fU1) fU1.value = item.url1 || '';
+    if (fS2) fS2.value = item.sumber_ilmiah_2 || '';
+    if (fU2) fU2.value = item.url2 || '';
+  }
+
+  /**
+   * Simpan data formulir admin ke window.SASTRA_DATA (Live in memory)
+   */
+  function saveAdminFormData(silent) {
+    const fId = document.getElementById('admin-field-id');
+    const fNama = document.getElementById('admin-field-nama');
+    const fRing = document.getElementById('admin-field-ring');
+    const fStatus = document.getElementById('admin-field-status');
+    const fKab = document.getElementById('admin-field-kabupaten');
+    const fKares = document.getElementById('admin-field-karesidenan');
+    const fKec = document.getElementById('admin-field-kecamatan');
+    const fDesa = document.getElementById('admin-field-desa');
+    const fEko = document.getElementById('admin-field-ekologi');
+    const fLat = document.getElementById('admin-field-lat');
+    const fLng = document.getElementById('admin-field-lng');
+    const fYt = document.getElementById('admin-field-youtube');
+    const fMaestro = document.getElementById('admin-field-maestro');
+    const fUsia = document.getElementById('admin-field-usia');
+    const fKom = document.getElementById('admin-field-komunitas');
+    const fDesc = document.getElementById('admin-field-deskripsi');
+    const fS1 = document.getElementById('admin-field-sumber1');
+    const fU1 = document.getElementById('admin-field-url1');
+    const fS2 = document.getElementById('admin-field-sumber2');
+    const fU2 = document.getElementById('admin-field-url2');
+
+    const nama = (fNama ? fNama.value : '').trim();
+    if (!nama) {
+      showAdminFeedback('⚠️ Nama Sastra Lisan wajib diisi!', 'error');
+      if (fNama) fNama.focus();
+      return null;
+    }
+
+    const lat = parseFloat(fLat ? fLat.value : '');
+    const lng = parseFloat(fLng ? fLng.value : '');
+    if (isNaN(lat) || isNaN(lng)) {
+      showAdminFeedback('⚠️ Titik Koordinat Latitude dan Longitude harus diisi dengan format angka yang benar!', 'error');
+      return null;
+    }
+
+    const ringLevel = parseInt(fRing ? fRing.value : '2', 10);
+    const ringStr = ringLevel === 1 ? 'Ring 1 - Terverifikasi' : (ringLevel === 2 ? 'Ring 2 - Terverifikasi Teks' : 'Ring 3 - Perlu Verifikasi');
+    const defaultStatus = ringLevel === 1 ? 'TERVERIFIKASI (VALIDASI LAPANGAN PENUH)' : (ringLevel === 2 ? 'TERVERIFIKASI TEKS ILMIAH' : 'PERLU VERIFIKASI LAPANGAN');
+    const statusLabel = (fStatus && fStatus.value.trim()) || defaultStatus;
+
+    const ytId = extractYouTubeId(fYt ? fYt.value : '');
+    const ytUrl = ytId ? `https://youtu.be/${ytId}` : '';
+
+    let currentId = (fId ? fId.value : '').trim();
+    const isNew = !currentId || currentId.startsWith('SLJT-NEW-');
+
+    // Cari item yang sudah ada di SASTRA_DATA
+    let existingItem = null;
+    let oldRingArray = null;
+    let oldIndex = -1;
+
+    if (!isNew && window.SASTRA_DATA) {
+      const ringKeys = ['ring1', 'ring2', 'ring3'];
+      for (let r = 0; r < ringKeys.length; r++) {
+        const arr = window.SASTRA_DATA[ringKeys[r]] || [];
+        const idx = arr.findIndex(function (x) { return x.id === currentId; });
+        if (idx !== -1) {
+          existingItem = arr[idx];
+          oldRingArray = arr;
+          oldIndex = idx;
+          break;
+        }
+      }
+    }
+
+    const item = existingItem || {};
+    if (isNew) {
+      currentId = 'SLJT-' + (ringLevel === 1 ? 'R1-' : (ringLevel === 2 ? 'R2-' : 'R3-')) + Math.floor(100 + Math.random() * 900);
+      item.id = currentId;
+      if (fId) fId.value = currentId;
+    }
+
+    item.nama = nama;
+    item.ring = ringStr;
+    item.ring_level = ringLevel;
+    item.status_label = statusLabel;
+    item.kabupaten = fKab ? fKab.value : '';
+    item.karesidenan = fKares ? fKares.value : '';
+    item.kecamatan = fKec ? fKec.value.trim() : '';
+    item.desa = fDesa ? fDesa.value.trim() : '';
+    item.zona_ekologi = fEko ? fEko.value.trim() : '';
+    item.latitude = lat;
+    item.longitude = lng;
+    item.youtube_id = ytId;
+    item.youtube_url = ytUrl;
+    item.maestro = fMaestro ? fMaestro.value.trim() : '';
+    item.usia_garis = fUsia ? fUsia.value.trim() : '';
+    item.komunitas = fKom ? fKom.value.trim() : '';
+
+    const descVal = fDesc ? fDesc.value.trim() : '';
+    if (ringLevel === 1) {
+      item.narasi_panjang = descVal;
+    } else if (ringLevel === 2) {
+      item.ringkasan_ilmiah = descVal;
+    } else {
+      item.catatan_kritis = descVal;
+    }
+
+    item.sumber_ilmiah_1 = fS1 ? fS1.value.trim() : '';
+    item.url1 = fU1 ? fU1.value.trim() : '';
+    item.sumber_ilmiah_2 = fS2 ? fS2.value.trim() : '';
+    item.url2 = fU2 ? fU2.value.trim() : '';
+
+    // Masukkan ke array yang sesuai (bila ring berubah atau objek baru)
+    const targetRingKey = ringLevel === 1 ? 'ring1' : (ringLevel === 2 ? 'ring2' : 'ring3');
+    if (!window.SASTRA_DATA[targetRingKey]) window.SASTRA_DATA[targetRingKey] = [];
+    const targetArr = window.SASTRA_DATA[targetRingKey];
+
+    if (isNew) {
+      targetArr.push(item);
+    } else if (oldRingArray && oldRingArray !== targetArr) {
+      oldRingArray.splice(oldIndex, 1);
+      targetArr.push(item);
+    }
+
+    // Perbarui metadata total
+    if (window.SASTRA_DATA.metadata) {
+      window.SASTRA_DATA.metadata.total_ring1 = (window.SASTRA_DATA.ring1 || []).length;
+      window.SASTRA_DATA.metadata.total_ring2 = (window.SASTRA_DATA.ring2 || []).length;
+      window.SASTRA_DATA.metadata.total_ring3 = (window.SASTRA_DATA.ring3 || []).length;
+      window.SASTRA_DATA.metadata.terakhir_diperbarui = new Date().toISOString();
+    }
+
+    // Perbarui angka statistik di layar
+    updateHeaderStats();
+
+    // Re-render marker di peta Leaflet
+    applyFilters(false);
+
+    // Refresh daftar dropdown tradisi admin
+    populateAdminSelect(item.id);
+
+    if (!silent) {
+      if (window.MapLayers) {
+        window.MapLayers.flyToLocation(item.latitude, item.longitude, 13);
+      }
+      showAdminFeedback(`✅ Data <strong>${item.nama}</strong> berhasil diterapkan langsung ke peta! Klik tombol 'Unduh sastra_data.js Terbaru' untuk menyimpan permanen ke repositori GitHub.`, 'success');
+    }
+
+    return item;
+  }
+
+  /**
+   * Unduh file JavaScript data/sastra_data.js dengan format rapi
+   */
+  function downloadSastraDataJs() {
+    if (!window.SASTRA_DATA) return;
+    const now = new Date();
+    const timestampStr = now.toLocaleDateString('id-ID', {
+      weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit'
+    });
+
+    const fileContent = `/**
+ * Peta Sastra Lisan di Jawa Tengah
+ * Balai Bahasa Provinsi Jawa Tengah
+ * Data Terverifikasi 100% Sesuai Rujukan Akademik & Registrasi WBTB
+ * Terakhir Diperbarui melalui Panel Admin: ${timestampStr}
+ */
+window.SASTRA_DATA = ${JSON.stringify(window.SASTRA_DATA, null, 2)};
+`;
+
+    const blob = new Blob([fileContent], { type: 'application/javascript;charset=utf-8' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'sastra_data.js';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    setTimeout(function () {
+      URL.revokeObjectURL(url);
+    }, 1000);
+
+    showAdminFeedback('📥 <strong>File data berhasil diunduh!</strong><br>Simpan file <code>sastra_data.js</code> yang baru saja diunduh ke folder <code>data/sastra_data.js</code> pada repository lokal Anda, lalu lakukan <code>git commit</code> dan <code>git push origin main</code> untuk memperbarui situs publik GitHub Pages.', 'success');
+  }
+
+  /**
+   * Buka dialog modal admin (dengan pengecekan sesi login)
+   */
+  function openAdminModal() {
+    const isAuth = sessionStorage.getItem('sastra_admin_auth') === '1';
+    const loginView = document.getElementById('admin-login-view');
+    const editorView = document.getElementById('admin-editor-view');
+    const editorActions = document.getElementById('admin-editor-actions');
+
+    if (isAuth) {
+      if (loginView) loginView.style.display = 'none';
+      if (editorView) editorView.style.display = 'block';
+      if (editorActions) editorActions.style.display = 'flex';
+
+      const selectTradisi = document.getElementById('admin-select-tradisi');
+      const currentVal = selectTradisi ? selectTradisi.value : null;
+      populateAdminSelect(currentVal);
+      if (selectTradisi && selectTradisi.value) {
+        loadTraditionIntoAdminForm(selectTradisi.value);
+      }
+    } else {
+      if (loginView) loginView.style.display = 'block';
+      if (editorView) editorView.style.display = 'none';
+      if (editorActions) editorActions.style.display = 'none';
+
+      const userField = document.getElementById('admin-username');
+      const passField = document.getElementById('admin-password');
+      const errEl = document.getElementById('admin-login-error');
+      if (userField && !userField.value) userField.value = 'admin';
+      if (passField) passField.value = '';
+      if (errEl) errEl.style.display = 'none';
+    }
+
+    openModal('modal-admin');
+  }
+
+  /**
+   * Inisialisasi event listener panel admin
+   */
+  function initAdminController() {
+    // 1. Submit login form
+    const loginForm = document.getElementById('admin-login-form');
+    if (loginForm) {
+      loginForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+        const user = (document.getElementById('admin-username').value || '').trim().toLowerCase();
+        const pass = document.getElementById('admin-password').value || '';
+        const errEl = document.getElementById('admin-login-error');
+
+        if ((user === 'admin' || user === 'bbpjt') && (pass === 'sastra2026' || pass === 'jawatengah')) {
+          sessionStorage.setItem('sastra_admin_auth', '1');
+          if (errEl) errEl.style.display = 'none';
+          openAdminModal();
+        } else {
+          if (errEl) {
+            errEl.style.display = 'block';
+            errEl.innerHTML = '<i class="fa-solid fa-triangle-exclamation"></i> Username atau kata sandi tidak cocok! Silakan coba lagi.';
+          }
+        }
+      });
+    }
+
+    // 2. Tombol Logout / Kunci
+    const btnLogout = document.getElementById('btn-admin-logout');
+    if (btnLogout) {
+      btnLogout.addEventListener('click', function () {
+        sessionStorage.removeItem('sastra_admin_auth');
+        openAdminModal();
+      });
+    }
+
+    // 3. Pilihan Tradisi Berubah
+    const selectTradisi = document.getElementById('admin-select-tradisi');
+    if (selectTradisi) {
+      selectTradisi.addEventListener('change', function () {
+        loadTraditionIntoAdminForm(selectTradisi.value);
+      });
+    }
+
+    // 4. Perubahan Klasifikasi Ring Otomatis Set Status Default
+    const fieldRing = document.getElementById('admin-field-ring');
+    if (fieldRing) {
+      fieldRing.addEventListener('change', function () {
+        const val = parseInt(fieldRing.value, 10);
+        const statusField = document.getElementById('admin-field-status');
+        if (statusField) {
+          if (val === 1) statusField.value = 'TERVERIFIKASI (VALIDASI LAPANGAN PENUH)';
+          else if (val === 2) statusField.value = 'TERVERIFIKASI TEKS ILMIAH';
+          else if (val === 3) statusField.value = 'PERLU VERIFIKASI LAPANGAN';
+        }
+      });
+    }
+
+    // 5. Pengambilan Koordinat Peta Interaktif (Map Picker)
+    const btnPickMap = document.getElementById('btn-admin-pick-map');
+    const bannerPickMap = document.getElementById('map-picker-banner');
+    const btnCancelPickMap = document.getElementById('btn-cancel-pick-map');
+    let mapPickHandler = null;
+
+    if (btnPickMap && bannerPickMap) {
+      btnPickMap.addEventListener('click', function () {
+        closeModal('modal-admin');
+        bannerPickMap.style.display = 'flex';
+        const map = window.MapLayers && window.MapLayers.getMap ? window.MapLayers.getMap() : null;
+        if (!map) return;
+
+        const container = map.getContainer();
+        if (container) container.style.cursor = 'crosshair';
+
+        mapPickHandler = function (e) {
+          const lat = e.latlng.lat.toFixed(6);
+          const lng = e.latlng.lng.toFixed(6);
+          const fieldLat = document.getElementById('admin-field-lat');
+          const fieldLng = document.getElementById('admin-field-lng');
+          if (fieldLat) fieldLat.value = lat;
+          if (fieldLng) fieldLng.value = lng;
+
+          if (container) container.style.cursor = '';
+          bannerPickMap.style.display = 'none';
+          map.off('click', mapPickHandler);
+          mapPickHandler = null;
+
+          openModal('modal-admin');
+          showAdminFeedback(`📍 Koordinat peta berhasil disalin: (${lat}, ${lng})`, 'success');
+        };
+
+        map.once('click', mapPickHandler);
+      });
+    }
+
+    if (btnCancelPickMap && bannerPickMap) {
+      btnCancelPickMap.addEventListener('click', function () {
+        const map = window.MapLayers && window.MapLayers.getMap ? window.MapLayers.getMap() : null;
+        if (map && mapPickHandler) {
+          map.off('click', mapPickHandler);
+          mapPickHandler = null;
+          const container = map.getContainer();
+          if (container) container.style.cursor = '';
+        }
+        bannerPickMap.style.display = 'none';
+        openModal('modal-admin');
+      });
+    }
+
+    // 6. Tombol Terapkan ke Peta (Live Preview)
+    const btnApplyPreview = document.getElementById('btn-admin-apply-preview');
+    if (btnApplyPreview) {
+      btnApplyPreview.addEventListener('click', function () {
+        saveAdminFormData(false);
+      });
+    }
+
+    // 7. Tombol Unduh sastra_data.js Terbaru
+    const btnDownloadJs = document.getElementById('btn-admin-download-js');
+    if (btnDownloadJs) {
+      btnDownloadJs.addEventListener('click', function () {
+        const saved = saveAdminFormData(true);
+        if (saved) {
+          downloadSastraDataJs();
+        }
+      });
+    }
+  }
+
   /**
    * Inisialisasi Event Listener
    */
@@ -1138,6 +1713,17 @@
     if (panelBackdrop) {
       panelBackdrop.addEventListener('click', closeMobilePanel);
     }
+
+    // 12. Admin Gear Trigger
+    const btnAdminGear = document.getElementById('btn-admin-gear');
+    if (btnAdminGear) {
+      btnAdminGear.addEventListener('click', function () {
+        openAdminModal();
+      });
+    }
+
+    // Inisialisasi Kontroler Admin
+    initAdminController();
   }
 
   // App Initialization
@@ -1147,6 +1733,7 @@
       window.MapLayers.initMap('map');
     }
     setupEventListeners();
+    updateHeaderStats();
     applyFilters(false);
   }
 
@@ -1160,7 +1747,10 @@
     closeMobilePanel: closeMobilePanel,
     renderTranscript: renderTabTranskrip,
     renderAnalyticsModal: renderAnalyticsModal,
-    renderMethodologyModal: renderMethodologyModal
+    renderMethodologyModal: renderMethodologyModal,
+    openAdminModal: openAdminModal,
+    saveAdminFormData: saveAdminFormData,
+    downloadSastraDataJs: downloadSastraDataJs
   };
 
   if (document.readyState === 'loading') {

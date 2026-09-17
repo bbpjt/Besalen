@@ -487,6 +487,13 @@
       if (!mapInstance) return;
       this.resetKabupatenHighlight();
       mapInstance.flyTo(getResponsiveMapCenter(), DEFAULT_ZOOM, { duration: 0.8 });
+    },
+
+    /**
+     * Dapatkan instance peta Leaflet (untuk event klik & tools admin)
+     */
+    getMap: function () {
+      return mapInstance;
     }
   };
 

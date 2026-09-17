@@ -18,7 +18,7 @@
   <header id="header">
     <div class="header-brand">
       <div class="header-title">
-        <i class="fa-solid fa-compass text-yellow-500"></i>
+        <img src="media/tutwuri.png" alt="Logo Tut Wuri Handayani" class="header-logo">
         <span class="brand-text-full">PETA SASTRA LISAN DI JAWA TENGAH</span>
         <span class="brand-text-med">Sastra Lisan Jawa Tengah</span>
         <span class="brand-text-short">Sastra Lisan Jateng</span>
@@ -63,12 +63,22 @@
         <i class="fa-solid fa-circle-info"></i>
         <span class="btn-text"><span class="btn-text-full">Metodologi</span><span class="btn-text-compact">Metode</span></span>
       </button>
+      <button id="btn-admin-gear" class="neo-btn" title="Kelola Data Sastra Lisan (Admin)">
+        <i class="fa-solid fa-gear"></i>
+      </button>
     </div>
   </header>
 
   <!-- ==================== MAIN MAP VIEW ==================== -->
   <main id="map-container">
     <div id="map"></div>
+
+    <!-- Map Coordinate Picker Banner -->
+    <div id="map-picker-banner" class="map-picker-banner" style="display: none;">
+      <i class="fa-solid fa-crosshairs fa-spin"></i>
+      <span>Mode Pemilihan Titik: Klik lokasi di peta untuk mengambil koordinat...</span>
+      <button id="btn-cancel-pick-map" type="button" class="neo-btn" style="padding: 4px 10px; font-size: 0.75rem;">Batal</button>
+    </div>
 
     <!-- Mobile Floating Action Button (FAB) -->
     <button id="btn-mobile-filter-fab" class="mobile-filter-fab neo-btn neo-btn-primary neo-shadow" aria-label="Buka Filter dan Pencarian">
@@ -398,6 +408,281 @@
       </div>
       <div class="modal-footer">
         <button class="neo-btn modal-close-btn" data-modal="modal-methodology">Tutup</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== MODAL 4: ADMIN / PENGELOLAAN DATA ==================== -->
+  <div class="neo-modal-backdrop" id="modal-admin">
+    <div class="neo-modal" style="width: 860px; max-width: 96vw;">
+      <div class="modal-header">
+        <h3><i class="fa-solid fa-gears text-yellow-500"></i> Kelola & Sunting Data Sastra Lisan (Admin)</h3>
+        <button class="drawer-close-btn modal-close-btn" data-modal="modal-admin">✕</button>
+      </div>
+
+      <!-- 1. Tampilan Login (Sebelum Terautentikasi) -->
+      <div id="admin-login-view" class="modal-body" style="padding: 24px;">
+        <div class="info-card" style="margin-bottom: 20px; background-color: var(--color-r1-light); border-left: 6px solid var(--color-r1);">
+          <div style="display: flex; gap: 12px; align-items: flex-start;">
+            <i class="fa-solid fa-lock" style="font-size: 1.5rem; margin-top: 2px;"></i>
+            <div>
+              <strong style="font-size: 0.95rem;">Autentikasi Administrator</strong>
+              <p style="font-size: 0.8rem; color: #333; margin-top: 4px;">
+                Akses ini untuk tim Balai Bahasa Provinsi Jawa Tengah dalam menyunting lokasi, wilayah kabupaten/kota, koordinat peta, maestro, profil tradisi, multimedia, dan rujukan ilmiah.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <form id="admin-login-form" style="display: flex; flex-direction: column; gap: 14px; max-width: 420px; margin: 0 auto;">
+          <div class="admin-form-group">
+            <label for="admin-username">Nama Pengguna (Username)</label>
+            <input type="text" id="admin-username" class="neo-input" placeholder="Masukkan username..." autocomplete="username" required>
+          </div>
+          <div class="admin-form-group">
+            <label for="admin-password">Kata Sandi (Password)</label>
+            <input type="password" id="admin-password" class="neo-input" placeholder="Masukkan kata sandi..." autocomplete="current-password" required>
+          </div>
+          <div id="admin-login-error" style="color: #dc2626; font-size: 0.82rem; font-weight: 700; display: none;">
+            <i class="fa-solid fa-triangle-exclamation"></i> Username atau kata sandi tidak cocok!
+          </div>
+          <div style="display: flex; gap: 10px; margin-top: 8px;">
+            <button type="submit" class="neo-btn neo-btn-primary" style="flex: 1; justify-content: center;">
+              <i class="fa-solid fa-right-to-bracket"></i> Masuk Admin
+            </button>
+          </div>
+          <p style="font-size: 0.74rem; color: #666; text-align: center; margin-top: 6px;">
+            Default Balai Bahasa: username <code>admin</code> | kata sandi <code>sastra2026</code>
+          </p>
+        </form>
+      </div>
+
+      <!-- 2. Tampilan Editor Data (Setelah Terautentikasi) -->
+      <div id="admin-editor-view" class="modal-body" style="display: none; padding: 18px;">
+        <!-- Admin Bar Status -->
+        <div style="display: flex; justify-content: space-between; align-items: center; background-color: var(--color-canvas); padding: 8px 12px; border: var(--neo-border-width) solid #000; box-shadow: 2px 2px 0px #000; margin-bottom: 14px;">
+          <div style="display: flex; align-items: center; gap: 8px; font-size: 0.82rem; font-weight: 700;">
+            <span class="neo-badge badge-r1" style="font-size: 0.68rem;"><i class="fa-solid fa-user-shield"></i> Terautentikasi</span>
+            <span id="admin-auth-label">Administrator Balai Bahasa</span>
+          </div>
+          <button id="btn-admin-logout" class="neo-btn" style="padding: 4px 10px; font-size: 0.72rem;">
+            <i class="fa-solid fa-lock"></i> Kunci / Keluar
+          </button>
+        </div>
+
+        <!-- Instruksi Singkat -->
+        <div class="info-card" style="margin-bottom: 14px; padding: 10px 14px; background: var(--color-r2-light);">
+          <p style="font-size: 0.78rem; line-height: 1.45;">
+            <strong>💡 Alur Kerja Penyuntingan:</strong><br>
+            1. Pilih sastra lisan dari daftar di bawah (atau buat tradisi baru).<br>
+            2. Ubah data (lokasi kabupaten/kota, koordinat peta, maestro, narasi profil, video youtube, rujukan pustaka).<br>
+            3. Klik <strong>Terapkan ke Peta (Live Preview)</strong> untuk langsung melihat perubahannya di peta tanpa reload.<br>
+            4. Klik <strong>Unduh sastra_data.js Terbaru</strong> untuk mengunduh berkas data yang sudah diperbarui, lalu timpa file <code>data/sastra_data.js</code> dan push ke GitHub repository Anda.
+          </p>
+        </div>
+
+        <!-- Pemilihan Sastra Lisan -->
+        <div class="admin-form-group" style="margin-bottom: 14px;">
+          <label for="admin-select-tradisi" style="display: flex; justify-content: space-between; align-items: center;">
+            <span>PILIH SASTRA LISAN YANG INGIN DISUNTING</span>
+            <span id="admin-tradisi-count-badge" class="neo-badge badge-kab" style="font-size: 0.68rem;">91 Tradisi</span>
+          </label>
+          <select id="admin-select-tradisi" class="neo-select" style="width: 100%; font-weight: 700; font-size: 0.9rem;">
+            <!-- Injected by JS -->
+          </select>
+        </div>
+
+        <!-- Form Fields Grid -->
+        <form id="admin-data-form">
+          <div class="admin-grid-2">
+            <!-- ID Objek -->
+            <div class="admin-form-group">
+              <label for="admin-field-id">Kode ID Objek</label>
+              <input type="text" id="admin-field-id" class="neo-input" readonly style="background-color: var(--color-muted); cursor: not-allowed;">
+            </div>
+
+            <!-- Nama Sastra Lisan -->
+            <div class="admin-form-group">
+              <label for="admin-field-nama">Nama Sastra Lisan *</label>
+              <input type="text" id="admin-field-nama" class="neo-input" required placeholder="Contoh: Kentrung Blora">
+            </div>
+
+            <!-- Ring Klasifikasi -->
+            <div class="admin-form-group">
+              <label for="admin-field-ring">Klasifikasi Ring *</label>
+              <select id="admin-field-ring" class="neo-select" style="width: 100%;">
+                <option value="1">⭐ Ring 1: Terverifikasi (Validasi Lapangan Penuh)</option>
+                <option value="2">📖 Ring 2: Terverifikasi Teks Ilmiah</option>
+                <option value="3">🔍 Ring 3: Perlu Verifikasi Lapangan</option>
+              </select>
+            </div>
+
+            <!-- Status Label -->
+            <div class="admin-form-group">
+              <label for="admin-field-status">Label Status</label>
+              <input type="text" id="admin-field-status" class="neo-input" placeholder="Contoh: TERVERIFIKASI (VALIDASI LAPANGAN)">
+            </div>
+
+            <!-- Kabupaten / Kota -->
+            <div class="admin-form-group">
+              <label for="admin-field-kabupaten">Wilayah Kabupaten / Kota *</label>
+              <select id="admin-field-kabupaten" class="neo-select" style="width: 100%;">
+                <option value="Kabupaten Banjarnegara">Kabupaten Banjarnegara</option>
+                <option value="Kabupaten Banyumas">Kabupaten Banyumas</option>
+                <option value="Kabupaten Batang">Kabupaten Batang</option>
+                <option value="Kabupaten Blora">Kabupaten Blora</option>
+                <option value="Kabupaten Boyolali">Kabupaten Boyolali</option>
+                <option value="Kabupaten Brebes">Kabupaten Brebes</option>
+                <option value="Kabupaten Cilacap">Kabupaten Cilacap</option>
+                <option value="Kabupaten Demak">Kabupaten Demak</option>
+                <option value="Kabupaten Grobogan">Kabupaten Grobogan</option>
+                <option value="Kabupaten Jepara">Kabupaten Jepara</option>
+                <option value="Kabupaten Karanganyar">Kabupaten Karanganyar</option>
+                <option value="Kabupaten Kebumen">Kabupaten Kebumen</option>
+                <option value="Kabupaten Kendal">Kabupaten Kendal</option>
+                <option value="Kabupaten Klaten">Kabupaten Klaten</option>
+                <option value="Kabupaten Kudus">Kabupaten Kudus</option>
+                <option value="Kabupaten Magelang">Kabupaten Magelang</option>
+                <option value="Kabupaten Pati">Kabupaten Pati</option>
+                <option value="Kabupaten Pekalongan">Kabupaten Pekalongan</option>
+                <option value="Kabupaten Pemalang">Kabupaten Pemalang</option>
+                <option value="Kabupaten Purbalingga">Kabupaten Purbalingga</option>
+                <option value="Kabupaten Purworejo">Kabupaten Purworejo</option>
+                <option value="Kabupaten Rembang">Kabupaten Rembang</option>
+                <option value="Kabupaten Semarang">Kabupaten Semarang</option>
+                <option value="Kabupaten Sragen">Kabupaten Sragen</option>
+                <option value="Kabupaten Sukoharjo">Kabupaten Sukoharjo</option>
+                <option value="Kabupaten Tegal">Kabupaten Tegal</option>
+                <option value="Kabupaten Temanggung">Kabupaten Temanggung</option>
+                <option value="Kabupaten Wonogiri">Kabupaten Wonogiri</option>
+                <option value="Kabupaten Wonosobo">Kabupaten Wonosobo</option>
+                <option value="Kota Magelang">Kota Magelang</option>
+                <option value="Kota Pekalongan">Kota Pekalongan</option>
+                <option value="Kota Salatiga">Kota Salatiga</option>
+                <option value="Kota Semarang">Kota Semarang</option>
+                <option value="Kota Surakarta">Kota Surakarta</option>
+                <option value="Kota Tegal">Kota Tegal</option>
+              </select>
+            </div>
+
+            <!-- Karesidenan -->
+            <div class="admin-form-group">
+              <label for="admin-field-karesidenan">Wilayah Karesidenan</label>
+              <select id="admin-field-karesidenan" class="neo-select" style="width: 100%;">
+                <option value="Karesidenan Banyumas">Karesidenan Banyumas</option>
+                <option value="Karesidenan Kedu">Karesidenan Kedu</option>
+                <option value="Karesidenan Pati (Muria Raya)">Karesidenan Pati (Muria Raya)</option>
+                <option value="Karesidenan Pekalongan">Karesidenan Pekalongan</option>
+                <option value="Karesidenan Semarang">Karesidenan Semarang</option>
+                <option value="Karesidenan Surakarta">Karesidenan Surakarta</option>
+              </select>
+            </div>
+
+            <!-- Kecamatan -->
+            <div class="admin-form-group">
+              <label for="admin-field-kecamatan">Kecamatan</label>
+              <input type="text" id="admin-field-kecamatan" class="neo-input" placeholder="Nama kecamatan...">
+            </div>
+
+            <!-- Desa / Kelurahan -->
+            <div class="admin-form-group">
+              <label for="admin-field-desa">Desa / Kelurahan</label>
+              <input type="text" id="admin-field-desa" class="neo-input" placeholder="Nama desa/kelurahan...">
+            </div>
+
+            <!-- Zona Ekologi Budaya -->
+            <div class="admin-form-group">
+              <label for="admin-field-ekologi">Zona Lanskap Budaya</label>
+              <input type="text" id="admin-field-ekologi" class="neo-input" placeholder="Contoh: Karst Kendeng & Hutan Jati Rimba">
+            </div>
+
+            <!-- YouTube Video ID -->
+            <div class="admin-form-group">
+              <label for="admin-field-youtube">YouTube Video ID / URL</label>
+              <input type="text" id="admin-field-youtube" class="neo-input" placeholder="ID YouTube, misal: 5XteEv2MU_g">
+            </div>
+          </div>
+
+          <!-- Geospasial: Koordinat & Map Picker -->
+          <div class="info-card" style="margin: 14px 0; background-color: var(--color-canvas);">
+            <label style="font-family: var(--font-display); font-weight: 700; font-size: 0.78rem; text-transform: uppercase; margin-bottom: 8px; display: block;">
+              <i class="fa-solid fa-location-crosshairs text-yellow-500"></i> Titik Koordinat Geografis (WGS84)
+            </label>
+            <div style="display: flex; gap: 10px; align-items: flex-end; flex-wrap: wrap;">
+              <div style="flex: 1; min-width: 140px;">
+                <label style="font-size: 0.72rem; color: #444; font-weight: 600;">Latitude (Garis Lintang)</label>
+                <input type="number" step="0.000001" id="admin-field-lat" class="neo-input" placeholder="-7.xxxxxx" required style="width: 100%;">
+              </div>
+              <div style="flex: 1; min-width: 140px;">
+                <label style="font-size: 0.72rem; color: #444; font-weight: 600;">Longitude (Garis Bujur)</label>
+                <input type="number" step="0.000001" id="admin-field-lng" class="neo-input" placeholder="110.xxxxxx" required style="width: 100%;">
+              </div>
+              <div>
+                <button type="button" id="btn-admin-pick-map" class="neo-btn neo-btn-cyan" style="white-space: nowrap; height: 38px;">
+                  <i class="fa-solid fa-crosshairs"></i> Klik Titik di Peta
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Maestro & Komunitas -->
+          <div class="admin-grid-2">
+            <div class="admin-form-group">
+              <label for="admin-field-maestro">Maestro / Penutur Utama</label>
+              <input type="text" id="admin-field-maestro" class="neo-input" placeholder="Nama maestro/narasumber...">
+            </div>
+            <div class="admin-form-group">
+              <label for="admin-field-usia">Usia & Silsilah Pewarisan</label>
+              <input type="text" id="admin-field-usia" class="neo-input" placeholder="Contoh: 63 tahun / Putra tunggal alm. Mbah Sutrisno">
+            </div>
+            <div class="admin-form-group" style="grid-column: 1 / -1;">
+              <label for="admin-field-komunitas">Komunitas / Paguyuban / Sanggar</label>
+              <input type="text" id="admin-field-komunitas" class="neo-input" placeholder="Nama paguyuban atau sanggar...">
+            </div>
+          </div>
+
+          <!-- Narasi / Deskripsi / Ringkasan Ilmiah -->
+          <div class="admin-form-group" style="margin-top: 10px;">
+            <label for="admin-field-deskripsi">Deskripsi Tradisi & Ringkasan Ilmiah</label>
+            <textarea id="admin-field-deskripsi" class="neo-input" rows="4" style="width: 100%; resize: vertical; line-height: 1.45;" placeholder="Tuliskan profil tradisi, bentuk tuturan, atau ringkasan kajian ilmiah..."></textarea>
+          </div>
+
+          <!-- Referensi Akademik / Pustaka -->
+          <div class="admin-grid-2" style="margin-top: 10px;">
+            <div class="admin-form-group">
+              <label for="admin-field-sumber1">Sumber Ilmiah / Referensi 1</label>
+              <input type="text" id="admin-field-sumber1" class="neo-input" placeholder="Penulis, Jurnal/Buku, Tahun...">
+            </div>
+            <div class="admin-form-group">
+              <label for="admin-field-url1">URL Rujukan 1</label>
+              <input type="url" id="admin-field-url1" class="neo-input" placeholder="https://...">
+            </div>
+            <div class="admin-form-group">
+              <label for="admin-field-sumber2">Sumber Ilmiah / Referensi 2</label>
+              <input type="text" id="admin-field-sumber2" class="neo-input" placeholder="Penulis, Jurnal/Buku, Tahun...">
+            </div>
+            <div class="admin-form-group">
+              <label for="admin-field-url2">URL Rujukan 2</label>
+              <input type="url" id="admin-field-url2" class="neo-input" placeholder="https://...">
+            </div>
+          </div>
+
+          <!-- Status Message Notification inside Modal -->
+          <div id="admin-feedback-msg" style="display: none; margin-top: 14px; padding: 10px 14px; border: var(--neo-border-width) solid #000; box-shadow: var(--neo-shadow-sm); font-size: 0.82rem; font-weight: 700;"></div>
+        </form>
+      </div>
+
+      <!-- Modal Footer Action Buttons -->
+      <div class="modal-footer" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
+        <div id="admin-editor-actions" style="display: none; gap: 8px; flex-wrap: wrap;">
+          <button id="btn-admin-apply-preview" type="button" class="neo-btn neo-btn-primary">
+            <i class="fa-solid fa-arrows-rotate"></i> Terapkan ke Peta (Live Preview)
+          </button>
+          <button id="btn-admin-download-js" type="button" class="neo-btn neo-btn-orange">
+            <i class="fa-solid fa-download"></i> Unduh sastra_data.js Terbaru
+          </button>
+        </div>
+        <button class="neo-btn modal-close-btn" data-modal="modal-admin">Tutup</button>
       </div>
     </div>
   </div>
