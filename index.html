@@ -10,7 +10,7 @@
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <!-- Neobrutalist Theme Stylesheet -->
-  <link rel="stylesheet" href="css/style.css?v=20260917_06">
+  <link rel="stylesheet" href="css/style.css?v=20260917_07">
 </head>
 <body>
 
@@ -20,6 +20,7 @@
       <div class="header-title">
         <i class="fa-solid fa-compass text-yellow-500"></i>
         <span class="brand-text-full">PETA SASTRA LISAN DI JAWA TENGAH</span>
+        <span class="brand-text-med">Sastra Lisan Jawa Tengah</span>
         <span class="brand-text-short">Sastra Lisan Jateng</span>
       </div>
     </div>
@@ -28,19 +29,19 @@
     <div class="header-stats">
       <div class="stat-chip badge-r1" title="Ring 1: Validasi Lapangan Penuh">
         <i class="fa-solid fa-star"></i>
-        <span id="stat-r1">3 Terverifikasi</span>
+        <span id="stat-r1"><span class="stat-text-full">3 Terverifikasi</span><span class="stat-text-compact">3 R1</span></span>
       </div>
       <div class="stat-chip badge-r2" title="Ring 2: Formula Teks Ilmiah">
         <i class="fa-solid fa-feather-pointed"></i>
-        <span id="stat-r2">44 Terverifikasi Teks</span>
+        <span id="stat-r2"><span class="stat-text-full">44 Terverifikasi Teks</span><span class="stat-text-compact">44 R2</span></span>
       </div>
       <div class="stat-chip badge-r3" title="Ring 3: Prioritas Verifikasi">
         <i class="fa-solid fa-clipboard-question"></i>
-        <span id="stat-r3">44 Perlu Verifikasi</span>
+        <span id="stat-r3"><span class="stat-text-full">44 Perlu Verifikasi</span><span class="stat-text-compact">44 R3</span></span>
       </div>
       <div class="stat-chip badge-kab" title="35 Kabupaten / Kota Terpetakan">
         <i class="fa-solid fa-map-location-dot"></i>
-        <span id="stat-kab">35 Wilayah</span>
+        <span id="stat-kab"><span class="stat-text-full">35 Wilayah</span><span class="stat-text-compact">35 Kab</span></span>
       </div>
     </div>
 
@@ -52,15 +53,15 @@
       </button>
       <button id="btn-export-gis" class="neo-btn neo-btn-primary" title="Ekspor Data untuk QGIS dan ArcGIS">
         <i class="fa-solid fa-file-export"></i>
-        <span class="btn-text">Ekspor GIS</span>
+        <span class="btn-text"><span class="btn-text-full">Ekspor GIS</span><span class="btn-text-compact">Ekspor</span></span>
       </button>
       <button id="btn-analytics" class="neo-btn" title="Statistik & Analitik Wilayah">
         <i class="fa-solid fa-chart-pie"></i>
-        <span class="btn-text">Analitik</span>
+        <span class="btn-text"><span class="btn-text-full">Analitik</span><span class="btn-text-compact">Analitik</span></span>
       </button>
       <button id="btn-methodology" class="neo-btn" title="Metodologi Kurasi & Ring 4 (Eksklusi)">
         <i class="fa-solid fa-circle-info"></i>
-        <span class="btn-text">Metodologi</span>
+        <span class="btn-text"><span class="btn-text-full">Metodologi</span><span class="btn-text-compact">Metode</span></span>
       </button>
     </div>
   </header>
@@ -403,11 +404,11 @@
 
   <!-- ==================== SCRIPTS ==================== -->
   <!-- 1. Master Data Layer -->
-  <script src="data/sastra_data.js?v=20260917_06"></script>
+  <script src="data/sastra_data.js?v=20260917_07"></script>
   <!-- 2. Administrative Boundaries GeoJSON -->
-  <script src="data/jateng_kabupaten.js?v=20260917_06"></script>
+  <script src="data/jateng_kabupaten.js?v=20260917_07"></script>
   <!-- 3. Full Transcription Dataset -->
-  <script src="data/transkrip_data.js?v=20260917_06"></script>
+  <script src="data/transkrip_data.js?v=20260917_07"></script>
   <!-- 4. Leaflet Map Library (Local offline bundle with CDN fallback) -->
   <script src="lib/leaflet/leaflet.js"></script>
   <script>
@@ -416,10 +417,10 @@
     }
   </script>
   <!-- 5. GIS Exporter Engine -->
-  <script src="js/export-gis.js?v=20260917_06"></script>
+  <script src="js/export-gis.js?v=20260917_07"></script>
   <!-- 6. Map Controller & Layer Manager -->
-  <script src="js/map-layers.js?v=20260917_06"></script>
+  <script src="js/map-layers.js?v=20260917_07"></script>
   <!-- 7. Application Entrypoint & Interactive Controller -->
-  <script src="js/app.js?v=20260917_06"></script>
+  <script src="js/app.js?v=20260917_07"></script>
 </body>
 </html>

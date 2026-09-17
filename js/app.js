@@ -15,7 +15,8 @@
     selectedEkologi: 'ALL',
     showBoundaries: false,
     selectedItem: null,
-    currentVideoSource: 'youtube' // 'youtube' or 'local'
+    currentVideoSource: 'youtube', // 'youtube' or 'local'
+    autoCollapsedByDrawer: false
   };
 
   /**
@@ -252,6 +253,19 @@
       window.MapLayers.highlightKabupaten(item.kabupaten);
     }
 
+    // Auto-collapse filter panel on tablet portrait (768px - 1024px) to prevent map occlusion
+    if (window.innerWidth >= 768 && window.innerWidth <= 1024) {
+      const panelBody = document.getElementById('panel-body-content');
+      const actionBtns = document.querySelector('.panel-action-buttons');
+      const btnTogglePanel = document.getElementById('btn-toggle-panel');
+      if (panelBody && panelBody.style.display !== 'none') {
+        panelBody.style.display = 'none';
+        if (actionBtns) actionBtns.style.display = 'none';
+        if (btnTogglePanel) btnTogglePanel.innerHTML = '<i class="fa-solid fa-chevron-down"></i>';
+        state.autoCollapsedByDrawer = true;
+      }
+    }
+
     // Tampilkan Drawer
     drawer.classList.add('drawer-open');
   }
@@ -282,6 +296,16 @@
     if (window.MapLayers && typeof window.MapLayers.resetKabupatenHighlight === 'function') {
       window.MapLayers.resetKabupatenHighlight();
     }
+    // Pulihkan filter panel jika sebelumnya diciutkan otomatis oleh pembukaan drawer di tablet
+    if (state.autoCollapsedByDrawer) {
+      const panelBody = document.getElementById('panel-body-content');
+      const actionBtns = document.querySelector('.panel-action-buttons');
+      const btnTogglePanel = document.getElementById('btn-toggle-panel');
+      if (panelBody) panelBody.style.display = 'flex';
+      if (actionBtns) actionBtns.style.display = 'flex';
+      if (btnTogglePanel) btnTogglePanel.innerHTML = '<i class="fa-solid fa-chevron-up"></i>';
+      state.autoCollapsedByDrawer = false;
+    }
   }
 
   /**
@@ -291,6 +315,9 @@
     document.querySelectorAll('.tab-btn').forEach(function (btn) {
       if (btn.getAttribute('data-target') === targetPaneId) {
         btn.classList.add('active');
+        if (typeof btn.scrollIntoView === 'function') {
+          btn.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+        }
       } else {
         btn.classList.remove('active');
       }
@@ -1016,6 +1043,7 @@
     const panelBody = document.getElementById('panel-body-content');
     const actionBtns = document.querySelector('.panel-action-buttons');
     btnTogglePanel.addEventListener('click', function () {
+      state.autoCollapsedByDrawer = false;
       if (panelBody.style.display === 'none') {
         panelBody.style.display = 'flex';
         if (actionBtns) actionBtns.style.display = 'flex';
