@@ -10,7 +10,7 @@
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <!-- Neobrutalist Theme Stylesheet -->
-  <link rel="stylesheet" href="css/style.css?v=20260917_04">
+  <link rel="stylesheet" href="css/style.css?v=20260917_05">
 </head>
 <body>
 
@@ -19,7 +19,8 @@
     <div class="header-brand">
       <div class="header-title">
         <i class="fa-solid fa-compass text-yellow-500"></i>
-        <span>PETA SASTRA LISAN DI JAWA TENGAH</span>
+        <span class="brand-text-full">PETA SASTRA LISAN DI JAWA TENGAH</span>
+        <span class="brand-text-short">Sastra Lisan Jateng</span>
       </div>
     </div>
 
@@ -45,17 +46,21 @@
 
     <!-- Action Buttons -->
     <div class="header-actions">
+      <button id="btn-mobile-filter-header" class="neo-btn neo-btn-primary mobile-filter-btn" title="Buka Filter & Pencarian">
+        <i class="fa-solid fa-sliders"></i>
+        <span class="btn-text-mobile">Filter</span>
+      </button>
       <button id="btn-export-gis" class="neo-btn neo-btn-primary" title="Ekspor Data untuk QGIS dan ArcGIS">
         <i class="fa-solid fa-file-export"></i>
-        <span>Ekspor GIS</span>
+        <span class="btn-text">Ekspor GIS</span>
       </button>
       <button id="btn-analytics" class="neo-btn" title="Statistik & Analitik Wilayah">
         <i class="fa-solid fa-chart-pie"></i>
-        <span>Analitik</span>
+        <span class="btn-text">Analitik</span>
       </button>
       <button id="btn-methodology" class="neo-btn" title="Metodologi Kurasi & Ring 4 (Eksklusi)">
         <i class="fa-solid fa-circle-info"></i>
-        <span>Metodologi</span>
+        <span class="btn-text">Metodologi</span>
       </button>
     </div>
   </header>
@@ -64,13 +69,28 @@
   <main id="map-container">
     <div id="map"></div>
 
+    <!-- Mobile Floating Action Button (FAB) -->
+    <button id="btn-mobile-filter-fab" class="mobile-filter-fab neo-btn neo-btn-primary neo-shadow" aria-label="Buka Filter dan Pencarian">
+      <i class="fa-solid fa-sliders"></i>
+      <span>Filter & Cari (91)</span>
+    </button>
+
+    <!-- Mobile Bottom Sheet Backdrop -->
+    <div id="panel-backdrop" class="panel-backdrop"></div>
+
     <!-- Floating Filter Panel -->
     <section id="floating-panel" class="neo-border neo-shadow">
+      <div class="mobile-drag-handle" id="mobile-drag-handle"></div>
       <div class="panel-header">
         <h3><i class="fa-solid fa-sliders"></i> Filter Penjelajahan</h3>
-        <button id="btn-toggle-panel" class="neo-btn" style="padding: 2px 8px; font-size: 0.75rem;">
-          <i class="fa-solid fa-chevron-up"></i>
-        </button>
+        <div style="display: flex; gap: 6px; align-items: center;">
+          <button id="btn-close-mobile-panel" class="neo-btn panel-close-mobile" title="Tutup Filter">
+            ✕
+          </button>
+          <button id="btn-toggle-panel" class="neo-btn" style="padding: 2px 8px; font-size: 0.75rem;">
+            <i class="fa-solid fa-chevron-up"></i>
+          </button>
+        </div>
       </div>
 
       <div class="panel-body" id="panel-body-content">
@@ -78,6 +98,14 @@
         <div class="search-box">
           <i class="fa-solid fa-magnifying-glass"></i>
           <input type="text" id="search-input" placeholder="Cari tradisi, maestro, daerah...">
+        </div>
+
+        <!-- Mobile Quick Stats Row (shown on mobile when header stats are hidden) -->
+        <div class="mobile-stats-row">
+          <div class="stat-chip badge-r1"><span>⭐ 3 Emas</span></div>
+          <div class="stat-chip badge-r2"><span>📖 44 Teks</span></div>
+          <div class="stat-chip badge-r3"><span>🔍 44 Ritus</span></div>
+          <div class="stat-chip badge-kab"><span>🗺️ 35 Kab</span></div>
         </div>
 
         <!-- Filter Ring Validasi -->
@@ -133,10 +161,16 @@
           <input type="checkbox" id="toggle-boundaries" style="width: 16px; height: 16px; accent-color: #000;">
         </div>
 
-        <!-- Quick Reset -->
-        <button id="btn-reset-filters" class="neo-btn" style="width: 100%; justify-content: center;">
-          <i class="fa-solid fa-arrow-rotate-left"></i> Reset Filter
-        </button>
+        <div style="display: flex; gap: 8px; flex-direction: column;">
+          <!-- Quick Reset -->
+          <button id="btn-reset-filters" class="neo-btn" style="width: 100%; justify-content: center;">
+            <i class="fa-solid fa-arrow-rotate-left"></i> Reset Filter
+          </button>
+          <!-- Mobile Apply & View Map Button -->
+          <button id="btn-apply-filter-mobile" class="neo-btn neo-btn-primary mobile-apply-btn" style="width: 100%; justify-content: center; padding: 10px;">
+            <i class="fa-solid fa-map-location-dot"></i> Terapkan & Lihat Peta
+          </button>
+        </div>
       </div>
     </section>
   </main>

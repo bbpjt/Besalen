@@ -1,4 +1,4 @@
-﻿/* ==========================================================================
+/* ==========================================================================
    ATLAS DIGITAL SASTRA LISAN JAWA TENGAH
    SISTEM DESAIN NEOBRUTALISME (Contemporary Neobrutalism)
    ========================================================================== */
@@ -39,13 +39,16 @@
   padding: 0;
 }
 
-body {
+html, body {
   font-family: var(--font-body);
   background-color: var(--color-canvas);
   color: var(--color-ink);
   overflow: hidden;
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  height: 100dvh;
+  width: 100%;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
 }
 
 /* ==========================================================================
@@ -158,6 +161,15 @@ body {
   display: flex;
   align-items: center;
   gap: 8px;
+  white-space: nowrap;
+}
+
+.brand-text-full {
+  display: inline;
+}
+
+.brand-text-short {
+  display: none;
 }
 
 .stamp-tag {
@@ -193,19 +205,113 @@ body {
   gap: 10px;
 }
 
+.mobile-filter-btn {
+  display: none;
+}
+
 /* ==========================================================================
-   MAP CONTAINER
+   MAP CONTAINER & MOBILE OVERLAYS
    ========================================================================== */
 #map-container {
-  width: 100vw;
-  height: calc(100vh - 64px);
+  width: 100%;
+  height: calc(100% - 64px);
+  height: calc(100dvh - 64px);
   position: relative;
+  overflow: hidden;
 }
 
 #map {
   width: 100%;
   height: 100%;
   background-color: #e5e9ec;
+}
+
+/* Mobile Filter FAB (Floating Action Button) */
+.mobile-filter-fab {
+  display: none;
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  padding: 11px 22px;
+  font-size: 0.92rem;
+  font-weight: 800;
+  border-radius: 999px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3), 3px 3px 0 #000;
+  white-space: nowrap;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  letter-spacing: 0.02em;
+  transition: all 0.15s ease;
+}
+
+.mobile-filter-fab:hover,
+.mobile-filter-fab:focus {
+  transform: translateX(-50%) translate(-2px, -2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35), 4px 4px 0 #000;
+}
+
+.mobile-filter-fab:active {
+  transform: translateX(-50%) translate(1px, 1px);
+  box-shadow: 1px 1px 0 #000;
+}
+
+/* Mobile Bottom Sheet Backdrop */
+.panel-backdrop {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  z-index: 1400;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  pointer-events: none;
+}
+
+.panel-backdrop.active {
+  display: block;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.mobile-drag-handle {
+  display: none;
+  width: 44px;
+  height: 5px;
+  background-color: #333;
+  border-radius: 4px;
+  margin: 10px auto 4px auto;
+  cursor: grab;
+}
+
+.panel-close-mobile {
+  display: none;
+}
+
+.mobile-stats-row {
+  display: none;
+}
+
+.mobile-apply-btn {
+  display: none;
+}
+
+/* Table Responsive Utility */
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-top: 8px;
+  margin-bottom: 8px;
 }
 
 /* ==========================================================================
@@ -223,6 +329,7 @@ body {
   z-index: 1000;
   transition: all 0.2s ease;
   max-height: calc(100vh - 100px);
+  max-height: calc(100dvh - 100px);
   display: flex;
   flex-direction: column;
 }
@@ -738,3 +845,459 @@ body {
 .leaflet-tooltip-neo::before {
   display: none !important;
 }
+
+/* ==========================================================================
+   RESPONSIVE DESIGN: TABLETS & MOBILE DEVICES
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. TABLET SCREENS (iPad, Android Tablets: 769px - 1024px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 1024px) {
+  #header {
+    height: 60px;
+    padding: 0 14px;
+  }
+
+  #map-container {
+    height: calc(100% - 60px);
+    height: calc(100dvh - 60px);
+  }
+
+  .header-title {
+    font-size: 1.02rem;
+    gap: 6px;
+  }
+
+  .header-stats {
+    gap: 6px;
+  }
+
+  .stat-chip {
+    padding: 3px 8px;
+    font-size: 0.72rem;
+  }
+
+  .neo-btn {
+    padding: 7px 11px;
+    font-size: 0.8rem;
+  }
+
+  #floating-panel {
+    top: 12px;
+    left: 12px;
+    width: 300px;
+    max-height: calc(100dvh - 84px);
+  }
+
+  #detail-drawer {
+    width: 440px;
+    max-width: 90vw;
+  }
+
+  .neo-modal {
+    width: 660px;
+    max-width: 92vw;
+    max-height: 86dvh;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   2. MOBILE PHONES & PHABLETS (<= 768px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+  #header {
+    height: 56px;
+    padding: 0 10px;
+  }
+
+  #map-container {
+    height: calc(100% - 56px);
+    height: calc(100dvh - 56px);
+  }
+
+  .brand-text-full {
+    display: none !important;
+  }
+
+  .header-brand {
+    min-width: 0;
+    flex: 1 1 auto;
+    overflow: hidden;
+  }
+
+  .header-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .brand-text-short {
+    display: inline-block !important;
+    font-size: 0.92rem;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  /* Hide stats in header on mobile to prevent overflow */
+  .header-stats {
+    display: none;
+  }
+
+  .header-actions {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-shrink: 0;
+  }
+
+  /* Show filter toggle in header on mobile as compact icon button */
+  .mobile-filter-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 8px;
+  }
+
+  .btn-text-mobile {
+    display: none !important;
+  }
+
+  /* Hide text on secondary action buttons, keep icons */
+  .header-actions #btn-export-gis .btn-text,
+  .header-actions #btn-analytics .btn-text,
+  .header-actions #btn-methodology .btn-text {
+    display: none !important;
+  }
+
+  .header-actions .neo-btn {
+    padding: 6px 8px;
+    min-width: 36px;
+    min-height: 36px;
+    font-size: 0.85rem;
+    justify-content: center;
+  }
+
+  /* Floating Action Button (FAB) at Bottom Center */
+  .mobile-filter-fab {
+    display: inline-flex;
+  }
+
+  /* Floating Filter Panel transforms into Bottom Sheet */
+  #floating-panel {
+    position: fixed;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    max-width: 100vw;
+    max-height: 82dvh;
+    border-radius: 16px 16px 0 0;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    border-top: var(--neo-border-width) solid var(--color-border);
+    box-shadow: 0 -8px 28px rgba(0, 0, 0, 0.35);
+    z-index: 1500;
+    transform: translateY(105%);
+    transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  #floating-panel.mobile-panel-open {
+    transform: translateY(0);
+  }
+
+  .mobile-drag-handle {
+    display: block;
+  }
+
+  .panel-header {
+    padding: 8px 14px;
+  }
+
+  .panel-close-mobile {
+    display: inline-flex;
+    min-width: 32px;
+    min-height: 32px;
+    justify-content: center;
+    font-weight: 800;
+  }
+
+  #btn-toggle-panel {
+    display: none;
+  }
+
+  .panel-body {
+    padding: 12px 14px 18px 14px;
+    gap: 12px;
+  }
+
+  .mobile-stats-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 6px;
+    margin: 2px 0;
+  }
+
+  .mobile-stats-row .stat-chip {
+    padding: 6px 2px;
+    font-size: 0.68rem;
+    font-weight: 800;
+    justify-content: center;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .mobile-apply-btn {
+    display: inline-flex;
+  }
+
+  /* Large readable form controls to prevent iOS zoom */
+  .search-box input {
+    font-size: 16px;
+    padding: 10px 12px 10px 36px;
+  }
+
+  .neo-select {
+    font-size: 15px;
+    padding: 10px 10px;
+    min-height: 44px;
+  }
+
+  .checkbox-pill {
+    padding: 10px 12px;
+    font-size: 0.85rem;
+    min-height: 44px;
+  }
+
+  .toggle-row {
+    padding: 10px 12px;
+    font-size: 0.85rem;
+    min-height: 44px;
+  }
+
+  /* Sliding Detail Drawer on Mobile: Full-screen Sheet */
+  #detail-drawer {
+    width: 100%;
+    max-width: 100vw;
+    height: 100%;
+    height: 100dvh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-left: none;
+    z-index: 2200;
+    box-shadow: none;
+  }
+
+  .drawer-header {
+    padding: 12px 14px;
+  }
+
+  #drawer-title {
+    font-size: 1.15rem;
+    line-height: 1.25;
+  }
+
+  .drawer-close-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 1.1rem;
+    min-width: 40px;
+    min-height: 40px;
+  }
+
+  /* Horizontally scrollable drawer tabs */
+  .drawer-tabs {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .drawer-tabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .tab-btn {
+    padding: 11px 15px;
+    font-size: 0.82rem;
+    flex-shrink: 0;
+    min-height: 44px;
+  }
+
+  .drawer-content {
+    padding: 14px;
+  }
+
+  .info-card {
+    padding: 12px;
+    margin-bottom: 12px;
+  }
+
+  /* Video player in mobile drawer */
+  .video-wrapper {
+    aspect-ratio: 16/9;
+    padding-bottom: 0;
+    height: auto;
+    min-height: 190px;
+  }
+
+  .video-wrapper iframe,
+  .video-wrapper video {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 190px;
+  }
+
+  /* Modals on Mobile: Bottom Sheet or Centered */
+  .neo-modal-backdrop {
+    padding: 8px;
+    align-items: flex-end;
+  }
+
+  .neo-modal {
+    width: 100%;
+    max-width: 100vw;
+    max-height: 90dvh;
+    border-radius: 16px 16px 0 0;
+  }
+
+  .modal-header {
+    padding: 12px 14px;
+  }
+
+  .modal-header h3 {
+    font-size: 0.95rem;
+  }
+
+  .modal-body {
+    padding: 14px;
+  }
+
+  /* Export GIS cards stack vertically on mobile */
+  #modal-export .info-card {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 10px !important;
+  }
+
+  #modal-export .info-card .neo-btn {
+    width: 100% !important;
+    justify-content: center !important;
+    min-height: 42px;
+  }
+
+  /* Leaflet Controls positioning */
+  .leaflet-top.leaflet-left {
+    top: 10px;
+    left: 10px;
+  }
+
+  .leaflet-control-zoom {
+    border: 2px solid #000 !important;
+    box-shadow: 2px 2px 0px #000 !important;
+  }
+
+  .leaflet-control-zoom a {
+    width: 36px !important;
+    height: 36px !important;
+    line-height: 36px !important;
+    font-size: 16px !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   3. EXTRA SMALL SMARTPHONES (<= 480px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 480px) {
+  .header-title span {
+    font-size: 0.88rem;
+    max-width: 46vw;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .btn-text-mobile {
+    display: none; /* Icon only on extra narrow screens */
+  }
+
+  .header-actions .neo-btn {
+    padding: 6px 8px;
+    min-width: 36px;
+    min-height: 36px;
+  }
+
+  .info-meta-grid {
+    grid-template-columns: 100px 1fr;
+    row-gap: 8px;
+    font-size: 0.78rem;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+
+  .gallery-thumb {
+    height: 88px;
+  }
+
+  .stat-chip {
+    font-size: 0.68rem;
+    padding: 3px 6px;
+  }
+
+  .mobile-filter-fab {
+    bottom: 20px;
+    padding: 10px 18px;
+    font-size: 0.85rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   4. MOBILE LANDSCAPE & SHORT VIEWPORTS (max-height: 540px)
+   -------------------------------------------------------------------------- */
+@media (max-height: 540px) {
+  #header {
+    height: 46px;
+    padding: 0 10px;
+  }
+
+  #map-container {
+    height: calc(100% - 46px);
+    height: calc(100dvh - 46px);
+  }
+
+  #floating-panel {
+    max-height: 88dvh;
+  }
+
+  .drawer-header {
+    padding: 8px 12px;
+  }
+
+  .tab-btn {
+    padding: 7px 10px;
+    min-height: 36px;
+  }
+
+  .mobile-filter-fab {
+    bottom: 12px;
+    padding: 7px 16px;
+    font-size: 0.8rem;
+  }
+}
+

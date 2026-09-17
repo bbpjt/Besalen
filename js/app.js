@@ -77,6 +77,12 @@
     if (window.MapLayers) {
       window.MapLayers.renderMarkers(filtered, openDrawer);
     }
+
+    // Perbarui badge counter pada tombol filter mobile
+    const mobileCountBadge = document.getElementById('mobile-filter-count-badge');
+    if (mobileCountBadge) {
+      mobileCountBadge.textContent = `Filter & Cari (${filtered.length})`;
+    }
   }
 
   /**
@@ -113,6 +119,9 @@
     // Reset ke tab pertama (Profil)
     switchDrawerTab('tab-pane-profil');
 
+    // Tutup mobile filter panel jika sedang terbuka
+    closeMobilePanel();
+
     // Sorot poligon wilayah kabupaten di peta
     if (window.MapLayers && typeof window.MapLayers.highlightKabupaten === 'function') {
       window.MapLayers.highlightKabupaten(item.kabupaten);
@@ -120,6 +129,20 @@
 
     // Tampilkan Drawer
     drawer.classList.add('drawer-open');
+  }
+
+  function openMobilePanel() {
+    const panel = document.getElementById('floating-panel');
+    const backdrop = document.getElementById('panel-backdrop');
+    if (panel) panel.classList.add('mobile-panel-open');
+    if (backdrop) backdrop.classList.add('active');
+  }
+
+  function closeMobilePanel() {
+    const panel = document.getElementById('floating-panel');
+    const backdrop = document.getElementById('panel-backdrop');
+    if (panel) panel.classList.remove('mobile-panel-open');
+    if (backdrop) backdrop.classList.remove('active');
   }
 
   function closeDrawer() {
@@ -689,18 +712,19 @@
       <h4 style="font-family:'Space Grotesk', sans-serif; font-size:1rem; font-weight:800; margin-bottom:10px;">
         Distribusi Potensi Sastra Lisan Berdasarkan 6 Wilayah Karesidenan:
       </h4>
-      <table style="width:100%; border-collapse:collapse; font-size:0.82rem; border:2px solid #000;">
-        <thead>
-          <tr style="background:#FFE600; border-bottom:2px solid #000;">
-            <th style="padding:8px; text-align:left; border-right:1px solid #000;">Wilayah Karesidenan</th>
-            <th style="padding:8px; text-align:center; border-right:1px solid #000;">Kab/Kota</th>
-            <th style="padding:8px; text-align:center; border-right:1px solid #000;">⭐ R1</th>
-            <th style="padding:8px; text-align:center; border-right:1px solid #000;">📖 R2</th>
-            <th style="padding:8px; text-align:center; border-right:1px solid #000;">🔍 R3</th>
-            <th style="padding:8px; text-align:center;">Total Sastra</th>
-          </tr>
-        </thead>
-        <tbody>
+      <div class="table-responsive">
+        <table style="width:100%; min-width:480px; border-collapse:collapse; font-size:0.82rem; border:2px solid #000;">
+          <thead>
+            <tr style="background:#FFE600; border-bottom:2px solid #000;">
+              <th style="padding:8px; text-align:left; border-right:1px solid #000;">Wilayah Karesidenan</th>
+              <th style="padding:8px; text-align:center; border-right:1px solid #000;">Kab/Kota</th>
+              <th style="padding:8px; text-align:center; border-right:1px solid #000;">⭐ R1</th>
+              <th style="padding:8px; text-align:center; border-right:1px solid #000;">📖 R2</th>
+              <th style="padding:8px; text-align:center; border-right:1px solid #000;">🔍 R3</th>
+              <th style="padding:8px; text-align:center;">Total Sastra</th>
+            </tr>
+          </thead>
+          <tbody>
     `;
 
     Object.keys(karesidenanCounts).sort().forEach(function (kar) {
@@ -718,8 +742,9 @@
     });
 
     html += `
-        </tbody>
-      </table>
+          </tbody>
+        </table>
+      </div>
     `;
 
     body.innerHTML = html;
@@ -750,8 +775,8 @@
       <h4 style="font-family:'Space Grotesk',sans-serif; font-weight:800; font-size:0.95rem; margin-bottom:8px;">
         Daftar 40 Entri Budaya Ring 4 (Eksklusi Non-Sastra):
       </h4>
-      <div style="max-height: 340px; overflow-y: auto; border: 2px solid #000;">
-        <table style="width:100%; border-collapse:collapse; font-size:0.78rem;">
+      <div class="table-responsive" style="max-height: 340px; overflow-y: auto; border: 2px solid #000;">
+        <table style="width:100%; min-width:540px; border-collapse:collapse; font-size:0.78rem;">
           <thead style="position:sticky; top:0; background:#FF3366; color:#fff;">
             <tr>
               <th style="padding:6px; text-align:center; width:40px;">No.</th>
@@ -924,6 +949,28 @@
         window.GISExporter.exportBoundaryGeoJSON(window.JATENG_KABUPATEN);
       }
     });
+
+    // 11. Mobile Panel Triggers
+    const btnMobileFilterFab = document.getElementById('btn-mobile-filter-fab');
+    if (btnMobileFilterFab) {
+      btnMobileFilterFab.addEventListener('click', openMobilePanel);
+    }
+    const btnMobileFilterHeader = document.getElementById('btn-mobile-filter-header');
+    if (btnMobileFilterHeader) {
+      btnMobileFilterHeader.addEventListener('click', openMobilePanel);
+    }
+    const btnCloseMobilePanel = document.getElementById('btn-close-mobile-panel');
+    if (btnCloseMobilePanel) {
+      btnCloseMobilePanel.addEventListener('click', closeMobilePanel);
+    }
+    const btnApplyFilterMobile = document.getElementById('btn-apply-filter-mobile');
+    if (btnApplyFilterMobile) {
+      btnApplyFilterMobile.addEventListener('click', closeMobilePanel);
+    }
+    const panelBackdrop = document.getElementById('panel-backdrop');
+    if (panelBackdrop) {
+      panelBackdrop.addEventListener('click', closeMobilePanel);
+    }
   }
 
   // App Initialization
@@ -942,6 +989,8 @@
     applyFilters: applyFilters,
     openDrawer: openDrawer,
     closeDrawer: closeDrawer,
+    openMobilePanel: openMobilePanel,
+    closeMobilePanel: closeMobilePanel,
     renderTranscript: renderTabTranskrip,
     renderAnalyticsModal: renderAnalyticsModal,
     renderMethodologyModal: renderMethodologyModal
