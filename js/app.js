@@ -319,8 +319,11 @@
    * Mengubah tab aktif di drawer
    */
   function switchDrawerTab(targetPaneId) {
+    if (!targetPaneId) return;
     document.querySelectorAll('.tab-btn').forEach(function (btn) {
-      if (btn.getAttribute('data-target') === targetPaneId) {
+      const dataTarget = btn.getAttribute('data-target');
+      if (!dataTarget) return;
+      if (dataTarget === targetPaneId) {
         btn.classList.add('active');
         if (typeof btn.scrollIntoView === 'function') {
           btn.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
@@ -1108,6 +1111,24 @@
     const fPewarisan = document.getElementById('admin-field-pewarisan');
     const fKom = document.getElementById('admin-field-komunitas');
     const fDesc = document.getElementById('admin-field-deskripsi');
+
+    // Field Baru: Aspek Pertunjukan & Tuturan (Tab Aspek)
+    const fBentuk = document.getElementById('admin-field-bentuk-tuturan');
+    const fPenutur = document.getElementById('admin-field-kategori-penutur');
+    const fAlat = document.getElementById('admin-field-alat-musik');
+    const fKostum = document.getElementById('admin-field-kostum');
+    const fBahasa = document.getElementById('admin-field-bahasa');
+    const fDeskripsiPertunjukan = document.getElementById('admin-field-deskripsi-pertunjukan');
+
+    // Field Baru: Multimedia & Dokumentasi (Tab Multimedia)
+    const fVideoLocal = document.getElementById('admin-field-video-local');
+    const fCoverImage = document.getElementById('admin-field-cover-image');
+    const fGallery = document.getElementById('admin-field-gallery-images');
+
+    // Field Baru: Transkripsi & Naskah (Tab Transkripsi)
+    const fRepertoar = document.getElementById('admin-field-repertoar');
+    const fUnsurTeks = document.getElementById('admin-field-unsur-teks');
+
     const fS1 = document.getElementById('admin-field-sumber1');
     const fU1 = document.getElementById('admin-field-url1');
     const fS2 = document.getElementById('admin-field-sumber2');
@@ -1133,6 +1154,21 @@
       if (fPewarisan) fPewarisan.value = '';
       if (fKom) fKom.value = '';
       if (fDesc) fDesc.value = '';
+
+      if (fBentuk) fBentuk.value = '';
+      if (fPenutur) fPenutur.value = '';
+      if (fAlat) fAlat.value = '';
+      if (fKostum) fKostum.value = '';
+      if (fBahasa) fBahasa.value = '';
+      if (fDeskripsiPertunjukan) fDeskripsiPertunjukan.value = '';
+
+      if (fVideoLocal) fVideoLocal.value = '';
+      if (fCoverImage) fCoverImage.value = '';
+      if (fGallery) fGallery.value = '';
+
+      if (fRepertoar) fRepertoar.value = '';
+      if (fUnsurTeks) fUnsurTeks.value = '';
+
       if (fS1) fS1.value = '';
       if (fU1) fU1.value = '';
       if (fS2) fS2.value = '';
@@ -1208,6 +1244,31 @@
       fDesc.value = item.narasi_panjang || item.ringkasan_ilmiah || item.catatan_kritis || item.deskripsi || '';
     }
 
+    // Load Aspek Pertunjukan & Tuturan
+    if (fBentuk) fBentuk.value = item.bentuk_tuturan || item.unsur_teks || '';
+    if (fPenutur) fPenutur.value = item.kategori_penutur || '';
+    if (fAlat) fAlat.value = item.alat_musik || item.iringan_musik || '';
+    if (fKostum) fKostum.value = item.kostum || '';
+    if (fBahasa) fBahasa.value = item.bahasa || '';
+    if (fDeskripsiPertunjukan) fDeskripsiPertunjukan.value = item.deskripsi_pertunjukan || '';
+
+    // Load Multimedia
+    if (fVideoLocal) fVideoLocal.value = item.video_local || '';
+    if (fCoverImage) fCoverImage.value = item.cover_image || '';
+    if (fGallery) {
+      if (Array.isArray(item.gallery_images)) {
+        fGallery.value = item.gallery_images.join('\n');
+      } else if (typeof item.gallery_images === 'string') {
+        fGallery.value = item.gallery_images;
+      } else {
+        fGallery.value = '';
+      }
+    }
+
+    // Load Transkripsi & Naskah
+    if (fRepertoar) fRepertoar.value = item.repertoar || '';
+    if (fUnsurTeks) fUnsurTeks.value = item.unsur_teks || '';
+
     if (fS1) fS1.value = item.sumber_ilmiah_1 || item.sumber_referensi || '';
     if (fU1) fU1.value = item.url1 || '';
     if (fS2) fS2.value = item.sumber_ilmiah_2 || '';
@@ -1235,6 +1296,22 @@
     const fPewarisan = document.getElementById('admin-field-pewarisan');
     const fKom = document.getElementById('admin-field-komunitas');
     const fDesc = document.getElementById('admin-field-deskripsi');
+
+    // Field Baru
+    const fBentuk = document.getElementById('admin-field-bentuk-tuturan');
+    const fPenutur = document.getElementById('admin-field-kategori-penutur');
+    const fAlat = document.getElementById('admin-field-alat-musik');
+    const fKostum = document.getElementById('admin-field-kostum');
+    const fBahasa = document.getElementById('admin-field-bahasa');
+    const fDeskripsiPertunjukan = document.getElementById('admin-field-deskripsi-pertunjukan');
+
+    const fVideoLocal = document.getElementById('admin-field-video-local');
+    const fCoverImage = document.getElementById('admin-field-cover-image');
+    const fGallery = document.getElementById('admin-field-gallery-images');
+
+    const fRepertoar = document.getElementById('admin-field-repertoar');
+    const fUnsurTeks = document.getElementById('admin-field-unsur-teks');
+
     const fS1 = document.getElementById('admin-field-sumber1');
     const fU1 = document.getElementById('admin-field-url1');
     const fS2 = document.getElementById('admin-field-sumber2');
@@ -1315,12 +1392,38 @@
     const descVal = fDesc ? fDesc.value.trim() : '';
     if (ringLevel === 1) {
       item.narasi_panjang = descVal;
+      item.ringkasan_ilmiah = descVal;
     } else if (ringLevel === 2) {
       item.ringkasan_ilmiah = descVal;
     } else {
       item.catatan_kritis = descVal;
+      item.ringkasan_ilmiah = descVal;
     }
 
+    // Aspek Pertunjukan & Tuturan
+    item.bentuk_tuturan = fBentuk ? fBentuk.value.trim() : '';
+    item.kategori_penutur = fPenutur ? fPenutur.value.trim() : '';
+    const alatMusikVal = fAlat ? fAlat.value.trim() : '';
+    item.alat_musik = alatMusikVal;
+    item.iringan_musik = alatMusikVal;
+    item.kostum = fKostum ? fKostum.value.trim() : '';
+    item.bahasa = fBahasa ? fBahasa.value.trim() : '';
+    item.deskripsi_pertunjukan = fDeskripsiPertunjukan ? fDeskripsiPertunjukan.value.trim() : '';
+
+    // Multimedia
+    item.video_local = fVideoLocal ? fVideoLocal.value.trim() : '';
+    item.cover_image = fCoverImage ? fCoverImage.value.trim() : '';
+    const rawGallery = fGallery ? fGallery.value : '';
+    item.gallery_images = rawGallery
+      .split('\n')
+      .map(function (s) { return s.trim(); })
+      .filter(function (s) { return s.length > 0; });
+
+    // Transkripsi & Naskah
+    item.repertoar = fRepertoar ? fRepertoar.value.trim() : '';
+    item.unsur_teks = fUnsurTeks ? fUnsurTeks.value.trim() : '';
+
+    // Sumber Rujukan
     item.sumber_ilmiah_1 = fS1 ? fS1.value.trim() : '';
     item.url1 = fU1 ? fU1.value.trim() : '';
     item.sumber_ilmiah_2 = fS2 ? fS2.value.trim() : '';
@@ -1355,11 +1458,26 @@
     // Refresh daftar dropdown tradisi admin
     populateAdminSelect(item.id);
 
+    // Perbarui Sliding Detail Drawer seketika jika tradisi ini sedang aktif dibuka
+    if (state.selectedItem && (state.selectedItem.id === item.id || state.selectedItem.nama === item.nama)) {
+      state.selectedItem = item;
+      const drawer = document.getElementById('detail-drawer');
+      if (drawer && drawer.classList.contains('drawer-open')) {
+        renderTabProfil(item);
+        renderTabTuturan(item);
+        renderTabMultimedia(item);
+        renderTabTranskrip(item);
+        renderTabPustaka(item);
+        const drawerTitle = document.getElementById('drawer-title');
+        if (drawerTitle) drawerTitle.textContent = item.nama;
+      }
+    }
+
     if (!silent) {
       if (window.MapLayers) {
         window.MapLayers.flyToLocation(item.latitude, item.longitude, 13);
       }
-      showAdminFeedback(`✅ Data <strong>${item.nama}</strong> berhasil diterapkan langsung ke peta! Klik tombol 'Unduh sastra_data.js Terbaru' untuk menyimpan permanen ke repositori GitHub.`, 'success');
+      showAdminFeedback(`✅ Data <strong>${item.nama}</strong> berhasil diterapkan langsung ke peta & drawer! Klik tombol 'Unduh File .js' atau 'Simpan' untuk memutakhirkan permanen.`, 'success');
     }
 
     return item;
@@ -1512,7 +1630,7 @@ window.SASTRA_DATA = ${JSON.stringify(window.SASTRA_DATA, null, 2)};
   /**
    * Buka dialog modal admin (dengan pengecekan sesi login)
    */
-  function openAdminModal() {
+  function openAdminModal(preferredId) {
     const isAuth = sessionStorage.getItem('sastra_admin_auth') === '1';
     const loginView = document.getElementById('admin-login-view');
     const editorView = document.getElementById('admin-editor-view');
@@ -1524,12 +1642,13 @@ window.SASTRA_DATA = ${JSON.stringify(window.SASTRA_DATA, null, 2)};
       if (editorActions) editorActions.style.display = 'flex';
 
       const selectTradisi = document.getElementById('admin-select-tradisi');
-      const currentVal = selectTradisi ? selectTradisi.value : null;
-      populateAdminSelect(currentVal);
+      const targetId = preferredId || (selectTradisi ? selectTradisi.value : null);
+      populateAdminSelect(targetId);
       if (selectTradisi && selectTradisi.value) {
         loadTraditionIntoAdminForm(selectTradisi.value);
       }
     } else {
+      state.pendingAdminTraditionId = preferredId || null;
       if (loginView) loginView.style.display = 'block';
       if (editorView) editorView.style.display = 'none';
       if (editorActions) editorActions.style.display = 'none';
@@ -1561,7 +1680,9 @@ window.SASTRA_DATA = ${JSON.stringify(window.SASTRA_DATA, null, 2)};
         if ((user === 'admin' || user === 'bbpjt') && (pass === 'sastra2026' || pass === 'jawatengah')) {
           sessionStorage.setItem('sastra_admin_auth', '1');
           if (errEl) errEl.style.display = 'none';
-          openAdminModal();
+          const pendId = state.pendingAdminTraditionId;
+          state.pendingAdminTraditionId = null;
+          openAdminModal(pendId);
         } else {
           if (errEl) {
             errEl.style.display = 'block';
@@ -1783,9 +1904,21 @@ window.SASTRA_DATA = ${JSON.stringify(window.SASTRA_DATA, null, 2)};
     document.querySelectorAll('.tab-btn').forEach(function (btn) {
       btn.addEventListener('click', function () {
         const target = btn.getAttribute('data-target');
-        switchDrawerTab(target);
+        if (target) {
+          switchDrawerTab(target);
+        }
       });
     });
+
+    // 8b. Tombol Setting / Kelola di Drawer (Buka Admin Langsung untuk Tradisi Terpilih)
+    const btnDrawerAdmin = document.getElementById('btn-drawer-admin');
+    if (btnDrawerAdmin) {
+      btnDrawerAdmin.addEventListener('click', function (e) {
+        e.stopPropagation();
+        const currentId = state.selectedItem ? state.selectedItem.id : null;
+        openAdminModal(currentId);
+      });
+    }
 
     // 9. Modals Trigger
     document.getElementById('btn-export-gis').addEventListener('click', function () {

@@ -14,7 +14,7 @@
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <!-- Neobrutalist Theme Stylesheet -->
-  <link rel="stylesheet" href="css/style.css?v=20260917_11">
+  <link rel="stylesheet" href="css/style.css?v=20260917_14">
 </head>
 <body>
 
@@ -213,6 +213,9 @@
       </button>
       <button class="tab-btn" id="tab-pustaka" data-target="tab-pane-pustaka">
         <i class="fa-solid fa-graduation-cap"></i> Sumber
+      </button>
+      <button class="tab-btn tab-btn-admin" id="btn-drawer-admin" type="button" title="Kelola & Sunting Data Sastra Lisan Ini (Admin)">
+        <i class="fa-solid fa-gear text-yellow-500"></i> Kelola
       </button>
     </nav>
 
@@ -489,6 +492,10 @@
 
         <!-- Form Fields Grid -->
         <form id="admin-data-form">
+          <!-- 1. Identitas, Wilayah & Koordinat (Tab 1 Profil) -->
+          <div class="admin-section-header" style="margin-top: 0;">
+            <i class="fa-solid fa-location-dot text-yellow-500"></i> 1. Identitas, Wilayah & Koordinat (Tab Profil)
+          </div>
           <div class="admin-grid-2">
             <!-- ID Objek -->
             <div class="admin-form-group">
@@ -590,12 +597,6 @@
               <label for="admin-field-ekologi">Topografis</label>
               <input type="text" id="admin-field-ekologi" class="neo-input" placeholder="Contoh: Karst Kendeng & Hutan Jati Rimba">
             </div>
-
-            <!-- YouTube Video ID -->
-            <div class="admin-form-group">
-              <label for="admin-field-youtube">YouTube Video ID / URL</label>
-              <input type="text" id="admin-field-youtube" class="neo-input" placeholder="ID YouTube, misal: 5XteEv2MU_g">
-            </div>
           </div>
 
           <!-- Geospasial: Koordinat & Map Picker -->
@@ -620,7 +621,10 @@
             </div>
           </div>
 
-          <!-- Maestro, Komunitas, Usia & Pewarisan -->
+          <!-- 2. Maestro, Komunitas, Usia & Pewarisan (Tab 1 Profil) -->
+          <div class="admin-section-header">
+            <i class="fa-solid fa-user-tie text-yellow-500"></i> Maestro, Komunitas & Pewarisan (Tab Profil)
+          </div>
           <div class="admin-grid-2">
             <div class="admin-form-group">
               <label for="admin-field-maestro">Maestro / Penutur Utama</label>
@@ -640,14 +644,89 @@
             </div>
           </div>
 
-          <!-- Narasi / Deskripsi / Ringkasan -->
-          <div class="admin-form-group" style="margin-top: 10px;">
-            <label for="admin-field-deskripsi">Ringkasan</label>
-            <textarea id="admin-field-deskripsi" class="neo-input" rows="4" style="width: 100%; resize: vertical; line-height: 1.45;" placeholder="Tuliskan profil tradisi, bentuk tuturan, atau ringkasan kajian ilmiah..."></textarea>
+          <!-- 3. Ringkasan & Profil Tradisi (Tab 1 Profil) -->
+          <div class="admin-section-header">
+            <i class="fa-solid fa-align-left text-yellow-500"></i> Ringkasan & Profil Tradisi (Tab Profil)
+          </div>
+          <div class="admin-form-group">
+            <label for="admin-field-deskripsi">Ringkasan / Narasi Tradisi</label>
+            <textarea id="admin-field-deskripsi" class="neo-input" rows="3" style="width: 100%; resize: vertical; line-height: 1.45;" placeholder="Tuliskan profil tradisi, bentuk tuturan, atau ringkasan kajian ilmiah..."></textarea>
           </div>
 
-          <!-- Referensi Akademik / Pustaka -->
-          <div class="admin-grid-2" style="margin-top: 10px;">
+          <!-- 4. Aspek Pertunjukan & Tuturan (Tab 2 Aspek) -->
+          <div class="admin-section-header">
+            <i class="fa-solid fa-layer-group text-yellow-500"></i> Aspek Pertunjukan & Tuturan (Tab Aspek)
+          </div>
+          <div class="admin-grid-2">
+            <div class="admin-form-group">
+              <label for="admin-field-bentuk-tuturan">Bentuk Tuturan</label>
+              <input type="text" id="admin-field-bentuk-tuturan" class="neo-input" placeholder="Contoh: Seni pertunjukan prosa-liris dan tembang berima...">
+            </div>
+            <div class="admin-form-group">
+              <label for="admin-field-kategori-penutur">Kategori Penutur</label>
+              <input type="text" id="admin-field-kategori-penutur" class="neo-input" placeholder="Contoh: Sendiri (penutur tunggal) / Kelompok...">
+            </div>
+            <div class="admin-form-group">
+              <label for="admin-field-alat-musik">Alat Musik / Iringan</label>
+              <input type="text" id="admin-field-alat-musik" class="neo-input" placeholder="Contoh: Tiga buah instrumen rebana (terbang besar dan dua ketunthung)...">
+            </div>
+            <div class="admin-form-group">
+              <label for="admin-field-kostum">Kostum</label>
+              <input type="text" id="admin-field-kostum" class="neo-input" placeholder="Contoh: Pakaian tradisional Jawa, beskap, batik...">
+            </div>
+            <div class="admin-form-group">
+              <label for="admin-field-bahasa">Bahasa yang Digunakan</label>
+              <input type="text" id="admin-field-bahasa" class="neo-input" placeholder="Contoh: Bahasa Jawa, Bahasa Jawa Banyumasan, dll.">
+            </div>
+            <div class="admin-form-group">
+              <label for="admin-field-deskripsi-pertunjukan">Deskripsi Pertunjukan</label>
+              <input type="text" id="admin-field-deskripsi-pertunjukan" class="neo-input" placeholder="Deskripsi ringkas tata pementasan, suasana, parikan, filosofi...">
+            </div>
+          </div>
+
+          <!-- 5. Multimedia & Dokumentasi Lapangan (Tab 3 Multimedia) -->
+          <div class="admin-section-header">
+            <i class="fa-solid fa-photo-film text-yellow-500"></i> Multimedia & Dokumentasi Lapangan (Tab Multimedia)
+          </div>
+          <div class="admin-grid-2">
+            <div class="admin-form-group">
+              <label for="admin-field-youtube">YouTube Video ID / URL</label>
+              <input type="text" id="admin-field-youtube" class="neo-input" placeholder="ID YouTube, misal: 5XteEv2MU_g">
+            </div>
+            <div class="admin-form-group">
+              <label for="admin-field-video-local">Berkas Video Lokal (Opsional)</label>
+              <input type="text" id="admin-field-video-local" class="neo-input" placeholder="Contoh: kentrung.mp4">
+            </div>
+            <div class="admin-form-group">
+              <label for="admin-field-cover-image">Gambar Sampul / Cover</label>
+              <input type="text" id="admin-field-cover-image" class="neo-input" placeholder="Contoh: media/banyumas/image1.png">
+            </div>
+            <div class="admin-form-group">
+              <label for="admin-field-gallery-images">Galeri Foto Lapangan (1 Path per baris)</label>
+              <textarea id="admin-field-gallery-images" class="neo-input" rows="2" style="width: 100%; resize: vertical;" placeholder="media/kentrung/kentrung_01.jpg&#10;media/kentrung/kentrung_02.jpg"></textarea>
+            </div>
+          </div>
+
+          <!-- 6. Transkripsi & Naskah (Tab 4 Transkripsi) -->
+          <div class="admin-section-header">
+            <i class="fa-solid fa-book-open text-yellow-500"></i> Transkripsi & Repertoar Naskah (Tab Transkripsi)
+          </div>
+          <div class="admin-grid-2">
+            <div class="admin-form-group">
+              <label for="admin-field-repertoar">Repertoar / Lakon Cerita</label>
+              <input type="text" id="admin-field-repertoar" class="neo-input" placeholder="Contoh: Transkripsi fonemik verbatim 367 segmen (Lakon Kelahiran Nabi Ibrahim)">
+            </div>
+            <div class="admin-form-group">
+              <label for="admin-field-unsur-teks">Unsur Teks / Catatan Transkripsi</label>
+              <input type="text" id="admin-field-unsur-teks" class="neo-input" placeholder="Contoh: Naskah Babad Pasir Luhur bait demi bait macapat">
+            </div>
+          </div>
+
+          <!-- 7. Sumber Pustaka & Referensi Ilmiah (Tab 5 Sumber) -->
+          <div class="admin-section-header">
+            <i class="fa-solid fa-graduation-cap text-yellow-500"></i> Sumber Pustaka & Referensi Ilmiah (Tab Sumber)
+          </div>
+          <div class="admin-grid-2">
             <div class="admin-form-group">
               <label for="admin-field-sumber1">Sumber Ilmiah / Referensi 1</label>
               <input type="text" id="admin-field-sumber1" class="neo-input" placeholder="Penulis, Jurnal/Buku, Tahun...">
@@ -708,6 +787,6 @@
   <!-- 6. Map Controller & Layer Manager -->
   <script src="js/map-layers.js?v=20260917_13"></script>
   <!-- 7. Application Entrypoint & Interactive Controller -->
-  <script src="js/app.js?v=20260917_13"></script>
+  <script src="js/app.js?v=20260917_14"></script>
 </body>
 </html>
