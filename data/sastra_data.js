@@ -31,7 +31,7 @@ window.SASTRA_DATA = {
       "maestro": "Yanuri Sutrisno",
       "usia_garis": "63 th (17 Juli 1963) / Putra tunggal alm. Mbah Sutrisno (Mbah Tris)",
       "komunitas": "Keluarga besar Mbah Tris & warga desa Sendanggayam",
-      "bentuk_tuturan": "Penutur tunggal memadukan 3 teknik: Kandha (narasi prosa), Janturan (sajak dilagukan), Caturan (dialog tokoh)",
+      "bentuk_tuturan": "Seni pertunjukan sastra tutur lisan prosa-liris dan tembang berima yang dipadukan dengan caturan (dialog dramatik antartokoh) serta diiringi instrumen perkusi rebana (terbang).",
       "iringan_musik": "Terbang besar dan dua ketunthung",
       "repertoar": "Transkripsi fonemik verbatim 367 segmen (Lakon Kelahiran Nabi Ibrahim)",
       "latitude": -6.9944,
@@ -98,7 +98,12 @@ window.SASTRA_DATA = {
       "url2": "https://www.blorakab.go.id/index.php/public/berita/detail/321/seni-kentrung-blora-masih-berkumandang",
       "sumber_ilmiah_1": "Balai Bahasa Provinsi Jawa Tengah (2026); Transkripsi Fonemik 367 Segmen",
       "sumber_ilmiah_2": "Pemerintah Kabupaten Blora (Dinas Komunikasi dan Informatika). Arsip Dokumentasi Pelestarian Tradisi Kentrung Blora.",
-      "narasi_panjang": "Kentrung Blora adalah seni tutur lisan berirama bernuansa Islam-Jawa pesisir dengan tabuhan terbang besar dan ketunthung. Penutur membawakan carita kepahlawanan dan religius dengan variasi kandha, janturan, dan caturan secara soliter."
+      "narasi_panjang": "Kentrung Blora adalah seni tutur lisan berirama bernuansa Islam-Jawa pesisir dengan tabuhan terbang besar dan ketunthung. Penutur membawakan carita kepahlawanan dan religius dengan variasi kandha, janturan, dan caturan secara soliter.",
+      "kategori_penutur": "Sendiri (penutur tunggal / dalang kentrung multiperan)",
+      "alat_musik": "Tiga buah instrumen perkusi rebana (terbang): satu buah terbang gedhe (bass ritmis penentu ketukan) serta dua buah ketunthung (ketunthung kempul dan ketunthung ploncon)",
+      "kostum": "Pakaian tradisional Jawa, berupa kemeja/beskap sederhana atau lurik, kain jarik/batik khas Blora, serta mengenakan ikat kepala atau peci/songkok",
+      "bahasa": "Bahasa Jawa (ragam ngoko dialek Blora, krama madya/inggil, serta pengaruh bahasa Jawa Kuna/Kawi dan serapan Arab pada puji-pujian)",
+      "deskripsi_pertunjukan": "Pertunjukan disajikan secara bersahaja, merakyat, komunikatif, dan diselingi humor serta parikan lokal. Di dalamnya terkandung ajaran ketuhanan, bakti kepada orang tua dan guru, nilai moral-kesusilaan, kerukunan sosial, serta doa tolak bala dan keselamatan bagi pemangku hajat."
     },
     {
       "id": "SLJT-002-BMS",
@@ -114,7 +119,7 @@ window.SASTRA_DATA = {
       "maestro": "Santoso Puji Irawan",
       "usia_garis": "45 th / Penggerak Omah Maca lereng Gunung Cokol",
       "komunitas": "Komunitas Omah Maca, pemuda desa, santri, dan seniman lokal",
-      "bentuk_tuturan": "Pelantunan tembang macapat (sekar macapat) dari teks babad tertua Banyumas",
+      "bentuk_tuturan": "Kidungan/balada lisan-tulis yang dilantunkan dalam gaya tembang macapat",
       "iringan_musik": "Kesenian Jemblungan (musik akapela gamelan tiruan mulut)",
       "repertoar": "Naskah Babad Pasir Luhur bait demi bait macapat",
       "latitude": -7.3889,
@@ -148,7 +153,12 @@ window.SASTRA_DATA = {
       "url1": "https://youtu.be/Ixm0NVVzniM",
       "url2": "https://balaibahasajateng.kemendikdasmen.go.id/2022/02/lindungi-sastra-lisan-banyumas-balai-bahasa-provinsi-jawa-tengah-gandeng-pemkab-banyumas/",
       "sumber_ilmiah_1": "Balai Bahasa Provinsi Jawa Tengah (2026); Laporan Revitalisasi Maca Babad Pasir Luhur",
-      "sumber_ilmiah_2": "Balai Bahasa Provinsi Jawa Tengah & Pemkab Banyumas. Dokumentasi Perlindungan Sastra Lisan Banyumas."
+      "sumber_ilmiah_2": "Balai Bahasa Provinsi Jawa Tengah & Pemkab Banyumas. Dokumentasi Perlindungan Sastra Lisan Banyumas.",
+      "kategori_penutur": "Tukang maca/maestro",
+      "alat_musik": "Pementasan revitalisasi memakai jemblungan; Omah Maca memiliki perlengkapan gamelan. Iringan tidak dinyatakan sebagai unsur wajib pada setiap pembacaan tradisional",
+      "kostum": "Kostum tradisional",
+      "bahasa": "Bahasa Jawa dialek Banyumas, bahasa Jawa dialek Surakarta, dan bahasa Sunda",
+      "deskripsi_pertunjukan": "Babad Pasir Luhur, yang disebut sebagai babad tertua Banyumas, berisi 39 pupuh mengenai perjalanan Raden Banyak Catra/Kamandaka, pertemuannya dengan Dewi Ciptarasa, dan peralihannya menjadi penguasa Pasir Luhur. Teks berfungsi sebagai ingatan asal-usul Banyumas."
     },
     {
       "id": "SLJT-003-WSB",
@@ -164,7 +174,7 @@ window.SASTRA_DATA = {
       "maestro": "Ki Makim Kartosudarmo",
       "usia_garis": "68 th / Maestro dalang wayang tutur >40 tahun",
       "komunitas": "Sanggar Sekar Tanjung, warga Selokromo, dan komunitas ruwatan",
-      "bentuk_tuturan": "Teater tutur pakeliran, narasi dalang, dialog antartokoh, dan suluk",
+      "bentuk_tuturan": "Tuturan berbentuk narasi pakeliran, dialog antartokoh, suluk, humor atau obrolan, dan seluruhnya diiringi gamelan sederhana",
       "iringan_musik": "Iringan gamelan laras slendro pathet manyura Kedu Wanasaban & tembang glenukan",
       "repertoar": "Lakon-lakon ruwat desa dan mitologi lokal Kedu",
       "latitude": -7.4206,
@@ -186,7 +196,12 @@ window.SASTRA_DATA = {
       "url1": "https://youtube.com/live/Q_JAmcKSFB0",
       "url2": "https://dapobud.kemenbud.go.id/wbtb/detail-wbtb/?id=bee23e6d-85eb-4030-8869-9adb80d93a65",
       "sumber_ilmiah_1": "Balai Bahasa Provinsi Jawa Tengah (2026); Laporan Revitalisasi Wayang Othok Obrol",
-      "sumber_ilmiah_2": "DAPOBUD, Kementerian Kebudayaan RI (Registrasi WBTB: Wayang Othok Obrol Wonosobo, No. SK 202101348)"
+      "sumber_ilmiah_2": "DAPOBUD, Kementerian Kebudayaan RI (Registrasi WBTB: Wayang Othok Obrol Wonosobo, No. SK 202101348)",
+      "kategori_penutur": "Penutur utama atau dalang",
+      "alat_musik": "Iringan gaya Kedu Wanasaban dengan satu pathet utama, yaitu manyura (demung, dua saron dimainkan imbal, kencer, kempul, kethuk, kenong, dan slenthem atau gender panembung; tanpa sinden/gerong)",
+      "kostum": "Dalang dan niyaga mengenakan busana Jawa dominan hitam, kain batik atau jarik, serta blangkon atau ikat kepala",
+      "bahasa": "Bahasa Jawa",
+      "deskripsi_pertunjukan": "Wayang Othok Obrol berisi cerita yang dituturkan secara lisan oleh dalang melalui narasi, suluk, dan dialog antartokoh bersumber dari kisah Mahabharata, Ramayana, lakon carangan, dan ruwatan. Di dalamnya terkandung ajaran tentang asal dan tujuan kehidupan, keberanian, kesetiaan, dan permohonan keselamatan."
     }
   ],
   "ring2": [

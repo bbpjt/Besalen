@@ -203,13 +203,13 @@
         <i class="fa-solid fa-id-card"></i> Profil
       </button>
       <button class="tab-btn" id="tab-tuturan" data-target="tab-pane-tuturan">
-        <i class="fa-solid fa-scroll"></i> Formula Teks
+        <i class="fa-solid fa-layer-group"></i> Aspek
       </button>
       <button class="tab-btn" id="tab-media" data-target="tab-pane-media">
         <i class="fa-solid fa-photo-film"></i> Multimedia
       </button>
       <button class="tab-btn" id="tab-transkrip" data-target="tab-pane-transkrip">
-        <i class="fa-solid fa-book-open"></i> Transkrip
+        <i class="fa-solid fa-book-open"></i> Transkripsi
       </button>
       <button class="tab-btn" id="tab-pustaka" data-target="tab-pane-pustaka">
         <i class="fa-solid fa-graduation-cap"></i> Sumber
@@ -242,27 +242,36 @@
         </div>
       </div>
 
-      <!-- 2. Pane Formula Tuturan -->
+      <!-- 2. Pane Aspek Pertunjukan & Tuturan -->
       <div class="tab-pane" id="tab-pane-tuturan">
         <div class="info-card">
-          <h4><i class="fa-solid fa-masks-theater"></i> Bentuk Sastra Lisan</h4>
-          <p id="formula-bentuk" style="line-height: 1.6; font-size: 0.88rem; font-weight: 600;">
-            <!-- Injected by JS -->
-          </p>
+          <h4><i class="fa-solid fa-scroll"></i> Bentuk Tuturan</h4>
+          <p id="aspek-bentuk" style="line-height: 1.6; font-size: 0.88rem; font-weight: 600;">-</p>
         </div>
 
         <div class="info-card">
-          <h4><i class="fa-solid fa-music"></i> Iringan & Penyangga Vokal</h4>
-          <p id="formula-musik" style="line-height: 1.6; font-size: 0.88rem;">
-            <!-- Injected by JS -->
-          </p>
+          <h4><i class="fa-solid fa-user-gear"></i> Kategori Penutur</h4>
+          <p id="aspek-penutur" style="line-height: 1.6; font-size: 0.88rem;">-</p>
         </div>
 
         <div class="info-card">
-          <h4><i class="fa-solid fa-quote-left"></i> Cuplikan Formula Ujaran</h4>
-          <blockquote id="formula-sample" style="font-style: italic; background: #fffbe6; border-left: 4px solid #000; padding: 10px; font-size: 0.85rem;">
-            <!-- Injected by JS -->
-          </blockquote>
+          <h4><i class="fa-solid fa-music"></i> Alat Musik</h4>
+          <p id="aspek-alat-musik" style="line-height: 1.6; font-size: 0.88rem;">-</p>
+        </div>
+
+        <div class="info-card">
+          <h4><i class="fa-solid fa-shirt"></i> Kostum</h4>
+          <p id="aspek-kostum" style="line-height: 1.6; font-size: 0.88rem;">-</p>
+        </div>
+
+        <div class="info-card">
+          <h4><i class="fa-solid fa-language"></i> Bahasa yang Digunakan</h4>
+          <p id="aspek-bahasa" style="line-height: 1.6; font-size: 0.88rem;">-</p>
+        </div>
+
+        <div class="info-card">
+          <h4><i class="fa-solid fa-align-left"></i> Deskripsi</h4>
+          <p id="aspek-deskripsi" style="line-height: 1.6; font-size: 0.88rem;">-</p>
         </div>
       </div>
 
@@ -292,12 +301,12 @@
         </div>
       </div>
 
-      <!-- 4. Pane Transkrip Naskah -->
+      <!-- 4. Pane Transkripsi Naskah -->
       <div class="tab-pane" id="tab-pane-transkrip">
         <div class="transcript-search">
           <div class="search-box">
             <i class="fa-solid fa-filter"></i>
-            <input type="text" id="transcript-search-input" placeholder="Cari kata/bait dalam naskah...">
+            <input type="text" id="transcript-search-input" placeholder="Cari nomor/kata/bait dalam transkripsi...">
           </div>
         </div>
         <div class="transcript-list" id="transcript-segments-list">
@@ -682,11 +691,11 @@
 
   <!-- ==================== SCRIPTS ==================== -->
   <!-- 1. Master Data Layer -->
-  <script src="data/sastra_data.js?v=20260917_11"></script>
+  <script src="data/sastra_data.js?v=20260917_12"></script>
   <!-- 2. Administrative Boundaries GeoJSON -->
-  <script src="data/jateng_kabupaten.js?v=20260917_11"></script>
+  <script src="data/jateng_kabupaten.js?v=20260917_12"></script>
   <!-- 3. Full Transcription Dataset -->
-  <script src="data/transkrip_data.js?v=20260917_11"></script>
+  <script src="data/transkrip_data.js?v=20260917_12"></script>
   <!-- 4. Leaflet Map Library (Local offline bundle with CDN fallback) -->
   <script src="lib/leaflet/leaflet.js"></script>
   <script>
@@ -695,10 +704,10 @@
     }
   </script>
   <!-- 5. GIS Exporter Engine -->
-  <script src="js/export-gis.js?v=20260917_11"></script>
+  <script src="js/export-gis.js?v=20260917_12"></script>
   <!-- 6. Map Controller & Layer Manager -->
-  <script src="js/map-layers.js?v=20260917_11"></script>
+  <script src="js/map-layers.js?v=20260917_12"></script>
   <!-- 7. Application Entrypoint & Interactive Controller -->
-  <script src="js/app.js?v=20260917_11"></script>
+  <script src="js/app.js?v=20260917_12"></script>
 </body>
 </html>

@@ -390,23 +390,22 @@
   }
 
   /**
-   * Render Tab 2: Formula Tuturan
+   * Render Tab 2: Aspek Pertunjukan & Tuturan (6 Bidang Data Sastra Lisan)
    */
   function renderTabTuturan(item) {
-    const bentukEl = document.getElementById('formula-bentuk');
-    bentukEl.textContent = item.bentuk_tuturan || item.unsur_teks || 'Tradisi tutur lisan komunal';
+    const bentukEl = document.getElementById('aspek-bentuk');
+    const penuturEl = document.getElementById('aspek-penutur');
+    const alatMusikEl = document.getElementById('aspek-alat-musik');
+    const kostumEl = document.getElementById('aspek-kostum');
+    const bahasaEl = document.getElementById('aspek-bahasa');
+    const deskripsiEl = document.getElementById('aspek-deskripsi');
 
-    const musikEl = document.getElementById('formula-musik');
-    musikEl.textContent = item.iringan_musik || 'Tuturan ritmis dengan instrumen penopang khas daerah';
-
-    const sampleEl = document.getElementById('formula-sample');
-    if (item.repertoar) {
-      sampleEl.textContent = item.repertoar;
-    } else if (item.unsur_teks) {
-      sampleEl.textContent = `Unsur tuturan teridentifikasi: ${item.unsur_teks}`;
-    } else {
-      sampleEl.textContent = 'Formula tuturan baku sedang dalam penelusuran lebih lanjut.';
-    }
+    if (bentukEl) bentukEl.textContent = item.bentuk_tuturan || item.unsur_teks || '-';
+    if (penuturEl) penuturEl.textContent = item.kategori_penutur || '-';
+    if (alatMusikEl) alatMusikEl.textContent = item.alat_musik || item.iringan_musik || '-';
+    if (kostumEl) kostumEl.textContent = item.kostum || '-';
+    if (bahasaEl) bahasaEl.textContent = item.bahasa || '-';
+    if (deskripsiEl) deskripsiEl.textContent = item.deskripsi_pertunjukan || item.deskripsi || item.ringkasan_ilmiah || item.catatan_kritis || '-';
   }
 
   /**
@@ -589,7 +588,7 @@
       // Tampilkan ringkasan tekstual untuk Ring 2 dan 3
       listEl.innerHTML = `
         <div class="segment-item">
-          <span class="segment-time">Catatan Formula Teks</span>
+          <span class="segment-time">Catatan Transkripsi</span>
           <p style="margin-top:6px; font-weight:600;">${item.unsur_teks || 'Belum ada transkripsi fonemik penuh untuk entri ini.'}</p>
           <p style="font-size:0.8rem; color:#555; margin-top:4px;">${item.ringkasan_ilmiah || item.catatan_kritis || ''}</p>
         </div>
@@ -601,31 +600,38 @@
     segments.forEach(function (seg) {
       const div = document.createElement('div');
       div.className = 'segment-item';
-      div.setAttribute('data-text', seg.text.toLowerCase());
+      const noText = seg.no ? `Segmen #${seg.no}` : '';
+      const timeText = seg.timestamp || seg.waktu || '';
+      const headerLabel = [noText, timeText].filter(Boolean).join(' &bull; ');
+      const text = seg.text || '';
+      div.setAttribute('data-text', (text + ' ' + timeText + ' ' + (seg.no || '')).toLowerCase());
       div.innerHTML = `
-        <span class="segment-time">${seg.timestamp} &bull; ${seg.section}</span>
-        <p style="line-height:1.5; margin-top:4px;">${seg.text}</p>
+        <span class="segment-time">${headerLabel || 'Segmen Tuturan'}</span>
+        <p style="font-family:'Times New Roman', serif; font-size:0.95rem; font-style:italic; line-height:1.5; margin:6px 0;">"${text}"</p>
       `;
       containerEl.appendChild(div);
     });
 
     // In-transcript live search
     const transInput = document.getElementById('transcript-search-input');
-    transInput.oninput = function () {
-      const q = transInput.value.toLowerCase().trim();
-      const items = containerEl.querySelectorAll('.segment-item');
-      items.forEach(function (itemEl) {
-        const text = itemEl.getAttribute('data-text') || '';
-        if (!q || text.includes(q)) {
-          itemEl.style.display = 'block';
-          if (q) itemEl.classList.add('highlight');
-          else itemEl.classList.remove('highlight');
-        } else {
-          itemEl.style.display = 'none';
-          itemEl.classList.remove('highlight');
-        }
-      });
-    };
+    if (transInput) {
+      transInput.value = '';
+      transInput.oninput = function () {
+        const q = transInput.value.toLowerCase().trim();
+        const items = containerEl.querySelectorAll('.segment-item');
+        items.forEach(function (itemEl) {
+          const text = itemEl.getAttribute('data-text') || '';
+          if (!q || text.includes(q)) {
+            itemEl.style.display = 'block';
+            if (q) itemEl.classList.add('highlight');
+            else itemEl.classList.remove('highlight');
+          } else {
+            itemEl.style.display = 'none';
+            itemEl.classList.remove('highlight');
+          }
+        });
+      };
+    }
   }
 
   /**
