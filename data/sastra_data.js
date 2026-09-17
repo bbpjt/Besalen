@@ -102,7 +102,7 @@ window.SASTRA_DATA = {
       "kategori_penutur": "Sendiri (penutur tunggal / dalang kentrung multiperan)",
       "alat_musik": "Tiga buah instrumen perkusi rebana (terbang): satu buah terbang gedhe (bass ritmis penentu ketukan) serta dua buah ketunthung (ketunthung kempul dan ketunthung ploncon)",
       "kostum": "Pakaian tradisional Jawa, berupa kemeja/beskap sederhana atau lurik, kain jarik/batik khas Blora, serta mengenakan ikat kepala atau peci/songkok",
-      "bahasa": "Bahasa Jawa (ragam ngoko dialek Blora, krama madya/inggil, serta pengaruh bahasa Jawa Kuna/Kawi dan serapan Arab pada puji-pujian)",
+      "bahasa": "Bahasa Jawa",
       "deskripsi_pertunjukan": "Pertunjukan disajikan secara bersahaja, merakyat, komunikatif, dan diselingi humor serta parikan lokal. Di dalamnya terkandung ajaran ketuhanan, bakti kepada orang tua dan guru, nilai moral-kesusilaan, kerukunan sosial, serta doa tolak bala dan keselamatan bagi pemangku hajat."
     },
     {
