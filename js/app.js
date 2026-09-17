@@ -905,10 +905,10 @@
     let html = `
       <div style="background:#FFFDF9; border:2px solid #000; padding:12px; margin-bottom:16px; box-shadow:3px 3px 0px #000;">
         <h4 style="font-family:'Space Grotesk',sans-serif; font-weight:800; font-size:0.95rem; margin-bottom:4px;">
-          Kriteria pengelompokan data pemetaan sastra lisan<br>Balai Bahasa Provinsi Jawa Tengah
+          Kriteria Pengelompokan Data Pemetaan Sastra Lisan<br>Balai Bahasa Provinsi Jawa Tengah
         </h4>
         <p style="font-size:0.82rem; line-height:1.5;">
-          Setiap entri dalam peta ini dikelompokkan menurut tingkat ketuntasan datanya. Tujuannya sederhana: membedakan sastra lisan yang sudah dicek di lapangan, yang baru terbukti dari teks (berdasarkan referensi) dan masih perlu verifikasi, yang masih asumsi dan perlu diverifikasi, dan yang ternyata bukan sastra lisan.
+          Setiap entri dalam peta ini dikelompokkan menurut tingkat ketuntasan datanya. Hal ini bertujuan untuk membedakan sastra lisan yang sudah diverifikasi di lapangan, yang terdapat bentuk sastra lisan (berdasarkan referensi) dan perlu verifikasi, yang masih kemungkinan terdapat bentuk sastra lisan (belum ada referensi ilmiah) dan perlu verifikasi, serta yang ternyata bukan sastra lisan.
         </p>
         <ul style="font-size:0.8rem; margin:8px 0 0 18px; line-height:1.5;">
           <li><strong>Ring 1 (Terverifikasi)</strong><br>Sudah dicek di lapangan. Ada maestro yang masih aktif, titik koordinat yang akurat, transkrip rekaman, dan dokumentasi resmi.</li>
