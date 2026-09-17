@@ -1,4 +1,4 @@
-﻿import os
+import os
 import sys
 import re
 import json
@@ -43,15 +43,15 @@ def verify_all():
         kab = data.get("kabupaten", [])
         
         print(f"[OK] Ring 1 (Terverifikasi): {len(r1)} / 3")
-        print(f"[OK] Ring 2 (Terverifikasi Teks): {len(r2)} / 44")
+        print(f"[OK] Ring 2 (Terverifikasi Teks): {len(r2)} / 45")
         print(f"[OK] Ring 3 (Perlu Verifikasi): {len(r3)} / 44")
-        print(f"[OK] Ring 4 (Eksklusi Non-Sastra): {len(r4)} / 40")
+        print(f"[OK] Ring 4 (Eksklusi Non-Sastra): {len(r4)} / 39")
         print(f"[OK] 35 Kabupaten/Kota: {len(kab)} / 35")
         
         if len(r1) != 3: errors.append(f"Ring 1 count mismatch: {len(r1)}")
-        if len(r2) != 44: errors.append(f"Ring 2 count mismatch: {len(r2)}")
+        if len(r2) != 45: errors.append(f"Ring 2 count mismatch: {len(r2)}")
         if len(r3) != 44: errors.append(f"Ring 3 count mismatch: {len(r3)}")
-        if len(r4) != 40: errors.append(f"Ring 4 count mismatch: {len(r4)}")
+        if len(r4) != 39: errors.append(f"Ring 4 count mismatch: {len(r4)}")
         if len(kab) != 35: errors.append(f"Kabupaten count mismatch: {len(kab)}")
         
         # Check coordinates

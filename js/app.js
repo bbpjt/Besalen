@@ -214,7 +214,14 @@
   /**
    * Membuka sliding drawer detail
    */
-  function openDrawer(item) {
+  function openDrawer(itemOrId) {
+    let item = itemOrId;
+    if (typeof itemOrId === 'string') {
+      const all = getAllItems();
+      item = all.find(function (x) { return x.id === itemOrId || x.nama === itemOrId; }) || null;
+    }
+    if (!item) return;
+
     state.selectedItem = item;
     const drawer = document.getElementById('detail-drawer');
     const drawerTitle = document.getElementById('drawer-title');

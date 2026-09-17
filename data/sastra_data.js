@@ -10,11 +10,11 @@ window.SASTRA_DATA = {
     "tahun": 2026,
     "instansi": "Balai Bahasa Provinsi Jawa Tengah",
     "total_ring1": 3,
-    "total_ring2": 44,
+    "total_ring2": 45,
     "total_ring3": 44,
-    "total_ring4": 40,
+    "total_ring4": 39,
     "total_kabupaten": 35,
-    "terakhir_diperbarui": "2026-09-17T03:06:26.522Z"
+    "terakhir_diperbarui": "2026-09-17T03:35:00.000Z"
   },
   "ring1": [
     {
@@ -1113,6 +1113,34 @@ window.SASTRA_DATA = {
       "latitude": -7.341487,
       "longitude": 109.906436,
       "dasar_bukti_2": "Arsip kajian folklor perairan vulkanik Dieng."
+    },
+    {
+      "id": "SLJT-R2-045",
+      "nama": "Wayang Suket Purbalingga",
+      "ring": "Ring 2 - Terverifikasi Teks",
+      "ring_level": 2,
+      "status_label": "TERVERIFIKASI TEKS ILMIAH (WBTB 2020)",
+      "kabupaten": "Kabupaten Purbalingga",
+      "karesidenan": "Karesidenan Banyumas",
+      "kecamatan": "Rembang",
+      "desa": "Wlahar",
+      "zona_ekologi": "Lembah DAS Klawing & Pegunungan Serayu Utara",
+      "status_verifikasi": "TERVERIFIKASI TEKS (BERTEKS)",
+      "unsur_teks": "antawecana dialog tokoh wayang; janturan catur narasi dalang; suluk pakeliran; lakon Pandawa Sumunar",
+      "ringkasan_ilmiah": "Wayang Suket Purbalingga adalah seni pertunjukan tutur wayang tradisional khas Banyumasan berbahan rumput kasuran (Saccharum spontaneum) yang dipentaskan dalang dengan naskah lakon tutur (seperti lakon Pandawa Sumunar, kisah babad, dan cerita fabel moral) diiringi antawecana, suluk, dan tembang. Dikembangkan oleh Mbah Gepuk (Kasan Wikrama Tunut) sejak 1905 dan dilanjutkan cucunya Badriyanto serta dalang muda Purbalingga. Telah ditetapkan sebagai Warisan Budaya Takbenda (WBTb) Indonesia pada tahun 2020.",
+      "maestro": "Mbah Gepuk (Kasan Wikrama Tunut) & Badriyanto / Ki Lalang Jazmul Qolbi",
+      "usia_garis": "Pewaris silsilah generasi ke-3 perintis Wayang Suket Desa Wlahar Rembang",
+      "komunitas": "Komunitas Pengrajin & Pelestari Wayang Suket Desa Wlahar / Sanggar Bantarbarang",
+      "sumber_ilmiah_1": "Kemendikbudristek RI (2020). Penetapan Warisan Budaya Takbenda Indonesia: Wayang Suket Purbalingga (No. Reg. 202001150).",
+      "dasar_bukti_1": "SK Penetapan WBTb Nasional kategori Seni Pertunjukan dan Tradisi/Ekspresi Lisan dengan dokumentasi lakon dan tutur pewayangan.",
+      "sumber_ilmiah_2": "Suswandari, dkk. (2021). Eksistensi Wayang Suket sebagai Kearifan Lokal dan Media Edukasi Nilai Karakter di Purbalingga.",
+      "dasar_bukti_2": "Analisis nilai filosofis, narasi cerita pewayangan, dan fungsi didaktik tutur sastra lisan masyarakat Purbalingga.",
+      "url1": "https://dapobud.kemdikbud.go.id/wbtb/detail-wbtb/?id=202001150",
+      "url2": "https://journal.uny.ac.id",
+      "youtube_id": "8iF4O7Vj3qI",
+      "youtube_url": "https://youtu.be/8iF4O7Vj3qI",
+      "latitude": -7.3475,
+      "longitude": 109.475
     }
   ],
   "ring3": [
@@ -2320,16 +2348,6 @@ window.SASTRA_DATA = {
     },
     {
       "no": 39,
-      "nama": "Wayang Suket Purbalingga",
-      "kabupaten": "Kabupaten Purbalingga",
-      "status_keputusan": "DIEKSKLUSI RESMI",
-      "kategori_asli": "boneka/kerajinan rumput",
-      "alasan_eksklusi": "Artikel Wayang Suket Purbalingga membahas bentuk estetika, bahan rumput dan seni rupa/kerajinan; tidak ada teks atau pertunjukan tutur pada objek yang diteliti.",
-      "sumber": "Dimas Putra Pradana (2016). Wayang Suket Purbalingga Karya Badriyanto. Jurnal Pendidikan Seni Rupa",
-      "url1": "https://journal.student.uny.ac.id/ojs/serupa/article/view/1831/0"
-    },
-    {
-      "no": 40,
       "nama": "Wedang Jamu Coro Demak",
       "kabupaten": "Kabupaten Demak",
       "status_keputusan": "DIEKSKLUSI RESMI",
@@ -2376,12 +2394,12 @@ window.SASTRA_DATA = {
       "karesidenan": "Karesidenan Banyumas",
       "zona_ekologi": "Lembah DAS Klawing & Lereng Timur Gunung Slamet (Sendang Drajat)",
       "r1_count": 0,
-      "r2_count": 1,
+      "r2_count": 2,
       "r3_count": 0,
-      "r4_count": 2,
-      "total_potensi": 1,
-      "status_keterwakilan": "Terwakili (Braen)",
-      "rencana_tindak_lanjut": "Pemutakhiran Profil Maestro Braen & Transmisi Syair Jawi 2026",
+      "r4_count": 1,
+      "total_potensi": 2,
+      "status_keterwakilan": "Terwakili (Braen & Wayang Suket)",
+      "rencana_tindak_lanjut": "Pelestarian Lakon Wayang Suket Mbah Gepuk & Transmisi Syair Jawi Braen",
       "latitude": -7.345,
       "longitude": 109.355
     },
