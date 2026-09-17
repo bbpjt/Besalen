@@ -2,6 +2,7 @@
  * Peta Sastra Lisan di Jawa Tengah
  * Balai Bahasa Provinsi Jawa Tengah
  * Data Terverifikasi 100% Sesuai Rujukan Akademik & Registrasi WBTB
+ * Terakhir Diperbarui melalui Panel Admin: Kamis, 17 September 2026 pukul 10.06
  */
 window.SASTRA_DATA = {
   "metadata": {
@@ -12,7 +13,8 @@ window.SASTRA_DATA = {
     "total_ring2": 44,
     "total_ring3": 44,
     "total_ring4": 40,
-    "total_kabupaten": 35
+    "total_kabupaten": 35,
+    "terakhir_diperbarui": "2026-09-17T03:06:26.522Z"
   },
   "ring1": [
     {
@@ -95,7 +97,8 @@ window.SASTRA_DATA = {
       "url1": "https://youtu.be/5XteEv2MU_g",
       "url2": "https://www.blorakab.go.id/index.php/public/berita/detail/321/seni-kentrung-blora-masih-berkumandang",
       "sumber_ilmiah_1": "Balai Bahasa Provinsi Jawa Tengah (2026); Transkripsi Fonemik 367 Segmen",
-      "sumber_ilmiah_2": "Pemerintah Kabupaten Blora (Dinas Komunikasi dan Informatika). Arsip Dokumentasi Pelestarian Tradisi Kentrung Blora."
+      "sumber_ilmiah_2": "Pemerintah Kabupaten Blora (Dinas Komunikasi dan Informatika). Arsip Dokumentasi Pelestarian Tradisi Kentrung Blora.",
+      "narasi_panjang": "Kentrung Blora adalah seni tutur lisan berirama bernuansa Islam-Jawa pesisir dengan tabuhan terbang besar dan ketunthung. Penutur membawakan carita kepahlawanan dan religius dengan variasi kandha, janturan, dan caturan secara soliter."
     },
     {
       "id": "SLJT-002-BMS",
