@@ -5,12 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Peta Sastra Lisan di Jawa Tengah</title>
 
+  <!-- Favicon Logo Resmi Tut Wuri Handayani -->
+  <link rel="icon" type="image/png" href="media/tutwuri.png">
+  <link rel="apple-touch-icon" href="media/tutwuri.png">
+
   <!-- Leaflet CSS (Local bundle with fallback) -->
   <link rel="stylesheet" href="lib/leaflet/leaflet.css">
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <!-- Neobrutalist Theme Stylesheet -->
-  <link rel="stylesheet" href="css/style.css?v=20260917_08">
+  <link rel="stylesheet" href="css/style.css?v=20260917_09">
 </head>
 <body>
 
@@ -451,9 +455,6 @@
               <i class="fa-solid fa-right-to-bracket"></i> Masuk Admin
             </button>
           </div>
-          <p style="font-size: 0.74rem; color: #666; text-align: center; margin-top: 6px;">
-            Default Balai Bahasa: username <code>admin</code> | kata sandi <code>sastra2026</code>
-          </p>
         </form>
       </div>
 
@@ -472,11 +473,11 @@
 
         <!-- Instruksi Singkat -->
         <div class="info-card" style="margin-bottom: 14px; padding: 10px 14px; background: var(--color-r2-light);">
-          <p style="font-size: 0.78rem; line-height: 1.45;">
-            <strong>💡 Alur Kerja Simpan Otomatis:</strong><br>
-            1. Pilih sastra lisan dari daftar di bawah (atau buat tradisi baru).<br>
-            2. Ubah data (lokasi, koordinat peta, maestro, narasi profil, video youtube, rujukan pustaka).<br>
-            3. Klik tombol hijau <strong>Simpan Otomatis ke GitHub</strong>: data akan langsung di-commit ke repositori GitHub dan GitHub Pages akan otomatis menyajikan pembaruan tanpa perlu membuka terminal atau download file apa pun!
+          <p style="font-size: 0.78rem; line-height: 1.5;">
+            <strong>💡 Alur Kerja</strong><br>
+            1. Pilih sastra lisan dari daftar di bawah (atau buat lokasi baru).<br>
+            2. Ubah data (lokasi, status, narasi, media, referensi, dll.).<br>
+            3. Klik tombol Simpan.
           </p>
         </div>
 
@@ -508,7 +509,7 @@
 
             <!-- Ring Klasifikasi -->
             <div class="admin-form-group">
-              <label for="admin-field-ring">Klasifikasi Ring *</label>
+              <label for="admin-field-ring">Klasifikasi *</label>
               <select id="admin-field-ring" class="neo-select" style="width: 100%;">
                 <option value="1">⭐ Ring 1: Terverifikasi (Validasi Lapangan Penuh)</option>
                 <option value="2">📖 Ring 2: Terverifikasi Teks Ilmiah</option>
@@ -674,8 +675,8 @@
       <!-- Modal Footer Action Buttons -->
       <div class="modal-footer" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
         <div id="admin-editor-actions" style="display: none; gap: 8px; flex-wrap: wrap;">
-          <button id="btn-admin-save-github" type="button" class="neo-btn neo-btn-green" title="Simpan langsung ke GitHub repository tanpa terminal">
-            <i class="fa-solid fa-cloud-arrow-up"></i> Simpan Otomatis ke GitHub
+          <button id="btn-admin-save-github" type="button" class="neo-btn neo-btn-green" title="Simpan perubahan data">
+            <i class="fa-solid fa-floppy-disk"></i> Simpan
           </button>
           <button id="btn-admin-apply-preview" type="button" class="neo-btn neo-btn-primary" title="Coba lihat perubahan langsung di peta browser">
             <i class="fa-solid fa-arrows-rotate"></i> Pratinjau di Peta

@@ -1049,7 +1049,7 @@
       badge.textContent = `${all.length} Tradisi`;
     }
 
-    let html = '<option value="__NEW__">➕ Tambah Sastra Lisan Baru</option>';
+    let html = '<option value="__NEW__">➕ Tambah Sastra Lisan Baru (Buat Lokasi Baru)</option>';
 
     const r1 = window.SASTRA_DATA ? (window.SASTRA_DATA.ring1 || []) : [];
     if (r1.length > 0) {
@@ -1391,10 +1391,10 @@ window.SASTRA_DATA = ${JSON.stringify(window.SASTRA_DATA, null, 2)};
     const originalBtnHtml = btnSaveGh ? btnSaveGh.innerHTML : '';
     if (btnSaveGh) {
       btnSaveGh.disabled = true;
-      btnSaveGh.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Menyimpan ke GitHub...';
+      btnSaveGh.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Menyimpan...';
     }
 
-    showAdminFeedback('⏳ Menghubungkan ke GitHub API dan mengunggah data terbaru...', 'info');
+    showAdminFeedback('⏳ Menyimpan data ke repositori...', 'info');
 
     const OWNER = 'bbpjt';
     const REPO = 'Peta-Sastra-Lisan-Jateng';
@@ -1467,14 +1467,14 @@ window.SASTRA_DATA = ${JSON.stringify(window.SASTRA_DATA, null, 2)};
       const commitUrl = (commitData && commitData.commit && commitData.commit.html_url) ? commitData.commit.html_url : `https://github.com/${OWNER}/${REPO}/commits/${BRANCH}`;
 
       showAdminFeedback(`
-        🎉 <strong>BERHASIL DISIMPAN KE GITHUB SECARA OTOMATIS!</strong><br>
-        Perubahan data <strong>${item.nama}</strong> telah resmi di-commit ke branch <code>main</code> (<a href="${commitUrl}" target="_blank" style="text-decoration:underline; font-weight:bold; color:#065F46;">Lihat Bukti Commit di GitHub ↗</a>).<br>
-        <span style="font-size:0.76rem; margin-top:4px; display:inline-block;">GitHub Pages sedang memproses build otomatis. Dalam 1–2 menit, data terbaru akan langsung live dan disajikan kepada seluruh pengunjung website!</span>
+        🎉 <strong>BERHASIL DISIMPAN!</strong><br>
+        Perubahan data <strong>${item.nama}</strong> telah resmi disimpan ke repositori (<a href="${commitUrl}" target="_blank" style="text-decoration:underline; font-weight:bold; color:#065F46;">Lihat Bukti Commit ↗</a>).<br>
+        <span style="font-size:0.76rem; margin-top:4px; display:inline-block;">GitHub Pages sedang memproses pembaruan otomatis (1–2 menit).</span>
       `, 'success');
 
     } catch (err) {
       console.error('GitHub API error:', err);
-      showAdminFeedback(`❌ <strong>Gagal menyimpan otomatis ke GitHub:</strong> ${err.message}<br><span style="font-size:0.75rem;">Periksa kembali GitHub Token Anda (pastikan memiliki centang <code>repo</code>). Sebagai alternatif, Anda tetap dapat mengunduh berkas dengan tombol 'Unduh File .js'.</span>`, 'error');
+      showAdminFeedback(`❌ <strong>Gagal menyimpan data:</strong> ${err.message}<br><span style="font-size:0.75rem;">Sebagai alternatif, Anda tetap dapat mengunduh berkas dengan tombol 'Unduh File .js'.</span>`, 'error');
     } finally {
       if (btnSaveGh) {
         btnSaveGh.disabled = false;
@@ -1511,7 +1511,7 @@ window.SASTRA_DATA = ${JSON.stringify(window.SASTRA_DATA, null, 2)};
       const userField = document.getElementById('admin-username');
       const passField = document.getElementById('admin-password');
       const errEl = document.getElementById('admin-login-error');
-      if (userField && !userField.value) userField.value = 'admin';
+      if (userField) userField.value = '';
       if (passField) passField.value = '';
       if (errEl) errEl.style.display = 'none';
     }
