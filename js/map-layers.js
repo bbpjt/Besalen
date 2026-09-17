@@ -14,6 +14,19 @@
 
   const MAP_CENTER = [-7.15, 110.14];
   const DEFAULT_ZOOM = 8;
+
+  function getResponsiveMapCenter() {
+    if (typeof window !== 'undefined' && window.innerHeight > window.innerWidth) {
+      const ratio = window.innerHeight / window.innerWidth;
+      if (ratio >= 1.6) {
+        // Layar potret tinggi/jenjang: geser sedikit ke selatan (-7.28)
+        // agar seluruh daratan Jawa Tengah berpusat tepat di tengah area pandang
+        return [-7.28, 110.14];
+      }
+    }
+    return MAP_CENTER;
+  }
+
   const STYLE_HIGHLIGHTED = {
     fillColor: '#FFE600', // Satu warna: Kuning Neobrutalis
     weight: 1.5, // Garis lebih tipis, rapi, dan presisi
@@ -116,7 +129,7 @@
       }
 
       mapInstance = L.map(containerId, {
-        center: MAP_CENTER,
+        center: getResponsiveMapCenter(),
         zoom: DEFAULT_ZOOM,
         minZoom: 7,
         maxZoom: 18,
@@ -473,7 +486,7 @@
     resetView: function () {
       if (!mapInstance) return;
       this.resetKabupatenHighlight();
-      mapInstance.flyTo(MAP_CENTER, DEFAULT_ZOOM, { duration: 0.8 });
+      mapInstance.flyTo(getResponsiveMapCenter(), DEFAULT_ZOOM, { duration: 0.8 });
     }
   };
 

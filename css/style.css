@@ -954,17 +954,23 @@ html, body {
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   1. LAPTOP & LANDSCAPE TABLET (1025px - 1240px)
+   1. LAPTOP & MEDIUM SCREENS (1025px - 1280px)
    -------------------------------------------------------------------------- */
-@media (max-width: 1240px) and (min-width: 1025px) {
+@media (max-width: 1280px) and (min-width: 1025px) {
   #header {
     height: 60px;
     padding: 0 14px;
-    gap: 10px;
+    gap: 8px;
   }
 
   .brand-text-full {
+    display: none !important;
+  }
+
+  .brand-text-med {
+    display: inline-block !important;
     font-size: 1.05rem;
+    font-weight: 800;
   }
 
   .header-stats {
@@ -972,8 +978,16 @@ html, body {
   }
 
   .stat-chip {
-    padding: 4px 8px;
-    font-size: 0.74rem;
+    padding: 4px 6px;
+    font-size: 0.72rem;
+  }
+
+  .stat-text-full {
+    display: none !important;
+  }
+
+  .stat-text-compact {
+    display: inline !important;
   }
 
   .header-actions {
@@ -983,6 +997,14 @@ html, body {
   .header-actions .neo-btn {
     padding: 6px 10px;
     font-size: 0.78rem;
+  }
+
+  .btn-text-full {
+    display: none !important;
+  }
+
+  .btn-text-compact {
+    display: inline !important;
   }
 
   #floating-panel {
@@ -996,12 +1018,13 @@ html, body {
 }
 
 /* --------------------------------------------------------------------------
-   2. PORTRAIT TABLETS (iPad, iPad Air, Surface Pro: 768px - 1024px)
+   2. PORTRAIT TABLETS & LARGE TOUCH SCREENS (768px - 1150px Portrait)
+   Adopsi Filosofi Galaxy A55: Kanvas Peta 100% Penuh, FAB Mengambang, & Bottom Sheet Elegan
    -------------------------------------------------------------------------- */
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1150px) and (orientation: portrait) {
   #header {
     height: 58px;
-    padding: 0 12px;
+    padding: 0 14px;
     gap: 8px;
   }
 
@@ -1047,15 +1070,28 @@ html, body {
     display: inline !important;
   }
 
-  /* Compact action buttons with short text */
+  /* Header action buttons: includes Filter toggle button! */
   .header-actions {
     display: flex !important;
     gap: 6px;
     flex-shrink: 0;
   }
 
+  .mobile-filter-btn {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 10px;
+    font-size: 0.78rem;
+    min-height: 38px;
+  }
+
+  .btn-text-mobile {
+    display: inline !important;
+  }
+
   .header-actions .neo-btn {
-    padding: 6px 8px;
+    padding: 6px 10px;
     font-size: 0.78rem;
     min-height: 38px;
   }
@@ -1068,60 +1104,105 @@ html, body {
     display: inline !important;
   }
 
-  .mobile-filter-btn {
-    display: none !important;
-  }
-
+  /* FULL-BLEED MAP: Tampilkan Floating Action Button (FAB) persis seperti Galaxy A55 */
   .mobile-filter-fab {
-    display: none !important;
+    display: inline-flex !important;
+    position: absolute;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1200;
+    padding: 12px 24px;
+    font-family: var(--font-display);
+    font-size: 0.95rem;
+    font-weight: 800;
+    border-radius: 999px;
+    background-color: var(--color-r1);
+    border: var(--neo-border-width) solid var(--color-border);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4), 3px 3px 0 #000;
+    white-space: nowrap;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
   }
 
   .panel-backdrop {
-    display: none !important;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    height: 100dvh;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    z-index: 1400;
+    opacity: 0;
+    transition: opacity 0.25s ease;
+    pointer-events: none;
   }
 
-  /* Keep Floating Panel on the left as a neat card, NOT a bottom sheet! */
+  .panel-backdrop.active {
+    display: block !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+  }
+
+  /* Transform floating panel into a neat centered bottom sheet (max-width 520px) */
   #floating-panel {
-    position: absolute !important;
-    top: 12px !important;
-    left: 12px !important;
-    bottom: auto !important;
+    position: fixed !important;
+    top: auto !important;
+    bottom: 0 !important;
+    left: 50% !important;
     right: auto !important;
-    width: 310px !important;
-    max-width: 40vw !important;
-    max-height: calc(100vh - 82px) !important;
-    max-height: calc(100dvh - 82px) !important;
-    border-radius: 0 !important;
-    border: var(--neo-border-width) solid var(--color-border) !important;
-    box-shadow: var(--neo-shadow-lg) !important;
-    transform: none !important;
-    z-index: 1000 !important;
+    width: 100% !important;
+    max-width: 520px !important;
+    max-height: 86dvh !important;
+    border-radius: 16px 16px 0 0 !important;
+    border-left: var(--neo-border-width) solid var(--color-border) !important;
+    border-right: var(--neo-border-width) solid var(--color-border) !important;
+    border-top: var(--neo-border-width) solid var(--color-border) !important;
+    border-bottom: none !important;
+    box-shadow: 0 -8px 32px rgba(0, 0, 0, 0.4) !important;
+    z-index: 1600 !important;
+    transform: translate(-50%, 105%) !important;
+    transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  }
+
+  #floating-panel.mobile-panel-open {
+    transform: translate(-50%, 0) !important;
   }
 
   .mobile-drag-handle {
-    display: none !important;
+    display: block !important;
   }
 
-  #btn-close-mobile-panel {
-    display: none !important;
+  .panel-close-mobile {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    font-size: 0.85rem;
+    padding: 0;
+    min-width: 32px;
+    min-height: 32px;
   }
 
   .mobile-apply-btn {
-    display: none !important;
+    display: inline-flex !important;
   }
 
-  .mobile-stats-row {
-    display: none !important;
-  }
-
-  /* Right Side Detail Drawer (Proportional 420px / max 52vw) */
+  /* Right Side Detail Drawer: 440px or max 52vw */
   #detail-drawer {
     position: fixed !important;
     top: 0 !important;
     bottom: 0 !important;
     right: 0 !important;
     left: auto !important;
-    width: 420px !important;
+    width: 440px !important;
     max-width: 52vw !important;
     height: 100% !important;
     height: 100dvh !important;
@@ -1149,6 +1230,42 @@ html, body {
     width: 660px;
     max-width: 92vw;
     max-height: 86dvh;
+  }
+}
+
+/* Landscape Tablets (e.g. iPad Landscape 1024x768) */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  #header {
+    height: 56px;
+    padding: 0 12px;
+    gap: 8px;
+  }
+  .brand-text-full { display: none !important; }
+  .brand-text-med { display: inline-block !important; font-size: 0.95rem; font-weight: 800; white-space: nowrap; }
+  .header-stats { display: flex !important; gap: 5px; }
+  .stat-chip { padding: 4px 6px; font-size: 0.72rem; }
+  .stat-text-full { display: none !important; }
+  .stat-text-compact { display: inline !important; }
+  .header-actions { display: flex !important; gap: 6px; }
+  .header-actions .neo-btn { padding: 6px 8px; font-size: 0.78rem; }
+  .btn-text-full { display: none !important; }
+  .btn-text-compact { display: inline !important; }
+  .mobile-filter-btn { display: none !important; }
+  .mobile-filter-fab { display: none !important; }
+  #floating-panel {
+    position: absolute !important;
+    top: 10px !important;
+    left: 10px !important;
+    width: 290px !important;
+    max-width: 32vw !important;
+    max-height: calc(100vh - 76px) !important;
+    border-radius: 0 !important;
+    transform: none !important;
+    box-shadow: var(--neo-shadow-lg) !important;
+  }
+  #detail-drawer {
+    width: 400px !important;
+    max-width: 45vw !important;
   }
 }
 
