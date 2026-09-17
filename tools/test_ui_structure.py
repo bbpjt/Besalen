@@ -1,4 +1,4 @@
-﻿import os
+import os
 import sys
 
 def test_ui_structure():
@@ -21,7 +21,7 @@ def test_ui_structure():
         "map", "stat-r1", "stat-r2", "stat-r3", "stat-kab",
         "btn-export-gis", "btn-analytics", "btn-methodology",
         "floating-panel", "search-input", "filter-r1", "filter-r2", "filter-r3",
-        "select-karesidenan", "select-ekologi", "toggle-boundaries",
+        "select-karesidenan", "toggle-boundaries",
         "detail-drawer", "drawer-close-btn", "drawer-title", "drawer-badge",
         "tab-profil", "tab-tuturan", "tab-media", "tab-transkrip", "tab-pustaka",
         "modal-export", "modal-analytics", "modal-methodology"

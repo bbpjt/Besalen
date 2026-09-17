@@ -1,4 +1,4 @@
-﻿import os
+import os
 import sys
 import re
 import json
@@ -37,9 +37,9 @@ def test_data_integrity():
     print(f"Counts: Ring1={len(r1)}, Ring2={len(r2)}, Ring3={len(r3)}, Ring4={len(r4)}, Kab={len(kab)}")
     
     assert len(r1) == 3, f"Expected 3 Ring 1 items, got {len(r1)}"
-    assert len(r2) == 44, f"Expected 44 Ring 2 items, got {len(r2)}"
+    assert len(r2) == 45, f"Expected 45 Ring 2 items, got {len(r2)}"
     assert len(r3) == 44, f"Expected 44 Ring 3 items, got {len(r3)}"
-    assert len(r4) == 40, f"Expected 41 Ring 4 items, got {len(r4)}"
+    assert len(r4) == 39, f"Expected 39 Ring 4 items, got {len(r4)}"
     assert len(kab) == 35, f"Expected 35 Kabupaten, got {len(kab)}"
     
     # Check coordinates for spatial items (Ring 1, 2, 3)

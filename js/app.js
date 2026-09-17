@@ -377,7 +377,7 @@
       </div>
       <div style="background: #fdfbf7; border: 2px solid #000; box-shadow: 2px 2px 0px #000; padding: 10px; margin-top: 10px;">
         <div style="font-size: 0.75rem; color: #555; font-weight: 700; margin-bottom: 4px; display: flex; align-items: center; gap: 6px;">
-          <i class="fa-solid fa-graduation-cap text-yellow-600"></i> Rujukan Ilmiah Verifikasi:
+          <i class="fa-solid fa-graduation-cap text-yellow-600"></i> Rujukan Ilmiah:
         </div>
         <div style="font-size: 0.82rem; font-style: italic; color: #111; margin-bottom: 8px;">
           "${sourceSummary}"
@@ -666,13 +666,13 @@
       badgeSub = 'Primer Balai Bahasa';
     } else if (ringLevel === 2) {
       badgeClass = 'badge-r2';
-      badgeTitle = 'Rujukan Akademik Berteks';
-      badgeSub = 'Jurnal Ilmiah Terindeks';
+      badgeTitle = 'Rujukan Akademik';
+      badgeSub = '';
     } else if (ringLevel === 3) {
       badgeClass = 'badge-r3';
       if (url1 && url1.includes('dapobud.kemenbud.go.id')) {
         badgeTitle = 'Registrasi WBTB Nasional';
-        badgeSub = 'Prioritas Pengamatan Lapangan';
+        badgeSub = '';
       } else if (url1 && (url1.includes('doi.org') || url1.includes('journal') || url1.includes('ejournal') || url1.includes('garuda'))) {
         badgeTitle = 'Kajian Akademik Pendukung';
         badgeSub = 'Perlu Transkripsi Lapangan';
@@ -733,7 +733,7 @@
           <span class="neo-badge ${badgeClass}" style="font-size:0.75rem; padding:3px 8px;">
             <i class="fa-solid fa-bookmark"></i> ${badgeTitle}
           </span>
-          <span style="font-size:0.75rem; color:#555; font-weight:700;">${badgeSub}</span>
+          ${badgeSub ? `<span style="font-size:0.75rem; color:#555; font-weight:700;">${badgeSub}</span>` : ''}
         </div>
 
         <div style="padding: 12px; background: #fffbe6; border: 2.5px solid #000; box-shadow: 3px 3px 0px #000; margin-bottom: 10px; font-size: 0.88rem; line-height: 1.55;">
@@ -742,7 +742,7 @@
 
         ${item.dasar_bukti_1 ? `
           <div style="font-size: 0.8rem; background: #fff; border: 2px solid #000; border-left: 5px solid #FF6B35; padding: 8px 10px; margin-bottom: 10px; color: #111;">
-            <strong style="color: #c2410c;"><i class="fa-solid fa-check-double"></i> Dasar Bukti Tekstual:</strong><br>
+            <strong style="color: #c2410c;"><i class="fa-solid fa-check-double"></i> Asumsi:</strong><br>
             <span style="margin-top: 2px; display: inline-block;">${item.dasar_bukti_1}</span>
           </div>
         ` : ''}
@@ -800,19 +800,6 @@
         </div>
       `;
     }
-
-    // Informasi Ringkasan Metodologis
-    let noteText = 'Seluruh rujukan akademik telah melalui uji kurasi komprehensif Balai Bahasa Provinsi Jawa Tengah untuk memastikan keterpenuhan korpus sastra tutur lisan.';
-    if (ringLevel === 3) {
-      noteText = 'Objek berstatus Ring 3 adalah tradisi yang tercatat dalam pangkalan data budaya daerah/WBTB, namun belum memiliki transkripsi teks sastra lisan di jurnal ilmiah bereputasi. Status ini menjadi panduan prioritas bagi tim Balai Bahasa untuk melakukan perekaman dan pengujian korpus tutur langsung di lapangan.';
-    }
-
-    html += `
-      <div style="margin-top: 16px; background: #fdfaf6; border: 1.5px solid #999; padding: 10px; font-size: 0.75rem; color: #444; line-height: 1.4;">
-        <i class="fa-solid fa-circle-info text-blue-600"></i>
-        ${noteText}
-      </div>
-    `;
 
     citationEl.innerHTML = html;
   }
@@ -1695,10 +1682,13 @@ window.SASTRA_DATA = ${JSON.stringify(window.SASTRA_DATA, null, 2)};
       state.selectedKaresidenan = e.target.value;
       applyFilters(true);
     });
-    document.getElementById('select-ekologi').addEventListener('change', function (e) {
-      state.selectedEkologi = e.target.value;
-      applyFilters(true);
-    });
+    const selectEkologi = document.getElementById('select-ekologi');
+    if (selectEkologi) {
+      selectEkologi.addEventListener('change', function (e) {
+        state.selectedEkologi = e.target.value;
+        applyFilters(true);
+      });
+    }
 
     // 4. Toggle Boundaries
     document.getElementById('toggle-boundaries').addEventListener('change', function (e) {
@@ -1720,7 +1710,8 @@ window.SASTRA_DATA = ${JSON.stringify(window.SASTRA_DATA, null, 2)};
       state.filterR3 = true;
       document.getElementById('select-karesidenan').value = 'ALL';
       state.selectedKaresidenan = 'ALL';
-      document.getElementById('select-ekologi').value = 'ALL';
+      const elEko = document.getElementById('select-ekologi');
+      if (elEko) elEko.value = 'ALL';
       state.selectedEkologi = 'ALL';
       const previewEl = document.getElementById('search-results-preview');
       if (previewEl) {

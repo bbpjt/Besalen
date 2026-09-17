@@ -1156,11 +1156,11 @@ window.SASTRA_DATA = {
       "status_kerja": "PRIORITAS OBSERVASI & PEREKAMAN LAPANGAN",
       "unsur_teks": "arak-arakan/ritual, teks belum ditranskripsi",
       "catatan_kritis": "Tercatat dalam registrasi Warisan Budaya Takbenda (WBTB). Belum ditemukan artikel jurnal ilmiah yang mentranskripsikan teks sastra lisan secara utuh. Objek prioritas perekaman tutur dan verifikasi lapangan.",
-      "sumber_referensi": "Inventarisasi WBTB Kemendikbudristek & Balai Bahasa Provinsi Jawa Tengah",
+      "sumber_referensi": "Inventarisasi WBTB Kementerian Kebudayaan",
       "url1": "https://dapobud.kemenbud.go.id/wbtb/detail-wbtb/?id=fdaead84-ba04-4768-9879-7dfacf2a966b",
       "latitude": -6.96303,
       "longitude": 110.405648,
-      "sumber_ilmiah_1": "Inventarisasi WBTB Kemendikbudristek & Balai Bahasa Provinsi Jawa Tengah"
+      "sumber_ilmiah_1": "Inventarisasi WBTB Kementerian Kebudayaan"
     },
     {
       "id": "SLJT-R3-002",
@@ -1290,11 +1290,11 @@ window.SASTRA_DATA = {
       "status_kerja": "PRIORITAS OBSERVASI & PEREKAMAN LAPANGAN",
       "unsur_teks": "seni musik instrumental, teks vokal belum dipilah",
       "catatan_kritis": "Tercatat dalam registrasi Warisan Budaya Takbenda (WBTB). Belum ditemukan artikel jurnal ilmiah yang mentranskripsikan teks sastra lisan secara utuh. Objek prioritas perekaman tutur dan verifikasi lapangan.",
-      "sumber_referensi": "Inventarisasi WBTB Kemendikbudristek & Balai Bahasa Provinsi Jawa Tengah",
+      "sumber_referensi": "Inventarisasi WBTB Kementerian Kebudayaan",
       "url1": "https://dapobud.kemenbud.go.id/wbtb/detail-wbtb/?id=c9366195-fffe-4391-b35f-340041f02219",
       "latitude": -7.571495,
       "longitude": 110.850175,
-      "sumber_ilmiah_1": "Inventarisasi WBTB Kemendikbudristek & Balai Bahasa Provinsi Jawa Tengah"
+      "sumber_ilmiah_1": "Inventarisasi WBTB Kementerian Kebudayaan"
     },
     {
       "id": "SLJT-R3-009",
@@ -1446,11 +1446,11 @@ window.SASTRA_DATA = {
       "status_kerja": "PRIORITAS OBSERVASI & PEREKAMAN LAPANGAN",
       "unsur_teks": "upacara maulid nabi, kidung belum ditranskripsi",
       "catatan_kritis": "Tercatat dalam registrasi Warisan Budaya Takbenda (WBTB). Belum ditemukan artikel jurnal ilmiah yang mentranskripsikan teks sastra lisan secara utuh. Objek prioritas perekaman tutur dan verifikasi lapangan.",
-      "sumber_referensi": "Inventarisasi WBTB Kemendikbudristek & Balai Bahasa Provinsi Jawa Tengah",
+      "sumber_referensi": "Inventarisasi WBTB Kementerian Kebudayaan",
       "url1": "https://dapobud.kemenbud.go.id/wbtb/detail-wbtb/?id=804c4454-1455-43a2-9a8b-c2774951296f",
       "latitude": -6.747843,
       "longitude": 111.059121,
-      "sumber_ilmiah_1": "Inventarisasi WBTB Kemendikbudristek & Balai Bahasa Provinsi Jawa Tengah"
+      "sumber_ilmiah_1": "Inventarisasi WBTB Kementerian Kebudayaan"
     },
     {
       "id": "SLJT-R3-017",
@@ -1464,11 +1464,11 @@ window.SASTRA_DATA = {
       "status_kerja": "PRIORITAS OBSERVASI & PEREKAMAN LAPANGAN",
       "unsur_teks": "upacara bersih dusun, teks doa belum ditranskripsi",
       "catatan_kritis": "Tercatat dalam registrasi Warisan Budaya Takbenda (WBTB). Belum ditemukan artikel jurnal ilmiah yang mentranskripsikan teks sastra lisan secara utuh. Objek prioritas perekaman tutur dan verifikasi lapangan.",
-      "sumber_referensi": "Inventarisasi WBTB Kemendikbudristek & Balai Bahasa Provinsi Jawa Tengah",
+      "sumber_referensi": "Inventarisasi WBTB Kementerian Kebudayaan",
       "url1": "https://dapobud.kemenbud.go.id/wbtb/detail-wbtb/?id=eb914890-cf43-4f07-bff6-4dbba76b6a44",
       "latitude": -7.589736,
       "longitude": 110.923224,
-      "sumber_ilmiah_1": "Inventarisasi WBTB Kemendikbudristek & Balai Bahasa Provinsi Jawa Tengah"
+      "sumber_ilmiah_1": "Inventarisasi WBTB Kementerian Kebudayaan"
     },
     {
       "id": "SLJT-R3-018",
@@ -1482,11 +1482,11 @@ window.SASTRA_DATA = {
       "status_kerja": "PRIORITAS OBSERVASI & PEREKAMAN LAPANGAN",
       "unsur_teks": "upacara adat sunda-jawa, ujaran adat belum ditranskripsi",
       "catatan_kritis": "Tercatat dalam registrasi Warisan Budaya Takbenda (WBTB). Belum ditemukan artikel jurnal ilmiah yang mentranskripsikan teks sastra lisan secara utuh. Objek prioritas perekaman tutur dan verifikasi lapangan.",
-      "sumber_referensi": "Inventarisasi WBTB Kemendikbudristek & Balai Bahasa Provinsi Jawa Tengah",
+      "sumber_referensi": "Inventarisasi WBTB Kementerian Kebudayaan",
       "url1": "https://dapobud.kemenbud.go.id/wbtb/detail-wbtb/?id=ab91dc5c-cd3d-459a-b107-66447aa437e2",
       "latitude": -7.056825,
       "longitude": 108.961729,
-      "sumber_ilmiah_1": "Inventarisasi WBTB Kemendikbudristek & Balai Bahasa Provinsi Jawa Tengah"
+      "sumber_ilmiah_1": "Inventarisasi WBTB Kementerian Kebudayaan"
     },
     {
       "id": "SLJT-R3-019",
@@ -1500,11 +1500,11 @@ window.SASTRA_DATA = {
       "status_kerja": "PRIORITAS OBSERVASI & PEREKAMAN LAPANGAN",
       "unsur_teks": "ritual agraris pegunungan, mantra belum ditranskripsi",
       "catatan_kritis": "Tercatat dalam registrasi Warisan Budaya Takbenda (WBTB). Belum ditemukan artikel jurnal ilmiah yang mentranskripsikan teks sastra lisan secara utuh. Objek prioritas perekaman tutur dan verifikasi lapangan.",
-      "sumber_referensi": "Inventarisasi WBTB Kemendikbudristek & Balai Bahasa Provinsi Jawa Tengah",
+      "sumber_referensi": "Inventarisasi WBTB Kementerian Kebudayaan",
       "url1": "https://dapobud.kemenbud.go.id/wbtb/detail-wbtb/?id=7aff8052-61d0-4143-920e-602afff52c01",
       "latitude": -7.040981,
       "longitude": 109.630377,
-      "sumber_ilmiah_1": "Inventarisasi WBTB Kemendikbudristek & Balai Bahasa Provinsi Jawa Tengah"
+      "sumber_ilmiah_1": "Inventarisasi WBTB Kementerian Kebudayaan"
     },
     {
       "id": "SLJT-R3-020",
@@ -1536,11 +1536,11 @@ window.SASTRA_DATA = {
       "status_kerja": "PRIORITAS OBSERVASI & PEREKAMAN LAPANGAN",
       "unsur_teks": "atraksi pertunjukan api, mitos belum ditranskripsi utuh",
       "catatan_kritis": "Tercatat dalam registrasi Warisan Budaya Takbenda (WBTB). Belum ditemukan artikel jurnal ilmiah yang mentranskripsikan teks sastra lisan secara utuh. Objek prioritas perekaman tutur dan verifikasi lapangan.",
-      "sumber_referensi": "Inventarisasi WBTB Kemendikbudristek & Balai Bahasa Provinsi Jawa Tengah",
+      "sumber_referensi": "Inventarisasi WBTB Kementerian Kebudayaan",
       "url1": "https://dapobud.kemenbud.go.id/wbtb/detail-wbtb/?id=6b28861d-7180-4195-8dd9-3e97a0f9fd15",
       "latitude": -6.594544,
       "longitude": 110.708897,
-      "sumber_ilmiah_1": "Inventarisasi WBTB Kemendikbudristek & Balai Bahasa Provinsi Jawa Tengah"
+      "sumber_ilmiah_1": "Inventarisasi WBTB Kementerian Kebudayaan"
     },
     {
       "id": "SLJT-R3-022",
@@ -1554,11 +1554,11 @@ window.SASTRA_DATA = {
       "status_kerja": "PRIORITAS OBSERVASI & PEREKAMAN LAPANGAN",
       "unsur_teks": "pesta sedekah laut kupatan, doa belum ditranskripsi",
       "catatan_kritis": "Tercatat dalam registrasi Warisan Budaya Takbenda (WBTB). Belum ditemukan artikel jurnal ilmiah yang mentranskripsikan teks sastra lisan secara utuh. Objek prioritas perekaman tutur dan verifikasi lapangan.",
-      "sumber_referensi": "Inventarisasi WBTB Kemendikbudristek & Balai Bahasa Provinsi Jawa Tengah",
+      "sumber_referensi": "Inventarisasi WBTB Kementerian Kebudayaan",
       "url1": "https://dapobud.kemenbud.go.id/wbtb/detail-wbtb/?id=d13e749c-e88f-40d8-830a-2c49e387fea8",
       "latitude": -6.589,
       "longitude": 110.658,
-      "sumber_ilmiah_1": "Inventarisasi WBTB Kemendikbudristek & Balai Bahasa Provinsi Jawa Tengah"
+      "sumber_ilmiah_1": "Inventarisasi WBTB Kementerian Kebudayaan"
     },
     {
       "id": "SLJT-R3-023",
@@ -1572,11 +1572,11 @@ window.SASTRA_DATA = {
       "status_kerja": "PRIORITAS OBSERVASI & PEREKAMAN LAPANGAN",
       "unsur_teks": "upacara pencukuran anak gembel, mantra belum ditranskripsi",
       "catatan_kritis": "Tercatat dalam registrasi Warisan Budaya Takbenda (WBTB). Belum ditemukan artikel jurnal ilmiah yang mentranskripsikan teks sastra lisan secara utuh. Objek prioritas perekaman tutur dan verifikasi lapangan.",
-      "sumber_referensi": "Inventarisasi WBTB Kemendikbudristek & Balai Bahasa Provinsi Jawa Tengah",
+      "sumber_referensi": "Inventarisasi WBTB Kementerian Kebudayaan",
       "url1": "https://dapobud.kemenbud.go.id/wbtb/detail-wbtb/?id=baf2a0c5-b819-4b88-9581-79dfec59aceb",
       "latitude": -7.2045,
       "longitude": 109.9042,
-      "sumber_ilmiah_1": "Inventarisasi WBTB Kemendikbudristek & Balai Bahasa Provinsi Jawa Tengah"
+      "sumber_ilmiah_1": "Inventarisasi WBTB Kementerian Kebudayaan"
     },
     {
       "id": "SLJT-R3-024",
@@ -1608,11 +1608,11 @@ window.SASTRA_DATA = {
       "status_kerja": "PRIORITAS OBSERVASI & PEREKAMAN LAPANGAN",
       "unsur_teks": "upacara panen, mantra belum dibuktikan",
       "catatan_kritis": "Tercatat dalam registrasi Warisan Budaya Takbenda (WBTB). Belum ditemukan artikel jurnal ilmiah yang mentranskripsikan teks sastra lisan secara utuh. Objek prioritas perekaman tutur dan verifikasi lapangan.",
-      "sumber_referensi": "Inventarisasi WBTB Kemendikbudristek & Balai Bahasa Provinsi Jawa Tengah",
+      "sumber_referensi": "Inventarisasi WBTB Kementerian Kebudayaan",
       "url1": "https://dapobud.kemenbud.go.id/wbtb/detail-wbtb/?id=d1b2a4e9-a4a8-4dc3-b187-47141668fabb",
       "latitude": -7.381468,
       "longitude": 109.649887,
-      "sumber_ilmiah_1": "Inventarisasi WBTB Kemendikbudristek & Balai Bahasa Provinsi Jawa Tengah"
+      "sumber_ilmiah_1": "Inventarisasi WBTB Kementerian Kebudayaan"
     },
     {
       "id": "SLJT-R3-026",
@@ -1626,11 +1626,11 @@ window.SASTRA_DATA = {
       "status_kerja": "PRIORITAS OBSERVASI & PEREKAMAN LAPANGAN",
       "unsur_teks": "ajaran gugon tuhon samin, teks tuturan lisan belum dihimpun",
       "catatan_kritis": "Tercatat dalam registrasi Warisan Budaya Takbenda (WBTB). Belum ditemukan artikel jurnal ilmiah yang mentranskripsikan teks sastra lisan secara utuh. Objek prioritas perekaman tutur dan verifikasi lapangan.",
-      "sumber_referensi": "Inventarisasi WBTB Kemendikbudristek & Balai Bahasa Provinsi Jawa Tengah",
+      "sumber_referensi": "Inventarisasi WBTB Kementerian Kebudayaan",
       "url1": "https://dapobud.kemenbud.go.id/wbtb/detail-wbtb/?id=f52685c7-e3b6-4a78-926f-2a52fd13247e",
       "latitude": -7.04859,
       "longitude": 111.445171,
-      "sumber_ilmiah_1": "Inventarisasi WBTB Kemendikbudristek & Balai Bahasa Provinsi Jawa Tengah"
+      "sumber_ilmiah_1": "Inventarisasi WBTB Kementerian Kebudayaan"
     },
     {
       "id": "SLJT-R3-027",
@@ -1644,11 +1644,11 @@ window.SASTRA_DATA = {
       "status_kerja": "PRIORITAS OBSERVASI & PEREKAMAN LAPANGAN",
       "unsur_teks": "upacara maulid nabi, gendhing kemanak belum dipilah teksnya",
       "catatan_kritis": "Tercatat dalam registrasi Warisan Budaya Takbenda (WBTB). Belum ditemukan artikel jurnal ilmiah yang mentranskripsikan teks sastra lisan secara utuh. Objek prioritas perekaman tutur dan verifikasi lapangan.",
-      "sumber_referensi": "Inventarisasi WBTB Kemendikbudristek & Balai Bahasa Provinsi Jawa Tengah",
+      "sumber_referensi": "Inventarisasi WBTB Kementerian Kebudayaan",
       "url1": "https://dapobud.kemenbud.go.id/wbtb/detail-wbtb/?id=3ff1011a-c531-4cc5-8770-483c9b1dd484",
       "latitude": -7.555001,
       "longitude": 110.825205,
-      "sumber_ilmiah_1": "Inventarisasi WBTB Kemendikbudristek & Balai Bahasa Provinsi Jawa Tengah"
+      "sumber_ilmiah_1": "Inventarisasi WBTB Kementerian Kebudayaan"
     },
     {
       "id": "SLJT-R3-028",
@@ -1662,11 +1662,11 @@ window.SASTRA_DATA = {
       "status_kerja": "PRIORITAS OBSERVASI & PEREKAMAN LAPANGAN",
       "unsur_teks": "tari istana, teks tembang belum ditranskripsi",
       "catatan_kritis": "Tercatat dalam registrasi Warisan Budaya Takbenda (WBTB). Belum ditemukan artikel jurnal ilmiah yang mentranskripsikan teks sastra lisan secara utuh. Objek prioritas perekaman tutur dan verifikasi lapangan.",
-      "sumber_referensi": "Inventarisasi WBTB Kemendikbudristek & Balai Bahasa Provinsi Jawa Tengah",
+      "sumber_referensi": "Inventarisasi WBTB Kementerian Kebudayaan",
       "url1": "https://dapobud.kemenbud.go.id/wbtb/detail-wbtb/?id=a855dd9e-74b5-49c3-825a-b643027095a6",
       "latitude": -7.5772,
       "longitude": 110.8271,
-      "sumber_ilmiah_1": "Inventarisasi WBTB Kemendikbudristek & Balai Bahasa Provinsi Jawa Tengah"
+      "sumber_ilmiah_1": "Inventarisasi WBTB Kementerian Kebudayaan"
     },
     {
       "id": "SLJT-R3-029",
@@ -1680,11 +1680,11 @@ window.SASTRA_DATA = {
       "status_kerja": "PRIORITAS OBSERVASI & PEREKAMAN LAPANGAN",
       "unsur_teks": "tari bedhaya-srimpi, teks sindhenan belum ditelaah",
       "catatan_kritis": "Tercatat dalam registrasi Warisan Budaya Takbenda (WBTB). Belum ditemukan artikel jurnal ilmiah yang mentranskripsikan teks sastra lisan secara utuh. Objek prioritas perekaman tutur dan verifikasi lapangan.",
-      "sumber_referensi": "Inventarisasi WBTB Kemendikbudristek & Balai Bahasa Provinsi Jawa Tengah",
+      "sumber_referensi": "Inventarisasi WBTB Kementerian Kebudayaan",
       "url1": "https://dapobud.kemenbud.go.id/wbtb/detail-wbtb/?id=c93e66ab-84cc-4b91-9f4c-51a112cfa06c",
       "latitude": -7.567412,
       "longitude": 110.860211,
-      "sumber_ilmiah_1": "Inventarisasi WBTB Kemendikbudristek & Balai Bahasa Provinsi Jawa Tengah"
+      "sumber_ilmiah_1": "Inventarisasi WBTB Kementerian Kebudayaan"
     },
     {
       "id": "SLJT-R3-030",
@@ -1698,11 +1698,11 @@ window.SASTRA_DATA = {
       "status_kerja": "PRIORITAS OBSERVASI & PEREKAMAN LAPANGAN",
       "unsur_teks": "tari klasik ksatria putri, teks belum dibuktikan",
       "catatan_kritis": "Tercatat dalam registrasi Warisan Budaya Takbenda (WBTB). Belum ditemukan artikel jurnal ilmiah yang mentranskripsikan teks sastra lisan secara utuh. Objek prioritas perekaman tutur dan verifikasi lapangan.",
-      "sumber_referensi": "Inventarisasi WBTB Kemendikbudristek & Balai Bahasa Provinsi Jawa Tengah",
+      "sumber_referensi": "Inventarisasi WBTB Kementerian Kebudayaan",
       "url1": "https://dapobud.kemenbud.go.id/wbtb/detail-wbtb/?id=35884135-4e5e-4b72-95d3-e2860632d881",
       "latitude": -7.568,
       "longitude": 110.8215,
-      "sumber_ilmiah_1": "Inventarisasi WBTB Kemendikbudristek & Balai Bahasa Provinsi Jawa Tengah"
+      "sumber_ilmiah_1": "Inventarisasi WBTB Kementerian Kebudayaan"
     },
     {
       "id": "SLJT-R3-031",
@@ -1716,11 +1716,11 @@ window.SASTRA_DATA = {
       "status_kerja": "PRIORITAS OBSERVASI & PEREKAMAN LAPANGAN",
       "unsur_teks": "tari keraton, teks tembang belum ditranskripsi",
       "catatan_kritis": "Tercatat dalam registrasi Warisan Budaya Takbenda (WBTB). Belum ditemukan artikel jurnal ilmiah yang mentranskripsikan teks sastra lisan secara utuh. Objek prioritas perekaman tutur dan verifikasi lapangan.",
-      "sumber_referensi": "Inventarisasi WBTB Kemendikbudristek & Balai Bahasa Provinsi Jawa Tengah",
+      "sumber_referensi": "Inventarisasi WBTB Kementerian Kebudayaan",
       "url1": "https://dapobud.kemenbud.go.id/wbtb/detail-wbtb/?id=4064f2c0-306c-45af-b8cf-2a12830caaf7",
       "latitude": -7.584805,
       "longitude": 110.827434,
-      "sumber_ilmiah_1": "Inventarisasi WBTB Kemendikbudristek & Balai Bahasa Provinsi Jawa Tengah"
+      "sumber_ilmiah_1": "Inventarisasi WBTB Kementerian Kebudayaan"
     },
     {
       "id": "SLJT-R3-032",
@@ -1734,11 +1734,11 @@ window.SASTRA_DATA = {
       "status_kerja": "PRIORITAS OBSERVASI & PEREKAMAN LAPANGAN",
       "unsur_teks": "tari intrik diplomasi, teks belum ditranskripsi",
       "catatan_kritis": "Tercatat dalam registrasi Warisan Budaya Takbenda (WBTB). Belum ditemukan artikel jurnal ilmiah yang mentranskripsikan teks sastra lisan secara utuh. Objek prioritas perekaman tutur dan verifikasi lapangan.",
-      "sumber_referensi": "Inventarisasi WBTB Kemendikbudristek & Balai Bahasa Provinsi Jawa Tengah",
+      "sumber_referensi": "Inventarisasi WBTB Kementerian Kebudayaan",
       "url1": "https://dapobud.kemenbud.go.id/wbtb/detail-wbtb/?id=db4a82a6-610a-41ef-824e-effec0250957",
       "latitude": -7.549089,
       "longitude": 110.838823,
-      "sumber_ilmiah_1": "Inventarisasi WBTB Kemendikbudristek & Balai Bahasa Provinsi Jawa Tengah"
+      "sumber_ilmiah_1": "Inventarisasi WBTB Kementerian Kebudayaan"
     },
     {
       "id": "SLJT-R3-033",
@@ -1752,11 +1752,11 @@ window.SASTRA_DATA = {
       "status_kerja": "PRIORITAS OBSERVASI & PEREKAMAN LAPANGAN",
       "unsur_teks": "upacara suran seniman petani, tuturan doa belum dihimpun",
       "catatan_kritis": "Tercatat dalam registrasi Warisan Budaya Takbenda (WBTB). Belum ditemukan artikel jurnal ilmiah yang mentranskripsikan teks sastra lisan secara utuh. Objek prioritas perekaman tutur dan verifikasi lapangan.",
-      "sumber_referensi": "Inventarisasi WBTB Kemendikbudristek & Balai Bahasa Provinsi Jawa Tengah",
+      "sumber_referensi": "Inventarisasi WBTB Kementerian Kebudayaan",
       "url1": "https://dapobud.kemenbud.go.id/wbtb/detail-wbtb/?id=b4469d60-ab9a-4d6f-a840-2cafeba0bd16",
       "latitude": -7.543628,
       "longitude": 110.180785,
-      "sumber_ilmiah_1": "Inventarisasi WBTB Kemendikbudristek & Balai Bahasa Provinsi Jawa Tengah"
+      "sumber_ilmiah_1": "Inventarisasi WBTB Kementerian Kebudayaan"
     },
     {
       "id": "SLJT-R3-034",
@@ -1770,11 +1770,11 @@ window.SASTRA_DATA = {
       "status_kerja": "PRIORITAS OBSERVASI & PEREKAMAN LAPANGAN",
       "unsur_teks": "tradisi lisan lokal, teks belum ditemukan dalam jurnal",
       "catatan_kritis": "Tercatat dalam registrasi Warisan Budaya Takbenda (WBTB). Belum ditemukan artikel jurnal ilmiah yang mentranskripsikan teks sastra lisan secara utuh. Objek prioritas perekaman tutur dan verifikasi lapangan.",
-      "sumber_referensi": "Inventarisasi WBTB Kemendikbudristek & Balai Bahasa Provinsi Jawa Tengah",
+      "sumber_referensi": "Inventarisasi WBTB Kementerian Kebudayaan",
       "url1": "https://dapobud.kemenbud.go.id/wbtb/detail-wbtb/?id=21d8a381-c013-44eb-90f5-dc66e63b3ff5",
       "latitude": -7.476279,
       "longitude": 109.284989,
-      "sumber_ilmiah_1": "Inventarisasi WBTB Kemendikbudristek & Balai Bahasa Provinsi Jawa Tengah"
+      "sumber_ilmiah_1": "Inventarisasi WBTB Kementerian Kebudayaan"
     },
     {
       "id": "SLJT-R3-035",
@@ -1788,11 +1788,11 @@ window.SASTRA_DATA = {
       "status_kerja": "PRIORITAS OBSERVASI & PEREKAMAN LAPANGAN",
       "unsur_teks": "tari topeng kayu liar, mantra pemanggil belum ditranskripsi",
       "catatan_kritis": "Tercatat dalam registrasi Warisan Budaya Takbenda (WBTB). Belum ditemukan artikel jurnal ilmiah yang mentranskripsikan teks sastra lisan secara utuh. Objek prioritas perekaman tutur dan verifikasi lapangan.",
-      "sumber_referensi": "Inventarisasi WBTB Kemendikbudristek & Balai Bahasa Provinsi Jawa Tengah",
+      "sumber_referensi": "Inventarisasi WBTB Kementerian Kebudayaan",
       "url1": "https://dapobud.kemenbud.go.id/wbtb/detail-wbtb/?id=5d848cc8-d954-47a9-af2d-da0fcfd48a2e",
       "latitude": -7.640842,
       "longitude": 109.660001,
-      "sumber_ilmiah_1": "Inventarisasi WBTB Kemendikbudristek & Balai Bahasa Provinsi Jawa Tengah"
+      "sumber_ilmiah_1": "Inventarisasi WBTB Kementerian Kebudayaan"
     },
     {
       "id": "SLJT-R3-036",
@@ -1826,11 +1826,11 @@ window.SASTRA_DATA = {
       "status_kerja": "PRIORITAS OBSERVASI & PEREKAMAN LAPANGAN",
       "unsur_teks": "tari pethilan wayang, dialog belum ditranskripsi",
       "catatan_kritis": "Tercatat dalam registrasi Warisan Budaya Takbenda (WBTB). Belum ditemukan artikel jurnal ilmiah yang mentranskripsikan teks sastra lisan secara utuh. Objek prioritas perekaman tutur dan verifikasi lapangan.",
-      "sumber_referensi": "Inventarisasi WBTB Kemendikbudristek & Balai Bahasa Provinsi Jawa Tengah",
+      "sumber_referensi": "Inventarisasi WBTB Kementerian Kebudayaan",
       "url1": "https://dapobud.kemenbud.go.id/wbtb/detail-wbtb/?id=92785823-8859-417b-a129-9927207f4ce8",
       "latitude": -7.555595,
       "longitude": 110.857179,
-      "sumber_ilmiah_1": "Inventarisasi WBTB Kemendikbudristek & Balai Bahasa Provinsi Jawa Tengah"
+      "sumber_ilmiah_1": "Inventarisasi WBTB Kementerian Kebudayaan"
     },
     {
       "id": "SLJT-R3-038",
@@ -1844,11 +1844,11 @@ window.SASTRA_DATA = {
       "status_kerja": "PRIORITAS OBSERVASI & PEREKAMAN LAPANGAN",
       "unsur_teks": "kuda kepang putih merapi, mantra pawang belum dibuktikan",
       "catatan_kritis": "Tercatat dalam registrasi Warisan Budaya Takbenda (WBTB). Belum ditemukan artikel jurnal ilmiah yang mentranskripsikan teks sastra lisan secara utuh. Objek prioritas perekaman tutur dan verifikasi lapangan.",
-      "sumber_referensi": "Inventarisasi WBTB Kemendikbudristek & Balai Bahasa Provinsi Jawa Tengah",
+      "sumber_referensi": "Inventarisasi WBTB Kementerian Kebudayaan",
       "url1": "https://dapobud.kemenbud.go.id/wbtb/detail-wbtb/?id=bd9eea0e-f14a-400c-b1ff-8767d3fcf1bf",
       "latitude": -7.510954,
       "longitude": 110.561877,
-      "sumber_ilmiah_1": "Inventarisasi WBTB Kemendikbudristek & Balai Bahasa Provinsi Jawa Tengah"
+      "sumber_ilmiah_1": "Inventarisasi WBTB Kementerian Kebudayaan"
     },
     {
       "id": "SLJT-R3-039",
