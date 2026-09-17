@@ -112,6 +112,16 @@ html, body {
   color: #fff;
 }
 
+.neo-btn-green {
+  background-color: #22C55E;
+  color: #000;
+}
+
+.neo-btn-green:hover {
+  background-color: #16A34A;
+  color: #fff;
+}
+
 .neo-badge {
   display: inline-flex;
   align-items: center;

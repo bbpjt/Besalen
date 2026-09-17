@@ -473,11 +473,10 @@
         <!-- Instruksi Singkat -->
         <div class="info-card" style="margin-bottom: 14px; padding: 10px 14px; background: var(--color-r2-light);">
           <p style="font-size: 0.78rem; line-height: 1.45;">
-            <strong>💡 Alur Kerja Penyuntingan:</strong><br>
+            <strong>💡 Alur Kerja Simpan Otomatis:</strong><br>
             1. Pilih sastra lisan dari daftar di bawah (atau buat tradisi baru).<br>
-            2. Ubah data (lokasi kabupaten/kota, koordinat peta, maestro, narasi profil, video youtube, rujukan pustaka).<br>
-            3. Klik <strong>Terapkan ke Peta (Live Preview)</strong> untuk langsung melihat perubahannya di peta tanpa reload.<br>
-            4. Klik <strong>Unduh sastra_data.js Terbaru</strong> untuk mengunduh berkas data yang sudah diperbarui, lalu timpa file <code>data/sastra_data.js</code> dan push ke GitHub repository Anda.
+            2. Ubah data (lokasi, koordinat peta, maestro, narasi profil, video youtube, rujukan pustaka).<br>
+            3. Klik tombol hijau <strong>Simpan Otomatis ke GitHub</strong>: data akan langsung di-commit ke repositori GitHub dan GitHub Pages akan otomatis menyajikan pembaruan tanpa perlu membuka terminal atau download file apa pun!
           </p>
         </div>
 
@@ -667,6 +666,36 @@
             </div>
           </div>
 
+          <!-- Integrasi Otomatis GitHub Pages (1-Click Sync) -->
+          <div class="info-card" style="margin-top: 14px; background-color: #F0FDF4; border: 2px solid #000; border-left: 6px solid #22C55E;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+              <strong style="font-size: 0.85rem; color: #14532D;"><i class="fa-brands fa-github"></i> Pengaturan Otomatisasi GitHub Pages</strong>
+              <button type="button" id="btn-toggle-gh-token" class="neo-btn" style="padding: 2px 8px; font-size: 0.72rem;">
+                <i class="fa-solid fa-key"></i> <span id="gh-token-status-text">Atur Token GitHub</span>
+              </button>
+            </div>
+            <p style="font-size: 0.76rem; color: #374151; line-height: 1.45;">
+              Cukup simpan GitHub Token (PAT) Anda sekali di perangkat ini. Setelah itu, setiap kali Anda klik <strong>Simpan Otomatis ke GitHub</strong>, website GitHub Pages akan otomatis terupdate dalam 1–2 menit tanpa perlu menyentuh terminal atau download file!
+            </p>
+            <div id="gh-token-settings" style="display: none; margin-top: 10px; padding-top: 10px; border-top: 1.5px dashed #86EFAC;">
+              <div class="admin-form-group">
+                <label for="admin-gh-token" style="display: flex; justify-content: space-between; align-items: center;">
+                  <span>GitHub Personal Access Token (PAT)</span>
+                  <a href="https://github.com/settings/tokens/new?scopes=repo&description=PetaSastraLisanToken" target="_blank" style="font-size: 0.72rem; color: #15803D; font-weight: 700; text-decoration: underline;">Buat Token Otomatis di GitHub ↗</a>
+                </label>
+                <div style="display: flex; gap: 8px;">
+                  <input type="password" id="admin-gh-token" class="neo-input" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx" autocomplete="off" style="font-family: monospace; font-size: 0.8rem;">
+                  <button type="button" id="btn-save-gh-token" class="neo-btn neo-btn-cyan" style="white-space: nowrap; font-size: 0.75rem;">
+                    <i class="fa-solid fa-floppy-disk"></i> Simpan Token
+                  </button>
+                </div>
+                <p style="font-size: 0.7rem; color: #4B5563; margin-top: 4px;">
+                  🔒 <em>Token hanya disimpan di browser lokal (localStorage) Anda dan tidak pernah dikirim ke pihak ketiga selain langsung ke GitHub API (<code>api.github.com</code>).</em>
+                </p>
+              </div>
+            </div>
+          </div>
+
           <!-- Status Message Notification inside Modal -->
           <div id="admin-feedback-msg" style="display: none; margin-top: 14px; padding: 10px 14px; border: var(--neo-border-width) solid #000; box-shadow: var(--neo-shadow-sm); font-size: 0.82rem; font-weight: 700;"></div>
         </form>
@@ -675,11 +704,14 @@
       <!-- Modal Footer Action Buttons -->
       <div class="modal-footer" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
         <div id="admin-editor-actions" style="display: none; gap: 8px; flex-wrap: wrap;">
-          <button id="btn-admin-apply-preview" type="button" class="neo-btn neo-btn-primary">
-            <i class="fa-solid fa-arrows-rotate"></i> Terapkan ke Peta (Live Preview)
+          <button id="btn-admin-save-github" type="button" class="neo-btn neo-btn-green" title="Simpan langsung ke GitHub repository tanpa terminal">
+            <i class="fa-solid fa-cloud-arrow-up"></i> Simpan Otomatis ke GitHub
           </button>
-          <button id="btn-admin-download-js" type="button" class="neo-btn neo-btn-orange">
-            <i class="fa-solid fa-download"></i> Unduh sastra_data.js Terbaru
+          <button id="btn-admin-apply-preview" type="button" class="neo-btn neo-btn-primary" title="Coba lihat perubahan langsung di peta browser">
+            <i class="fa-solid fa-arrows-rotate"></i> Pratinjau di Peta
+          </button>
+          <button id="btn-admin-download-js" type="button" class="neo-btn neo-btn-orange" title="Cadangan unduh file sastra_data.js">
+            <i class="fa-solid fa-download"></i> Unduh File .js
           </button>
         </div>
         <button class="neo-btn modal-close-btn" data-modal="modal-admin">Tutup</button>

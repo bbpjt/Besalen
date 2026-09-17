@@ -1374,6 +1374,121 @@ window.SASTRA_DATA = ${JSON.stringify(window.SASTRA_DATA, null, 2)};
   }
 
   /**
+   * Simpan otomatis data langsung ke GitHub Pages via GitHub REST API (1-Click)
+   */
+  async function saveDirectlyToGitHub() {
+    const token = (localStorage.getItem('sastra_gh_token') || '').trim();
+    const tokenSettings = document.getElementById('gh-token-settings');
+    const tokenInput = document.getElementById('admin-gh-token');
+
+    if (!token) {
+      if (tokenSettings) tokenSettings.style.display = 'block';
+      if (tokenInput) tokenInput.focus();
+      showAdminFeedback('🔑 <strong>Masukkan GitHub Personal Access Token (PAT) Anda terlebih dahulu</strong> untuk mengaktifkan fitur simpan otomatis ke GitHub Pages. <br><a href="https://github.com/settings/tokens/new?scopes=repo&description=PetaSastraLisanToken" target="_blank" style="color:#000; text-decoration:underline; font-weight:bold;">Klik di sini untuk membuat token baru di GitHub</a> (centang lingkup <code>repo</code>). Token cukup dimasukkan sekali saja di perangkat Anda.', 'info');
+      return;
+    }
+
+    // Simpan perubahan ke memori & perbarui map
+    const item = saveAdminFormData(true);
+    if (!item) return;
+
+    const btnSaveGh = document.getElementById('btn-admin-save-github');
+    const originalBtnHtml = btnSaveGh ? btnSaveGh.innerHTML : '';
+    if (btnSaveGh) {
+      btnSaveGh.disabled = true;
+      btnSaveGh.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Menyimpan ke GitHub...';
+    }
+
+    showAdminFeedback('⏳ Menghubungkan ke GitHub API dan mengunggah data terbaru...', 'info');
+
+    const OWNER = 'bbpjt';
+    const REPO = 'Peta-Sastra-Lisan-Jateng';
+    const FILE_PATH = 'data/sastra_data.js';
+    const BRANCH = 'main';
+
+    try {
+      // 1. Ambil SHA file terbaru dari GitHub API
+      const getRes = await fetch(`https://api.github.com/repos/${OWNER}/${REPO}/contents/${FILE_PATH}?ref=${BRANCH}`, {
+        headers: {
+          'Accept': 'application/vnd.github.v3+json',
+          'Authorization': `Bearer ${token}`
+        }
+      });
+
+      if (getRes.status === 401) {
+        throw new Error('Token GitHub tidak valid atau telah kedaluwarsa. Silakan periksa kembali Token Anda.');
+      }
+      if (getRes.status === 404) {
+        throw new Error('Berkas data/sastra_data.js atau repositori tidak ditemukan di GitHub.');
+      }
+      if (!getRes.ok) {
+        const errJson = await getRes.json().catch(function () { return {}; });
+        throw new Error(errJson.message || `Gagal mengambil info berkas dari GitHub (Status ${getRes.status})`);
+      }
+
+      const fileMeta = await getRes.json();
+      const currentSha = fileMeta.sha;
+
+      // 2. Format isi berkas baru
+      const now = new Date();
+      const timestampStr = now.toLocaleDateString('id-ID', {
+        weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit'
+      });
+
+      const fileContent = `/**
+ * Peta Sastra Lisan di Jawa Tengah
+ * Balai Bahasa Provinsi Jawa Tengah
+ * Data Terverifikasi 100% Sesuai Rujukan Akademik & Registrasi WBTB
+ * Terakhir Diperbarui melalui Panel Admin: ${timestampStr}
+ */
+window.SASTRA_DATA = ${JSON.stringify(window.SASTRA_DATA, null, 2)};
+`;
+
+      // 3. Encode UTF-8 ke Base64 (aman untuk karakter Indonesia/diakritik)
+      const base64Content = btoa(unescape(encodeURIComponent(fileContent)));
+
+      // 4. Kirim PUT request ke GitHub untuk commit otomatis
+      const putRes = await fetch(`https://api.github.com/repos/${OWNER}/${REPO}/contents/${FILE_PATH}`, {
+        method: 'PUT',
+        headers: {
+          'Accept': 'application/vnd.github.v3+json',
+          'Authorization': `Bearer ${token}`,
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          message: `data(admin): perbarui data sastra lisan [${item.nama}]`,
+          content: base64Content,
+          sha: currentSha,
+          branch: BRANCH
+        })
+      });
+
+      if (!putRes.ok) {
+        const putErrJson = await putRes.json().catch(function () { return {}; });
+        throw new Error(putErrJson.message || `Gagal menyimpan commit ke GitHub (Status ${putRes.status})`);
+      }
+
+      const commitData = await putRes.json();
+      const commitUrl = (commitData && commitData.commit && commitData.commit.html_url) ? commitData.commit.html_url : `https://github.com/${OWNER}/${REPO}/commits/${BRANCH}`;
+
+      showAdminFeedback(`
+        🎉 <strong>BERHASIL DISIMPAN KE GITHUB SECARA OTOMATIS!</strong><br>
+        Perubahan data <strong>${item.nama}</strong> telah resmi di-commit ke branch <code>main</code> (<a href="${commitUrl}" target="_blank" style="text-decoration:underline; font-weight:bold; color:#065F46;">Lihat Bukti Commit di GitHub ↗</a>).<br>
+        <span style="font-size:0.76rem; margin-top:4px; display:inline-block;">GitHub Pages sedang memproses build otomatis. Dalam 1–2 menit, data terbaru akan langsung live dan disajikan kepada seluruh pengunjung website!</span>
+      `, 'success');
+
+    } catch (err) {
+      console.error('GitHub API error:', err);
+      showAdminFeedback(`❌ <strong>Gagal menyimpan otomatis ke GitHub:</strong> ${err.message}<br><span style="font-size:0.75rem;">Periksa kembali GitHub Token Anda (pastikan memiliki centang <code>repo</code>). Sebagai alternatif, Anda tetap dapat mengunduh berkas dengan tombol 'Unduh File .js'.</span>`, 'error');
+    } finally {
+      if (btnSaveGh) {
+        btnSaveGh.disabled = false;
+        btnSaveGh.innerHTML = originalBtnHtml;
+      }
+    }
+  }
+
+  /**
    * Buka dialog modal admin (dengan pengecekan sesi login)
    */
   function openAdminModal() {
@@ -1392,6 +1507,17 @@ window.SASTRA_DATA = ${JSON.stringify(window.SASTRA_DATA, null, 2)};
       populateAdminSelect(currentVal);
       if (selectTradisi && selectTradisi.value) {
         loadTraditionIntoAdminForm(selectTradisi.value);
+      }
+
+      // Cek status token GitHub yang tersimpan di perangkat
+      const savedToken = localStorage.getItem('sastra_gh_token');
+      const tokenInput = document.getElementById('admin-gh-token');
+      const tokenStatusText = document.getElementById('gh-token-status-text');
+      if (savedToken) {
+        if (tokenInput) tokenInput.value = savedToken;
+        if (tokenStatusText) tokenStatusText.innerHTML = '<i class="fa-solid fa-check text-green-600"></i> Token Tersimpan';
+      } else {
+        if (tokenStatusText) tokenStatusText.textContent = 'Atur Token GitHub';
       }
     } else {
       if (loginView) loginView.style.display = 'block';
@@ -1532,6 +1658,47 @@ window.SASTRA_DATA = ${JSON.stringify(window.SASTRA_DATA, null, 2)};
         const saved = saveAdminFormData(true);
         if (saved) {
           downloadSastraDataJs();
+        }
+      });
+    }
+
+    // 8. Tombol Simpan Otomatis ke GitHub (1-Click Sync)
+    const btnSaveGithub = document.getElementById('btn-admin-save-github');
+    if (btnSaveGithub) {
+      btnSaveGithub.addEventListener('click', saveDirectlyToGitHub);
+    }
+
+    // 9. Tombol Toggle Pengaturan Token GitHub
+    const btnToggleGhToken = document.getElementById('btn-toggle-gh-token');
+    const ghTokenSettings = document.getElementById('gh-token-settings');
+    if (btnToggleGhToken && ghTokenSettings) {
+      btnToggleGhToken.addEventListener('click', function () {
+        const isHidden = ghTokenSettings.style.display === 'none';
+        ghTokenSettings.style.display = isHidden ? 'block' : 'none';
+        if (isHidden) {
+          const input = document.getElementById('admin-gh-token');
+          if (input) input.focus();
+        }
+      });
+    }
+
+    // 10. Tombol Simpan Token GitHub
+    const btnSaveGhToken = document.getElementById('btn-save-gh-token');
+    if (btnSaveGhToken) {
+      btnSaveGhToken.addEventListener('click', function () {
+        const tokenInput = document.getElementById('admin-gh-token');
+        const tokenVal = (tokenInput ? tokenInput.value : '').trim();
+        const tokenStatusText = document.getElementById('gh-token-status-text');
+
+        if (!tokenVal) {
+          localStorage.removeItem('sastra_gh_token');
+          if (tokenStatusText) tokenStatusText.textContent = 'Atur Token GitHub';
+          showAdminFeedback('Token GitHub telah dihapus dari perangkat ini.', 'info');
+        } else {
+          localStorage.setItem('sastra_gh_token', tokenVal);
+          if (tokenStatusText) tokenStatusText.innerHTML = '<i class="fa-solid fa-check text-green-600"></i> Token Tersimpan';
+          showAdminFeedback('✅ <strong>Token GitHub berhasil disimpan di perangkat ini!</strong> Sekarang Anda dapat langsung menggunakan tombol hijau "Simpan Otomatis ke GitHub" untuk memperbarui website publik.', 'success');
+          if (ghTokenSettings) ghTokenSettings.style.display = 'none';
         }
       });
     }
@@ -1750,7 +1917,8 @@ window.SASTRA_DATA = ${JSON.stringify(window.SASTRA_DATA, null, 2)};
     renderMethodologyModal: renderMethodologyModal,
     openAdminModal: openAdminModal,
     saveAdminFormData: saveAdminFormData,
-    downloadSastraDataJs: downloadSastraDataJs
+    downloadSastraDataJs: downloadSastraDataJs,
+    saveDirectlyToGitHub: saveDirectlyToGitHub
   };
 
   if (document.readyState === 'loading') {
