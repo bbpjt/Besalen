@@ -905,21 +905,21 @@
     let html = `
       <div style="background:#FFFDF9; border:2px solid #000; padding:12px; margin-bottom:16px; box-shadow:3px 3px 0px #000;">
         <h4 style="font-family:'Space Grotesk',sans-serif; font-weight:800; font-size:0.95rem; margin-bottom:4px;">
-          Kriteria Metodologi Kurasi Ilmiah Balai Bahasa Provinsi Jawa Tengah (2026)
+          Kriteria pengelompokan data pemetaan sastra lisan<br>Balai Bahasa Provinsi Jawa Tengah
         </h4>
         <p style="font-size:0.82rem; line-height:1.5;">
-          Pemetaan Sastra Lisan menggunakan pendekatan <strong>Ring Validasi Empiris</strong> untuk menjaga integritas data kebahasaan dan kesusastraan nasional:
+          Setiap entri dalam peta ini dikelompokkan menurut tingkat ketuntasan datanya. Tujuannya sederhana: membedakan sastra lisan yang sudah dicek di lapangan, yang baru terbukti dari teks (berdasarkan referensi) dan masih perlu verifikasi, yang masih asumsi dan perlu diverifikasi, dan yang ternyata bukan sastra lisan.
         </p>
         <ul style="font-size:0.8rem; margin:8px 0 0 18px; line-height:1.5;">
-          <li><strong>Ring 1 (Terverifikasi):</strong> Telah divalidasi penuh di lapangan dengan profil maestro aktif, GPS presisi, transkrip rekaman, dan media resmi.</li>
-          <li><strong>Ring 2 (Terverifikasi Teks):</strong> Terbukti secara tekstual ilmiah memiliki formula tuturan (mantra, tembang, suluk, parikan).</li>
-          <li><strong>Ring 3 (Perlu Verifikasi):</strong> Ritus adat atau pertunjukan komunal yang masuk prioritas verifikasi lapangan untuk menemukan naskah tuturan bakunya.</li>
-          <li><strong>Ring 4 (Eksklusi Non-Sastra):</strong> Objek budaya yang resmi dikeluarkan karena merupakan kriya, busana, kuliner tradisional, atau penanggalan fisik tanpa unsur sastra tutur.</li>
+          <li><strong>Ring 1 (Terverifikasi)</strong><br>Sudah dicek di lapangan. Ada maestro yang masih aktif, titik koordinat yang akurat, transkrip rekaman, dan dokumentasi resmi.</li>
+          <li><strong>Ring 2 (Ada referensi)</strong><br>Datanya berasal dari referensi tertulis. Indikasi sebagai sastra lisan cukup kuat karena sumber itu menyebut rumusan tuturan, misalnya mantra, tembang, suluk, atau parikan. Masih menjadi asumsi dan perlu verifikasi di lapangan.</li>
+          <li><strong>Ring 3 (Tercatat WBTB)</strong><br>Datanya baru dari inventarisasi WBTB atau dari tulisan yang belum memperlihatkan teks tuturannya. Bentuknya mengarah ke sastra lisan, tetapi rujukan atas naskah/tuturan baku belum ada. Ini juga asumsi kerja dan menjadi prioritas verifikasi lapangan.</li>
+          <li><strong>Ring 4 (Bukan sastra lisan)</strong><br>Dikeluarkan dari peta karena berupa kerajinan, busana, kuliner, atau kalender fisik, tanpa unsur sastra lisan.</li>
         </ul>
       </div>
 
       <h4 style="font-family:'Space Grotesk',sans-serif; font-weight:800; font-size:0.95rem; margin-bottom:8px;">
-        Daftar 40 Entri Budaya Ring 4 (Eksklusi Non-Sastra):
+        Daftar ${ring4.length} Entri Budaya Ring 4 (Bukan Sastra Lisan):
       </h4>
       <div class="table-responsive" style="max-height: 340px; overflow-y: auto; border: 2px solid #000;">
         <table style="width:100%; min-width:540px; border-collapse:collapse; font-size:0.78rem;">
@@ -929,7 +929,7 @@
               <th style="padding:6px; text-align:left;">Nama Entri Budaya</th>
               <th style="padding:6px; text-align:left;">Daerah Asal</th>
               <th style="padding:6px; text-align:left;">Kategori Budaya</th>
-              <th style="padding:6px; text-align:left;">Alasan Ilmiah Eksklusi</th>
+              <th style="padding:6px; text-align:left;">Alasan Eksklusi</th>
             </tr>
           </thead>
           <tbody>
