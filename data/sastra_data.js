@@ -2,7 +2,7 @@
  * Peta Sastra Lisan di Jawa Tengah
  * Balai Bahasa Provinsi Jawa Tengah
  * Data Terverifikasi 100% Sesuai Rujukan Akademik & Registrasi WBTB
- * Terakhir Diperbarui melalui Panel Admin: Kamis, 17 September 2026 pukul 15.11
+ * Terakhir Diperbarui melalui Panel Admin: Sabtu, 19 September 2026 pukul 16.01
  */
 window.SASTRA_DATA = {
   "metadata": {
@@ -14,7 +14,7 @@ window.SASTRA_DATA = {
     "total_ring3": 44,
     "total_ring4": 39,
     "total_kabupaten": 35,
-    "terakhir_diperbarui": "2026-09-17T08:11:07.425Z"
+    "terakhir_diperbarui": "2026-09-19T09:01:36.033Z"
   },
   "ring1": [
     {
@@ -82,7 +82,7 @@ window.SASTRA_DATA = {
       "usia_garis": "45 th / Penggerak Omah Maca lereng Gunung Cokol",
       "komunitas": "Komunitas Omah Maca, pemuda desa, santri, dan seniman lokal",
       "bentuk_tuturan": "Kidungan/balada lisan-tulis yang dilantunkan dalam gaya tembang macapat",
-      "iringan_musik": "Kesenian Jemblungan (musik akapela gamelan tiruan mulut)",
+      "iringan_musik": "Pementasan revitalisasi memakai jemblungan; Omah Maca memiliki perlengkapan gamelan. Iringan tidak dinyatakan sebagai unsur wajib pada setiap pembacaan tradisional",
       "repertoar": "Naskah Babad Pasir Luhur bait demi bait macapat",
       "latitude": -7.3889,
       "longitude": 109.1867,
@@ -91,7 +91,6 @@ window.SASTRA_DATA = {
       "video_local": "",
       "cover_image": "media/banyumas/image1.png",
       "gallery_images": [
-        "media/banyumas/image1.png",
         "media/banyumas/image10.png",
         "media/banyumas/image11.jpeg",
         "media/banyumas/image12.jpeg",
@@ -102,7 +101,6 @@ window.SASTRA_DATA = {
         "media/banyumas/image17.jpeg",
         "media/banyumas/image18.jpg",
         "media/banyumas/image19.jpg",
-        "media/banyumas/image2.jpeg",
         "media/banyumas/image20.jpeg",
         "media/banyumas/image21.jpg",
         "media/banyumas/image22.jpeg",
@@ -120,7 +118,11 @@ window.SASTRA_DATA = {
       "alat_musik": "Pementasan revitalisasi memakai jemblungan; Omah Maca memiliki perlengkapan gamelan. Iringan tidak dinyatakan sebagai unsur wajib pada setiap pembacaan tradisional",
       "kostum": "Kostum tradisional",
       "bahasa": "Bahasa Jawa dialek Banyumas, bahasa Jawa dialek Surakarta, dan bahasa Sunda",
-      "deskripsi_pertunjukan": "Babad Pasir Luhur, yang disebut sebagai babad tertua Banyumas, berisi 39 pupuh mengenai perjalanan Raden Banyak Catra/Kamandaka, pertemuannya dengan Dewi Ciptarasa, dan peralihannya menjadi penguasa Pasir Luhur. Teks berfungsi sebagai ingatan asal-usul Banyumas."
+      "deskripsi_pertunjukan": "Babad Pasir Luhur, yang disebut sebagai babad tertua Banyumas, berisi 39 pupuh mengenai perjalanan Raden Banyak Catra/Kamandaka, pertemuannya dengan Dewi Ciptarasa, dan peralihannya menjadi penguasa Pasir Luhur. Teks berfungsi sebagai ingatan asal-usul Banyumas.",
+      "usia": "45 th",
+      "pewarisan": "Penggerak Omah Maca lereng Gunung Cokol",
+      "narasi_panjang": "Maca Babad Pasir Luhur merupakan tradisi pelantunan tembang macapat (sekar macapat) dari naskah babad tertua di lembah Serayu lereng Gunung Cokol. Pertunjukan memadukan tradisi sastra tulis babad dengan sastra tutur jemblungan akapela.",
+      "unsur_teks": ""
     },
     {
       "id": "SLJT-003-WSB",
