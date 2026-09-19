@@ -2,7 +2,7 @@
  * Peta Sastra Lisan di Jawa Tengah
  * Balai Bahasa Provinsi Jawa Tengah
  * Data Terverifikasi 100% Sesuai Rujukan Akademik & Registrasi WBTB
- * Terakhir Diperbarui melalui Panel Admin: Sabtu, 19 September 2026 pukul 16.11
+ * Terakhir Diperbarui melalui Panel Admin: Sabtu, 19 September 2026 pukul 16.17
  */
 window.SASTRA_DATA = {
   "metadata": {
@@ -14,7 +14,7 @@ window.SASTRA_DATA = {
     "total_ring3": 44,
     "total_ring4": 39,
     "total_kabupaten": 35,
-    "terakhir_diperbarui": "2026-09-19T09:11:13.568Z"
+    "terakhir_diperbarui": "2026-09-19T09:17:25.559Z"
   },
   "ring1": [
     {
@@ -33,7 +33,7 @@ window.SASTRA_DATA = {
       "komunitas": "Keluarga besar Mbah Tris & warga desa Sendanggayam",
       "bentuk_tuturan": "Seni pertunjukan sastra tutur lisan prosa-liris dan tembang berima yang dipadukan dengan caturan (dialog dramatik antartokoh) serta diiringi instrumen perkusi rebana (terbang).",
       "iringan_musik": "Tiga buah instrumen perkusi rebana (terbang): satu buah terbang gedhe (bass ritmis penentu ketukan) serta dua buah ketunthung (ketunthung kempul dan ketunthung ploncon)",
-      "repertoar": "Transkripsi Lakon Kelahiran Nabi Ibrahim",
+      "repertoar": "Transkripsi lakon \"Kelahiran Nabi Ibrahim\"",
       "latitude": -6.9944,
       "longitude": 111.3789,
       "youtube_id": "5XteEv2MU_g",
