@@ -2,7 +2,7 @@
  * Peta Sastra Lisan di Jawa Tengah
  * Balai Bahasa Provinsi Jawa Tengah
  * Data Terverifikasi 100% Sesuai Rujukan Akademik & Registrasi WBTB
- * Terakhir Diperbarui melalui Panel Admin: Sabtu, 19 September 2026 pukul 16.03
+ * Terakhir Diperbarui melalui Panel Admin: Sabtu, 19 September 2026 pukul 16.05
  */
 window.SASTRA_DATA = {
   "metadata": {
@@ -14,7 +14,7 @@ window.SASTRA_DATA = {
     "total_ring3": 44,
     "total_ring4": 39,
     "total_kabupaten": 35,
-    "terakhir_diperbarui": "2026-09-19T09:03:40.038Z"
+    "terakhir_diperbarui": "2026-09-19T09:05:14.690Z"
   },
   "ring1": [
     {
@@ -91,6 +91,7 @@ window.SASTRA_DATA = {
       "video_local": "",
       "cover_image": "media/banyumas/image1.png",
       "gallery_images": [
+        "media/banyumas/image48.jpeg",
         "media/banyumas/image11.jpeg",
         "media/banyumas/image10.png",
         "media/banyumas/image15.jpeg",
